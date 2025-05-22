@@ -7,19 +7,18 @@
   text-align: center;
 }
 
-.sidebar .logo {
+.sidebar .logo a {
+  text-decoration: none !important;
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 2rem;
   color: $primary-color;
-  border-bottom: 2px solid $primary-color;
+  border-bottom: 2px solid transparent; // Always transparent
 
-  a {
+  &:hover {
+    color: $secondary-color;
+    // Do NOT set border-bottom-color
     text-decoration: none;
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    color: $primary-color;
   }
 }
 
@@ -29,12 +28,28 @@
 }
 
 .sidebar nav ul li a {
-  display: block;
-  padding: 10px 0;
+  display: inline-block;
+  padding: 15px 0;
   text-decoration: none;
   color: #333;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s;
+
 
   &:hover {
-    border-bottom: 2px solid $primary-color;
+    border-bottom: 2px solid $accent-color;
+
   }
+}
+
+.contact-me {
+  border-top: 2px solid $primary-color;
+  border-bottom: 2px solid $primary-color;
+  margin-top: 50px !important;
+}
+
+// Only apply on hover of the last item
+.sidebar nav ul li:last-child a:hover {
+  color: $secondary-color;
+  border-bottom: 2px solid transparent;
 }

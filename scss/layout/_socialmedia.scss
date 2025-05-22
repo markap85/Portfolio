@@ -2,7 +2,24 @@
 // This file contains the styles for social media icons
 // ==========================================================================
 
-.social-icons {
-color: $primary-color;
-padding-left: 20px;
+.socials {
+    margin-top: 20px;
+}
+
+.social-icons--linkedin,
+.social-icons--git,
+.social-icons--facebook {
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: $primary-color;
+
+    &:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: $secondary-color;
+}
 }
