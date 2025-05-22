@@ -2,21 +2,43 @@
 // This file contains the styles for social media icons
 // ==========================================================================
 
-.portfolio-grid {
+.portfolio-grid { // Grid Container
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-top: 40px;
+  margin-top: 80px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.project {
-  background: #eee;
-  padding: 10px;
+.project { // Grid Item
   text-align: left;
+  position: relative;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  top: 0;
+  transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+  &:hover { // Hover Effect
+    top: -5px;
+    background-color: $primary-color;
+    
+    h3, a { // Text Color Change on Hover
+      color: $white;
+    }
   }
+
+      h3, a { // Text Styles
+      padding-left: 10px;
+    }
+
+  img { // Image Styles - Extended from %img-portfolio
+    @extend %img-portfolio;
+  }
+}
+
+
+.icon-arrow-right2 { // Arrow Icon Styles For Portfolio
+  font-size: normal;
 }
