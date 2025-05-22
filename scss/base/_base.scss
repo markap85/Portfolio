@@ -9,7 +9,12 @@ body {
 }
 
 main {
-  margin-left: 200px;
+  margin-left: 0;
   flex-grow: 1;
+
+  @media (min-width: 768px) {
+    margin-left: 200px;
+    flex-grow: 1;
+  }
 }
 

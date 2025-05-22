@@ -1,10 +1,19 @@
 .sidebar {
-  width: 200px;
+  display: none;
+  width: 0px;
+
   background-color: #f4f4f4;
   position: fixed;
   height: 100%;
   border-right: 2px solid $primary-color;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    display: block;
+    width: 200px;
+  }
 }
 
 .sidebar .logo a {
@@ -22,7 +31,6 @@
   }
 }
 
-
 .sidebar nav ul {
   list-style: none;
 }
@@ -35,10 +43,8 @@
   border-bottom: 2px solid transparent;
   transition: color 0.3s;
 
-
   &:hover {
     border-bottom: 2px solid $accent-color;
-
   }
 }
 
