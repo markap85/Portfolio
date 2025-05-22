@@ -14,15 +14,55 @@
         font-weight: bold;
     }
 
+    .about-me-icons {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        margin-top: 10px;
+        color: $grey-medium !important;
+        transition: color 0.3s ease-in-out;
+
+        .icon-html-five  {
+            @extend %skill-icon;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        .icon-css3  {
+            @extend %skill-icon;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+
+        .icon-sass  {
+            @extend %skill-icon;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
 .about-me-image {
     margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
     img {
         max-width: 50%;
         border-radius: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        filter: grayscale(100%);
+        transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        &:hover {
+            filter: grayscale(0%);
+            box-shadow: 8px 8px 24px 0 rgba(0, 0, 0, 0.35);
+        }
     }
-}
 }
