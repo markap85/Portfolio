@@ -1,4 +1,4 @@
-.scss-info {
+.template-blank {
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 50px;
@@ -25,18 +25,20 @@
         li {
             margin-bottom: 14px;
             font-size: 1.05rem;
-        }
-    }
 
-    a {
-        color: $secondary-color;
-        text-decoration: none !important;
-        text-decoration-thickness: 0 !important;
-        font-weight: 500;
-        transition: color 0.2s, border-bottom-color 0.2s;
+            a {
+                color: $primary-color;
+                text-decoration: none;
+                font-weight: 500;
+                border-bottom: 1px dashed $primary-color;
+                transition: color 0.2s, border-bottom-color 0.2s;
 
-        &:hover {
-            color: $primary-color;
+                &:hover {
+                    color: $accent-color;
+                    border-bottom: 1px solid $accent-color;
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
