@@ -11,12 +11,12 @@ footer {
 
     .icon-keyboard_arrow_up {
       font-size: 2rem;
-      color: $primary-color;
+      color: $secondary-color;
       transition: color 0.3s;
 
 
         &:hover {
-          color: darken($primary-color, 10%);
+          color: $accent-color;
           font-weight: bold;
         }
       }
@@ -25,7 +25,7 @@ footer {
         text-decoration: none;
 
         &:hover {
-          color: darken($primary-color, 10%);
+          color: $accent-color;
           font-weight: bold;
         }
     }

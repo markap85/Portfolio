@@ -6,3 +6,16 @@
     height: auto;
     border-radius: 10px 10px 0px 0px;
 }
+
+%portfolio-tag {
+display: inline-block;
+font-size: 1.1rem;
+position:absolute;
+top: 0;
+right: 0;
+text-transform: lowercase;
+padding: 5px;
+padding-left: 20px;
+padding-right: 20px;
+color: $white
+}

@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
 
-    // Add Darken Overlay to the image to make text more readable
+      // Add Darken Overlay to the image to make text more readable
 
   &::before {
     content: '';
@@ -21,12 +21,53 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: -1;
   }
 
-  // Ensure the text is above the overlay
+  .hero-text {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 300px;
 
-  h2, h1, p {
-    z-index: 1;
+    // Ensure the text is above the overlay
+
+        h1, h2, p, a, span {
+          z-index: 1;
+          color: $white;
+        }
+
+        h1 {
+          font-size: 5rem;
+          letter-spacing: 0.05em;
+        }
+
+        h2 {
+          font-size: 3rem;
+          letter-spacing: 0.05em;
+        }
+
+        .icon-keyboard_arrow_down {
+        font-size: 2rem;
+        color: $secondary-color;
+        transition: color 0.3s;
+        cursor: pointer;
+
+          &:hover {
+            color: $accent-color;
+            font-weight: bold;
+          }
+      }
+  
+      a {
+        text-decoration: none;
+
+        &:hover {
+          color: $accent-color;
+          font-weight: bold;
+        }
+    }
   }
 }

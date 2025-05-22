@@ -15,9 +15,17 @@ $black              : #2c3e50;
 // Primary Color Variables
 // ==========================================================================
 
-$primary-color      : #03c49a;
-$secondary-color    : #2ecc71;
-$accent-color       : #f10095;
+$primary-color      : #0079A0;
+$secondary-color    : #DF2C7D;
+$accent-color       : #BAA085;
+
+// ==========================================================================
+// Font Variables
+// ==========================================================================
+
+$tag-design         : #0079A0;
+$tag-responsive     : $secondary-color;
+$tag-backend        : $accent-color;
 
 // ==========================================================================
 // Breakpoints

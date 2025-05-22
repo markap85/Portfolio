@@ -29,6 +29,11 @@
     }
   }
 
+  h3 {
+    font-weight: bolder;
+    margin-top: 10px;
+  }
+
       h3, a { // Text Styles
       padding-left: 10px;
     }
@@ -41,4 +46,44 @@
 
 .icon-arrow-right2 { // Arrow Icon Styles For Portfolio
   font-size: normal;
+}
+
+// Project Background Color Change on Hover
+.project.pr-1:hover {
+  background-color: $tag-design;
+}
+
+.project.pr-2:hover {
+  background-color: $tag-responsive;
+}
+
+.project.pr-3:hover {
+  background-color: $tag-backend;
+}
+
+.project.pr-4:hover {
+  background-color: $tag-responsive;
+}
+.project.pr-5:hover {
+  background-color: $tag-design;
+}
+.project.pr-6:hover {
+  background-color: $tag-backend;
+}
+
+// Project Tags
+
+.tag-design {
+  @extend %portfolio-tag;
+  background-color: $tag-design;
+}
+
+.tag-responsive {
+  @extend %portfolio-tag;
+  background-color: $tag-responsive;
+}
+
+.tag-backend {
+  @extend %portfolio-tag;
+  background-color: $tag-backend;
 }
