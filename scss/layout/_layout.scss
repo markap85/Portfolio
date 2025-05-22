@@ -70,6 +70,12 @@ main {
   background: #eee;
   padding: 10px;
   text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
 }
 
 .contact-form {
