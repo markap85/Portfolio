@@ -1,7 +1,32 @@
 .hero {
-  background: url('hero-image.jpg') no-repeat center center/cover;
-  background-color: $accent-color;
+  position: relative;
+  background: url('../img/HeroImage.jpg') no-repeat center center/cover;
   height: 100vh;
-  color: white;
   text-align: center;
+
+  // Aligns Text to Center of Hero Section
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+    // Add Darken Overlay to the image to make text more readable
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  // Ensure the text is above the overlay
+
+  h2, h1, p {
+    z-index: 1;
+  }
 }
