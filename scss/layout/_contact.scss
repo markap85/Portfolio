@@ -105,7 +105,7 @@
     }
 
     .submit-btn {
-      width: max-content;
+      width: 100%;
       justify-self: start;
       background: $primary-color;
       color: #fff;
@@ -116,6 +116,10 @@
       font-weight: bold;
       cursor: pointer;
       transition: background 0.2s;
+
+        @media (min-width: 992px) {
+        width: max-content;
+        }
 
       &:hover,
       &:focus {
