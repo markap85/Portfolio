@@ -1,0 +1,33 @@
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+
+  .contact-item {
+    background: #f4f4f4;
+    border-radius: 10px;
+    text-align: left;
+  }
+
+  .contact-form {
+  margin-top: 60px;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.contact-form textarea {
+  grid-column: span 2;
+  height: 100px;
+}
+
+}
+
+.contact-me {
+  border-top: 2px solid $primary-color;
+  border-bottom: 2px solid $primary-color;
+}
