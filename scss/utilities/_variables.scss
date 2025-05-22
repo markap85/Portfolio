@@ -1,8 +1,9 @@
-// Color Variables
-// This file contains all the color variables used in the project.
+// Variables
+// This file contains all the variables used in the project.
 
 // ==========================================================================
 // Generic Color Variables
+// ==========================================================================
 
 $grey               : #7f8c8d;
 $dark-grey          : #34495e;
@@ -12,11 +13,22 @@ $black              : #2c3e50;
 
 // ==========================================================================
 // Primary Color Variables
+// ==========================================================================
 
 $primary-color      : #3498db;
 $secondary-color    : #2ecc71;
 $accent-color       : #e74c3c;
 
+// ==========================================================================
+// Breakpoints
+// ==========================================================================
+
+$brk-point-xs      : 280px; // 280px
+$brk-point-sm      : 576px; // 576px
+$brk-point-md      : 768px; // 768px
+$brk-point-lg      : 992px; // 992px
+$brk-point-xl      : 1200px; // 1200px
+
+// ==========================================================================
 // Mixins
-// This file contains all the mixins used in the project.
 // ==========================================================================
