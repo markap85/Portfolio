@@ -59,3 +59,9 @@
   color: $secondary-color;
   border-bottom: 2px solid transparent;
 }
+
+.txt-secondary {
+    &:hover {
+    border-bottom: 2px solid $secondary-color !important;
+  }
+}

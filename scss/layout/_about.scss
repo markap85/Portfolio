@@ -1,17 +1,28 @@
-.about-me {
+.about-me-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     margin-left: 10%;
     margin-right: 10%;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     border-radius: 10px;
 
-}
+    h3 {
+        color: $primary-color;
+        font-size: 2rem;
+        font-weight: bold;
+    }
 
 .about-me-image {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-        max-width: 20%;
+        max-width: 50%;
         border-radius: 50%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+}
 }

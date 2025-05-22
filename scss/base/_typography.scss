@@ -60,3 +60,12 @@ ul, li {
         margin-bottom: 0.5rem;
     }
 }
+
+// Overide Color Rules {
+
+.txt-primary {
+    color: $primary-color;
+}
+.txt-secondary {
+    color: $secondary-color;
+}
