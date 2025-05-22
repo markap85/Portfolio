@@ -17,7 +17,8 @@ text-transform: lowercase;
 padding: 5px;
 padding-left: 20px;
 padding-right: 20px;
-color: $white
+color: $white;
+box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 %skill-icon {

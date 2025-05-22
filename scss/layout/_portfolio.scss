@@ -51,6 +51,7 @@
 // Project Background Color Change on Hover
 .project.pr-1:hover {
   background-color: $tag-design;
+  
 }
 
 .project.pr-2:hover {
@@ -65,10 +66,10 @@
   background-color: $tag-responsive;
 }
 .project.pr-5:hover {
-  background-color: $tag-design;
+  background-color: $tag-backend;
 }
 .project.pr-6:hover {
-  background-color: $tag-backend;
+  background-color: $tag-design;
 }
 
 // Project Tags
@@ -86,4 +87,11 @@
 .tag-backend {
   @extend %portfolio-tag;
   background-color: $tag-backend;
+}
+
+.icon-heart {
+  font-size: 0.8rem;
+  // Move the icon down by a specific pixel amount
+  position: relative;
+  top: 1.5px; // Adjust this value as needed
 }

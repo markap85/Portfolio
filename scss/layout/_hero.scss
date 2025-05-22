@@ -10,8 +10,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0px -30px 0px -20px rgba(0, 0, 0, 0.3);
 
-      // Add Darken Overlay to the image to make text more readable
+  // Add Darken Overlay to the bottom of the image to make text more readable
 
   &::before {
     content: '';
