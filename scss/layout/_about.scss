@@ -1,60 +1,63 @@
 .about-me-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 0px;
     width: 100%;
     padding: 20px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 
     h3 {
         color: $primary-color;
         font-size: 1.5rem;
         font-weight: bold;
+        text-align: center;
     }
 
-    P {
+    p {
         color: $text;
         font-size: 1rem;
         line-height: 1;
+        text-align: center;
     }
 
     .about-me-icons {
         display: none;
-        justify-content: left;
-        align-items: left;
+        justify-content: center;
+        align-items: center;
         margin-top: 10px;
         color: $grey-medium !important;
         transition: color 0.3s ease-in-out;
 
         .icon-html-five  {
             @extend %skill-icon;
-
-            &:hover {
-                color: $primary-color;
-            }
+            &:hover { color: $primary-color; }
         }
-
         .icon-css3  {
             @extend %skill-icon;
-
-            &:hover {
-                color: $secondary-color;
-            }
+            &:hover { color: $secondary-color; }
         }
-
         .icon-sass  {
             @extend %skill-icon;
-
-            &:hover {
-                color: $accent-color;
-            }
+            &:hover { color: $accent-color; }
         }
     }
 
     @media (min-width: $brk-point-md) {
-        margin-left: 10%;
-        margin-right: 10%;
         text-align: left;
+        h3, p { text-align: left; }
+        align-items: flex-start;
+    }
+    @media (min-width: $brk-point-lg) {
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    @media (min-width: $brk-point-xl) {
+        padding-left: 100px;
+        padding-right: 100px;
     }
 }
 
@@ -63,27 +66,40 @@
     margin-top: 10px;
     justify-content: center;
     align-items: center;
-    
+
     img {
         max-width: 50%;
         border-radius: 50%;
         filter: grayscale(100%);
         transition: filter 0.3s ease-in-out;
-
-        &:hover {
-            filter: grayscale(0%);
-        }
+        &:hover { filter: grayscale(0%); }
     }
 }
 
-// Show icons at $brk-point-sm and above
 @media (min-width: $brk-point-sm) {
     .about-me-grid {
         .about-me-icons {
             display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
+}
+
+@media (min-width: $brk-point-md) {
+    .about-me-grid {
+        .about-me-icons {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}
+
+@media (min-width: $brk-point-lg) {
     .about-me-image {
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

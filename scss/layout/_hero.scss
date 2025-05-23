@@ -2,9 +2,6 @@
   position: relative;
   background: url('../img/HeroImage.jpg') no-repeat center center/cover;
   text-align: center;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
 
   // Aligns Text to Center of Hero Section
 
@@ -35,8 +32,10 @@
   display: flex;
   height: 100%;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: stretch;
+  min-height: 50%;
+  max-height: 50%;
   z-index: 1;
 
     // Ensure the text is above the overlay
@@ -75,25 +74,57 @@
           font-weight: bold;
         }
     }
+
+    // Ensure the scroll-down is always at the bottom
+    > div:last-child {
+      margin-top: auto;
+      align-self: center;
+    }
   }
   .light {
   color: $accent-color;
 
 }
 
+}
+
 @media (min-width: $brk-point-md) {
   .hero {
-
-    .hero-text {
-      h1 {
-        font-size: 5rem;
-        letter-spacing: 0.05em;
-      }
-      h2 {
-        font-size: 3rem;
-        letter-spacing: 0.05em;
-      }
-    }
+    min-height: 50vh;
+    height: 50vh;
+  }
+  .hero .hero-text h1 {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+  }
+  .hero .hero-text h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
   }
 }
+
+@media (min-width: $brk-point-lg) {
+  .hero {
+    min-height: 80vh;
+    height: 80vh;
+  }
+  .hero .hero-text h1 {
+    font-size: 5rem;
+  }
+  .hero .hero-text h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: $brk-point-xl) {
+  .hero {
+    min-height: 100vh;
+    height: 100vh;
+  }
+  .hero .hero-text h1 {
+    font-size: 5rem;
+  }
+  .hero .hero-text h2 {
+    font-size: 3rem;
+  }
 }
