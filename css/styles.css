@@ -957,9 +957,11 @@ footer .back-to-top .icon-keyboard_arrow_up:hover {
 /* line 44, ../Portfolio/scss/layout/_footer.scss */
 footer .back-to-top a {
   text-decoration: none;
+  color: #0079A0;
+  font-size: 1.1rem;
 }
 
-/* line 47, ../Portfolio/scss/layout/_footer.scss */
+/* line 49, ../Portfolio/scss/layout/_footer.scss */
 footer .back-to-top a:hover {
   color: #BAA085;
   font-weight: bold;
