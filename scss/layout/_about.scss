@@ -48,6 +48,7 @@
 
     @media (min-width: $brk-point-md) {
         text-align: left;
+        margin-left: 25px;
         h3, p { 
             text-align: left;
             font-size: 1.7rem;
@@ -58,6 +59,8 @@
         align-items: flex-start;
     }
     @media (min-width: $brk-point-lg) {
+        margin-left: 0 auto;
+        margin-left: 0 auto;
         flex-direction: row;
         gap: 20px;
         align-items: center;
@@ -70,6 +73,8 @@
         }
     }
     @media (min-width: $brk-point-xl) {
+                margin-left: 0 auto;
+        margin-right: 0 auto;
         padding-left: 100px;
         padding-right: 100px;
         h3 {
