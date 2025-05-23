@@ -1,32 +1,37 @@
-// This file contains mixins and extends for the project
-// // ==========================================================================
+// ==========================================================================
+// Mixins and Extends for the Project
+// ==========================================================================
 
+// Portfolio Image Style
 %img-portfolio {
     max-width: 100%;
     height: auto;
     border-radius: 10px 10px 0px 0px;
 }
 
+// Portfolio Tag Style
 %portfolio-tag {
-display: inline-block;
-font-size: 1.1rem;
-position:absolute;
-top: 0;
-right: 0;
-text-transform: lowercase;
-padding: 5px;
-padding-left: 20px;
-padding-right: 20px;
-color: $white;
-box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    font-size: 1.1rem;
+    position:absolute;
+    top: 0;
+    right: 0;
+    text-transform: lowercase;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: $white;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
+// Skill Icon Style
 %skill-icon {
     font-size: 40px;
     padding-right: 20px;
     transition: color 0.3s ease-in-out;
 }
 
+// Social Media Icon Style
 %socialmedia-icon {
     text-decoration: none;
     font-size: 1.3rem;
@@ -36,12 +41,13 @@ box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3);
     color: $primary-color;
 
     &:hover {
-    font-weight: 700;
-    text-decoration: none;
-    color: $secondary-color;
+        font-weight: 700;
+        text-decoration: none;
+        color: $secondary-color;
     }
 }
 
+// Generic Button Style
 %button-generic {
   background-color: $primary-color;
   color: white !important;

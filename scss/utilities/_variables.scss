@@ -6,7 +6,6 @@
 // ==========================================================================
 
 $grey               : #7f8c8d;
-
 $grey-medium        : #c2c5c5;
 $light-grey         : #ecf0f1;
 $white              : #ffffff;
@@ -21,10 +20,11 @@ $secondary-color    : #DF2C7D;
 $accent-color       : #BAA085;
 $text               : #34495e;
 
+// Lightened grey for backgrounds
 $grey-color-light : lighten($grey, 30%);
 
 // ==========================================================================
-// Font Variables
+// Font Tag Colors
 // ==========================================================================
 
 $tag-design         : #0079A0;
@@ -32,14 +32,14 @@ $tag-responsive     : $secondary-color;
 $tag-backend        : $accent-color;
 
 // ==========================================================================
-// Breakpoints
+// Breakpoints for Responsive Design
 // ==========================================================================
 
-$brk-point-xs      : 280px; // 280px
-$brk-point-sm      : 576px; // 576px
-$brk-point-md      : 768px; // 768px
-$brk-point-lg      : 992px; // 992px
-$brk-point-xl      : 1200px; // 1200px
+$brk-point-xs      : 280px; // Extra small devices
+$brk-point-sm      : 576px; // Small devices
+$brk-point-md      : 768px; // Medium devices/tablets
+$brk-point-lg      : 992px; // Large devices/desktops
+$brk-point-xl      : 1200px; // Extra large screens
 
 // ==========================================================================
 // Mixins

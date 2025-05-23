@@ -2,6 +2,10 @@
 // This file contains the styles for social media icons
 // ==========================================================================
 
+// ==========================================================================
+// Portfolio Grid Layout
+// ==========================================================================
+
 .portfolio-grid { // Grid Container
   display: grid;
   grid-template-columns: 1fr; // 1 column by default
@@ -11,22 +15,28 @@
   justify-items: center;
   margin-top: 50px !important; // Add space at the top for all screen sizes
 
-
+  // ==========================================================================
+  // Responsive Breakpoints
+  // ==========================================================================
   @media (min-width: $brk-point-sm) {
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     max-width: 1260px;
     margin-left: auto;
     margin-right: auto;
   }
   
   @media (min-width: $brk-point-md) {
-            margin-left: 25px;
+    margin-left: 25px;
   }
   @media (min-width: $brk-point-lg) {
-        margin: 0 auto;
+    margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+// =========================================================================
+// Portfolio Project Card
+// ==========================================================================
 
 .project { // Grid Item
   // text-align: left;
@@ -38,7 +48,8 @@
   top: 0;
   transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
-  &:hover { // Hover Effect
+  // Hover Effect
+  &:hover {
     top: -5px;
     background-color: $primary-color;
     
@@ -56,17 +67,21 @@
       padding-left: 10px;
     }
 
-  img { // Image Styles - Extended from %img-portfolio
+  // Image Styles - Extended from %img-portfolio
+  img { 
     @extend %img-portfolio;
   }
 }
 
-
-.icon-arrow-right2 { // Arrow Icon Styles For Portfolio
+// Arrow Icon Styles For Portfolio
+.icon-arrow-right2 { 
   font-size: normal;
 }
 
+// ==========================================================================
 // Project Background Color Change on Hover
+// ==========================================================================
+
 .project.pr-1:hover {
   background-color: $tag-design;
   
@@ -90,7 +105,9 @@
   background-color: $tag-design;
 }
 
+// ==========================================================================
 // Project Tags
+// ==========================================================================
 
 .tag-design {
   @extend %portfolio-tag;
@@ -107,6 +124,7 @@
   background-color: $tag-backend;
 }
 
+// Heart Icon Adjustment
 .icon-heart {
   font-size: 0.8rem;
   // Move the icon down by a specific pixel amount
