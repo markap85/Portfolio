@@ -7,8 +7,8 @@
   background: url('../img/HeroImage.jpg') no-repeat center center/cover;
   text-align: center;
   box-shadow: inset 0px -30px 0px -20px rgba(0, 0, 0, 0.3);
-      min-height: 40vh;
-    height: 40vh;
+      min-height: 20vh;
+    height: 20vh;
 
   // Add Darken Overlay to the bottom of the image to make text more readable
 
@@ -159,8 +159,8 @@
 
 @media (min-width: $brk-point-sm) {
   .hero {
-    min-height: 40vh;
-    height: 40vh;
+    min-height: 20vh;
+    height: 20vh;
   }
 }
 

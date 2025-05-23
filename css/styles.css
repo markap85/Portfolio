@@ -1126,8 +1126,8 @@ footer .back-to-top a:hover {
   background: url("../img/HeroImage.jpg") no-repeat center center/cover;
   text-align: center;
   box-shadow: inset 0px -30px 0px -20px rgba(0, 0, 0, 0.3);
-  min-height: 40vh;
-  height: 40vh;
+  min-height: 20vh;
+  height: 20vh;
 }
 
 /* line 15, ../Portfolio/scss/layout/_hero.scss */
@@ -1296,8 +1296,8 @@ footer .back-to-top a:hover {
 @media (min-width: 576px) {
   /* line 161, ../Portfolio/scss/layout/_hero.scss */
   .hero {
-    min-height: 40vh;
-    height: 40vh;
+    min-height: 20vh;
+    height: 20vh;
   }
 }
 
@@ -1775,7 +1775,6 @@ footer .back-to-top a:hover {
 /* line 131, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid a:hover {
   color: #BAA085;
-  border-bottom: 1px solid #BAA085;
   text-decoration: none !important;
   text-decoration-thickness: 0 !important;
 }
