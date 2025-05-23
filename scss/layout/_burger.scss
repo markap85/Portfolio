@@ -1,0 +1,62 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: transparent; // transparent background 
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1100;
+
+  span,
+  .burger-bar {
+    display: block;
+    width: 32px;
+    height: 4px;
+    margin: 5px 0;
+    background: $secondary-color; // color when sidebar is closed
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  // Animate burger to X when active
+  &.active {
+    span {
+      background: $secondary-color; // Color when sidebar is open
+    }
+    &::before {
+      transform: translateY(9px) rotate(45deg);
+    }
+    &::after {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+
+  @media (min-width: $brk-point-md) {
+    display: none;
+  }
+}
+
+.burger.active .burger-bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.burger.active .burger-bar:nth-child(2) {
+  opacity: 0;
+}
+.burger.active .burger-bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.burger-bar {
+  display: block;
+  width: 32px;
+  height: 4px;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
