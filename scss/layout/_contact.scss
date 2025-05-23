@@ -2,7 +2,7 @@
   display: block; // Default to block element
   box-sizing: border-box;
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 50px !important; // Add space at the top for all screen sizes
 
   @media (min-width: $brk-point-md) {
     margin-left: 25px;
@@ -17,9 +17,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr; // 2 columns after 992px
     max-width: 1260px;
-        margin-left: 0 auto;
-    margin-left: 0 auto;
-    margin-right: 0 auto;
+        margin: 0 auto;
     gap: 20px;
 
   .contact-details,
@@ -35,11 +33,11 @@
     box-sizing: border-box;
     margin-left: 25px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $brk-point-md) {
       padding: 0px;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: $brk-point-lg) {
       text-align: left;
     }
 
