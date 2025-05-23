@@ -1,7 +1,3 @@
-// ==========================================================================
-// Contact Section Layout
-// ==========================================================================
-
 .contact-grid {
   display: block; // Default to block element
   box-sizing: border-box;
@@ -9,9 +5,6 @@
   margin-top: 50px !important; // Add space at the top for all screen sizes
   color: $text;
 
-  // ==========================================================================
-  // Responsive Breakpoints
-  // ==========================================================================
   @media (min-width: $brk-point-md) {
     margin-left: 25px;
   }
@@ -32,7 +25,6 @@
       box-sizing: border-box;
     }
 
-    // Contact Details Card
     .contact-details {
       background: $white;
       border-radius: 10px;
@@ -67,167 +59,158 @@
         }
       }
     }
+  }
+}
 
-    // ==========================================================================
-    // Contact Form Grid Layout
-    // ==========================================================================
-    .contact-form-grid {
-      display: grid;
-      padding-top: 24px;
-      row-gap: 10px;
-      grid-template-columns: 1fr;
-      box-sizing: border-box;
+// ==========================================================================
+// Contact Form Grid Styles (apply to all breakpoints)
+// ==========================================================================
+.contact-form-grid {
+  display: grid;
+  padding-top: 24px;
+  row-gap: 10px;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
 
-      // Form Field Grid Placement
-      .name-row {
-        .name-row {
-          display: block;
-          width: 100%; // Ensure it spans the full width
-        }
-        grid-column: 1;
-        grid-row: 1;
-      }
-      .last-name {
-        grid-column: 1;
-        grid-row: 2;
-      }
-      .email {
-        grid-column: 1 / span 1;
-        grid-row: 3;
-      }
-      .subject {
-        grid-column: 1 / span 2;
-        grid-row: 4;
-      }
-      .message {
-        grid-column: 1 / span 2;
-        grid-row: 5;
-      }
-      .submit-btn {
-        grid-column: 1 / span 1;
-        grid-row: 6;
-      }
+  .name-row {
+    .name-row {
+      display: block;
+      width: 100%; // Ensure it spans the full width
+    }
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .last-name {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .email {
+    grid-column: 1 / span 1;
+    grid-row: 3;
+  }
+  .subject {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
+  .message {
+    grid-column: 1 / span 2;
+    grid-row: 5;
+  }
+  .submit-btn {
+    grid-column: 1 / span 1;
+    grid-row: 6;
+  }
 
-      // ==========================================================================
-      // Responsive Breakpoints for Form Grid
-      // ==========================================================================
-      @media (min-width: 576px) {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 10px;
+  @media (min-width: 576px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
 
-        .name-row {
-          display: contents;
-        }
-        .first-name {
-          grid-column: 1;
-          grid-row: 1;
-        }
-        .last-name {
-          grid-column: 2;
-          grid-row: 1;
-        }
-        .email {
-          grid-column: 1 / span 2;
-          grid-row: 2;
-        }
-        .subject {
-          grid-column: 1 / span 2;
-          grid-row: 3;
-        }
-        .message {
-          grid-column: 1 / span 2;
-          grid-row: 4;
-        }
-        .submit-btn {
-          grid-column: 1 / span 2;
-          grid-row: 5;
-        }
-      }
+    .name-row {
+      display: contents;
+    }
+    .first-name {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .last-name {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .email {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+    }
+    .subject {
+      grid-column: 1 / span 2;
+      grid-row: 3;
+    }
+    .message {
+      grid-column: 1 / span 2;
+      grid-row: 4;
+    }
+    .submit-btn {
+      grid-column: 1 / span 2;
+      grid-row: 5;
+    }
+  }
 
-      @media (min-width: 768px) {
-        .name-row {
-          display: contents;
-        }
-        .first-name {
-          grid-column: 1;
-          grid-row: 1;
-        }
-        .last-name {
-          grid-column: 2;
-          grid-row: 1;
-        }
-        .email {
-          grid-column: 1 / span 2;
-          grid-row: 2;
-        }
-        .subject {
-          grid-column: 1 / span 2;
-          grid-row: 3;
-        }
-        .message {
-          grid-column: 1 / span 2;
-          grid-row: 4;
-        }
-        .submit-btn {
-          grid-column: 1 / span 2;
-          grid-row: 5;
-        }
-      }
+  @media (min-width: 768px) {
+    .name-row {
+      display: contents;
+    }
+    .first-name {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .last-name {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .email {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+    }
+    .subject {
+      grid-column: 1 / span 2;
+      grid-row: 3;
+    }
+    .message {
+      grid-column: 1 / span 2;
+      grid-row: 4;
+    }
+    .submit-btn {
+      grid-column: 1 / span 2;
+      grid-row: 5;
+    }
+  }
 
-      // ==========================================================================
-      // Style Contact Form Fields
-      // ==========================================================================
-      input,
-      textarea {
-        min-width: 0; // Prevent grid overflow/clipping
-        border: none;
-        border: 0px solid $white;
-        border-radius: 6px;
-        font-size: 1rem;
-        background: $grey-color-light;
-        box-shadow: inset 0 3px 5px rgba($text, 0.2);
-        transition: border-color 0.2s;
-        box-sizing: border-box;
-        padding: 10px 16px;
-        color: $white; // Set text color to white
+  // STYLE CONTACT FORM
+  input,
+  textarea {
+    min-width: 0; // Prevent grid overflow/clipping
+    border: none;
+    border: 0px solid $white;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: $grey-color-light;
+    box-shadow: inset 0 3px 5px rgba($text, 0.2);
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    color: $white;
 
-        &:focus {
-          border-color: $primary-color;
-          outline: none;
-        }
-      }
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
 
-      textarea {
-        height: 100px;
-        resize: vertical;
-      }
+  textarea {
+    height: 100px;
+    resize: vertical;
+  }
 
-      // ==========================================================================
-      // Submit Button Styling
-      // ==========================================================================
-      .submit-btn {
-        justify-self: center;
-        background: $primary-color;
-        color: $white;
-        border: none;
-        border-radius: 6px;
-        padding: 14px 20px;
-        font-size: 1.1rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background 0.2s;
+  .submit-btn {
+    justify-self: center;
+    background: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
 
-        @media (min-width: 992px) {
-          width: max-content;
-          justify-self: start;
-        }
+    @media (min-width: 992px) {
+      width: max-content;
+      justify-self: start;
+    }
 
-        &:hover,
-        &:focus {
-          background: $secondary-color;
-          box-shadow: inset 0 3px 5px rgba($text, 0.4);
-        }
-      }
+    &:hover,
+    &:focus {
+      background: $secondary-color;
+      box-shadow: inset 0 3px 5px rgba($text, 0.4);
     }
   }
 }

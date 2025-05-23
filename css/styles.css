@@ -639,7 +639,7 @@ li {
   top: 1.5px;
 }
 
-/* line 5, ../Portfolio/scss/layout/_contact.scss */
+/* line 1, ../Portfolio/scss/layout/_contact.scss */
 .contact-grid {
   display: block;
   box-sizing: border-box;
@@ -649,21 +649,21 @@ li {
 }
 
 @media (min-width: 768px) {
-  /* line 5, ../Portfolio/scss/layout/_contact.scss */
+  /* line 1, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid {
     margin-left: 25px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 5, ../Portfolio/scss/layout/_contact.scss */
+  /* line 1, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid {
     margin: 0 auto;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 5, ../Portfolio/scss/layout/_contact.scss */
+  /* line 1, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -671,12 +671,12 @@ li {
     margin: 0 auto;
     gap: 20px;
   }
-  /* line 30, ../Portfolio/scss/layout/_contact.scss */
+  /* line 23, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details,
   .contact-grid .contact-form-grid {
     box-sizing: border-box;
   }
-  /* line 36, ../Portfolio/scss/layout/_contact.scss */
+  /* line 28, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details {
     background: #ffffff;
     border-radius: 10px;
@@ -688,25 +688,25 @@ li {
 }
 
 @media (min-width: 992px) and (min-width: 768px) {
-  /* line 36, ../Portfolio/scss/layout/_contact.scss */
+  /* line 28, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details {
     padding: 0px;
   }
 }
 
 @media (min-width: 992px) and (min-width: 992px) {
-  /* line 36, ../Portfolio/scss/layout/_contact.scss */
+  /* line 28, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details {
     text-align: left;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 52, ../Portfolio/scss/layout/_contact.scss */
+  /* line 44, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details h3 {
     color: #0079A0;
   }
-  /* line 56, ../Portfolio/scss/layout/_contact.scss */
+  /* line 48, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details a {
     color: #DF2C7D;
     text-decoration: none;
@@ -716,191 +716,198 @@ li {
     transition: color 0.3s;
     word-break: break-all;
   }
-  /* line 64, ../Portfolio/scss/layout/_contact.scss */
+  /* line 56, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details a:hover {
     color: #BAA085;
     font-weight: bold;
   }
-  /* line 74, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid {
-    display: grid;
-    padding-top: 24px;
-    row-gap: 10px;
-    grid-template-columns: 1fr;
-    box-sizing: border-box;
-  }
-  /* line 82, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .name-row {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  /* line 83, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .name-row .name-row {
-    display: block;
-    width: 100%;
-  }
-  /* line 90, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .last-name {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  /* line 94, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .email {
-    grid-column: 1 / span 1;
-    grid-row: 3;
-  }
-  /* line 98, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .subject {
-    grid-column: 1 / span 2;
-    grid-row: 4;
-  }
-  /* line 102, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .message {
-    grid-column: 1 / span 2;
-    grid-row: 5;
-  }
-  /* line 106, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .submit-btn {
-    grid-column: 1 / span 1;
-    grid-row: 6;
-  }
 }
 
-@media (min-width: 992px) and (min-width: 576px) {
-  /* line 74, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid {
+/* line 68, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid {
+  display: grid;
+  padding-top: 24px;
+  row-gap: 10px;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+}
+
+/* line 75, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid .name-row {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* line 76, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid .name-row .name-row {
+  display: block;
+  width: 100%;
+}
+
+/* line 83, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid .last-name {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* line 87, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid .email {
+  grid-column: 1 / span 1;
+  grid-row: 3;
+}
+
+/* line 91, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid .subject {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+}
+
+/* line 95, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid .message {
+  grid-column: 1 / span 2;
+  grid-row: 5;
+}
+
+/* line 99, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid .submit-btn {
+  grid-column: 1 / span 1;
+  grid-row: 6;
+}
+
+@media (min-width: 576px) {
+  /* line 68, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid {
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
   }
-  /* line 118, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .name-row {
+  /* line 108, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .name-row {
     display: contents;
   }
-  /* line 121, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .first-name {
+  /* line 111, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .first-name {
     grid-column: 1;
     grid-row: 1;
   }
-  /* line 125, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .last-name {
+  /* line 115, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .last-name {
     grid-column: 2;
     grid-row: 1;
   }
-  /* line 129, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .email {
+  /* line 119, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .email {
     grid-column: 1 / span 2;
     grid-row: 2;
   }
-  /* line 133, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .subject {
+  /* line 123, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .subject {
     grid-column: 1 / span 2;
     grid-row: 3;
   }
-  /* line 137, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .message {
+  /* line 127, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .message {
     grid-column: 1 / span 2;
     grid-row: 4;
   }
-  /* line 141, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .submit-btn {
+  /* line 131, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .submit-btn {
     grid-column: 1 / span 2;
     grid-row: 5;
   }
 }
 
-@media (min-width: 992px) and (min-width: 768px) {
-  /* line 148, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .name-row {
+@media (min-width: 768px) {
+  /* line 138, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .name-row {
     display: contents;
   }
-  /* line 151, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .first-name {
+  /* line 141, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .first-name {
     grid-column: 1;
     grid-row: 1;
   }
-  /* line 155, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .last-name {
+  /* line 145, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .last-name {
     grid-column: 2;
     grid-row: 1;
   }
-  /* line 159, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .email {
+  /* line 149, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .email {
     grid-column: 1 / span 2;
     grid-row: 2;
   }
-  /* line 163, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .subject {
+  /* line 153, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .subject {
     grid-column: 1 / span 2;
     grid-row: 3;
   }
-  /* line 167, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .message {
+  /* line 157, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .message {
     grid-column: 1 / span 2;
     grid-row: 4;
   }
-  /* line 171, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .submit-btn {
+  /* line 161, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .submit-btn {
     grid-column: 1 / span 2;
     grid-row: 5;
   }
+}
+
+/* line 168, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid input,
+.contact-form-grid textarea {
+  min-width: 0;
+  border: none;
+  border: 0px solid #ffffff;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #d0d5d5;
+  box-shadow: inset 0 3px 5px rgba(52, 73, 94, 0.2);
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  color: #ffffff;
+}
+
+/* line 182, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid input:focus,
+.contact-form-grid textarea:focus {
+  border-color: #0079A0;
+  outline: none;
+}
+
+/* line 188, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* line 193, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid .submit-btn {
+  justify-self: center;
+  background: #0079A0;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
 @media (min-width: 992px) {
-  /* line 180, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid input,
-  .contact-grid .contact-form-grid textarea {
-    min-width: 0;
-    border: none;
-    border: 0px solid #ffffff;
-    border-radius: 6px;
-    font-size: 1rem;
-    background: #d0d5d5;
-    box-shadow: inset 0 3px 5px rgba(52, 73, 94, 0.2);
-    transition: border-color 0.2s;
-    box-sizing: border-box;
-    padding: 10px 16px;
-    color: #ffffff;
-  }
-  /* line 194, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid input:focus,
-  .contact-grid .contact-form-grid textarea:focus {
-    border-color: #0079A0;
-    outline: none;
-  }
-  /* line 200, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid textarea {
-    height: 100px;
-    resize: vertical;
-  }
-  /* line 208, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .submit-btn {
-    justify-self: center;
-    background: #0079A0;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    padding: 14px 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 992px) {
-  /* line 208, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .submit-btn {
+  /* line 193, ../Portfolio/scss/layout/_contact.scss */
+  .contact-form-grid .submit-btn {
     width: max-content;
     justify-self: start;
   }
 }
 
-@media (min-width: 992px) {
-  /* line 225, ../Portfolio/scss/layout/_contact.scss */
-  .contact-grid .contact-form-grid .submit-btn:hover, .contact-grid .contact-form-grid .submit-btn:focus {
-    background: #DF2C7D;
-    box-shadow: inset 0 3px 5px rgba(52, 73, 94, 0.4);
-  }
+/* line 210, ../Portfolio/scss/layout/_contact.scss */
+.contact-form-grid .submit-btn:hover, .contact-form-grid .submit-btn:focus {
+  background: #DF2C7D;
+  box-shadow: inset 0 3px 5px rgba(52, 73, 94, 0.4);
 }
 
 /* line 5, ../Portfolio/scss/layout/_footer.scss */
@@ -1471,26 +1478,25 @@ footer .back-to-top a:hover {
 .about-me-image img {
   max-width: 100%;
   border-radius: 50%;
-  filter: grayscale(100%);
   filter: none;
   /* Fallback for older browsers */
   filter: grayscale(100%);
   transition: filter 0.3s ease-in-out;
 }
 
-/* line 133, ../Portfolio/scss/layout/_about.scss */
+/* line 132, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img[loading="lazy"] {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 138, ../Portfolio/scss/layout/_about.scss */
+/* line 137, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img[loading="lazy"]:not([src=""]) {
   opacity: 1;
 }
 
 @media (min-width: 576px) {
-  /* line 150, ../Portfolio/scss/layout/_about.scss */
+  /* line 149, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid .about-me-icons {
     display: flex;
     justify-content: center;
@@ -1499,7 +1505,7 @@ footer .back-to-top a:hover {
 }
 
 @media (min-width: 768px) {
-  /* line 160, ../Portfolio/scss/layout/_about.scss */
+  /* line 159, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid .about-me-icons {
     display: flex;
     justify-content: flex-start;
@@ -1508,7 +1514,7 @@ footer .back-to-top a:hover {
 }
 
 @media (min-width: 992px) {
-  /* line 169, ../Portfolio/scss/layout/_about.scss */
+  /* line 168, ../Portfolio/scss/layout/_about.scss */
   .about-me-image {
     display: flex;
     justify-content: center;
@@ -1516,7 +1522,7 @@ footer .back-to-top a:hover {
   }
 }
 
-/* line 180, ../Portfolio/scss/layout/_about.scss */
+/* line 179, ../Portfolio/scss/layout/_about.scss */
 .skip-link {
   position: absolute;
   top: -9999px;
@@ -1526,7 +1532,7 @@ footer .back-to-top a:hover {
   overflow: hidden;
 }
 
-/* line 188, ../Portfolio/scss/layout/_about.scss */
+/* line 187, ../Portfolio/scss/layout/_about.scss */
 .skip-link:focus {
   position: static;
   width: auto;

@@ -125,7 +125,6 @@
     img {
         max-width: 100%;
         border-radius: 50%;
-        filter: grayscale(100%);
         filter: none; /* Fallback for older browsers */
         filter: grayscale(100%);
         transition: filter 0.3s ease-in-out;
