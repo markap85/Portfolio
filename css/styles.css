@@ -1693,13 +1693,15 @@ footer .back-to-top a:hover {
   object-fit: cover;
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   align-self: stretch;
   justify-self: stretch;
   aspect-ratio: 16 / 9;
+  transition: box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out;
+  filter: brightness(1);
 }
 
-/* line 63, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 65, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid .info-img .info-img img {
   width: 100%;
   height: 100%;
@@ -1707,19 +1709,25 @@ footer .back-to-top a:hover {
   border-radius: 8px;
 }
 
-/* line 74, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 72, ../Portfolio/scss/layout/_scssinfo.scss */
+.scss-info-grid .info-img:hover {
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
+  filter: brightness(0.8);
+}
+
+/* line 81, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid h1, .scss-info-grid h2, .scss-info-grid h3, .scss-info-grid h4, .scss-info-grid h5, .scss-info-grid h6, .scss-info-grid p, .scss-info-grid ul, .scss-info-grid li a {
   text-align: center;
 }
 
 @media (min-width: 992px) {
-  /* line 74, ../Portfolio/scss/layout/_scssinfo.scss */
+  /* line 81, ../Portfolio/scss/layout/_scssinfo.scss */
   .scss-info-grid h1, .scss-info-grid h2, .scss-info-grid h3, .scss-info-grid h4, .scss-info-grid h5, .scss-info-grid h6, .scss-info-grid p, .scss-info-grid ul, .scss-info-grid li a {
     text-align: left;
   }
 }
 
-/* line 81, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 88, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid h3 {
   font-size: 2rem;
   color: #0079A0;
@@ -1728,7 +1736,7 @@ footer .back-to-top a:hover {
   margin-top: 0;
 }
 
-/* line 89, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 96, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid p {
   font-size: 1.1rem;
   color: #34495e;
@@ -1736,7 +1744,7 @@ footer .back-to-top a:hover {
   line-height: 1.6;
 }
 
-/* line 96, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 103, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid ul {
   list-style: none;
   padding: 0;
@@ -1744,13 +1752,13 @@ footer .back-to-top a:hover {
   color: #34495e;
 }
 
-/* line 102, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 109, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid ul li {
   margin-bottom: 14px;
   font-size: 1.05rem;
 }
 
-/* line 111, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 118, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid a {
   color: #DF2C7D;
   text-decoration: none !important;
@@ -1763,7 +1771,7 @@ footer .back-to-top a:hover {
 }
 
 @media (min-width: 992px) {
-  /* line 111, ../Portfolio/scss/layout/_scssinfo.scss */
+  /* line 118, ../Portfolio/scss/layout/_scssinfo.scss */
   .scss-info-grid a {
     display: inline;
     text-align: left;
@@ -1772,7 +1780,7 @@ footer .back-to-top a:hover {
   }
 }
 
-/* line 131, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 138, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid a:hover {
   color: #BAA085;
   text-decoration: none !important;
