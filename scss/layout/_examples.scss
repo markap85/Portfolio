@@ -1,44 +1,70 @@
+// Breakpoints for responsive styling
 .examples {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
 
-    h3 {
-        font-size: 2rem;
-        color: $primary-color;
-        margin-bottom: 16px;
-        font-weight: bold;
-    }
+        margin-top: 50px;
+        margin-right: 50px;
+        text-align: center;
 
-    p {
-        font-size: 1.1rem;
-        color: #444;
-        margin-bottom: 24px;
-        line-height: 1.6;
-    }
+        h3 {
+            font-size: 1rem;
+            color: $primary-color;
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 24px 0;
+        p {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
 
-        li {
-            margin-bottom: 14px;
-            font-size: 1.05rem;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
 
-            a {
-                color: $primary-color;
-                text-decoration: none;
-                font-weight: 500;
-                border-bottom: 1px dashed $primary-color;
-                transition: color 0.2s, border-bottom-color 0.2s;
+            li {
+                margin-bottom: 14px;
+                font-size: 1rem;
 
-                &:hover {
-                    color: $accent-color;
-                    border-bottom: 1px solid $accent-color;
-                    text-decoration: underline;
+                a {
+                    font-size: 0.8rem;
+                    color: $primary-color;
+                    text-decoration: none;
+                    font-weight: 500;
+                    border-bottom: 1px dashed $primary-color;
+                    transition: color 0.2s, border-bottom-color 0.2s;
+
+                    &:hover {
+                        color: $accent-color;
+                        border-bottom: 1px solid $accent-color;
+                        text-decoration: underline;
+                    }
                 }
             }
         }
-    }
-}
+
+            @media (min-width: $brk-point-sm) {
+                    text-align: left;
+            }
+
+            @media (min-width: $brk-point-md) {
+                    margin-left: 50px;
+                    margin-right: 50px;
+
+                    h3 {
+                        font-size: 2rem;
+                    }
+
+                    p {
+                        font-size: 1.1rem;
+                    }
+
+                    ul {
+                            a {
+                                font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
