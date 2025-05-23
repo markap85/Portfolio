@@ -10,6 +10,18 @@
     margin-left: auto;
     margin-right: auto;
 
+    a {
+        text-decoration: none;
+        color: $accent-color;
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: darken($accent-color, 20%);
+        }
+    }
+
     h3 {
         color: $primary-color;
         font-size: 1.5rem;
@@ -138,18 +150,6 @@
     }
 }
 
-.special-link > a {
-    color: $accent-color !important;
-    text-decoration: none !important;
-    font-size: 1.7rem !important;
-    font-weight: bold !important;
-    transition: color 0.3s !important;
-    word-break: break-all !important;
-
-    &:hover {
-        color: darken($accent-color, 10%) !important;
-    }
-}
 
 .skip-link {
     position: absolute;

@@ -503,6 +503,11 @@ li {
   color: #DF2C7D;
 }
 
+/* line 78, ../Portfolio/scss/base/_typography.scss */
+.txt-accent {
+  color: #BAA085;
+}
+
 /* line 5, ../Portfolio/scss/layout/_socialmedia.scss */
 .socials {
   margin-top: 20px;
@@ -854,19 +859,20 @@ li {
     transition: border-color 0.2s;
     box-sizing: border-box;
     padding: 10px 16px;
+    color: #ffffff;
   }
-  /* line 179, ../Portfolio/scss/layout/_contact.scss */
+  /* line 180, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-form-grid input:focus,
   .contact-grid .contact-form-grid textarea:focus {
     border-color: #0079A0;
     outline: none;
   }
-  /* line 185, ../Portfolio/scss/layout/_contact.scss */
+  /* line 186, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-form-grid textarea {
     height: 100px;
     resize: vertical;
   }
-  /* line 191, ../Portfolio/scss/layout/_contact.scss */
+  /* line 192, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-form-grid .submit-btn {
     justify-self: center;
     background: #0079A0;
@@ -882,7 +888,7 @@ li {
 }
 
 @media (min-width: 992px) and (min-width: 992px) {
-  /* line 191, ../Portfolio/scss/layout/_contact.scss */
+  /* line 192, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-form-grid .submit-btn {
     width: max-content;
     justify-self: start;
@@ -890,7 +896,7 @@ li {
 }
 
 @media (min-width: 992px) {
-  /* line 208, ../Portfolio/scss/layout/_contact.scss */
+  /* line 209, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-form-grid .submit-btn:hover, .contact-grid .contact-form-grid .submit-btn:focus {
     background: #DF2C7D;
     box-shadow: inset 0 3px 5px rgba(52, 73, 94, 0.4);
@@ -1342,6 +1348,20 @@ footer .back-to-top a:hover {
 }
 
 /* line 13, ../Portfolio/scss/layout/_about.scss */
+.about-me-grid a {
+  text-decoration: none;
+  color: #BAA085;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 20, ../Portfolio/scss/layout/_about.scss */
+.about-me-grid a:hover {
+  color: #8b6d4e;
+}
+
+/* line 25, ../Portfolio/scss/layout/_about.scss */
 .about-me-grid h3 {
   color: #0079A0;
   font-size: 1.5rem;
@@ -1349,7 +1369,7 @@ footer .back-to-top a:hover {
   text-align: center;
 }
 
-/* line 20, ../Portfolio/scss/layout/_about.scss */
+/* line 32, ../Portfolio/scss/layout/_about.scss */
 .about-me-grid p {
   color: #34495e;
   font-size: 1rem;
@@ -1357,7 +1377,7 @@ footer .back-to-top a:hover {
   text-align: center;
 }
 
-/* line 27, ../Portfolio/scss/layout/_about.scss */
+/* line 39, ../Portfolio/scss/layout/_about.scss */
 .about-me-grid .about-me-icons {
   display: none;
   justify-content: center;
@@ -1367,17 +1387,17 @@ footer .back-to-top a:hover {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 37, ../Portfolio/scss/layout/_about.scss */
+/* line 49, ../Portfolio/scss/layout/_about.scss */
 .about-me-grid .about-me-icons .icon-html-five:hover {
   color: #0079A0;
 }
 
-/* line 41, ../Portfolio/scss/layout/_about.scss */
+/* line 53, ../Portfolio/scss/layout/_about.scss */
 .about-me-grid .about-me-icons .icon-css3:hover {
   color: #DF2C7D;
 }
 
-/* line 45, ../Portfolio/scss/layout/_about.scss */
+/* line 57, ../Portfolio/scss/layout/_about.scss */
 .about-me-grid .about-me-icons .icon-sass:hover {
   color: #BAA085;
 }
@@ -1389,12 +1409,12 @@ footer .back-to-top a:hover {
     margin-left: 25px;
     align-items: flex-start;
   }
-  /* line 52, ../Portfolio/scss/layout/_about.scss */
+  /* line 64, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid h3, .about-me-grid p {
     text-align: left;
     font-size: 1.7rem;
   }
-  /* line 56, ../Portfolio/scss/layout/_about.scss */
+  /* line 68, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid p {
     font-size: 1.15rem;
   }
@@ -1410,11 +1430,11 @@ footer .back-to-top a:hover {
     align-items: center;
     justify-content: center;
   }
-  /* line 68, ../Portfolio/scss/layout/_about.scss */
+  /* line 80, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid h3 {
     font-size: 2rem;
   }
-  /* line 71, ../Portfolio/scss/layout/_about.scss */
+  /* line 83, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid p {
     font-size: 1.25rem;
   }
@@ -1427,17 +1447,17 @@ footer .back-to-top a:hover {
     padding-left: 100px;
     padding-right: 100px;
   }
-  /* line 79, ../Portfolio/scss/layout/_about.scss */
+  /* line 91, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid h3 {
     font-size: 2.3rem;
   }
-  /* line 82, ../Portfolio/scss/layout/_about.scss */
+  /* line 94, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid p {
     font-size: 1.4rem;
   }
 }
 
-/* line 88, ../Portfolio/scss/layout/_about.scss */
+/* line 100, ../Portfolio/scss/layout/_about.scss */
 .about-me-image {
   display: none;
   margin-top: 10px;
@@ -1445,7 +1465,7 @@ footer .back-to-top a:hover {
   align-items: center;
 }
 
-/* line 94, ../Portfolio/scss/layout/_about.scss */
+/* line 106, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img {
   max-width: 100%;
   border-radius: 50%;
@@ -1456,19 +1476,19 @@ footer .back-to-top a:hover {
   transition: filter 0.3s ease-in-out;
 }
 
-/* line 102, ../Portfolio/scss/layout/_about.scss */
+/* line 114, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img[loading="lazy"] {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 107, ../Portfolio/scss/layout/_about.scss */
+/* line 119, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img[loading="lazy"]:not([src=""]) {
   opacity: 1;
 }
 
 @media (min-width: 576px) {
-  /* line 115, ../Portfolio/scss/layout/_about.scss */
+  /* line 127, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid .about-me-icons {
     display: flex;
     justify-content: center;
@@ -1477,7 +1497,7 @@ footer .back-to-top a:hover {
 }
 
 @media (min-width: 768px) {
-  /* line 125, ../Portfolio/scss/layout/_about.scss */
+  /* line 137, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid .about-me-icons {
     display: flex;
     justify-content: flex-start;
@@ -1486,27 +1506,12 @@ footer .back-to-top a:hover {
 }
 
 @media (min-width: 992px) {
-  /* line 134, ../Portfolio/scss/layout/_about.scss */
+  /* line 146, ../Portfolio/scss/layout/_about.scss */
   .about-me-image {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-}
-
-/* line 141, ../Portfolio/scss/layout/_about.scss */
-.special-link > a {
-  color: #BAA085 !important;
-  text-decoration: none !important;
-  font-size: 1.7rem !important;
-  font-weight: bold !important;
-  transition: color 0.3s !important;
-  word-break: break-all !important;
-}
-
-/* line 149, ../Portfolio/scss/layout/_about.scss */
-.special-link > a:hover {
-  color: #a88764 !important;
 }
 
 /* line 154, ../Portfolio/scss/layout/_about.scss */
