@@ -1,9 +1,10 @@
 .hero {
   position: relative;
   background: url('../img/HeroImage.jpg') no-repeat center center/cover;
-  height: 100vh;
   text-align: center;
-  margin-right: -50px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 
   // Aligns Text to Center of Hero Section
 
@@ -36,7 +37,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
   z-index: 1;
 
     // Ensure the text is above the overlay
@@ -46,12 +46,12 @@
         }
 
         h1 {
-          font-size: 5rem;
+          font-size: 1rem;
           letter-spacing: 0.05em;
         }
 
         h2 {
-          font-size: 3rem;
+          font-size: 1rem;
           letter-spacing: 0.05em;
         }
 
@@ -76,9 +76,24 @@
         }
     }
   }
-}
-
-.light {
+  .light {
   color: $accent-color;
 
+}
+
+@media (min-width: $brk-point-md) {
+  .hero {
+
+    .hero-text {
+      h1 {
+        font-size: 5rem;
+        letter-spacing: 0.05em;
+      }
+      h2 {
+        font-size: 3rem;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+}
 }

@@ -4,15 +4,22 @@
 
 .portfolio-grid { // Grid Container
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr; // 1 column by default
   gap: 20px;
-  margin-top: 80px;
-  margin-left: 50px;
-  margin-right: 50px;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-items: center;
+
+  @media (min-width: $brk-point-md) {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .project { // Grid Item
-  text-align: left;
+  // text-align: left;
+  text-align: center;
   position: relative;
   border-radius: 10px;
   padding-bottom: 10px;

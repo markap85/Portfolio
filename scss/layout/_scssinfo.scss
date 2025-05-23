@@ -1,8 +1,12 @@
 .scss-info-grid {
+    width: 100%;
     margin-top: 50px;
+    margin-right: 0;
+    margin-left: 0;
 
         @media (min-width: 768px) {
         margin-left: 50px;
+        margin-right: 50px;
         }
 
     .info-block {
