@@ -137,3 +137,38 @@
         align-items: center;
     }
 }
+
+.special-link > a {
+    color: $accent-color !important;
+    text-decoration: none !important;
+    font-size: 1.7rem !important;
+    font-weight: bold !important;
+    transition: color 0.3s !important;
+    word-break: break-all !important;
+
+    &:hover {
+        color: darken($accent-color, 10%) !important;
+    }
+}
+
+.skip-link {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        background-color: $primary-color;
+        color: $white;
+        z-index: 1000;
+        text-decoration: none;
+    }
+}

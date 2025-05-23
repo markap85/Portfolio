@@ -4,7 +4,7 @@
     margin-right: 0;
     margin-left: 0;
 
-        @media (min-width: 768px) {
+        @media (min-width: $brk-point-md) {
         margin-left: 50px;
         margin-right: 50px;
         }
@@ -53,7 +53,7 @@
 }
 }
 
-h1,h2,h3,h4,h5,h6,p,ul,li {
+h1,h2,h3,h4,h5,h6,p,ul,li a {
     text-align: center;
     @media (min-width: $brk-point-lg) {
     text-align: left;
@@ -70,7 +70,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 
     p {
         font-size: 1.1rem;
-        color: #444;
+        color: $text;
         margin-bottom: 24px;
         line-height: 1.6;
     }
@@ -79,6 +79,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
         list-style: none;
         padding: 0;
         margin: 0 0 24px 0;
+        color: $text;
 
         li {
             margin-bottom: 14px;
@@ -92,6 +93,19 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
         text-decoration-thickness: 0 !important;
         font-weight: 500;
         transition: color 0.2s, border-bottom-color 0.2s;
+
+        // Center links by default (below md)
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+
+        @media (min-width: $brk-point-lg) {
+            // Restore inline and alignment for md and up
+            display: inline;
+            text-align: left;
+            margin: 0;
+            align-items: left;
+        }
 
         &:hover {
             color: $accent-color;
