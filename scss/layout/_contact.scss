@@ -13,7 +13,7 @@
     margin: 0 auto;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: $brk-point-lg) {
     display: grid;
     grid-template-columns: 1fr 2fr; // 2 columns after 992px
     max-width: 1260px;
@@ -28,17 +28,25 @@
     .contact-details {
       background: $white;
       border-radius: 10px;
-      text-align: center;
+      text-align: center; // Center by default
       padding: 0 16px;
-      box-sizing: border-box;
       margin-left: 25px;
+
+      // Ensure all children are centered by default
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
       @media (min-width: $brk-point-md) {
         padding: 0px;
+        text-align: left;
+        align-items: flex-start;
       }
 
       @media (min-width: $brk-point-lg) {
         text-align: left;
+        align-items: flex-start;
       }
 
       h3 {

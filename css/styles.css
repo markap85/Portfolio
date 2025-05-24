@@ -682,8 +682,11 @@ li {
     border-radius: 10px;
     text-align: center;
     padding: 0 16px;
-    box-sizing: border-box;
     margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -691,6 +694,8 @@ li {
   /* line 28, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details {
     padding: 0px;
+    text-align: left;
+    align-items: flex-start;
   }
 }
 
@@ -698,15 +703,16 @@ li {
   /* line 28, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details {
     text-align: left;
+    align-items: flex-start;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 44, ../Portfolio/scss/layout/_contact.scss */
+  /* line 52, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details h3 {
     color: #0079A0;
   }
-  /* line 48, ../Portfolio/scss/layout/_contact.scss */
+  /* line 56, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details a {
     color: #DF2C7D;
     text-decoration: none;
@@ -716,14 +722,14 @@ li {
     transition: color 0.3s;
     word-break: break-all;
   }
-  /* line 56, ../Portfolio/scss/layout/_contact.scss */
+  /* line 64, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details a:hover {
     color: #BAA085;
     font-weight: bold;
   }
 }
 
-/* line 68, ../Portfolio/scss/layout/_contact.scss */
+/* line 76, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid {
   display: grid;
   padding-top: 24px;
@@ -732,7 +738,7 @@ li {
   box-sizing: border-box;
 }
 
-/* line 76, ../Portfolio/scss/layout/_contact.scss */
+/* line 84, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .first-name,
 .contact-form-grid .last-name {
   width: 100%;
@@ -741,84 +747,84 @@ li {
   margin-top: 10px;
 }
 
-/* line 85, ../Portfolio/scss/layout/_contact.scss */
+/* line 93, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .name-row {
   grid-column: 1;
   grid-row: 1;
 }
 
-/* line 86, ../Portfolio/scss/layout/_contact.scss */
+/* line 94, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .name-row .name-row {
   display: block;
   width: 100%;
 }
 
-/* line 93, ../Portfolio/scss/layout/_contact.scss */
+/* line 101, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .last-name {
   grid-column: 1;
   grid-row: 2;
 }
 
-/* line 97, ../Portfolio/scss/layout/_contact.scss */
+/* line 105, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .email {
   grid-column: 1 / span 1;
   grid-row: 3;
 }
 
-/* line 101, ../Portfolio/scss/layout/_contact.scss */
+/* line 109, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .subject {
   grid-column: 1 / span 2;
   grid-row: 4;
 }
 
-/* line 105, ../Portfolio/scss/layout/_contact.scss */
+/* line 113, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .message {
   grid-column: 1 / span 2;
   grid-row: 5;
 }
 
-/* line 109, ../Portfolio/scss/layout/_contact.scss */
+/* line 117, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .submit-btn {
   grid-column: 1 / span 1;
   grid-row: 6;
 }
 
 @media (min-width: 576px) {
-  /* line 68, ../Portfolio/scss/layout/_contact.scss */
+  /* line 76, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid {
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
   }
-  /* line 118, ../Portfolio/scss/layout/_contact.scss */
+  /* line 126, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .name-row {
     display: contents;
   }
-  /* line 121, ../Portfolio/scss/layout/_contact.scss */
+  /* line 129, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .first-name {
     grid-column: 1;
     grid-row: 1;
   }
-  /* line 125, ../Portfolio/scss/layout/_contact.scss */
+  /* line 133, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .last-name {
     grid-column: 2;
     grid-row: 1;
   }
-  /* line 129, ../Portfolio/scss/layout/_contact.scss */
+  /* line 137, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .email {
     grid-column: 1 / span 2;
     grid-row: 2;
   }
-  /* line 133, ../Portfolio/scss/layout/_contact.scss */
+  /* line 141, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .subject {
     grid-column: 1 / span 2;
     grid-row: 3;
   }
-  /* line 137, ../Portfolio/scss/layout/_contact.scss */
+  /* line 145, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .message {
     grid-column: 1 / span 2;
     grid-row: 4;
   }
-  /* line 141, ../Portfolio/scss/layout/_contact.scss */
+  /* line 149, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .submit-btn {
     grid-column: 1 / span 2;
     grid-row: 5;
@@ -826,43 +832,43 @@ li {
 }
 
 @media (min-width: 768px) {
-  /* line 148, ../Portfolio/scss/layout/_contact.scss */
+  /* line 156, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .name-row {
     display: contents;
   }
-  /* line 151, ../Portfolio/scss/layout/_contact.scss */
+  /* line 159, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .first-name {
     grid-column: 1;
     grid-row: 1;
   }
-  /* line 155, ../Portfolio/scss/layout/_contact.scss */
+  /* line 163, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .last-name {
     grid-column: 2;
     grid-row: 1;
   }
-  /* line 159, ../Portfolio/scss/layout/_contact.scss */
+  /* line 167, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .email {
     grid-column: 1 / span 2;
     grid-row: 2;
   }
-  /* line 163, ../Portfolio/scss/layout/_contact.scss */
+  /* line 171, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .subject {
     grid-column: 1 / span 2;
     grid-row: 3;
   }
-  /* line 167, ../Portfolio/scss/layout/_contact.scss */
+  /* line 175, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .message {
     grid-column: 1 / span 2;
     grid-row: 4;
   }
-  /* line 171, ../Portfolio/scss/layout/_contact.scss */
+  /* line 179, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .submit-btn {
     grid-column: 1 / span 2;
     grid-row: 5;
   }
 }
 
-/* line 178, ../Portfolio/scss/layout/_contact.scss */
+/* line 186, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid input,
 .contact-form-grid textarea {
   min-width: 0;
@@ -878,20 +884,20 @@ li {
   color: #ffffff;
 }
 
-/* line 192, ../Portfolio/scss/layout/_contact.scss */
+/* line 200, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid input:focus,
 .contact-form-grid textarea:focus {
   border-color: #0079A0;
   outline: none;
 }
 
-/* line 198, ../Portfolio/scss/layout/_contact.scss */
+/* line 206, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid textarea {
   height: 100px;
   resize: vertical;
 }
 
-/* line 203, ../Portfolio/scss/layout/_contact.scss */
+/* line 211, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .submit-btn {
   justify-self: center;
   background: #0079A0;
@@ -906,14 +912,14 @@ li {
 }
 
 @media (min-width: 992px) {
-  /* line 203, ../Portfolio/scss/layout/_contact.scss */
+  /* line 211, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .submit-btn {
     width: max-content;
     justify-self: start;
   }
 }
 
-/* line 220, ../Portfolio/scss/layout/_contact.scss */
+/* line 228, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .submit-btn:hover, .contact-form-grid .submit-btn:focus {
   background: #DF2C7D;
   box-shadow: inset 0 3px 5px rgba(52, 73, 94, 0.4);
@@ -1126,8 +1132,8 @@ footer .back-to-top a:hover {
   background: url("../img/HeroImage.jpg") no-repeat center center/cover;
   text-align: center;
   box-shadow: inset 0px -30px 0px -20px rgba(0, 0, 0, 0.3);
-  min-height: 20vh;
-  height: 20vh;
+  min-height: 250px;
+  height: 250px;
 }
 
 /* line 15, ../Portfolio/scss/layout/_hero.scss */
@@ -1240,7 +1246,7 @@ footer .back-to-top a:hover {
 @media (min-width: 992px) {
   /* line 113, ../Portfolio/scss/layout/_hero.scss */
   .hero .hero-text--name h1 {
-    font-size: 5rem;
+    font-size: rem;
   }
   /* line 116, ../Portfolio/scss/layout/_hero.scss */
   .hero .hero-text--name h2 {
@@ -1265,9 +1271,17 @@ footer .back-to-top a:hover {
   align-self: center;
   z-index: 2;
   position: relative;
+  display: none;
 }
 
-/* line 136, ../Portfolio/scss/layout/_hero.scss */
+@media (min-width: 992px) {
+  /* line 130, ../Portfolio/scss/layout/_hero.scss */
+  .hero .hero-text--scroll {
+    display: block;
+  }
+}
+
+/* line 141, ../Portfolio/scss/layout/_hero.scss */
 .hero .hero-text--scroll .icon-keyboard_arrow_down {
   font-size: 2rem;
   color: #DF2C7D;
@@ -1275,44 +1289,31 @@ footer .back-to-top a:hover {
   cursor: pointer;
 }
 
-/* line 142, ../Portfolio/scss/layout/_hero.scss */
+/* line 147, ../Portfolio/scss/layout/_hero.scss */
 .hero .hero-text--scroll .icon-keyboard_arrow_down:hover {
   color: #BAA085;
   font-weight: bold;
 }
 
-/* line 148, ../Portfolio/scss/layout/_hero.scss */
+/* line 153, ../Portfolio/scss/layout/_hero.scss */
 .hero .hero-text--scroll a {
   text-decoration: none;
   color: #ffffff;
 }
 
-/* line 152, ../Portfolio/scss/layout/_hero.scss */
+/* line 157, ../Portfolio/scss/layout/_hero.scss */
 .hero .hero-text--scroll a:hover {
   color: #BAA085;
   font-weight: bold;
 }
 
-@media (min-width: 576px) {
-  /* line 161, ../Portfolio/scss/layout/_hero.scss */
-  .hero {
-    min-height: 20vh;
-    height: 20vh;
-  }
-}
-
 @media (min-width: 768px) {
-  /* line 168, ../Portfolio/scss/layout/_hero.scss */
-  .hero {
-    min-height: 50vh;
-    height: 50vh;
-  }
-  /* line 172, ../Portfolio/scss/layout/_hero.scss */
+  /* line 167, ../Portfolio/scss/layout/_hero.scss */
   .hero .hero-text--name h1 {
     font-size: 2rem;
     letter-spacing: 0.05em;
   }
-  /* line 176, ../Portfolio/scss/layout/_hero.scss */
+  /* line 171, ../Portfolio/scss/layout/_hero.scss */
   .hero .hero-text--name h2 {
     font-size: 1.5rem;
     letter-spacing: 0.05em;
@@ -1320,32 +1321,32 @@ footer .back-to-top a:hover {
 }
 
 @media (min-width: 992px) {
-  /* line 183, ../Portfolio/scss/layout/_hero.scss */
+  /* line 178, ../Portfolio/scss/layout/_hero.scss */
   .hero {
     min-height: 80vh;
     height: 80vh;
   }
-  /* line 187, ../Portfolio/scss/layout/_hero.scss */
+  /* line 182, ../Portfolio/scss/layout/_hero.scss */
   .hero .hero-text--name h1 {
     font-size: 3rem;
   }
-  /* line 190, ../Portfolio/scss/layout/_hero.scss */
+  /* line 185, ../Portfolio/scss/layout/_hero.scss */
   .hero .hero-text--name h2 {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 196, ../Portfolio/scss/layout/_hero.scss */
+  /* line 191, ../Portfolio/scss/layout/_hero.scss */
   .hero {
     min-height: 100vh;
     height: 100vh;
   }
-  /* line 200, ../Portfolio/scss/layout/_hero.scss */
+  /* line 195, ../Portfolio/scss/layout/_hero.scss */
   .hero .hero-text--name h1 {
     font-size: 5rem;
   }
-  /* line 203, ../Portfolio/scss/layout/_hero.scss */
+  /* line 198, ../Portfolio/scss/layout/_hero.scss */
   .hero .hero-text--name h2 {
     font-size: 3rem;
   }

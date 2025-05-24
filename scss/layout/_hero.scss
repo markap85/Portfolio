@@ -7,8 +7,8 @@
   background: url('../img/HeroImage.jpg') no-repeat center center/cover;
   text-align: center;
   box-shadow: inset 0px -30px 0px -20px rgba(0, 0, 0, 0.3);
-      min-height: 20vh;
-    height: 20vh;
+  min-height: 250px;
+  height: 250px;
 
   // Add Darken Overlay to the bottom of the image to make text more readable
 
@@ -111,7 +111,7 @@
     // Responsive font sizes for h1 and h2
     @media (min-width: $brk-point-lg) {
       h1 {
-        font-size: 5rem;
+        font-size: rem;
       }
       h2 {
         font-size: 3rem;
@@ -132,6 +132,11 @@
     align-self: center;
     z-index: 2;
     position: relative;
+    display: none;
+
+    @media (min-width: $brk-point-lg) {
+    display: block;
+    }
 
     .icon-keyboard_arrow_down {
       font-size: 2rem;
@@ -157,18 +162,8 @@
   }
 }
 
-@media (min-width: $brk-point-sm) {
-  .hero {
-    min-height: 20vh;
-    height: 20vh;
-  }
-}
 
 @media (min-width: $brk-point-md) {
-  .hero {
-    min-height: 50vh;
-    height: 50vh;
-  }
   .hero .hero-text--name h1 {
     font-size: 2rem;
     letter-spacing: 0.05em;
