@@ -1009,9 +1009,12 @@ footer .back-to-top a:hover {
   transform: translateX(-100%);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* line 15, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 18, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar.sidebar--open {
   transform: translateX(0);
   box-shadow: 2px 0 16px rgba(0, 0, 0, 0.2);
@@ -1019,7 +1022,7 @@ footer .back-to-top a:hover {
 }
 
 @media (min-width: 768px) {
-  /* line 15, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 18, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar.sidebar--open {
     padding-top: 20px;
   }
@@ -1036,30 +1039,44 @@ footer .back-to-top a:hover {
   }
 }
 
-/* line 34, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 37, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar .logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* line 45, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .logo a {
   text-decoration: none !important;
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   color: #0079A0;
   border-bottom: 1px solid transparent;
   transition: color 0.3s, text-shadow 0.3s;
 }
 
-/* line 42, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 53, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .logo a:hover {
   color: #DF2C7D;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   text-decoration: none;
 }
 
-/* line 50, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 61, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* line 53, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 69, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul .icon-keyboard_arrow_right, .sidebar nav ul .icon-keyboard_arrow_down {
   font-size: 1.5rem;
   color: transparent;
@@ -1068,7 +1085,12 @@ footer .back-to-top a:hover {
   top: 6px;
 }
 
-/* line 63, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 78, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar nav ul li {
+  margin-left: 24.4px;
+}
+
+/* line 81, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a {
   display: inline-block;
   padding: 15px 0;
@@ -1078,40 +1100,45 @@ footer .back-to-top a:hover {
   transition: color 0.3s;
 }
 
-/* line 71, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 89, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover {
   border-bottom: 1px solid #BAA085;
 }
 
-/* line 74, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 92, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_right {
   color: #DF2C7D;
 }
 
-/* line 78, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 96, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_down {
   color: #BAA085;
 }
 
-/* line 85, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 104, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li:last-child a:hover {
   color: #DF2C7D;
   border-bottom: 1px solid transparent;
 }
 
-/* line 93, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 112, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .contact-me {
   border-top: 1px solid #7f8c8d;
   border-bottom: 1px solid #7f8c8d;
   margin-top: 50px !important;
+  margin-right: 24.4px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* line 100, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 124, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary:hover {
   border-bottom: 1px solid #DF2C7D !important;
 }
 
-/* line 107, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 131, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar-overlay {
   display: none;
   position: fixed;
@@ -1124,24 +1151,24 @@ footer .back-to-top a:hover {
   transition: opacity 0.3s;
 }
 
-/* line 118, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 142, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar-overlay.sidebar-overlay--active {
   display: block;
 }
 
-/* line 121, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 145, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar-overlay.sidebar-overlay--active ~ .sidebar {
   background-color: #ffffff;
   border: 0px;
 }
 
-/* line 126, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 150, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar-overlay.sidebar-overlay--active ~ .sidebar a:hover {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 768px) {
-  /* line 107, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 131, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar-overlay {
     display: none;
   }
