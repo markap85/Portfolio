@@ -120,13 +120,24 @@
     align-items: center;
   }
 
-  .txt-secondary {
+.txt-secondary {
+  &:hover {
+    border-bottom: 1px solid $secondary-color !important;
+  }
+  
+  .contacthover span {
+    color: inherit; // Use the inherited color by default (visible)
+    transition: color 0.2s;
+
+    // Hide only the curly braces, not the text
+    opacity: 0.1; // Make braces subtle but visible
+
     &:hover {
-      border-bottom: 1px solid $secondary-color !important;
+      color: $primary-color;
+      opacity: 1; // Fully visible on hover
     }
   }
 }
-
 // Sidebar overlay styles
 .sidebar-overlay {
   display: none;
@@ -156,4 +167,5 @@
   @media (min-width: $brk-point-md) {
     display: none;
   }
+}
 }
