@@ -401,23 +401,24 @@ html, body {
 /* line 11, ../Portfolio/scss/base/_base.scss */
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
-/* line 15, ../Portfolio/scss/base/_base.scss */
+/* line 16, ../Portfolio/scss/base/_base.scss */
 body {
   display: block;
   margin: 0;
   font-family: sans-serif;
 }
 
-/* line 21, ../Portfolio/scss/base/_base.scss */
+/* line 22, ../Portfolio/scss/base/_base.scss */
 main {
   margin-left: 0;
   margin-right: 0;
 }
 
 @media (min-width: 768px) {
-  /* line 21, ../Portfolio/scss/base/_base.scss */
+  /* line 22, ../Portfolio/scss/base/_base.scss */
   main {
     margin-left: 200px;
     flex-grow: 1;
