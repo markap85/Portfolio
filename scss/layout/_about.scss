@@ -197,3 +197,38 @@
         text-decoration: none;
     }
 }
+
+//next section
+// ==========================================================================
+
+.next-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: $primary-color;
+
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: darken($primary-color, 20%);
+        }
+    }
+
+    .icon-keyboard_arrow_down {
+        font-size: 4rem;
+
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}

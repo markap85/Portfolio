@@ -1608,6 +1608,42 @@ footer .back-to-top a:hover {
   text-decoration: none;
 }
 
+/* line 204, ../Portfolio/scss/layout/_about.scss */
+.next-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #0079A0;
+}
+
+/* line 213, ../Portfolio/scss/layout/_about.scss */
+.next-section a {
+  text-decoration: none;
+  color: #0079A0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 220, ../Portfolio/scss/layout/_about.scss */
+.next-section a:hover {
+  color: #002c3a;
+}
+
+/* line 225, ../Portfolio/scss/layout/_about.scss */
+.next-section .icon-keyboard_arrow_down {
+  font-size: 4rem;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 230, ../Portfolio/scss/layout/_about.scss */
+.next-section .icon-keyboard_arrow_down:hover {
+  color: #DF2C7D;
+}
+
 /* line 6, ../Portfolio/scss/layout/_examples.scss */
 .examples {
   width: 100%;
