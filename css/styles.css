@@ -311,8 +311,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?bh8jto");
-  src: url("../fonts/icomoon.eot?bh8jto#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?bh8jto") format("truetype"), url("../fonts/icomoon.woff?bh8jto") format("woff"), url("../fonts/icomoon.svg?bh8jto#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?4s34nz");
+  src: url("../fonts/icomoon.eot?4s34nz#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?4s34nz") format("truetype"), url("../fonts/icomoon.woff?4s34nz") format("woff"), url("../fonts/icomoon.svg?4s34nz#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -338,51 +338,56 @@ th {
 }
 
 /* line 30, ../Portfolio/scss/base/_icons.scss */
+.icon-keyboard_arrow_right:before {
+  content: "\e903";
+}
+
+/* line 33, ../Portfolio/scss/base/_icons.scss */
 .icon-keyboard_arrow_down:before {
   content: "\e901";
 }
 
-/* line 33, ../Portfolio/scss/base/_icons.scss */
+/* line 36, ../Portfolio/scss/base/_icons.scss */
 .icon-keyboard_arrow_up:before {
   content: "\e900";
 }
 
-/* line 36, ../Portfolio/scss/base/_icons.scss */
+/* line 39, ../Portfolio/scss/base/_icons.scss */
 .icon-heart:before {
   content: "\e9da";
 }
 
-/* line 39, ../Portfolio/scss/base/_icons.scss */
+/* line 42, ../Portfolio/scss/base/_icons.scss */
 .icon-arrow-right2:before {
   content: "\ea3c";
 }
 
-/* line 42, ../Portfolio/scss/base/_icons.scss */
+/* line 45, ../Portfolio/scss/base/_icons.scss */
 .icon-facebook2:before {
   content: "\ea91";
 }
 
-/* line 45, ../Portfolio/scss/base/_icons.scss */
+/* line 48, ../Portfolio/scss/base/_icons.scss */
 .icon-instagram:before {
   content: "\ea92";
 }
 
-/* line 48, ../Portfolio/scss/base/_icons.scss */
+/* line 51, ../Portfolio/scss/base/_icons.scss */
 .icon-github:before {
   content: "\eab0";
 }
 
-/* line 51, ../Portfolio/scss/base/_icons.scss */
+/* line 54, ../Portfolio/scss/base/_icons.scss */
 .icon-linkedin:before {
   content: "\eac9";
 }
 
-/* line 54, ../Portfolio/scss/base/_icons.scss */
+/* line 57, ../Portfolio/scss/base/_icons.scss */
 .icon-html-five:before {
   content: "\eae4";
 }
 
-/* line 57, ../Portfolio/scss/base/_icons.scss */
+/* line 60, ../Portfolio/scss/base/_icons.scss */
 .icon-css3:before {
   content: "\eae6";
 }
@@ -1054,7 +1059,16 @@ footer .back-to-top a:hover {
   list-style: none;
 }
 
-/* line 54, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 53, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar nav ul .icon-keyboard_arrow_right, .sidebar nav ul .icon-keyboard_arrow_down {
+  font-size: 1.5rem;
+  color: transparent;
+  transition: color 0.3s;
+  position: relative;
+  top: 6px;
+}
+
+/* line 63, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a {
   display: inline-block;
   padding: 15px 0;
@@ -1064,30 +1078,40 @@ footer .back-to-top a:hover {
   transition: color 0.3s;
 }
 
-/* line 62, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 71, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover {
   border-bottom: 1px solid #BAA085;
 }
 
-/* line 68, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 74, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar nav ul li a:hover .icon-keyboard_arrow_right {
+  color: #DF2C7D;
+}
+
+/* line 78, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar nav ul li a:hover .icon-keyboard_arrow_down {
+  color: #BAA085;
+}
+
+/* line 85, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li:last-child a:hover {
   color: #DF2C7D;
   border-bottom: 1px solid transparent;
 }
 
-/* line 76, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 93, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .contact-me {
   border-top: 1px solid #7f8c8d;
   border-bottom: 1px solid #7f8c8d;
   margin-top: 50px !important;
 }
 
-/* line 83, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 100, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary:hover {
   border-bottom: 1px solid #DF2C7D !important;
 }
 
-/* line 90, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 107, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar-overlay {
   display: none;
   position: fixed;
@@ -1100,24 +1124,24 @@ footer .back-to-top a:hover {
   transition: opacity 0.3s;
 }
 
-/* line 101, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 118, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar-overlay.sidebar-overlay--active {
   display: block;
 }
 
-/* line 104, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 121, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar-overlay.sidebar-overlay--active ~ .sidebar {
   background-color: #ffffff;
   border: 0px;
 }
 
-/* line 109, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 126, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar-overlay.sidebar-overlay--active ~ .sidebar a:hover {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 768px) {
-  /* line 90, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 107, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar-overlay {
     display: none;
   }

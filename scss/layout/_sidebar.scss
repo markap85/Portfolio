@@ -50,6 +50,15 @@
   nav ul {
     list-style: none;
 
+    .icon-keyboard_arrow_right, .icon-keyboard_arrow_down {
+      font-size: 1.5rem;
+      color: transparent;
+      transition: color 0.3s;
+      position: relative;
+      top: 6px; // Adjust this value as needed
+
+    }
+
     li {
       a {
         display: inline-block;
@@ -61,6 +70,14 @@
 
         &:hover {
           border-bottom: 1px solid $accent-color;
+
+          .icon-keyboard_arrow_right {
+            color: $secondary-color; // Change icon color on hover
+          }
+
+          .icon-keyboard_arrow_down {
+            color: $accent-color; // Change icon color on hover
+          }
         }
       }
 

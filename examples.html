@@ -12,30 +12,35 @@
 
 <body>
 
-    <button class="burger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
-    <span class="burger-bar"></span>
-    <span class="burger-bar"></span>
-    <span class="burger-bar"></span>
-    </button>
-    <div class="sidebar-overlay"></div>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Sidebar Navigation -->
+  <button class="burger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
+    <span class="burger-bar"></span>
+    <span class="burger-bar"></span>
+    <span class="burger-bar"></span>
+  </button>
+  <div class="sidebar-overlay"></div>
+
   <aside class="sidebar" id="sidebar">
     <div class="logo"><h1><a href="index.html">&#123;M/P&#125;</a></h1></div>
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
       <ul>
-        <li><a href="/Portfolio/index.html#about">About Me</a></li>
-        <li><a href="/Portfolio/index.html#portfolio">My Portfolio</a></li>
-        <li><a href="examples.html" class="txt-secondary">Coding Examples</a></li>
-        <li><a href="scss.html" class="txt-secondary">SCS Scheme</a></li>
+        <li><a href="/Portfolio/index.html#about">About Me<span class="icon-keyboard_arrow_down"></span></a></li>
+        <li><a href="/Portfolio/index.html#portfolio">My Portfolio<span class="icon-keyboard_arrow_down"></span></a></li>
+        <li><a href="examples.html" class="txt-secondary">Coding Examples<span class="icon-keyboard_arrow_right"></span></a></li>
+        <li><a href="scss.html" class="txt-secondary">SCS Scheme<span class="icon-keyboard_arrow_right"></span></a></li>
         <li class="contact-me"><a href="/Portfolio/index.html#contact">Contact Me</a></li>
       </ul>
     </nav>
+
     <div class="socials">
-      <a class="social-icons--linkedin icon-linkedin" href="https://www.linkedin.com/in/mark-alex-peters/" target="_blank" rel="noopener" aria-label="LinkedIn"></a>
-      <a class="social-icons--git icon-github" href="https://github.com/markap85" target="_blank" rel="noopener" aria-label="GitHub"></a>
-      <a class="social-icons--facebook icon-facebook2" href="https://www.facebook.com/markpeters85" target="_blank" rel="noopener" aria-label="Facebook"></a>
+        <a class="social-icons--linkedin icon-linkedin" href="https://www.linkedin.com/in/mark-alex-peters/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
+        <a class="social-icons--git icon-github" href="https://github.com/markap85" target="_blank" rel="noopener" aria-label="GitHub"></a>
+        <a class="social-icons--facebook icon-facebook2" href="https://www.facebook.com/markpeters85" target="_blank" rel="noopener" aria-label="Facebook"></a>
+      <!-- Add social icons -->
     </div>
+
   </aside>
 
   <main>
