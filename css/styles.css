@@ -1659,14 +1659,15 @@ footer .back-to-top a:hover {
 
 /* line 6, ../Portfolio/scss/layout/_examples.scss */
 .examples {
-  width: 100%;
-  margin-left: 50px;
-  margin-right: 0;
-  margin-top: 50px;
+  width: 80%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 60px;
   text-align: center;
+  overflow-wrap: break-word;
 }
 
-/* line 14, ../Portfolio/scss/layout/_examples.scss */
+/* line 15, ../Portfolio/scss/layout/_examples.scss */
 .examples h3 {
   font-size: 1rem;
   color: #0079A0;
@@ -1674,30 +1675,29 @@ footer .back-to-top a:hover {
   font-weight: bold;
 }
 
-/* line 22, ../Portfolio/scss/layout/_examples.scss */
+/* line 23, ../Portfolio/scss/layout/_examples.scss */
 .examples p {
-  font-size: 1rem;
-  color: #444;
+  font-size: 0.8rem;
+  color: #34495e;
   margin-bottom: 24px;
   line-height: 1.6;
 }
 
-/* line 30, ../Portfolio/scss/layout/_examples.scss */
+/* line 31, ../Portfolio/scss/layout/_examples.scss */
 .examples ul {
   list-style: none;
   padding: 0;
   margin: 0 0 24px 0;
 }
 
-/* line 35, ../Portfolio/scss/layout/_examples.scss */
+/* line 36, ../Portfolio/scss/layout/_examples.scss */
 .examples ul li {
   margin-bottom: 14px;
-  font-size: 1rem;
 }
 
 /* line 39, ../Portfolio/scss/layout/_examples.scss */
 .examples ul li a {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: #0079A0;
   text-decoration: none;
   font-weight: 500;
@@ -1715,27 +1715,46 @@ footer .back-to-top a:hover {
 @media (min-width: 576px) {
   /* line 6, ../Portfolio/scss/layout/_examples.scss */
   .examples {
-    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 60px;
   }
 }
 
 @media (min-width: 768px) {
   /* line 6, ../Portfolio/scss/layout/_examples.scss */
   .examples {
-    margin-left: 50px;
-    margin-right: 50px;
     text-align: left;
   }
   /* line 68, ../Portfolio/scss/layout/_examples.scss */
   .examples h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   /* line 72, ../Portfolio/scss/layout/_examples.scss */
   .examples p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
-  /* line 77, ../Portfolio/scss/layout/_examples.scss */
-  .examples ul a {
+  /* line 78, ../Portfolio/scss/layout/_examples.scss */
+  .examples ul li a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 6, ../Portfolio/scss/layout/_examples.scss */
+  .examples {
+    text-align: left;
+  }
+  /* line 88, ../Portfolio/scss/layout/_examples.scss */
+  .examples h3 {
+    font-size: 2rem;
+  }
+  /* line 92, ../Portfolio/scss/layout/_examples.scss */
+  .examples p {
+    font-size: 1.2rem;
+  }
+  /* line 99, ../Portfolio/scss/layout/_examples.scss */
+  .examples ul li a {
     font-size: 1.2rem;
   }
 }

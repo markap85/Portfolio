@@ -4,11 +4,12 @@
 // ==========================================================================
 
 .examples {
-        width: 100%;
-        margin-left: 50px;
-        margin-right: 0;
-        margin-top: 50px;
+        width: 80%;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 60px;
         text-align: center;
+        overflow-wrap: break-word;
 
         // Section Heading
         h3 {
@@ -20,8 +21,8 @@
 
         // Section Paragraph
         p {
-            font-size: 1rem;
-            color: #444;
+            font-size: 0.8rem;
+            color: $text;
             margin-bottom: 24px;
             line-height: 1.6;
         }
@@ -34,10 +35,9 @@
 
             li {
                 margin-bottom: 14px;
-                font-size: 1rem;
 
                 a {
-                    font-size: 0.8rem;
+                    font-size: 0.5rem;
                     color: $primary-color;
                     text-decoration: none;
                     font-weight: 500;
@@ -57,12 +57,32 @@
     // Responsive Breakpoints
     // ==========================================================================
     @media (min-width: $brk-point-sm) {
-        text-align: left;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 60px;
     }
 
     @media (min-width: $brk-point-md) {
-        margin-left: 50px;
-        margin-right: 50px;
+        text-align: left;
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        ul {
+            li {
+                a {
+                    font-size: 1rem;
+                }
+            }
+    }
+    }
+
+        @media (min-width: $brk-point-lg) {
         text-align: left;
 
         h3 {
@@ -70,13 +90,16 @@
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         ul {
-            a {
-                font-size: 1.2rem;
+            li {
+
+                a {
+                    font-size: 1.2rem;
+                }
             }
-        }
+    }
     }
 }
