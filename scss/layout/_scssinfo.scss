@@ -51,8 +51,10 @@
     // ==========================================================================
     .info-img {
         width: 100%;
+        max-width: 400px;
         height: 100%;
         object-fit: cover;
+        margin: 0 auto;
         border-radius: 8px;
         background: #fff;
         box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
@@ -73,6 +75,12 @@
             box-shadow: 0 0 0px rgba(0,0,0,0.5);
             filter: brightness(0.8);
         }
+
+        @media (min-width: $brk-point-lg) {
+            max-width: 100%;
+            aspect-ratio: 16 / 9; // Maintain aspect ratio for larger screens
+        }
+            
     }
 
     // ==========================================================================
