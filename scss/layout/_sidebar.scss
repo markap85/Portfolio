@@ -56,6 +56,11 @@
       // Do NOT set border-bottom-color
       text-decoration: none;
     }
+
+    span {
+      display: inline-block; // Allow transform to work
+      transform: translateY(-3px); // Adjust the span position
+    }
   }
 
   nav ul {

@@ -1066,7 +1066,13 @@ footer .back-to-top a:hover {
   text-decoration: none;
 }
 
-/* line 61, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 60, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar .logo a span {
+  display: inline-block;
+  transform: translateY(-3px);
+}
+
+/* line 66, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul {
   list-style: none;
   padding: 0;
@@ -1076,7 +1082,7 @@ footer .back-to-top a:hover {
   align-items: center;
 }
 
-/* line 69, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 74, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul .icon-keyboard_arrow_right, .sidebar nav ul .icon-keyboard_arrow_down {
   font-size: 1.5rem;
   color: transparent;
@@ -1085,12 +1091,12 @@ footer .back-to-top a:hover {
   top: 6px;
 }
 
-/* line 78, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 83, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li {
   margin-left: 24.4px;
 }
 
-/* line 81, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 86, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a {
   display: inline-block;
   padding: 15px 0;
@@ -1100,28 +1106,28 @@ footer .back-to-top a:hover {
   transition: color 0.3s;
 }
 
-/* line 89, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 94, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover {
   border-bottom: 1px solid #BAA085;
 }
 
-/* line 92, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 97, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_right {
   color: #DF2C7D;
 }
 
-/* line 96, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 101, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_down {
   color: #BAA085;
 }
 
-/* line 104, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 109, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li:last-child a:hover {
   color: #DF2C7D;
   border-bottom: 1px solid transparent;
 }
 
-/* line 112, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 117, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .contact-me {
   border-top: 1px solid #BAA085;
   border-bottom: 1px solid #BAA085;
@@ -1133,25 +1139,25 @@ footer .back-to-top a:hover {
   align-items: center;
 }
 
-/* line 124, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 129, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary:hover {
   border-bottom: 1px solid #DF2C7D !important;
 }
 
-/* line 128, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 133, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary .contacthover span {
   color: inherit;
   transition: color 0.2s;
   opacity: 0.1;
 }
 
-/* line 135, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 140, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary .contacthover span:hover {
   color: #0079A0;
   opacity: 1;
 }
 
-/* line 142, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 147, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay {
   display: none;
   position: fixed;
@@ -1164,24 +1170,24 @@ footer .back-to-top a:hover {
   transition: opacity 0.3s;
 }
 
-/* line 153, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 158, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay.sidebar-overlay--active {
   display: block;
 }
 
-/* line 156, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 161, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay.sidebar-overlay--active ~ .sidebar {
   background-color: #ffffff;
   border: 0px;
 }
 
-/* line 161, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 166, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay.sidebar-overlay--active ~ .sidebar a:hover {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 768px) {
-  /* line 142, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 147, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .sidebar-overlay {
     display: none;
   }
