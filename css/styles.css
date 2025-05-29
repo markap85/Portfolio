@@ -943,56 +943,103 @@ main {
   flex: 1 0 auto;
 }
 
-/* line 15, ../Portfolio/scss/layout/_footer.scss */
+/* line 19, ../Portfolio/scss/layout/_footer.scss */
 footer {
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  background: none;
-  font-size: 1.2rem;
-  position: relative;
-  bottom: 0;
-  left: 0;
   flex-shrink: 0;
+  padding: 2rem 1rem 0.625rem;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
 }
 
-/* line 32, ../Portfolio/scss/layout/_footer.scss */
-footer .back-to-top {
-  display: inline-block;
-  cursor: pointer;
-  margin: 0 auto;
-  width: auto;
-}
-
-/* line 38, ../Portfolio/scss/layout/_footer.scss */
-footer .back-to-top .icon-keyboard_arrow_up {
-  font-size: 2rem;
-  color: #DF2C7D;
-  transition: color 0.3s;
-}
-
-/* line 43, ../Portfolio/scss/layout/_footer.scss */
-footer .back-to-top .icon-keyboard_arrow_up:hover {
-  color: #BAA085;
-  font-weight: bold;
+@media (max-width: 768px) {
+  /* line 19, ../Portfolio/scss/layout/_footer.scss */
+  footer {
+    padding: 1.5rem 1rem 0.5rem;
+    font-size: 1.1rem;
+  }
 }
 
 /* line 49, ../Portfolio/scss/layout/_footer.scss */
-footer .back-to-top a {
+.back-to-top {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+/* line 60, ../Portfolio/scss/layout/_footer.scss */
+.back-to-top a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
   text-decoration: none;
   color: #0079A0;
   font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
 }
 
-/* line 54, ../Portfolio/scss/layout/_footer.scss */
-footer .back-to-top a:hover {
+/* line 71, ../Portfolio/scss/layout/_footer.scss */
+.back-to-top a:hover, .back-to-top a:focus-visible {
   color: #BAA085;
-  font-weight: bold;
+  font-weight: 600;
+}
+
+/* line 78, ../Portfolio/scss/layout/_footer.scss */
+.back-to-top .icon-keyboard_arrow_up {
+  font-size: 2rem;
+  color: #DF2C7D;
+  transition: color 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* line 78, ../Portfolio/scss/layout/_footer.scss */
+  .back-to-top .icon-keyboard_arrow_up {
+    transition: none;
+  }
+}
+
+/* line 91, ../Portfolio/scss/layout/_footer.scss */
+.back-to-top:hover .icon-keyboard_arrow_up {
+  color: #BAA085;
+  font-weight: 600;
+}
+
+/* line 97, ../Portfolio/scss/layout/_footer.scss */
+.back-to-top:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  /* line 103, ../Portfolio/scss/layout/_footer.scss */
+  .back-to-top .icon-keyboard_arrow_up {
+    font-size: 1.75rem;
+  }
+  /* line 107, ../Portfolio/scss/layout/_footer.scss */
+  .back-to-top a {
+    font-size: 1rem;
+  }
+}
+
+@supports (scroll-behavior: smooth) {
+  /* line 118, ../Portfolio/scss/layout/_footer.scss */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media print {
+  /* line 128, ../Portfolio/scss/layout/_footer.scss */
+  footer {
+    display: none;
+  }
 }
 
 /* line 1, ../Portfolio/scss/layout/_sidebar.scss */

@@ -44,3 +44,22 @@ $brk-point-xl      : 1200px; // 1200px
 // ==========================================================================
 // Mixins
 // ==========================================================================
+
+// Variables (move to a separate _variables.scss file if not already defined)
+$footer-padding-top: 2rem;
+$footer-padding-bottom: 0.625rem;
+$footer-font-size: 1.2rem;
+$back-to-top-icon-size: 2rem;
+$back-to-top-text-size: 1.1rem;
+$transition-duration: 0.3s;
+$transition-easing: ease-in-out;
+
+// Mixins for reusable styles
+@mixin hover-transition($property: all, $duration: $transition-duration, $easing: $transition-easing) {
+transition: $property $duration $easing;
+}
+
+@mixin hover-effect {
+color: $accent-color;
+font-weight: 600; // More precise than 'bold'
+}

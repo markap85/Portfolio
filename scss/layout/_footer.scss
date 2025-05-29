@@ -1,5 +1,5 @@
 // ==========================================================================
-// Footer Layout and Styles
+// Sticky Footer Layout
 // ==========================================================================
 
 body {
@@ -9,52 +9,123 @@ body {
 }
 
 main {
-  flex: 1 0 auto;
+  flex: 1 0 auto; // Grow to fill available space
 }
 
+// ==========================================================================
+// Footer Styles
+// ==========================================================================
+
 footer {
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
+  // Layout
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  background: none;
-  font-size: 1.2rem;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  flex-shrink: 0;
+  flex-shrink: 0; // Prevent footer from shrinking
+  
+  // Spacing
+  padding: $footer-padding-top 1rem $footer-padding-bottom;
+  
+  // Typography
+  font-size: $footer-font-size;
+  text-align: center;
+  
+  // Visual
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent; // More explicit than 'none'
+  
+  // Responsive padding
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem 0.5rem;
+    font-size: 1.1rem;
+  }
+}
 
-  // Back to Top Button
-  .back-to-top {
-    display: inline-block;
-    cursor: pointer;
-    margin: 0 auto;
-    width: auto;
+// ==========================================================================
+// Back to Top Component
+// ==========================================================================
 
+.back-to-top {
+  // Layout
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem; // Space between icon and text
+  
+  // Interaction
+  cursor: pointer;
+  
+  // Link styling
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-decoration: none;
+    color: $primary-color;
+    font-size: $back-to-top-text-size;
+    @include hover-transition(color);
+  
+    
+    &:hover,
+    &:focus-visible {
+      @include hover-effect;
+    }
+  }
+  
+  // Icon specific styles
+  .icon-keyboard_arrow_up {
+    font-size: $back-to-top-icon-size;
+    color: $secondary-color;
+    @include hover-transition(color);
+    
+    // Reduce motion for accessibility
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+  
+  // Hover state for the entire component
+  &:hover {
     .icon-keyboard_arrow_up {
-      font-size: 2rem;
-      color: $secondary-color;
-      transition: color 0.3s;
-
-      &:hover {
-        color: $accent-color;
-        font-weight: bold;
-      }
+      @include hover-effect;
     }
-
+  }
+  
+  // Active state for better user feedback
+  &:active {
+    transform: translateY(1px);
+  }
+  
+  // Responsive sizing
+  @media (max-width: 768px) {
+    .icon-keyboard_arrow_up {
+      font-size: 1.75rem;
+    }
+    
     a {
-      text-decoration: none;
-      color: $primary-color;
-      font-size: 1.1rem;
-
-      &:hover {
-        color: $accent-color;
-        font-weight: bold;
-      }
+      font-size: 1rem;
     }
+  }
+}
+
+// ==========================================================================
+// Smooth Scroll Enhancement (if supported)
+// ==========================================================================
+
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+// ==========================================================================
+// Print Styles
+// ==========================================================================
+
+@media print {
+  footer {
+    display: none; // Hide footer when printing
   }
 }
