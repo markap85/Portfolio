@@ -2047,6 +2047,17 @@ footer {
   transition: 0.3s;
 }
 
+/* line 1, ../Portfolio/scss/layout/_percentagebar.scss */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #DF2C7D;
+  width: 0;
+  z-index: 9999;
+}
+
 /* line 1, ../Portfolio/scss/layout/_blanktemplate.scss */
 .template-blank {
   width: 100%;
