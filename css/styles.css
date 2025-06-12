@@ -23,7 +23,7 @@
 }
 
 /* line 30, ../Portfolio/scss/utilities/_extendsmixins.scss */
-.about-me-grid .about-me-icons .icon-html-five, .about-me-grid .about-me-icons .icon-css3, .about-me-grid .about-me-icons .icon-sass {
+.about-me-grid .about-me-icons .icon-html-five, .about-me-grid .about-me-icons .icon-css3, .about-me-grid .about-me-icons .icon-sass, .about-me-grid .about-me-icons .icon-javascript {
   font-size: 40px;
   padding-right: 20px;
   transition: color 0.3s ease-in-out;
@@ -313,8 +313,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?4s34nz");
-  src: url("../fonts/icomoon.eot?4s34nz#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?4s34nz") format("truetype"), url("../fonts/icomoon.woff?4s34nz") format("woff"), url("../fonts/icomoon.svg?4s34nz#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?c25mk");
+  src: url("../fonts/icomoon.eot?c25mk#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?c25mk") format("truetype"), url("../fonts/icomoon.woff?c25mk") format("woff"), url("../fonts/icomoon.svg?c25mk#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -335,61 +335,66 @@ th {
 }
 
 /* line 27, ../Portfolio/scss/base/_icons.scss */
+.icon-javascript:before {
+  content: "\e904";
+}
+
+/* line 30, ../Portfolio/scss/base/_icons.scss */
 .icon-sass:before {
   content: "\e902";
 }
 
-/* line 30, ../Portfolio/scss/base/_icons.scss */
+/* line 33, ../Portfolio/scss/base/_icons.scss */
 .icon-keyboard_arrow_right:before {
   content: "\e903";
 }
 
-/* line 33, ../Portfolio/scss/base/_icons.scss */
+/* line 36, ../Portfolio/scss/base/_icons.scss */
 .icon-keyboard_arrow_down:before {
   content: "\e901";
 }
 
-/* line 36, ../Portfolio/scss/base/_icons.scss */
+/* line 39, ../Portfolio/scss/base/_icons.scss */
 .icon-keyboard_arrow_up:before {
   content: "\e900";
 }
 
-/* line 39, ../Portfolio/scss/base/_icons.scss */
+/* line 42, ../Portfolio/scss/base/_icons.scss */
 .icon-heart:before {
   content: "\e9da";
 }
 
-/* line 42, ../Portfolio/scss/base/_icons.scss */
+/* line 45, ../Portfolio/scss/base/_icons.scss */
 .icon-arrow-right2:before {
   content: "\ea3c";
 }
 
-/* line 45, ../Portfolio/scss/base/_icons.scss */
+/* line 48, ../Portfolio/scss/base/_icons.scss */
 .icon-facebook2:before {
   content: "\ea91";
 }
 
-/* line 48, ../Portfolio/scss/base/_icons.scss */
+/* line 51, ../Portfolio/scss/base/_icons.scss */
 .icon-instagram:before {
   content: "\ea92";
 }
 
-/* line 51, ../Portfolio/scss/base/_icons.scss */
+/* line 54, ../Portfolio/scss/base/_icons.scss */
 .icon-github:before {
   content: "\eab0";
 }
 
-/* line 54, ../Portfolio/scss/base/_icons.scss */
+/* line 57, ../Portfolio/scss/base/_icons.scss */
 .icon-linkedin:before {
   content: "\eac9";
 }
 
-/* line 57, ../Portfolio/scss/base/_icons.scss */
+/* line 60, ../Portfolio/scss/base/_icons.scss */
 .icon-html-five:before {
   content: "\eae4";
 }
 
-/* line 60, ../Portfolio/scss/base/_icons.scss */
+/* line 63, ../Portfolio/scss/base/_icons.scss */
 .icon-css3:before {
   content: "\eae6";
 }
@@ -1549,6 +1554,11 @@ footer {
   color: #BAA085;
 }
 
+/* line 70, ../Portfolio/scss/layout/_about.scss */
+.about-me-grid .about-me-icons .icon-javascript:hover {
+  color: #0079A0;
+}
+
 @media (min-width: 768px) {
   /* line 5, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid {
@@ -1556,12 +1566,12 @@ footer {
     margin-left: 25px;
     align-items: flex-start;
   }
-  /* line 77, ../Portfolio/scss/layout/_about.scss */
+  /* line 82, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid h3, .about-me-grid p {
     text-align: left;
     font-size: 1.7rem;
   }
-  /* line 81, ../Portfolio/scss/layout/_about.scss */
+  /* line 86, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid p {
     font-size: 1.15rem;
   }
@@ -1577,11 +1587,11 @@ footer {
     align-items: center;
     justify-content: center;
   }
-  /* line 94, ../Portfolio/scss/layout/_about.scss */
+  /* line 99, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid h3 {
     font-size: 2rem;
   }
-  /* line 97, ../Portfolio/scss/layout/_about.scss */
+  /* line 102, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid p {
     font-size: 1.25rem;
   }
@@ -1594,17 +1604,17 @@ footer {
     padding-left: 100px;
     padding-right: 100px;
   }
-  /* line 106, ../Portfolio/scss/layout/_about.scss */
+  /* line 111, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid h3 {
     font-size: 2.3rem;
   }
-  /* line 109, ../Portfolio/scss/layout/_about.scss */
+  /* line 114, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid p {
     font-size: 1.4rem;
   }
 }
 
-/* line 119, ../Portfolio/scss/layout/_about.scss */
+/* line 124, ../Portfolio/scss/layout/_about.scss */
 .about-me-image {
   display: none;
   margin-top: 10px;
@@ -1612,7 +1622,7 @@ footer {
   align-items: center;
 }
 
-/* line 125, ../Portfolio/scss/layout/_about.scss */
+/* line 130, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img {
   max-width: 100%;
   border-radius: 50%;
@@ -1622,19 +1632,19 @@ footer {
   transition: filter 0.3s ease-in-out;
 }
 
-/* line 132, ../Portfolio/scss/layout/_about.scss */
+/* line 137, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img[loading="lazy"] {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 137, ../Portfolio/scss/layout/_about.scss */
+/* line 142, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img[loading="lazy"]:not([src=""]) {
   opacity: 1;
 }
 
 @media (min-width: 576px) {
-  /* line 149, ../Portfolio/scss/layout/_about.scss */
+  /* line 154, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid .about-me-icons {
     display: flex;
     justify-content: center;
@@ -1643,7 +1653,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 159, ../Portfolio/scss/layout/_about.scss */
+  /* line 164, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid .about-me-icons {
     display: flex;
     justify-content: flex-start;
@@ -1652,7 +1662,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 168, ../Portfolio/scss/layout/_about.scss */
+  /* line 173, ../Portfolio/scss/layout/_about.scss */
   .about-me-image {
     display: flex;
     justify-content: center;
@@ -1660,7 +1670,7 @@ footer {
   }
 }
 
-/* line 179, ../Portfolio/scss/layout/_about.scss */
+/* line 184, ../Portfolio/scss/layout/_about.scss */
 .skip-link {
   position: absolute;
   top: -9999px;
@@ -1670,7 +1680,7 @@ footer {
   overflow: hidden;
 }
 
-/* line 187, ../Portfolio/scss/layout/_about.scss */
+/* line 192, ../Portfolio/scss/layout/_about.scss */
 .skip-link:focus {
   position: static;
   width: auto;
@@ -1684,7 +1694,7 @@ footer {
   text-decoration: none;
 }
 
-/* line 204, ../Portfolio/scss/layout/_about.scss */
+/* line 209, ../Portfolio/scss/layout/_about.scss */
 .next-section {
   display: flex;
   justify-content: center;
@@ -1695,7 +1705,7 @@ footer {
   color: #0079A0;
 }
 
-/* line 213, ../Portfolio/scss/layout/_about.scss */
+/* line 218, ../Portfolio/scss/layout/_about.scss */
 .next-section a {
   text-decoration: none;
   color: #0079A0;
@@ -1704,18 +1714,18 @@ footer {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 220, ../Portfolio/scss/layout/_about.scss */
+/* line 225, ../Portfolio/scss/layout/_about.scss */
 .next-section a:hover {
   color: #002c3a;
 }
 
-/* line 225, ../Portfolio/scss/layout/_about.scss */
+/* line 230, ../Portfolio/scss/layout/_about.scss */
 .next-section .icon-keyboard_arrow_down {
   font-size: 4rem;
   transition: color 0.3s ease-in-out;
 }
 
-/* line 230, ../Portfolio/scss/layout/_about.scss */
+/* line 235, ../Portfolio/scss/layout/_about.scss */
 .next-section .icon-keyboard_arrow_down:hover {
   color: #DF2C7D;
 }

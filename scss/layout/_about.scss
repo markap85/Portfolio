@@ -64,6 +64,11 @@
             @extend %skill-icon;
             &:hover { color: $accent-color; }
         }
+
+        .icon-javascript  {
+            @extend %skill-icon;
+            &:hover { color: $primary-color; }
+        }
     }
 
     // ==========================================================================
