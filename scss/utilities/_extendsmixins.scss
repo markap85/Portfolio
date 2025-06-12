@@ -5,8 +5,10 @@
 // Portfolio Image Style
 %img-portfolio {
     max-width: 100%;
-    height: auto;
+    height: 250px; // Set your desired fixed height
+    object-fit: cover;
     border-radius: 10px 10px 0px 0px;
+    display: block;
 }
 
 // Portfolio Tag Style

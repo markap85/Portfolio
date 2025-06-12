@@ -1,12 +1,16 @@
-// Social Media Icon Styles
-// This file contains the styles for social media icons
 // ==========================================================================
+// Configuration Variables - Easy to Update
+// ==========================================================================
+$disabled-items: (3, 4, 5, 6); // List of item numbers to disable
+$disabled-opacity: 0.4; // Opacity for disabled items
+$disabled-filter: grayscale(80%); // Grayscale filter for disabled items
 
 // ==========================================================================
 // Portfolio Grid Layout
 // ==========================================================================
 
-.portfolio-grid { // Grid Container
+.portfolio-grid {
+  // Grid Container
   display: grid;
   grid-template-columns: 1fr; // 1 column by default
   gap: 20px;
@@ -24,7 +28,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   @media (min-width: $brk-point-md) {
     margin-left: 25px;
   }
@@ -34,12 +38,12 @@
   }
 }
 
-// =========================================================================
+// ==========================================================================
 // Portfolio Project Card
 // ==========================================================================
 
-.project { // Grid Item
-  // text-align: left;
+.project {
+  // Grid Item
   text-align: center;
   position: relative;
   border-radius: 10px;
@@ -48,11 +52,11 @@
   top: 0;
   transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
-  // Hover Effect
-  &:hover {
+  // Hover Effect (only for enabled items)
+  &:not(.disabled):hover {
     top: -5px;
     background-color: $primary-color;
-    
+
     h3, a { // Text Color Change on Hover
       color: $white;
     }
@@ -63,45 +67,66 @@
     margin-top: 10px;
   }
 
-      h3, a { // Text Styles
-      padding-left: 10px;
-    }
+  h3, a { // Text Styles
+    padding-left: 10px;
+  }
 
   // Image Styles - Extended from %img-portfolio
-  img { 
+  img {
     @extend %img-portfolio;
+  }
+
+  // ==========================================================================
+  // Disabled State Styles
+  // ==========================================================================
+  &.disabled {
+    opacity: $disabled-opacity;
+    filter: $disabled-filter;
+    cursor: not-allowed;
+    pointer-events: none;
+    
+  }
+}
+
+// ==========================================================================
+// Auto-generate disabled classes for specified items
+// ==========================================================================
+@each $item in $disabled-items {
+  .project.pr-#{$item} {
+    @extend .project.disabled;
   }
 }
 
 // Arrow Icon Styles For Portfolio
-.icon-arrow-right2 { 
+.icon-arrow-right2 {
   font-size: normal;
 }
 
 // ==========================================================================
-// Project Background Color Change on Hover
+// Project Background Color Change on Hover (only for enabled items)
 // ==========================================================================
 
-.project.pr-1:hover {
+.project.pr-1:not(.disabled):hover {
   background-color: $tag-design;
-  
 }
 
-.project.pr-2:hover {
+.project.pr-2:not(.disabled):hover {
   background-color: $tag-responsive;
 }
 
-.project.pr-3:hover {
+.project.pr-3:not(.disabled):hover {
   background-color: $tag-backend;
 }
 
-.project.pr-4:hover {
+.project.pr-4:not(.disabled):hover {
   background-color: $tag-responsive;
 }
-.project.pr-5:hover {
+
+.project.pr-5:not(.disabled):hover {
   background-color: $tag-backend;
 }
-.project.pr-6:hover {
+
+.project.pr-6:not(.disabled):hover {
   background-color: $tag-design;
 }
 

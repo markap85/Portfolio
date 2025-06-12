@@ -1,11 +1,13 @@
 /* line 6, ../Portfolio/scss/utilities/_extendsmixins.scss */
 .project img {
   max-width: 100%;
-  height: auto;
+  height: 250px;
+  object-fit: cover;
   border-radius: 10px 10px 0px 0px;
+  display: block;
 }
 
-/* line 13, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 15, ../Portfolio/scss/utilities/_extendsmixins.scss */
 .tag-design, .tag-responsive, .tag-backend {
   display: inline-block;
   font-size: 1.1rem;
@@ -20,14 +22,14 @@
   box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* line 28, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 30, ../Portfolio/scss/utilities/_extendsmixins.scss */
 .about-me-grid .about-me-icons .icon-html-five, .about-me-grid .about-me-icons .icon-css3, .about-me-grid .about-me-icons .icon-sass {
   font-size: 40px;
   padding-right: 20px;
   transition: color 0.3s ease-in-out;
 }
 
-/* line 35, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 37, ../Portfolio/scss/utilities/_extendsmixins.scss */
 .social-icons--linkedin,
 .social-icons--git,
 .social-icons--facebook {
@@ -39,7 +41,7 @@
   color: #0079A0;
 }
 
-/* line 43, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 45, ../Portfolio/scss/utilities/_extendsmixins.scss */
 .social-icons--linkedin:hover,
 .social-icons--git:hover,
 .social-icons--facebook:hover {
@@ -519,7 +521,7 @@ li {
   margin-top: 20px;
 }
 
-/* line 9, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 12, ../Portfolio/scss/layout/_portfolio.scss */
 .portfolio-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -531,7 +533,7 @@ li {
 }
 
 @media (min-width: 576px) {
-  /* line 9, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 12, ../Portfolio/scss/layout/_portfolio.scss */
   .portfolio-grid {
     grid-template-columns: 1fr 1fr;
     max-width: 1260px;
@@ -541,21 +543,21 @@ li {
 }
 
 @media (min-width: 768px) {
-  /* line 9, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 12, ../Portfolio/scss/layout/_portfolio.scss */
   .portfolio-grid {
     margin-left: 25px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 9, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 12, ../Portfolio/scss/layout/_portfolio.scss */
   .portfolio-grid {
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-/* line 41, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 45, ../Portfolio/scss/layout/_portfolio.scss */
 .project {
   text-align: center;
   position: relative;
@@ -566,79 +568,87 @@ li {
   transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-/* line 52, ../Portfolio/scss/layout/_portfolio.scss */
-.project:hover {
+/* line 56, ../Portfolio/scss/layout/_portfolio.scss */
+.project:not(.disabled):hover {
   top: -5px;
   background-color: #0079A0;
 }
 
-/* line 56, ../Portfolio/scss/layout/_portfolio.scss */
-.project:hover h3, .project:hover a {
+/* line 60, ../Portfolio/scss/layout/_portfolio.scss */
+.project:not(.disabled):hover h3, .project:not(.disabled):hover a {
   color: #ffffff;
 }
 
-/* line 61, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 65, ../Portfolio/scss/layout/_portfolio.scss */
 .project h3 {
   font-weight: bolder;
   margin-top: 10px;
 }
 
-/* line 66, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 70, ../Portfolio/scss/layout/_portfolio.scss */
 .project h3, .project a {
   padding-left: 10px;
 }
 
-/* line 77, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 82, ../Portfolio/scss/layout/_portfolio.scss */
+.project.disabled, .project.pr-3, .project.pr-4, .project.pr-5, .project.pr-6 {
+  opacity: 0.4;
+  filter: grayscale(80%);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* line 101, ../Portfolio/scss/layout/_portfolio.scss */
 .icon-arrow-right2 {
   font-size: normal;
 }
 
-/* line 85, ../Portfolio/scss/layout/_portfolio.scss */
-.project.pr-1:hover {
+/* line 109, ../Portfolio/scss/layout/_portfolio.scss */
+.project.pr-1:not(.disabled):hover {
   background-color: #0079A0;
 }
 
-/* line 90, ../Portfolio/scss/layout/_portfolio.scss */
-.project.pr-2:hover {
+/* line 113, ../Portfolio/scss/layout/_portfolio.scss */
+.project.pr-2:not(.disabled):hover {
   background-color: #DF2C7D;
 }
 
-/* line 94, ../Portfolio/scss/layout/_portfolio.scss */
-.project.pr-3:hover {
+/* line 117, ../Portfolio/scss/layout/_portfolio.scss */
+.project.pr-3:not(.disabled):hover {
   background-color: #BAA085;
 }
 
-/* line 98, ../Portfolio/scss/layout/_portfolio.scss */
-.project.pr-4:hover {
+/* line 121, ../Portfolio/scss/layout/_portfolio.scss */
+.project.pr-4:not(.disabled):hover {
   background-color: #DF2C7D;
 }
 
-/* line 101, ../Portfolio/scss/layout/_portfolio.scss */
-.project.pr-5:hover {
+/* line 125, ../Portfolio/scss/layout/_portfolio.scss */
+.project.pr-5:not(.disabled):hover {
   background-color: #BAA085;
 }
 
-/* line 104, ../Portfolio/scss/layout/_portfolio.scss */
-.project.pr-6:hover {
+/* line 129, ../Portfolio/scss/layout/_portfolio.scss */
+.project.pr-6:not(.disabled):hover {
   background-color: #0079A0;
 }
 
-/* line 112, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 137, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-design {
   background-color: #0079A0;
 }
 
-/* line 117, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 142, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-responsive {
   background-color: #DF2C7D;
 }
 
-/* line 122, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 147, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-backend {
   background-color: #BAA085;
 }
 
-/* line 128, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 153, ../Portfolio/scss/layout/_portfolio.scss */
 .icon-heart {
   font-size: 0.8rem;
   position: relative;
