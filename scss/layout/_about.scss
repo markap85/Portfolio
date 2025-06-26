@@ -14,8 +14,16 @@
 
     // Optimized glassmorphic styling
     background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: 
+      blur(20px) 
+      contrast(1.12) 
+      saturate(1.06) 
+      hue-rotate(0.8deg);
+    -webkit-backdrop-filter: 
+      blur(20px) 
+      contrast(1.12) 
+      saturate(1.06) 
+      hue-rotate(0.8deg);
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 24px;
     box-shadow: 
@@ -24,7 +32,7 @@
     position: relative;
     overflow: hidden;
     
-    // Subtle glass shine effect
+    // Enhanced refraction shine effect
     &::before {
       content: '';
       position: absolute;
@@ -32,13 +40,20 @@
       left: -100%;
       width: 300%;
       height: 300%;
-      background: linear-gradient(
-        45deg,
-        transparent 40%,
-        rgba(255, 255, 255, 0.04) 50%,
-        transparent 60%
-      );
-      animation: glassShine 12s ease-in-out infinite;
+      background: 
+        linear-gradient(
+          45deg,
+          transparent 35%,
+          rgba(255, 255, 255, 0.04) 48%,
+          rgba(200, 220, 255, 0.03) 50%,
+          rgba(255, 255, 255, 0.04) 52%,
+          transparent 65%
+        );
+      filter: 
+        blur(0.5px) 
+        contrast(1.1) 
+        hue-rotate(-0.5deg);
+      animation: refractionGlassShine 18s ease-in-out infinite;
       pointer-events: none;
     }
 
@@ -90,7 +105,7 @@
 // Typography styling
 .about-me-text {
     h3 {
-        color: rgba(40, 60, 80, 0.9);
+        color: $white;
         font-size: clamp(1.8rem, 4vw, 2.5rem);
         font-weight: 600;
         margin-bottom: 1.5rem;
@@ -99,7 +114,7 @@
     }
 
     p {
-        color: rgba(60, 80, 100, 0.85);
+        color: $white;
         font-size: clamp(1rem, 2.5vw, 1.2rem);
         line-height: 1.7;
         max-width: 600px;
@@ -129,6 +144,7 @@
 
 // Skills icons
 .about-me-icons {
+    margin: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,56 +155,26 @@
 
     [class^="icon-"] {
         font-size: 2.5rem;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: pointer;
+        transition: all 0.2s;
+        color: $white;
+    }
+
+    // Future skills with reduced opacity
+    .icon-postgresql,
+    .icon-php,
+    .icon-laravel {
+        color: rgba(255, 255, 255, 0.24);
+        cursor: default;
 
         &:hover {
-            transform: translateY(-4px) scale(1.1);
-        }
-
-        // Skill-specific colors optimized for glassmorphic design
-        &.icon-html-five { 
-            color: rgba(227, 79, 38, 0.8);
-            &:hover { color: rgba(227, 79, 38, 1); }
-        }
-        
-        &.icon-css3 { 
-            color: rgba(21, 114, 182, 0.8);
-            &:hover { color: rgba(21, 114, 182, 1); }
-        }
-        
-        &.icon-sass { 
-            color: rgba(207, 100, 154, 0.8);
-            &:hover { color: rgba(207, 100, 154, 1); }
-        }
-        
-        &.icon-javascript { 
-            color: rgba(240, 219, 79, 0.9);
-            &:hover { color: rgba(240, 219, 79, 1); }
-        }
-        
-        &.icon-jquery { 
-            color: rgba(0, 104, 183, 0.8);
-            &:hover { color: rgba(0, 104, 183, 1); }
-        }
-        
-        // Future skills with reduced opacity
-        &.icon-postgresql,
-        &.icon-php,
-        &.icon-laravel {
-            color: rgba(120, 140, 160, 0.4);
-            cursor: default;
-            
-            &:hover {
-                transform: none;
-                color: rgba(120, 140, 160, 0.6);
-            }
+            transform: none;
+            color: rgba(120, 140, 160, 0.6);
         }
     }
 
     @media (min-width: $brk-point-md) {
         gap: 2rem;
-        
+
         [class^="icon-"] {
             font-size: 3rem;
         }
@@ -204,6 +190,24 @@
   50% {
     transform: translateX(0%) translateY(0%) rotate(45deg);
     opacity: 1;
+  }
+}
+
+@keyframes refractionGlassShine {
+  0%, 100% {
+    transform: translateX(-150%) translateY(-150%) rotate(45deg) scale(0.8);
+    filter: blur(0.5px) contrast(1.1) hue-rotate(-0.5deg);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translateX(-75%) translateY(-75%) rotate(46deg) scale(0.9);
+    filter: blur(0.3px) contrast(1.15) hue-rotate(0deg);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translateX(75%) translateY(75%) rotate(44deg) scale(1.1);
+    filter: blur(0.7px) contrast(1.08) hue-rotate(0.5deg);
+    opacity: 0.9;
   }
 }
 
@@ -233,37 +237,8 @@
     }
 }
 
-//next section
-// ==========================================================================
-
-.next-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    color: $primary-color;
-
-    a {
-        text-decoration: none;
-        color: $primary-color;
-        font-size: 1.5rem;
-        font-weight: bold;
-        transition: color 0.3s ease-in-out;
-
-        &:hover {
-            color: darken($primary-color, 20%);
-        }
-    }
-
-    .icon-keyboard_arrow_down {
-        font-size: 4rem;
-
-        transition: color 0.3s ease-in-out;
-
-        &:hover {
-            color: $secondary-color;
-        }
-    }
-}
+// SCROLL BUTTON DOWN
+// ==================
+  .next-section {
+    @include frosted-scroll-btn();
+  }

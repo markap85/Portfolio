@@ -27,15 +27,14 @@ body {
 main {
   margin-left: 0;
   margin-right: 0;
-  // Remove the desktop margin - content will now go full width
 
-  // Create a content wrapper for text elements only
   .content-wrapper {
-    margin-left: 0;
-    margin-right: 0;
+  margin: 2rem 0;
+    display: flex;
+    justify-content: center;
     
     @media (min-width: 768px) {
-      margin-left: 220px; // Only shift content wrapper, not backgrounds
+      margin-left: 220px;
     }
   }
 }

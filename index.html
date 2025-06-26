@@ -72,16 +72,18 @@
   <main id="main-content" role="main">
     <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-text--name">
-          <h2 class="light">const me = &#123;</h2>
+        <div class="content-wrapper">
+          <div class="hero-text--name">
+            <h2 class="light">const me = &#123;</h2>
             <h1 id="typewriter" class="light">name: <span>"Mark Peters"</span>,</h1>
             <h2 class="light">  role: <span>"Web Developer"</span>,</h2>
-          <h2 class="light">&#125;;</h2>
+            <h2 class="light">&#125;;</h2>
+          </div>
         </div>
-        <div class="hero-text--scroll">
-          <a href="#about" class="scroll-down"></a> <br>
-          <a href="#about" class="icon-keyboard_arrow_down"></a>
-        </div>
+          <div class="content-wrapper hero-text--scroll">
+            <a href="#about" class="scroll-down"></a> <br>
+            <a href="#about" class="icon-keyboard_arrow_down"></a>
+          </div>
     </header>
 
     <!-- ABOUT ME - Wrap content but keep section full width -->
@@ -145,33 +147,21 @@
             <article class="project pr-3">
               <img src="img/WebSitePlaceHolder_3.jpg" alt="Project Three">
               <h3>Coming Soon</h3>
-              <a href="#">
-                View Project <span class="icon-arrow-right2"></span>
-              </a>
             </article>
           <!-- Project 4 -->
             <article class="project pr-4">
               <img src="img/WebSitePlaceHolder_4.jpg" alt="Project Four">
               <h3>Coming Soon</h3>
-              <a href="#">
-                View Project <span class="icon-arrow-right2"></span>
-              </a>
             </article>
           <!-- Project 5 -->
             <article class="project pr-5">
               <img src="img/WebSitePlaceHolder_5.jpg" alt="Project Five">
               <h3>Coming Soon</h3>
-              <a href="#">
-                View Project <span class="icon-arrow-right2"></span>
-              </a>
             </article>
           <!-- Project 6 -->
             <article class="project pr-6">
               <img src="img/WebSitePlaceHolder_6.jpg" alt="Project Six">
               <h3>Coming Soon</h3>
-              <a href="#">
-                View Project <span class="icon-arrow-right2"></span>
-              </a>
             </article>
 
         </section>
@@ -215,12 +205,20 @@
     <!-- Footer -->
     <div class="content-wrapper">
       <footer role="contentinfo">
+        <div class="footer-container">
           <div class="back-to-top">
-            <a href="#">
-              <span class="icon-keyboard_arrow_up"></span> <br>
-              Back To Top
-            </a>
+            <a href="#" aria-label="Back to top"><span class="icon-keyboard_arrow_up"></span></a>
           </div>
+          
+          <div class="footer-text">
+            <p class="created-by">
+              Created with <span class="highlight">passion</span> by Mark Peters
+            </p>
+            <p class="copyright">
+              &copy; <span class="year">2024</span> Mark Peters. All rights reserved.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
     

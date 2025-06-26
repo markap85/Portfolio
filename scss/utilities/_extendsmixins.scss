@@ -13,17 +13,21 @@
 
 // Portfolio Tag Style
 %portfolio-tag {
-    display: inline-block;
-    font-size: 1.1rem;
-    position:absolute;
-    top: 0;
-    right: 0;
-    text-transform: lowercase;
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: $white;
-    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-transform: lowercase;
+  padding: 5px 20px;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 // Skill Icon Style
@@ -64,5 +68,106 @@
 
   &:hover {
     background-color: $secondary-color;
+  }
+}
+
+// Flexible glassmorphic button mixin
+@mixin glassmorphic-btn(
+  $width: auto,
+  $height: auto,
+  $padding: 0.75rem 1.5rem,
+  $border-radius: 25px,
+  $font-size: 1rem,
+  $bg: rgba(255, 255, 255, 0.1),
+  $hover-bg: rgba(255, 255, 255, 0.25),
+  $border: 1px solid rgba(255, 255, 255, 0.2),
+  $hover-border: 1px solid rgba(255, 255, 255, 0.4),
+  $color: rgba(60, 80, 100, 0.85),
+  $hover-color: rgba(40, 60, 80, 1),
+  $margin: 0
+) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $width;
+  height: $height;
+  padding: $padding;
+  margin: $margin;
+  border-radius: $border-radius;
+  background: $bg;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: $border;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  
+  color: $color;
+  font-size: $font-size;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  
+  transition: 
+    background 0.3s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.3s cubic-bezier(.4,0,.2,1),
+    color 0.3s cubic-bezier(.4,0,.2,1),
+    border 0.3s cubic-bezier(.4,0,.2,1),
+    transform 0.3s cubic-bezier(.4,0,.2,1);
+
+  &:hover, &:focus {
+    background: $hover-bg;
+    color: $hover-color;
+    border: $hover-border;
+    box-shadow: 
+      0 8px 25px rgba(0, 0, 0, 0.12),
+      0 0 0 1px rgba(255,255,255,0.15),
+      inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    outline: none;
+  }
+}
+
+// Specialized scroll button mixin using the base glassmorphic mixin
+@mixin frosted-scroll-btn($size: 90px, $icon-size: 4rem) {
+  @include glassmorphic-btn(
+    $width: $size,
+    $height: $size,
+    $padding: 0,
+    $border-radius: 50%,
+    $bg: rgba(255, 255, 255, 0.05),
+    $hover-bg: rgba(255, 255, 255, 0.35),
+    $color: rgba(255,255,255,0.7),
+    $hover-color: $white,
+    $margin: 3rem auto 0
+  );
+  
+  align-self: center;
+  z-index: 4;
+  position: relative;
+
+  .icon-keyboard_arrow_down {
+    font-size: $icon-size;
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  @media (min-width: $brk-point-lg) {
+    display: flex;
   }
 }

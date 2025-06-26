@@ -21,10 +21,11 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-shrink: 0; // Prevent footer from shrinking
+  flex-shrink: 0;
   
   // Spacing
-  padding: $footer-padding-top 1rem $footer-padding-bottom;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
   
   // Typography
   font-size: $footer-font-size;
@@ -32,13 +33,41 @@ footer {
   
   // Visual
   width: 100%;
-  box-sizing: border-box;
-  background: transparent; // More explicit than 'none'
+  background: transparent;
   
   // Responsive padding
   @media (max-width: 768px) {
-    padding: 1.5rem 1rem 0.5rem;
+    padding: 1.5rem 1rem;
     font-size: 1.1rem;
+  }
+}
+
+// ==========================================================================
+// Footer Container
+// ==========================================================================
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+
+  // Light glassmorphic styling
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  @media (min-width: $brk-point-md) {
+    padding: 1rem 20rem;
   }
 }
 
@@ -47,64 +76,79 @@ footer {
 // ==========================================================================
 
 .back-to-top {
-  // Layout
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25rem; // Space between icon and text
+  @include frosted-scroll-btn(70px, 1.8rem);
   
-  // Interaction
-  cursor: pointer;
-  
-  // Link styling
   a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
-    color: $primary-color;
-    font-size: $back-to-top-text-size;
-    @include hover-transition(color);
-  
-    
-    &:hover,
-    &:focus-visible {
-      @include hover-effect;
-    }
+    color: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    gap: 0.2rem;
   }
   
-  // Icon specific styles
   .icon-keyboard_arrow_up {
-    font-size: $back-to-top-icon-size;
-    color: $secondary-color;
-    @include hover-transition(color);
+    color: inherit;
     
-    // Reduce motion for accessibility
     @media (prefers-reduced-motion: reduce) {
       transition: none;
     }
   }
   
-  // Hover state for the entire component
-  &:hover {
-    .icon-keyboard_arrow_up {
-      @include hover-effect;
-    }
-  }
-  
-  // Active state for better user feedback
-  &:active {
-    transform: translateY(1px);
-  }
-  
-  // Responsive sizing
   @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+    
     .icon-keyboard_arrow_up {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
     }
     
     a {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+// ==========================================================================
+// Footer Text Styles
+// ==========================================================================
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+  .created-by {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    
+    .highlight {
+      color: rgba(255, 0, 212, 0.9);
+      font-weight: 600;
+    }
+  }
+  
+  .copyright {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    
+    .year {
+      font-weight: 500;
+    }
+  }
+  
+  @media (min-width: $brk-point-md) {
+    .created-by {
+      font-size: 1.2rem;
+    }
+    
+    .copyright {
       font-size: 1rem;
     }
   }
