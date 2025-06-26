@@ -57,12 +57,13 @@
     // Responsive Breakpoints
     // ==========================================================================
     @media (min-width: $brk-point-sm) {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
         margin-top: 60px;
     }
 
     @media (min-width: $brk-point-md) {
+        margin-left: 0; // Remove margin, let content-wrapper handle it
         text-align: left;
 
         h3 {

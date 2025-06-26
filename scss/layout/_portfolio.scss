@@ -34,7 +34,7 @@ $disabled-filter: grayscale(80%); // Grayscale filter for disabled items
   }
 
   @media (min-width: $brk-point-md) {
-    margin-left: 25px;
+    margin-left: 0; // Remove margin, let content-wrapper handle it
   }
   @media (min-width: $brk-point-lg) {
     margin: 0 auto;

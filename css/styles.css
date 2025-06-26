@@ -449,11 +449,16 @@ main {
   margin-right: 0;
 }
 
+/* line 28, ../Portfolio/scss/base/_base.scss */
+main .content-wrapper {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 @media (min-width: 768px) {
-  /* line 22, ../Portfolio/scss/base/_base.scss */
-  main {
-    margin-left: 200px;
-    flex-grow: 1;
+  /* line 28, ../Portfolio/scss/base/_base.scss */
+  main .content-wrapper {
+    margin-left: 220px;
   }
 }
 
@@ -575,7 +580,7 @@ li {
 @media (min-width: 768px) {
   /* line 16, ../Portfolio/scss/layout/_portfolio.scss */
   .portfolio-grid {
-    margin-left: 25px;
+    margin-left: 0;
   }
 }
 
@@ -752,7 +757,7 @@ li {
 @media (min-width: 768px) {
   /* line 1, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid {
-    margin-left: 25px;
+    margin-left: 0;
   }
 }
 
@@ -1164,26 +1169,31 @@ footer {
   width: 220px;
   height: 100vh;
   text-align: center;
-  background-color: #f4f4f4;
-  border-right: 1px solid #7f8c8d;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transform: translateX(-100%);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s, background 0.3s;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* line 18, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 21, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar.sidebar--open {
   transform: translateX(0);
-  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 0 32px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.15);
+  border-right-color: rgba(255, 255, 255, 0.3);
   padding-top: 50px;
 }
 
 @media (min-width: 768px) {
-  /* line 18, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 21, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar.sidebar--open {
     padding-top: 20px;
   }
@@ -1193,14 +1203,15 @@ footer {
   /* line 1, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar {
     transform: none;
-    box-shadow: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     position: fixed;
     left: 0;
     padding-top: 20px;
+    background: rgba(255, 255, 255, 0.08);
   }
 }
 
-/* line 37, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 43, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .logo {
   width: 100%;
   display: flex;
@@ -1209,7 +1220,7 @@ footer {
   margin-bottom: 2rem;
 }
 
-/* line 45, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 51, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .logo a {
   text-decoration: none !important;
   font-size: 3rem;
@@ -1220,20 +1231,20 @@ footer {
   transition: color 0.3s, text-shadow 0.3s;
 }
 
-/* line 53, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 59, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .logo a:hover {
   color: #DF2C7D;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   text-decoration: none;
 }
 
-/* line 60, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 66, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .logo a span {
   display: inline-block;
   transform: translateY(-3px);
 }
 
-/* line 66, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 72, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul {
   list-style: none;
   padding: 0;
@@ -1243,7 +1254,7 @@ footer {
   align-items: center;
 }
 
-/* line 74, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 80, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul .icon-keyboard_arrow_right, .sidebar nav ul .icon-keyboard_arrow_down {
   font-size: 1.5rem;
   color: transparent;
@@ -1252,73 +1263,82 @@ footer {
   top: 6px;
 }
 
-/* line 83, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 89, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li {
   margin-left: 24.4px;
 }
 
-/* line 86, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 92, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a {
   display: inline-block;
   padding: 15px 0;
   text-decoration: none;
   color: #333;
   border-bottom: 1px solid transparent;
-  transition: color 0.3s;
+  transition: color 0.3s, background 0.3s, border-radius 0.3s;
+  border-radius: 8px;
 }
 
-/* line 94, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 101, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover {
   border-bottom: 1px solid #BAA085;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-/* line 97, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 107, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_right {
   color: #DF2C7D;
 }
 
-/* line 101, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 111, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_down {
   color: #BAA085;
 }
 
-/* line 109, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 119, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li:last-child a:hover {
   color: #DF2C7D;
   border-bottom: 1px solid transparent;
 }
 
-/* line 117, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 127, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .contact-me {
-  border-top: 1px solid #BAA085;
-  border-bottom: 1px solid #BAA085;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-top: 50px !important;
   margin-right: 24.4px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 10px 0;
 }
 
-/* line 129, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 144, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary:hover {
   border-bottom: 1px solid #DF2C7D !important;
 }
 
-/* line 133, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 148, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary .contacthover span {
   color: inherit;
   transition: color 0.2s;
   opacity: 0.1;
 }
 
-/* line 140, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 155, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary .contacthover span:hover {
   color: #0079A0;
   opacity: 1;
 }
 
-/* line 147, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 162, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay {
   display: none;
   position: fixed;
@@ -1326,29 +1346,32 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   z-index: 999;
   transition: opacity 0.3s;
 }
 
-/* line 158, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 175, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay.sidebar-overlay--active {
   display: block;
 }
 
-/* line 161, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 178, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay.sidebar-overlay--active ~ .sidebar {
-  background-color: #ffffff;
-  border: 0px;
+  background: rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.2);
 }
 
-/* line 166, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 185, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay.sidebar-overlay--active ~ .sidebar a:hover {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 768px) {
-  /* line 147, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 162, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .sidebar-overlay {
     display: none;
   }
@@ -1714,7 +1737,7 @@ footer {
   /* line 5, ../Portfolio/scss/layout/_about.scss */
   .about-me-grid {
     text-align: left;
-    margin-left: 25px;
+    margin-left: 0;
     align-items: flex-start;
   }
   /* line 112, ../Portfolio/scss/layout/_about.scss */
@@ -1939,8 +1962,8 @@ footer {
 @media (min-width: 576px) {
   /* line 6, ../Portfolio/scss/layout/_examples.scss */
   .examples {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: 60px;
   }
 }
@@ -1948,17 +1971,18 @@ footer {
 @media (min-width: 768px) {
   /* line 6, ../Portfolio/scss/layout/_examples.scss */
   .examples {
+    margin-left: 0;
     text-align: left;
   }
-  /* line 68, ../Portfolio/scss/layout/_examples.scss */
+  /* line 69, ../Portfolio/scss/layout/_examples.scss */
   .examples h3 {
     font-size: 1.5rem;
   }
-  /* line 72, ../Portfolio/scss/layout/_examples.scss */
+  /* line 73, ../Portfolio/scss/layout/_examples.scss */
   .examples p {
     font-size: 1rem;
   }
-  /* line 78, ../Portfolio/scss/layout/_examples.scss */
+  /* line 79, ../Portfolio/scss/layout/_examples.scss */
   .examples ul li a {
     font-size: 1rem;
   }
@@ -1969,15 +1993,15 @@ footer {
   .examples {
     text-align: left;
   }
-  /* line 88, ../Portfolio/scss/layout/_examples.scss */
+  /* line 89, ../Portfolio/scss/layout/_examples.scss */
   .examples h3 {
     font-size: 2rem;
   }
-  /* line 92, ../Portfolio/scss/layout/_examples.scss */
+  /* line 93, ../Portfolio/scss/layout/_examples.scss */
   .examples p {
     font-size: 1.2rem;
   }
-  /* line 99, ../Portfolio/scss/layout/_examples.scss */
+  /* line 100, ../Portfolio/scss/layout/_examples.scss */
   .examples ul li a {
     font-size: 1.2rem;
   }
@@ -2150,16 +2174,29 @@ footer {
   align-items: center;
   width: 48px;
   height: 48px;
-  background: transparent;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
   cursor: pointer;
   position: fixed;
-  top: 10px;
-  left: 0px;
+  top: 20px;
+  left: 20px;
   z-index: 1100;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* line 16, ../Portfolio/scss/layout/_burger.scss */
+/* line 21, ../Portfolio/scss/layout/_burger.scss */
+.burger:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* line 28, ../Portfolio/scss/layout/_burger.scss */
 .burger span,
 .burger .burger-bar {
   display: block;
@@ -2171,17 +2208,23 @@ footer {
   transition: 0.3s;
 }
 
-/* line 29, ../Portfolio/scss/layout/_burger.scss */
+/* line 40, ../Portfolio/scss/layout/_burger.scss */
+.burger.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* line 44, ../Portfolio/scss/layout/_burger.scss */
 .burger.active span {
   background: #DF2C7D;
 }
 
-/* line 32, ../Portfolio/scss/layout/_burger.scss */
+/* line 47, ../Portfolio/scss/layout/_burger.scss */
 .burger.active::before {
   transform: translateY(9px) rotate(45deg);
 }
 
-/* line 35, ../Portfolio/scss/layout/_burger.scss */
+/* line 50, ../Portfolio/scss/layout/_burger.scss */
 .burger.active::after {
   transform: translateY(-9px) rotate(-45deg);
 }
@@ -2193,22 +2236,22 @@ footer {
   }
 }
 
-/* line 45, ../Portfolio/scss/layout/_burger.scss */
+/* line 60, ../Portfolio/scss/layout/_burger.scss */
 .burger.active .burger-bar:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
 
-/* line 48, ../Portfolio/scss/layout/_burger.scss */
+/* line 63, ../Portfolio/scss/layout/_burger.scss */
 .burger.active .burger-bar:nth-child(2) {
   opacity: 0;
 }
 
-/* line 51, ../Portfolio/scss/layout/_burger.scss */
+/* line 66, ../Portfolio/scss/layout/_burger.scss */
 .burger.active .burger-bar:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* line 55, ../Portfolio/scss/layout/_burger.scss */
+/* line 70, ../Portfolio/scss/layout/_burger.scss */
 .burger-bar {
   display: block;
   width: 32px;

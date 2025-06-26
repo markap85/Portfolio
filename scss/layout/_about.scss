@@ -108,7 +108,7 @@
     @media (min-width: $brk-point-md) {
         // Medium screens: left align text, increase font size
         text-align: left;
-        margin-left: 25px;
+        margin-left: 0; // Remove margin, let content-wrapper handle it
         h3, p { 
             text-align: left;
             font-size: 1.7rem;

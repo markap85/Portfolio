@@ -6,7 +6,7 @@
   color: $text;
 
   @media (min-width: $brk-point-md) {
-    margin-left: 25px;
+    margin-left: 0; // Remove margin, let content-wrapper handle it
   }
 
   @media (min-width: $brk-point-lg) {
