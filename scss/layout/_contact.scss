@@ -233,3 +233,20 @@
     }
   }
 }
+
+.error {
+    border: 3px SOLID $secondary-color !important;
+}
+
+.error-message {
+  color: white;
+  background-color: $secondary-color;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+}
