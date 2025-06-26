@@ -4,75 +4,64 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('../img/HeroImage.jpg') no-repeat center center/cover;
   text-align: center;
-  box-shadow: inset 0px -30px 0px -20px rgba(0, 0, 0, 0.3);
-  min-height: 250px;
-  height: 250px;
+  min-height: 100vh;
+  height: 100vh;
+  padding: 2rem;
+  margin-bottom: 2rem;
 
-  // Add Darken Overlay to the bottom of the image to make text more readable
+  // Enhanced frosted glass effect
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 
+  // Frosted glass overlay with texture
   &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-    linear-gradient(to right, rgba($primary-color, 0.5) 5%, rgba($primary-color, 0) 50%),
-    rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    background: 
+      rgba(255, 255, 255, 0.1),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.02) 2px,
+        rgba(255, 255, 255, 0.02) 4px
+      );
     z-index: 0;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    pointer-events: none;
   }
 
-  .hero-text {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: stretch;
-    min-height: 50%;
-    max-height: 50%;
+  // Add overflow hidden to contain animations
+  overflow: hidden;
+
+  // Add subtle frosted glass animation
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.2) 50%,
+      transparent 70%
+    );
+    animation: frostShine 8s ease-in-out infinite;
+    pointer-events: none;
     z-index: 1;
-
-    // Ensure the text is above the overlay
-
-    span, a {
-      color: $white;
-    }
-
-    h1 {
-      font-size: 1rem;
-      letter-spacing: 0.05em;
-    }
-
-    h2 {
-      font-size: 1rem;
-      letter-spacing: 0.05em;
-    }
-
-    .icon-keyboard_arrow_down {
-      font-size: 2rem;
-      color: $secondary-color;
-      transition: color 0.3s;
-      cursor: pointer;
-
-      &:hover {
-        color: $accent-color;
-        font-weight: bold;
-      }
-    }
-
-    a {
-      text-decoration: none;
-
-      &:hover {
-        color: $accent-color;
-        font-weight: bold;
-      }
-    }
+    // Ensure the animation stays within bounds
+    will-change: transform;
   }
 
   .hero-text--name {
@@ -81,45 +70,57 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none; // allows scroll-down to remain clickable if overlapping
-    z-index: 1;
+    position: relative;
+    z-index: 3;
 
     span, a {
       color: $white;
     }
 
     h1 {
-      font-size: 1rem;
+      font-size: 2rem;
       letter-spacing: 0.05em;
+      color: $white;
+      margin: 0.5rem 0;
+      font-weight: 300;
     }
 
     h2 {
-      font-size: 1rem;
+      font-size: 1.5rem;
       letter-spacing: 0.05em;
+      color: $white;
+      margin: 0.5rem 0;
+      font-weight: 300;
     }
 
     .light {
-      color: $accent-color;
+      color: $white;
     }
 
-    // Responsive font sizes for h1 and h2
-    @media (min-width: $brk-point-lg) {
+    // Responsive font sizes
+    @media (min-width: $brk-point-md) {
+      padding: 4rem 3rem;
+
       h1 {
-        font-size: rem;
-      }
-      h2 {
         font-size: 3rem;
       }
+      h2 {
+        font-size: 2rem;
+      }
     }
+
+    @media (min-width: $brk-point-lg) {
+      h1 {
+        font-size: 4rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+
     @media (min-width: $brk-point-xl) {
       h1 {
-        font-size: 3rem !important;
+        font-size: 5rem;
       }
       h2 {
         font-size: 3rem;
@@ -127,75 +128,85 @@
     }
   }
 
-  .hero-text--scroll {
-    margin-top: auto;
-    align-self: center;
-    z-index: 2;
-    position: relative;
-    display: none;
+  // SCROLL BUTTON DOWN
 
-    @media (min-width: $brk-point-lg) {
-    display: block;
+  .hero-text--scroll {
+    margin-top: 3rem;
+    align-self: center;
+    z-index: 4;
+    position: relative;
+
+    // Perfectly circular, translucent white text button
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 
+      0 4px 16px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    padding: 0;
+    transition: 
+      background 0.3s cubic-bezier(.4,0,.2,1),
+      box-shadow 0.3s cubic-bezier(.4,0,.2,1),
+      color 0.3s cubic-bezier(.4,0,.2,1),
+      border 0.3s cubic-bezier(.4,0,.2,1),
+      filter 0.3s cubic-bezier(.4,0,.2,1);
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover, &:focus {
+      background: rgba(255, 255, 255, 0.35);
+      color: $white;
+      box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.15),
+        0 0 0 2px rgba(255,255,255,0.2),
+        inset 0 2px 0 rgba(255, 255, 255, 0.5);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      filter: brightness(1.1);
+      outline: none;
     }
 
     .icon-keyboard_arrow_down {
-      font-size: 2rem;
-      color: $secondary-color;
+      font-size: 4rem;
+      color: inherit;
       transition: color 0.3s;
       cursor: pointer;
 
       &:hover {
-        color: $accent-color;
-        font-weight: bold;
+        color: $secondary-color;
       }
     }
 
     a {
       text-decoration: none;
-      color: $white;
+      color: inherit;
+      font-weight: 500;
 
       &:hover {
-        color: $accent-color;
-        font-weight: bold;
+        color: $secondary-color;
       }
+    }
+
+    @media (min-width: $brk-point-lg) {
+      display: flex;
     }
   }
 }
 
-
-@media (min-width: $brk-point-md) {
-  .hero .hero-text--name h1 {
-    font-size: 2rem;
-    letter-spacing: 0.05em;
+@keyframes frostShine {
+  0%, 100% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
   }
-  .hero .hero-text--name h2 {
-    font-size: 1.5rem;
-    letter-spacing: 0.05em;
-  }
-}
-
-@media (min-width: $brk-point-lg) {
-  .hero {
-    min-height: 80vh;
-    height: 80vh;
-  }
-  .hero .hero-text--name h1 {
-    font-size: 3rem;
-  }
-  .hero .hero-text--name h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: $brk-point-xl) {
-  .hero {
-    min-height: 100vh;
-    height: 100vh;
-  }
-  .hero .hero-text--name h1 {
-    font-size: 5rem;
-  }
-  .hero .hero-text--name h2 {
-    font-size: 3rem;
+  50% {
+    transform: translateX(0%) translateY(0%) rotate(45deg);
   }
 }

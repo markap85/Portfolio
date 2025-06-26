@@ -55,11 +55,25 @@ $disabled-filter: grayscale(80%); // Grayscale filter for disabled items
   cursor: pointer;
   top: 0;
   transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
 
   // Hover Effect (only for enabled items)
   &:not(.disabled):hover {
     top: -5px;
     background-color: $primary-color;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-8px);
+    box-shadow: 
+      0 16px 48px rgba(0, 0, 0, 0.15),
+      inset 0 2px 0 rgba(255, 255, 255, 0.5);
 
     h3, a { // Text Color Change on Hover
       color: $white;

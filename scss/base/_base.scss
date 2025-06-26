@@ -5,7 +5,7 @@
 html, body {
   width: 100%;
   max-width: 100vw;
-  // overflow-x: hidden; // Disabled to allow horizontal scrolling for debugging purposes
+  overflow-x: hidden; // Enable this to prevent horizontal scrolling
 }
 
 html {
@@ -17,6 +17,26 @@ body {
   display: block;
   margin: 0;
   font-family: sans-serif;
+  background: url('../img/glassmorphic_01.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+  
+  // Add blur to the background image
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/glassmorphic_01.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
+    pointer-events: none;
+  }
 }
 
 main {

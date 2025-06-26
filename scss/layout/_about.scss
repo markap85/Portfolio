@@ -13,6 +13,37 @@
     max-width: 1260px;
     margin-left: auto;
     margin-right: auto;
+    
+    // Light glassmorphic styling
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      0 0 60px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    
+    // Light glass shine effect
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 70%
+      );
+      animation: lightShine 8s ease-in-out infinite;
+      pointer-events: none;
+    }
 
     // About Me Links
     a {
@@ -20,10 +51,11 @@
         color: $accent-color;
         font-size: 1.5rem;
         font-weight: bold;
-        transition: color 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 
         &:hover {
             color: darken($accent-color, 20%);
+            text-shadow: 0 0 10px rgba($accent-color, 0.3);
         }
     }
 
@@ -33,6 +65,8 @@
         font-size: 1.5rem;
         font-weight: bold;
         text-align: center;
+        position: relative;
+        z-index: 1;
     }
 
     // Section Paragraphs
@@ -41,6 +75,8 @@
         font-size: 1rem;
         line-height: 1.5;
         text-align: center;
+        position: relative;
+        z-index: 1;
     }
 
     // Skill Icons Row
@@ -109,6 +145,12 @@
         // Medium screens: left align text, increase font size
         text-align: left;
         margin-left: 0; // Remove margin, let content-wrapper handle it
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 
+          0 12px 40px rgba(0, 0, 0, 0.15),
+          inset 0 1px 0 rgba(255, 255, 255, 0.5),
+          0 0 80px rgba(255, 255, 255, 0.15);
         h3, p { 
             text-align: left;
             font-size: 1.7rem;
@@ -118,14 +160,22 @@
         }
         align-items: flex-start;
     }
+    
     @media (min-width: $brk-point-lg) {
         // Large screens: row layout, more padding
         margin: 0 auto;
-        padding-left: 50px;
+        padding: 40px 50px;
         flex-direction: row;
         gap: 20px;
         align-items: center;
         justify-content: center;
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        box-shadow: 
+          0 16px 60px rgba(0, 0, 0, 0.2),
+          inset 0 2px 0 rgba(255, 255, 255, 0.6),
+          0 0 100px rgba(255, 255, 255, 0.2);
         h3 {
             font-size: 2rem;
         }
@@ -133,11 +183,11 @@
             font-size: 1.25rem;
         }
     }
+    
     @media (min-width: $brk-point-xl) {
         // Extra large screens: even more padding and larger text
         margin: 0 auto;
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 50px 100px;
         h3 {
             font-size: 2.3rem;
         }
@@ -145,6 +195,15 @@
             font-size: 1.4rem;
         }
     }
+}
+
+@keyframes lightShine {
+  0%, 100% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  50% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
 }
 
 // ==========================================================================
@@ -160,9 +219,18 @@
     img {
         max-width: 100%;
         border-radius: 50%;
-        filter: none; /* Fallback for older browsers */
         filter: grayscale(100%);
-        transition: filter 0.3s ease-in-out;
+        transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 
+          0 8px 32px rgba(0, 0, 0, 0.15),
+          0 0 40px rgba(255, 255, 255, 0.2);
+
+        &:hover {
+            filter: none;
+            box-shadow: 
+              0 12px 40px rgba(0, 0, 0, 0.2),
+              0 0 60px rgba(255, 255, 255, 0.3);
+        }
 
         &[loading="lazy"] {
             opacity: 0;
