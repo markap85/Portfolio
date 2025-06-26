@@ -1,0 +1,49 @@
+.music-toggle {
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: background 0.3s ease;
+  border-radius: 50%;
+
+  &:hover > .wave-container > .wave,
+  &:focus > .wave-container > .wave {
+    background-color: $secondary-color !important;
+  }
+}
+
+.wave-container {
+  display: flex;
+  gap: 2px;
+}
+
+.wave {
+  width: 10px;
+  height: 15px;
+  border-radius: 2px;
+  animation: waveAnim 1s infinite ease-in-out;
+  transform-origin: bottom;
+  opacity: 1;
+  transition: background 0.5s ease;
+  background-color: $secondary-color; // PLAYING COLOR
+
+}
+
+.wave1 { animation-delay: 0s; }
+.wave2 { animation-delay: 0.2s; }
+.wave3 { animation-delay: 0.4s; }
+
+@keyframes waveAnim {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.8); }
+}
+
+.music-toggle.paused .wave {
+  animation: none;
+  transform: scaleY(1);
+  background-color: $primary-color !important;
+
+}

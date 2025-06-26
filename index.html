@@ -12,7 +12,20 @@
 
 <body>
 
-  <div id="progress-bar"></div>
+    <!-- =======================
+    PROGRESS BAR
+    ======================= -->
+    <div id="progress-bar"></div>
+
+    <!-- =======================
+    AUDIO PLAYER
+    ======================= -->
+    <audio id="bg-music" loop>
+      <source src="./audio/Music.wav" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  
+  
   <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -25,7 +38,19 @@
 
   <aside class="sidebar" id="sidebar">
     <div class="logo"><h1><a href="index.html"><span>&#123;</span>M/P<span>&#125;</span></a></h1></div>
+            <!-- =======================
+        MUSIC TOGGLE BUTTON
+        ======================= -->
+        <div id="music-toggle" class="music-toggle">
+          <div class="wave-container">
+            <span class="wave wave1"></span>
+            <span class="wave wave2"></span>
+            <span class="wave wave3"></span>
+          </div>
+        </div>
     <nav role="navigation" aria-label="Main navigation">
+
+
       <ul>
         <li><a href="index.html#about">About Me<span class="icon-keyboard_arrow_down"></span></a></li>
         <li><a href="index.html#portfolio">My Portfolio<span class="icon-keyboard_arrow_down"></span></a></li>
@@ -187,10 +212,12 @@
     
   </main>
 
-  <!-- <script src="js/typewriter.js"></script> -->
+  <script src="js/typewriter.js"></script>
   <script src="js/main.js"></script>
   <script src="js/burger.js"></script>
   <script src="js/scrollpercentage.js"></script>
+  <script src="js/audioplayer.js"></script>
+  <script src="js/smoothscroll.js"></script>
 
 </body>
 </html>

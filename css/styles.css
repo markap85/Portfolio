@@ -2078,6 +2078,74 @@ footer {
   z-index: 9999;
 }
 
+/* line 1, ../Portfolio/scss/layout/_audio.scss */
+.music-toggle {
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: background 0.3s ease;
+  border-radius: 50%;
+}
+
+/* line 12, ../Portfolio/scss/layout/_audio.scss */
+.music-toggle:hover > .wave-container > .wave,
+.music-toggle:focus > .wave-container > .wave {
+  background-color: #DF2C7D !important;
+}
+
+/* line 18, ../Portfolio/scss/layout/_audio.scss */
+.wave-container {
+  display: flex;
+  gap: 2px;
+}
+
+/* line 23, ../Portfolio/scss/layout/_audio.scss */
+.wave {
+  width: 10px;
+  height: 15px;
+  border-radius: 2px;
+  animation: waveAnim 1s infinite ease-in-out;
+  transform-origin: bottom;
+  opacity: 1;
+  transition: background 0.5s ease;
+  background-color: #DF2C7D;
+}
+
+/* line 35, ../Portfolio/scss/layout/_audio.scss */
+.wave1 {
+  animation-delay: 0s;
+}
+
+/* line 36, ../Portfolio/scss/layout/_audio.scss */
+.wave2 {
+  animation-delay: 0.2s;
+}
+
+/* line 37, ../Portfolio/scss/layout/_audio.scss */
+.wave3 {
+  animation-delay: 0.4s;
+}
+
+@keyframes waveAnim {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.8);
+  }
+}
+
+/* line 44, ../Portfolio/scss/layout/_audio.scss */
+.music-toggle.paused .wave {
+  animation: none;
+  transform: scaleY(1);
+  background-color: #0079A0 !important;
+}
+
 /* line 1, ../Portfolio/scss/layout/_blanktemplate.scss */
 .template-blank {
   width: 100%;
