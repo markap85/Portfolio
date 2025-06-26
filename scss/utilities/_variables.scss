@@ -1,66 +1,36 @@
-// Variables
-// This file contains all the variables used in the project.
-
 // ==========================================================================
 // Generic Color Variables
 // ==========================================================================
 
-$grey               : #7f8c8d;
-
-$grey-medium        : #c2c5c5;
-$light-grey         : #ecf0f1;
 $white              : #ffffff;
-$black              : #2c3e50;
+$black              : #000000;
 
 // ==========================================================================
 // Primary Color Variables
 // ==========================================================================
 
-$primary-color      : #0079A0;
-$secondary-color    : #7F4CC0;
-$accent-color       : #BAA085;
-$text               : #34495e;
+$primary-color      : #32CCEE;
+$secondary-color    : #943AE4;
+$accent-color       : #EFADBE;
 
-$grey-color-light : lighten($grey, 30%);
+$text-dark          : #34495e;
+$text-light         : #ecf0f1;
+
 
 // ==========================================================================
-// Font Variables
+// Tag Color Variables
 // ==========================================================================
 
-$tag-design         : #0079A0;
-$tag-refactor       : #0079A0;
-$tag-frontend     : $secondary-color;
+$tag-refactor       : $primary-color;
+$tag-frontend       : $secondary-color;
 $tag-backend        : $accent-color;
 
 // ==========================================================================
 // Breakpoints
 // ==========================================================================
 
-$brk-point-xs      : 280px; // 280px
-$brk-point-sm      : 576px; // 576px
-$brk-point-md      : 768px; // 768px
-$brk-point-lg      : 992px; // 992px
-$brk-point-xl      : 1200px; // 1200px
-
-// ==========================================================================
-// Mixins
-// ==========================================================================
-
-// Variables (move to a separate _variables.scss file if not already defined)
-$footer-padding-top: 2rem;
-$footer-padding-bottom: 0.625rem;
-$footer-font-size: 1.2rem;
-$back-to-top-icon-size: 2rem;
-$back-to-top-text-size: 1.1rem;
-$transition-duration: 0.3s;
-$transition-easing: ease-in-out;
-
-// Mixins for reusable styles
-@mixin hover-transition($property: all, $duration: $transition-duration, $easing: $transition-easing) {
-transition: $property $duration $easing;
-}
-
-@mixin hover-effect {
-color: $accent-color;
-font-weight: 600; // More precise than 'bold'
-}
+$brk-point-xs       : 280px;     // 280px
+$brk-point-sm       : 576px;     // 576px
+$brk-point-md       : 768px;     // 768px
+$brk-point-lg       : 992px;     // 992px
+$brk-point-xl       : 1200px;    // 1200px

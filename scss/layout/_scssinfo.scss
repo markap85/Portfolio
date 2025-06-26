@@ -3,17 +3,16 @@
 // ==========================================================================
 
 .scss-info-grid {
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
     max-width: 1260px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 
     // ==========================================================================
     // Responsive Breakpoint: Medium Screens
     // ==========================================================================
     @media (min-width: $brk-point-md) {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-top: 0; // Remove top margin for medium screens and larger
     }
 
     // ==========================================================================
@@ -23,30 +22,18 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 50px;
-        align-items: stretch; // ensure children stretch to same height
-        background: rgba(255, 255, 255, 0.25);
-        border-radius: 8px;
-        padding: 24px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        backdrop-filter: blur(12px) saturate(180%);
-        -webkit-backdrop-filter: blur(12px) saturate(180%);
-        border: 1px solid rgba(255,255,255,0.18);
-        margin: 0 0 20px 0;
-
-
-        // Responsive: Large Screens
-        @media (min-width: $brk-point-lg) {
-            grid-template-columns: 1fr 2fr;
-            margin-right: 20px;
-        }
-
-        .info-block > * {
-            min-width: 0;
-        }
+        padding: 2rem;
+        margin: 0 0 2rem 0;
+        @extend %glassmorphic-card;
 
         // Responsive: Small Screens
         @media (max-width: 600px) {
             grid-template-columns: 1fr;
+        }
+
+        // Responsive: Large Screens
+        @media (min-width: $brk-point-lg) {
+            grid-template-columns: 1fr 2fr;
         }
     }
 
@@ -100,25 +87,24 @@
     h3 {
         font-size: 2rem;
         color: $white;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
         font-weight: bold;
         margin-top: 0;
     }
 
     p {
         font-size: 1.1rem;
-        color: $text;
-        margin-bottom: 24px;
+        color: $text-dark;
+        margin-bottom: 1.5rem;
         line-height: 1.6;
     }
-
     ul {
-        list-style: none;
-        padding: 0;
+        padding-left: 1.5em;
         margin: 0 0 24px 0;
-        color: $text;
+        color: $text-dark;
 
         li {
+            list-style-type: disc;
             margin-bottom: 14px;
             font-size: 1.05rem;
         }
@@ -133,6 +119,7 @@
         text-decoration-thickness: 0 !important;
         font-weight: 500;
         transition: color 0.2s, border-bottom-color 0.2s;
+        font-size: 1.5rem;
 
         // Center links by default (below md)
         display: block;

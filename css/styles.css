@@ -1,4 +1,16 @@
-/* line 6, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 2, ../Portfolio/scss/utilities/_extends.scss */
+.about-me-grid, .examples-grid, .scss-info-grid .info-block {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
+  -webkit-backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 24, ../Portfolio/scss/utilities/_extends.scss */
 .project img {
   max-width: 100%;
   height: 250px;
@@ -7,7 +19,7 @@
   display: block;
 }
 
-/* line 15, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 33, ../Portfolio/scss/utilities/_extends.scss */
 .tag-refactor, .tag-frontend, .tag-backend {
   display: inline-block;
   font-size: 1.1rem;
@@ -26,7 +38,7 @@
   letter-spacing: 0.02em;
 }
 
-/* line 41, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 59, ../Portfolio/scss/utilities/_extends.scss */
 .social-icons--linkedin,
 .social-icons--git,
 .social-icons--facebook {
@@ -38,13 +50,13 @@
   color: #ffffff;
 }
 
-/* line 49, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 67, ../Portfolio/scss/utilities/_extends.scss */
 .social-icons--linkedin:hover,
 .social-icons--git:hover,
 .social-icons--facebook:hover {
   font-weight: 700;
   text-decoration: none;
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
 /* line 8, ../Portfolio/scss/base/_normalize.scss */
@@ -611,17 +623,17 @@ li {
 
 /* line 71, ../Portfolio/scss/base/_typography.scss */
 .txt-primary {
-  color: #0079A0;
+  color: #32CCEE;
 }
 
 /* line 74, ../Portfolio/scss/base/_typography.scss */
 .txt-secondary {
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
 /* line 78, ../Portfolio/scss/base/_typography.scss */
 .txt-accent {
-  color: #BAA085;
+  color: #EFADBE;
 }
 
 /* line 5, ../Portfolio/scss/layout/_socialmedia.scss */
@@ -689,7 +701,7 @@ li {
 /* line 67, ../Portfolio/scss/layout/_portfolio.scss */
 .project:not(.disabled):hover {
   top: -5px;
-  background-color: #0079A0;
+  background-color: #32CCEE;
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-8px);
@@ -742,47 +754,47 @@ li {
 
 /* line 140, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-1:not(.disabled):hover {
-  background-color: #0079A0;
+  background-color: #32CCEE;
 }
 
 /* line 144, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-2:not(.disabled):hover {
-  background-color: #7F4CC0;
+  background-color: #943AE4;
 }
 
 /* line 148, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-3:not(.disabled):hover {
-  background-color: #BAA085;
+  background-color: #EFADBE;
 }
 
 /* line 152, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-4:not(.disabled):hover {
-  background-color: #7F4CC0;
+  background-color: #943AE4;
 }
 
 /* line 156, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-5:not(.disabled):hover {
-  background-color: #BAA085;
+  background-color: #EFADBE;
 }
 
 /* line 160, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-6:not(.disabled):hover {
-  background-color: #0079A0;
+  background-color: #32CCEE;
 }
 
 /* line 168, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-refactor {
-  background-color: #0079A0;
+  background-color: #32CCEE;
 }
 
 /* line 173, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-frontend {
-  background-color: #7F4CC0;
+  background-color: #943AE4;
 }
 
 /* line 178, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-backend {
-  background-color: #BAA085;
+  background-color: #EFADBE;
 }
 
 /* line 184, ../Portfolio/scss/layout/_portfolio.scss */
@@ -833,7 +845,7 @@ li {
   transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* line 119, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 50, ../Portfolio/scss/utilities/_mixins.scss */
 .filter-btn:hover, .filter-btn:focus {
   background: rgba(255, 255, 255, 0.25);
   color: #ffffff;
@@ -953,7 +965,7 @@ li {
   }
   /* line 64, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details a {
-    color: #7F4CC0;
+    color: #943AE4;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
@@ -963,7 +975,7 @@ li {
   }
   /* line 72, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details a:hover {
-    color: #BAA085;
+    color: #EFADBE;
     font-weight: bold;
   }
 }
@@ -1122,7 +1134,7 @@ li {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-sizing: border-box;
   padding: 14px 18px;
-  color: #2c3e50;
+  color: #000000;
   font-weight: 400;
 }
 
@@ -1136,7 +1148,7 @@ li {
 /* line 218, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid input:focus,
 .contact-form-grid textarea:focus {
-  border-color: #0079A0;
+  border-color: #32CCEE;
   background: glass-white(0.12);
   box-shadow: 0 6px 20px glass-black(0.1), 0 0 0 2px glass-primary(0.3), inset 0 1px 0 glass-white(0.3);
   outline: none;
@@ -1162,7 +1174,7 @@ li {
 /* line 243, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .submit-btn {
   justify-self: center;
-  background: linear-gradient(135deg, #0079A0 0%, #00a0d3 100%);
+  background: linear-gradient(135deg, #32CCEE 0%, #61d8f2 100%);
   color: #ffffff;
   border: none;
   border-radius: 12px;
@@ -1205,7 +1217,7 @@ li {
 
 /* line 291, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .submit-btn:hover, .contact-form-grid .submit-btn:focus {
-  background: linear-gradient(135deg, #7F4CC0 0%, #9a72cd 100%);
+  background: linear-gradient(135deg, #943AE4 0%, #ac67ea 100%);
   box-shadow: 0 8px 25px glass-secondary(0.4), inset 0 1px 0 glass-white(0.3);
   transform: translateY(-2px);
   outline: none;
@@ -1219,7 +1231,7 @@ li {
 
 /* line 314, ../Portfolio/scss/layout/_contact.scss */
 .error {
-  border: 2px solid #7F4CC0 !important;
+  border: 2px solid #943AE4 !important;
   background: glass-white(0.05) !important;
   animation: errorShake 0.5s ease-in-out;
 }
@@ -1239,7 +1251,7 @@ li {
 /* line 326, ../Portfolio/scss/layout/_contact.scss */
 .error-message {
   color: #ffffff;
-  background: linear-gradient(135deg, #7F4CC0 0%, #6638a1 100%);
+  background: linear-gradient(135deg, #943AE4 0%, #7b1ccf 100%);
   border-radius: 8px;
   font-size: 0.9rem;
   text-align: center;
@@ -1335,7 +1347,7 @@ footer {
   position: relative;
 }
 
-/* line 119, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 50, ../Portfolio/scss/utilities/_mixins.scss */
 .back-to-top:hover, .back-to-top:focus {
   background: rgba(255, 255, 255, 0.35);
   color: #ffffff;
@@ -1345,28 +1357,28 @@ footer {
   outline: none;
 }
 
-/* line 150, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 81, ../Portfolio/scss/utilities/_mixins.scss */
 .back-to-top .icon-keyboard_arrow_down {
   font-size: 1.8rem;
   color: inherit;
   transition: color 0.3s;
 }
 
-/* line 155, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 86, ../Portfolio/scss/utilities/_mixins.scss */
 .back-to-top .icon-keyboard_arrow_down:hover {
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
-/* line 160, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 91, ../Portfolio/scss/utilities/_mixins.scss */
 .back-to-top a {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
 }
 
-/* line 165, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 96, ../Portfolio/scss/utilities/_mixins.scss */
 .back-to-top a:hover {
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
 @media (min-width: 992px) {
@@ -1599,7 +1611,7 @@ footer {
 
 /* line 160, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover {
-  border-bottom: 1px solid #BAA085;
+  border-bottom: 1px solid #EFADBE;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1607,17 +1619,17 @@ footer {
 
 /* line 166, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_right {
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
 /* line 170, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_down {
-  color: #BAA085;
+  color: #EFADBE;
 }
 
 /* line 178, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li:last-child a:hover {
-  color: #7F4CC0;
+  color: #943AE4;
   border-bottom: 1px solid transparent;
 }
 
@@ -1639,7 +1651,7 @@ footer {
 
 /* line 202, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary:hover {
-  border-bottom: 1px solid #7F4CC0 !important;
+  border-bottom: 1px solid #943AE4 !important;
 }
 
 /* line 206, ../Portfolio/scss/layout/_sidebar.scss */
@@ -1651,7 +1663,7 @@ footer {
 
 /* line 213, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary .contacthover span:hover {
-  color: #0079A0;
+  color: #32CCEE;
   opacity: 1;
 }
 
@@ -1785,7 +1797,7 @@ footer {
 
 /* line 345, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon.active {
-  color: #0079A0;
+  color: #32CCEE;
 }
 
 /* line 1, ../Portfolio/scss/layout/_hero.scss */
@@ -1958,7 +1970,7 @@ footer {
 
 /* line 184, ../Portfolio/scss/layout/_hero.scss */
 .hero .hero-text--scroll .icon-keyboard_arrow_down:hover {
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
 /* line 189, ../Portfolio/scss/layout/_hero.scss */
@@ -1970,7 +1982,7 @@ footer {
 
 /* line 194, ../Portfolio/scss/layout/_hero.scss */
 .hero .hero-text--scroll a:hover {
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
 @media (min-width: 992px) {
@@ -2000,17 +2012,9 @@ footer {
   max-width: 800px;
   margin: 0 auto;
   z-index: 55;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
-  -webkit-backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 24px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  position: relative;
-  overflow: hidden;
 }
 
-/* line 37, ../Portfolio/scss/layout/_about.scss */
+/* line 20, ../Portfolio/scss/layout/_about.scss */
 .about-me-grid::before {
   content: '';
   position: absolute;
@@ -2040,7 +2044,7 @@ footer {
   }
 }
 
-/* line 75, ../Portfolio/scss/layout/_about.scss */
+/* line 58, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img {
   width: 120px;
   height: 120px;
@@ -2051,7 +2055,7 @@ footer {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
-/* line 86, ../Portfolio/scss/layout/_about.scss */
+/* line 69, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img:hover {
   filter: none;
   transform: scale(1.05);
@@ -2059,7 +2063,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 75, ../Portfolio/scss/layout/_about.scss */
+  /* line 58, ../Portfolio/scss/layout/_about.scss */
   .about-me-image img {
     width: 150px;
     height: 150px;
@@ -2067,14 +2071,14 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 75, ../Portfolio/scss/layout/_about.scss */
+  /* line 58, ../Portfolio/scss/layout/_about.scss */
   .about-me-image img {
     width: 180px;
     height: 180px;
   }
 }
 
-/* line 108, ../Portfolio/scss/layout/_about.scss */
+/* line 91, ../Portfolio/scss/layout/_about.scss */
 .about-me-text h3 {
   color: #ffffff;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -2084,7 +2088,7 @@ footer {
   z-index: 1;
 }
 
-/* line 117, ../Portfolio/scss/layout/_about.scss */
+/* line 100, ../Portfolio/scss/layout/_about.scss */
 .about-me-text p {
   color: #ffffff;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -2095,12 +2099,12 @@ footer {
   z-index: 1;
 }
 
-/* line 126, ../Portfolio/scss/layout/_about.scss */
+/* line 109, ../Portfolio/scss/layout/_about.scss */
 .about-me-text p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 131, ../Portfolio/scss/layout/_about.scss */
+/* line 114, ../Portfolio/scss/layout/_about.scss */
 .about-me-text a {
   color: rgba(0, 120, 160, 0.9);
   text-decoration: none;
@@ -2109,14 +2113,14 @@ footer {
   border-bottom: 1px solid transparent;
 }
 
-/* line 138, ../Portfolio/scss/layout/_about.scss */
+/* line 121, ../Portfolio/scss/layout/_about.scss */
 .about-me-text a:hover {
   color: rgba(223, 44, 125, 0.9);
   border-bottom-color: rgba(223, 44, 125, 0.4);
   text-shadow: 0 0 8px rgba(223, 44, 125, 0.2);
 }
 
-/* line 147, ../Portfolio/scss/layout/_about.scss */
+/* line 130, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons {
   margin: 1.5rem;
   display: flex;
@@ -2128,14 +2132,14 @@ footer {
   z-index: 1;
 }
 
-/* line 157, ../Portfolio/scss/layout/_about.scss */
+/* line 140, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons [class^="icon-"] {
   font-size: 2.5rem;
   transition: all 0.2s;
   color: #ffffff;
 }
 
-/* line 164, ../Portfolio/scss/layout/_about.scss */
+/* line 147, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons .icon-postgresql,
 .about-me-icons .icon-php,
 .about-me-icons .icon-laravel {
@@ -2143,7 +2147,7 @@ footer {
   cursor: default;
 }
 
-/* line 170, ../Portfolio/scss/layout/_about.scss */
+/* line 153, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons .icon-postgresql:hover,
 .about-me-icons .icon-php:hover,
 .about-me-icons .icon-laravel:hover {
@@ -2152,11 +2156,11 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 147, ../Portfolio/scss/layout/_about.scss */
+  /* line 130, ../Portfolio/scss/layout/_about.scss */
   .about-me-icons {
     gap: 2rem;
   }
-  /* line 179, ../Portfolio/scss/layout/_about.scss */
+  /* line 162, ../Portfolio/scss/layout/_about.scss */
   .about-me-icons [class^="icon-"] {
     font-size: 3rem;
   }
@@ -2191,7 +2195,7 @@ footer {
   }
 }
 
-/* line 219, ../Portfolio/scss/layout/_about.scss */
+/* line 202, ../Portfolio/scss/layout/_about.scss */
 .skip-link {
   position: absolute;
   top: -9999px;
@@ -2201,7 +2205,7 @@ footer {
   overflow: hidden;
 }
 
-/* line 227, ../Portfolio/scss/layout/_about.scss */
+/* line 210, ../Portfolio/scss/layout/_about.scss */
 .skip-link:focus {
   position: static;
   width: auto;
@@ -2209,13 +2213,13 @@ footer {
   top: 0;
   left: 0;
   padding: 10px;
-  background-color: #0079A0;
+  background-color: #32CCEE;
   color: #ffffff;
   z-index: 1000;
   text-decoration: none;
 }
 
-/* line 243, ../Portfolio/scss/layout/_about.scss */
+/* line 226, ../Portfolio/scss/layout/_about.scss */
 .next-section {
   display: inline-flex;
   align-items: center;
@@ -2242,7 +2246,7 @@ footer {
   position: relative;
 }
 
-/* line 119, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 50, ../Portfolio/scss/utilities/_mixins.scss */
 .next-section:hover, .next-section:focus {
   background: rgba(255, 255, 255, 0.35);
   color: #ffffff;
@@ -2252,32 +2256,32 @@ footer {
   outline: none;
 }
 
-/* line 150, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 81, ../Portfolio/scss/utilities/_mixins.scss */
 .next-section .icon-keyboard_arrow_down {
   font-size: 4rem;
   color: inherit;
   transition: color 0.3s;
 }
 
-/* line 155, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 86, ../Portfolio/scss/utilities/_mixins.scss */
 .next-section .icon-keyboard_arrow_down:hover {
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
-/* line 160, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 91, ../Portfolio/scss/utilities/_mixins.scss */
 .next-section a {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
 }
 
-/* line 165, ../Portfolio/scss/utilities/_extendsmixins.scss */
+/* line 96, ../Portfolio/scss/utilities/_mixins.scss */
 .next-section a:hover {
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
 @media (min-width: 992px) {
-  /* line 243, ../Portfolio/scss/layout/_about.scss */
+  /* line 226, ../Portfolio/scss/layout/_about.scss */
   .next-section {
     display: flex;
   }
@@ -2296,7 +2300,7 @@ footer {
 /* line 15, ../Portfolio/scss/layout/_examples.scss */
 .examples h3 {
   font-size: 1rem;
-  color: #0079A0;
+  color: #32CCEE;
   margin-bottom: 16px;
   font-weight: bold;
 }
@@ -2324,17 +2328,17 @@ footer {
 /* line 39, ../Portfolio/scss/layout/_examples.scss */
 .examples ul li a {
   font-size: 0.5rem;
-  color: #0079A0;
+  color: #32CCEE;
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 1px dashed #0079A0;
+  border-bottom: 1px dashed #32CCEE;
   transition: color 0.2s, border-bottom-color 0.2s;
 }
 
 /* line 47, ../Portfolio/scss/layout/_examples.scss */
 .examples ul li a:hover {
-  color: #BAA085;
-  border-bottom: 1px solid #BAA085;
+  color: #EFADBE;
+  border-bottom: 1px solid #EFADBE;
   text-decoration: underline;
 }
 
@@ -2396,17 +2400,9 @@ footer {
   align-items: center;
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
-  -webkit-backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 24px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  position: relative;
-  overflow: hidden;
 }
 
-/* line 143, ../Portfolio/scss/layout/_examples.scss */
+/* line 126, ../Portfolio/scss/layout/_examples.scss */
 .examples-grid::before {
   content: '';
   position: absolute;
@@ -2420,7 +2416,7 @@ footer {
   pointer-events: none;
 }
 
-/* line 170, ../Portfolio/scss/layout/_examples.scss */
+/* line 153, ../Portfolio/scss/layout/_examples.scss */
 .examples-grid::after {
   content: '';
   position: absolute;
@@ -2450,13 +2446,13 @@ footer {
   }
 }
 
-/* line 206, ../Portfolio/scss/layout/_examples.scss */
+/* line 189, ../Portfolio/scss/layout/_examples.scss */
 .examples-header {
   position: relative;
   z-index: 1;
 }
 
-/* line 210, ../Portfolio/scss/layout/_examples.scss */
+/* line 193, ../Portfolio/scss/layout/_examples.scss */
 .examples-header h3 {
   color: #ffffff;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -2464,7 +2460,7 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* line 217, ../Portfolio/scss/layout/_examples.scss */
+/* line 200, ../Portfolio/scss/layout/_examples.scss */
 .examples-header p {
   color: #ffffff;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -2473,7 +2469,7 @@ footer {
   margin: 0 auto 2rem auto;
 }
 
-/* line 227, ../Portfolio/scss/layout/_examples.scss */
+/* line 210, ../Portfolio/scss/layout/_examples.scss */
 .examples-list {
   display: flex;
   flex-direction: column;
@@ -2483,7 +2479,7 @@ footer {
   z-index: 1;
 }
 
-/* line 235, ../Portfolio/scss/layout/_examples.scss */
+/* line 218, ../Portfolio/scss/layout/_examples.scss */
 .examples-list .example-item {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -2494,7 +2490,7 @@ footer {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* line 244, ../Portfolio/scss/layout/_examples.scss */
+/* line 227, ../Portfolio/scss/layout/_examples.scss */
 .examples-list .example-item:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.3);
@@ -2502,7 +2498,7 @@ footer {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-/* line 253, ../Portfolio/scss/layout/_examples.scss */
+/* line 236, ../Portfolio/scss/layout/_examples.scss */
 .examples-list .example-item h4 {
   color: #ffffff;
   font-size: 1.2rem;
@@ -2510,7 +2506,7 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-/* line 260, ../Portfolio/scss/layout/_examples.scss */
+/* line 243, ../Portfolio/scss/layout/_examples.scss */
 .examples-list .example-item p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 1rem;
@@ -2519,7 +2515,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 227, ../Portfolio/scss/layout/_examples.scss */
+  /* line 210, ../Portfolio/scss/layout/_examples.scss */
   .examples-list {
     gap: 2rem;
   }
@@ -2565,57 +2561,43 @@ footer {
 
 /* line 5, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid {
-  width: 100%;
-  margin-right: 0;
-  margin-left: 0;
   max-width: 1260px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 @media (min-width: 768px) {
   /* line 5, ../Portfolio/scss/layout/_scssinfo.scss */
   .scss-info-grid {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-top: 0;
   }
 }
 
-/* line 22, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 21, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid .info-block {
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
-  align-items: stretch;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 8px;
-  padding: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  margin: 0 0 20px 0;
-}
-
-@media (min-width: 992px) {
-  /* line 22, ../Portfolio/scss/layout/_scssinfo.scss */
-  .scss-info-grid .info-block {
-    grid-template-columns: 1fr 2fr;
-    margin-right: 20px;
-  }
-}
-
-/* line 43, ../Portfolio/scss/layout/_scssinfo.scss */
-.scss-info-grid .info-block .info-block > * {
-  min-width: 0;
+  padding: 2rem;
+  margin: 0 0 2rem 0;
 }
 
 @media (max-width: 600px) {
-  /* line 22, ../Portfolio/scss/layout/_scssinfo.scss */
+  /* line 21, ../Portfolio/scss/layout/_scssinfo.scss */
   .scss-info-grid .info-block {
     grid-template-columns: 1fr;
   }
 }
 
-/* line 56, ../Portfolio/scss/layout/_scssinfo.scss */
+@media (min-width: 992px) {
+  /* line 21, ../Portfolio/scss/layout/_scssinfo.scss */
+  .scss-info-grid .info-block {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* line 43, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid .info-img {
   width: 100%;
   max-width: 400px;
@@ -2632,7 +2614,7 @@ footer {
   filter: brightness(1);
 }
 
-/* line 71, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 58, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid .info-img .info-img img {
   width: 100%;
   height: 100%;
@@ -2640,77 +2622,78 @@ footer {
   border-radius: 8px;
 }
 
-/* line 78, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 65, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid .info-img:hover {
   box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
   filter: brightness(0.8);
 }
 
 @media (min-width: 992px) {
-  /* line 56, ../Portfolio/scss/layout/_scssinfo.scss */
+  /* line 43, ../Portfolio/scss/layout/_scssinfo.scss */
   .scss-info-grid .info-img {
     max-width: 100%;
     aspect-ratio: 16 / 9;
   }
 }
 
-/* line 93, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 80, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid h1, .scss-info-grid h2, .scss-info-grid h3, .scss-info-grid h4, .scss-info-grid h5, .scss-info-grid h6, .scss-info-grid p, .scss-info-grid ul, .scss-info-grid li a {
   text-align: center;
 }
 
 @media (min-width: 992px) {
-  /* line 93, ../Portfolio/scss/layout/_scssinfo.scss */
+  /* line 80, ../Portfolio/scss/layout/_scssinfo.scss */
   .scss-info-grid h1, .scss-info-grid h2, .scss-info-grid h3, .scss-info-grid h4, .scss-info-grid h5, .scss-info-grid h6, .scss-info-grid p, .scss-info-grid ul, .scss-info-grid li a {
     text-align: left;
   }
 }
 
-/* line 100, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 87, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid h3 {
   font-size: 2rem;
   color: #ffffff;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   font-weight: bold;
   margin-top: 0;
 }
 
-/* line 108, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 95, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid p {
   font-size: 1.1rem;
   color: #34495e;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
-/* line 115, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 101, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid ul {
-  list-style: none;
-  padding: 0;
+  padding-left: 1.5em;
   margin: 0 0 24px 0;
   color: #34495e;
 }
 
-/* line 121, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 106, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid ul li {
+  list-style-type: disc;
   margin-bottom: 14px;
   font-size: 1.05rem;
 }
 
-/* line 130, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 116, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid a {
-  color: #7F4CC0;
+  color: #943AE4;
   text-decoration: none !important;
   text-decoration-thickness: 0 !important;
   font-weight: 500;
   transition: color 0.2s, border-bottom-color 0.2s;
+  font-size: 1.5rem;
   display: block;
   text-align: center;
   margin: 0 auto;
 }
 
 @media (min-width: 992px) {
-  /* line 130, ../Portfolio/scss/layout/_scssinfo.scss */
+  /* line 116, ../Portfolio/scss/layout/_scssinfo.scss */
   .scss-info-grid a {
     display: inline;
     text-align: left;
@@ -2719,9 +2702,9 @@ footer {
   }
 }
 
-/* line 150, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 137, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid a:hover {
-  color: #BAA085;
+  color: #EFADBE;
   text-decoration: none !important;
   text-decoration-thickness: 0 !important;
 }
@@ -2847,7 +2830,7 @@ footer {
 /* line 12, ../Portfolio/scss/layout/_audio.scss */
 .music-toggle:hover > .wave-container > .wave,
 .music-toggle:focus > .wave-container > .wave {
-  background-color: #7F4CC0 !important;
+  background-color: #943AE4 !important;
 }
 
 /* line 18, ../Portfolio/scss/layout/_audio.scss */
@@ -2865,7 +2848,7 @@ footer {
   transform-origin: bottom;
   opacity: 1;
   transition: background 0.5s ease;
-  background-color: #7F4CC0;
+  background-color: #943AE4;
 }
 
 /* line 35, ../Portfolio/scss/layout/_audio.scss */
@@ -2896,7 +2879,7 @@ footer {
 .music-toggle.paused .wave {
   animation: none;
   transform: scaleY(1);
-  background-color: #0079A0 !important;
+  background-color: #32CCEE !important;
 }
 
 /* line 5, ../Portfolio/scss/layout/_nav-dots.scss */
@@ -3149,7 +3132,7 @@ section {
 
 /* line 160, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover {
-  border-bottom: 1px solid #BAA085;
+  border-bottom: 1px solid #EFADBE;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -3157,17 +3140,17 @@ section {
 
 /* line 166, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_right {
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
 /* line 170, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_down {
-  color: #BAA085;
+  color: #EFADBE;
 }
 
 /* line 178, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li:last-child a:hover {
-  color: #7F4CC0;
+  color: #943AE4;
   border-bottom: 1px solid transparent;
 }
 
@@ -3189,7 +3172,7 @@ section {
 
 /* line 202, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary:hover {
-  border-bottom: 1px solid #7F4CC0 !important;
+  border-bottom: 1px solid #943AE4 !important;
 }
 
 /* line 206, ../Portfolio/scss/layout/_sidebar.scss */
@@ -3201,7 +3184,7 @@ section {
 
 /* line 213, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary .contacthover span:hover {
-  color: #0079A0;
+  color: #32CCEE;
   opacity: 1;
 }
 
@@ -3335,7 +3318,7 @@ section {
 
 /* line 345, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon.active {
-  color: #0079A0;
+  color: #32CCEE;
 }
 
 /* line 5, ../Portfolio/scss/layout/_nav-dots.scss */
@@ -3636,7 +3619,7 @@ section {
 
 /* line 184, ../Portfolio/scss/layout/_hero.scss */
 .hero .hero-text--scroll .icon-keyboard_arrow_down:hover {
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
 /* line 189, ../Portfolio/scss/layout/_hero.scss */
@@ -3648,7 +3631,7 @@ section {
 
 /* line 194, ../Portfolio/scss/layout/_hero.scss */
 .hero .hero-text--scroll a:hover {
-  color: #7F4CC0;
+  color: #943AE4;
 }
 
 @media (min-width: 992px) {

@@ -2,75 +2,6 @@
 // Mixins and Extends for the Project
 // ==========================================================================
 
-// Portfolio Image Style
-%img-portfolio {
-    max-width: 100%;
-    height: 250px; // Set your desired fixed height
-    object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
-    display: block;
-}
-
-// Portfolio Tag Style
-%portfolio-tag {
-  display: inline-block;
-  font-size: 1.1rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-transform: lowercase;
-  padding: 5px 20px;
-  color: rgba(255, 255, 255, 1);
-  background: rgba(255, 255, 255, 0.13);
-  border-radius: 12px 0 0 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.18);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-// Skill Icon Style
-%skill-icon {
-    font-size: 40px;
-    padding-right: 20px;
-    transition: color 0.3s ease-in-out;
-}
-
-// Social Media Icon Style
-%socialmedia-icon {
-    text-decoration: none;
-    font-size: 2rem;
-    transition: color 0.3s;
-    cursor: pointer;
-    padding: 0 5px;
-    color: $white;
-
-    &:hover {
-        font-weight: 700;
-        text-decoration: none;
-        color: $secondary-color;
-    }
-}
-
-// Generic Button Style
-%button-generic {
-  background-color: $primary-color;
-  color: white !important;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: $secondary-color;
-  }
-}
-
 // Flexible glassmorphic button mixin
 @mixin glassmorphic-btn(
   $width: auto,
@@ -170,4 +101,14 @@
   @media (min-width: $brk-point-lg) {
     display: flex;
   }
+}
+
+// Mixins for reusable styles
+@mixin hover-transition($property: all, $duration: $transition-duration, $easing: $transition-easing) {
+transition: $property $duration $easing;
+}
+
+@mixin hover-effect {
+color: $accent-color;
+font-weight: 600; // More precise than 'bold'
 }
