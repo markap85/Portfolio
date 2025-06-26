@@ -5,274 +5,206 @@
 .about-me-grid {
     display: flex;
     flex-direction: column;
-    gap: 0px;
-    padding: 20px;
+    gap: 2rem;
+    padding: 3rem 2.5rem;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    max-width: 1260px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    // Light glassmorphic styling
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    // Optimized glassmorphic styling
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 24px;
     box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4),
-      0 0 60px rgba(255, 255, 255, 0.1);
+      0 12px 40px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
     position: relative;
     overflow: hidden;
     
-    // Light glass shine effect
+    // Subtle glass shine effect
     &::before {
       content: '';
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
+      top: -100%;
+      left: -100%;
+      width: 300%;
+      height: 300%;
       background: linear-gradient(
         45deg,
-        transparent 30%,
-        rgba(255, 255, 255, 0.1) 50%,
-        transparent 70%
+        transparent 40%,
+        rgba(255, 255, 255, 0.04) 50%,
+        transparent 60%
       );
-      animation: lightShine 8s ease-in-out infinite;
+      animation: glassShine 12s ease-in-out infinite;
       pointer-events: none;
     }
 
-    // About Me Links
-    a {
-        text-decoration: none;
-        color: $accent-color;
-        font-size: 1.5rem;
-        font-weight: bold;
-        transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-
-        &:hover {
-            color: darken($accent-color, 20%);
-            text-shadow: 0 0 10px rgba($accent-color, 0.3);
-        }
-    }
-
-    // Section Headings
-    h3 {
-        color: $primary-color;
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    // Section Paragraphs
-    p {
-        color: $text;
-        font-size: 1rem;
-        line-height: 1.5;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    // Skill Icons Row
-    .about-me-icons {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-        transition: color 0.3s ease-in-out;
-
-        .icon-html-five  {
-            @extend %skill-icon;
-            color: $primary-color;
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-            &:hover { transform: scale(1.2); }
-        }
-        .icon-css3  {
-            @extend %skill-icon;
-            color: $secondary-color;
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-            &:hover { transform: scale(1.2); }
-        }
-        .icon-sass  {
-            @extend %skill-icon;
-            color: $accent-color;
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-            &:hover { transform: scale(1.2); }
-        }
-
-        .icon-javascript  {
-            @extend %skill-icon;
-            color: $primary-color;
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-            &:hover { transform: scale(1.2); }
-        }
-
-        .icon-jquery  {
-            @extend %skill-icon;
-            color: $primary-color;
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-            &:hover { transform: scale(1.2); }
-        }
-        .icon-postgresql  {
-            @extend %skill-icon;
-            color: $grey;
-            opacity: 0.5
-        }
-        .icon-php  {
-            @extend %skill-icon;
-            color: $grey;
-            opacity: 0.5
-        }
-
-        .icon-laravel  {
-            @extend %skill-icon;
-            color: $grey;
-            opacity: 0.5
-        }
-    }
-
-    // ==========================================================================
-    // Breakpoints for Responsive Layout
-    // ==========================================================================
-
+    // Responsive sizing
     @media (min-width: $brk-point-md) {
-        // Medium screens: left align text, increase font size
-        text-align: left;
-        margin-left: 0; // Remove margin, let content-wrapper handle it
-        background: rgba(255, 255, 255, 0.2);
-        border-color: rgba(255, 255, 255, 0.4);
-        box-shadow: 
-          0 12px 40px rgba(0, 0, 0, 0.15),
-          inset 0 1px 0 rgba(255, 255, 255, 0.5),
-          0 0 80px rgba(255, 255, 255, 0.15);
-        h3, p { 
-            text-align: left;
-            font-size: 1.7rem;
-        }
-        p {
-            font-size: 1.15rem;
-        }
-        align-items: flex-start;
+        padding: 4rem 3rem;
+        gap: 2.5rem;
     }
     
     @media (min-width: $brk-point-lg) {
-        // Large screens: row layout, more padding
-        margin: 0 auto;
-        padding: 40px 50px;
-        flex-direction: row;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
-        background: rgba(255, 255, 255, 0.18);
-        backdrop-filter: blur(30px);
-        -webkit-backdrop-filter: blur(30px);
-        box-shadow: 
-          0 16px 60px rgba(0, 0, 0, 0.2),
-          inset 0 2px 0 rgba(255, 255, 255, 0.6),
-          0 0 100px rgba(255, 255, 255, 0.2);
-        h3 {
-            font-size: 2rem;
-        }
-        p {
-            font-size: 1.25rem;
-        }
-    }
-    
-    @media (min-width: $brk-point-xl) {
-        // Extra large screens: even more padding and larger text
-        margin: 0 auto;
-        padding: 50px 100px;
-        h3 {
-            font-size: 2.3rem;
-        }
-        p {
-            font-size: 1.4rem;
-        }
+        padding: 5rem 4rem;
+        gap: 3rem;
     }
 }
 
-@keyframes lightShine {
-  0%, 100% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
-  }
-  50% {
-    transform: translateX(100%) translateY(100%) rotate(45deg);
-  }
-}
-
-// ==========================================================================
-// About Me Image Section
-// ==========================================================================
-
+// Image styling
 .about-me-image {
-    display: none;
-    margin-top: 10px;
-    justify-content: center;
-    align-items: center;
-
     img {
-        max-width: 100%;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
-        filter: grayscale(100%);
-        transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        object-fit: cover;
+        filter: grayscale(80%) brightness(1.1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 
-          0 8px 32px rgba(0, 0, 0, 0.15),
-          0 0 40px rgba(255, 255, 255, 0.2);
+          0 8px 24px rgba(0, 0, 0, 0.12),
+          0 0 0 2px rgba(255, 255, 255, 0.2);
 
         &:hover {
             filter: none;
+            transform: scale(1.05);
             box-shadow: 
-              0 12px 40px rgba(0, 0, 0, 0.2),
-              0 0 60px rgba(255, 255, 255, 0.3);
+              0 16px 40px rgba(0, 0, 0, 0.2),
+              0 0 0 3px rgba(255, 255, 255, 0.3);
         }
 
-        &[loading="lazy"] {
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
+        @media (min-width: $brk-point-md) {
+            width: 150px;
+            height: 150px;
         }
-
-        &[loading="lazy"]:not([src=""]) {
-            opacity: 1;
-        }
-    }
-}
-
-// ==========================================================================
-// Responsive Breakpoints for Icons and Image
-// ==========================================================================
-
-@media (min-width: $brk-point-sm) {
-    .about-me-grid {
-        .about-me-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        
+        @media (min-width: $brk-point-lg) {
+            width: 180px;
+            height: 180px;
         }
     }
 }
 
-@media (min-width: $brk-point-md) {
-    .about-me-grid {
-        .about-me-icons {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+// Typography styling
+.about-me-text {
+    h3 {
+        color: rgba(40, 60, 80, 0.9);
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    p {
+        color: rgba(60, 80, 100, 0.85);
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        line-height: 1.7;
+        max-width: 600px;
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 1;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        color: rgba(0, 120, 160, 0.9);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            color: rgba(223, 44, 125, 0.9);
+            border-bottom-color: rgba(223, 44, 125, 0.4);
+            text-shadow: 0 0 8px rgba(223, 44, 125, 0.2);
         }
     }
 }
 
-@media (min-width: $brk-point-lg) {
-    .about-me-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+// Skills icons
+.about-me-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+
+    [class^="icon-"] {
+        font-size: 2.5rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-4px) scale(1.1);
+        }
+
+        // Skill-specific colors optimized for glassmorphic design
+        &.icon-html-five { 
+            color: rgba(227, 79, 38, 0.8);
+            &:hover { color: rgba(227, 79, 38, 1); }
+        }
+        
+        &.icon-css3 { 
+            color: rgba(21, 114, 182, 0.8);
+            &:hover { color: rgba(21, 114, 182, 1); }
+        }
+        
+        &.icon-sass { 
+            color: rgba(207, 100, 154, 0.8);
+            &:hover { color: rgba(207, 100, 154, 1); }
+        }
+        
+        &.icon-javascript { 
+            color: rgba(240, 219, 79, 0.9);
+            &:hover { color: rgba(240, 219, 79, 1); }
+        }
+        
+        &.icon-jquery { 
+            color: rgba(0, 104, 183, 0.8);
+            &:hover { color: rgba(0, 104, 183, 1); }
+        }
+        
+        // Future skills with reduced opacity
+        &.icon-postgresql,
+        &.icon-php,
+        &.icon-laravel {
+            color: rgba(120, 140, 160, 0.4);
+            cursor: default;
+            
+            &:hover {
+                transform: none;
+                color: rgba(120, 140, 160, 0.6);
+            }
+        }
     }
+
+    @media (min-width: $brk-point-md) {
+        gap: 2rem;
+        
+        [class^="icon-"] {
+            font-size: 3rem;
+        }
+    }
+}
+
+// Optimized animation
+@keyframes glassShine {
+  0%, 100% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0%) translateY(0%) rotate(45deg);
+    opacity: 1;
+  }
 }
 
 // ==========================================================================

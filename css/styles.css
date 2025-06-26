@@ -22,23 +22,16 @@
   box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* line 30, ../Portfolio/scss/utilities/_extendsmixins.scss */
-.about-me-grid .about-me-icons .icon-html-five, .about-me-grid .about-me-icons .icon-css3, .about-me-grid .about-me-icons .icon-sass, .about-me-grid .about-me-icons .icon-javascript, .about-me-grid .about-me-icons .icon-jquery, .about-me-grid .about-me-icons .icon-postgresql, .about-me-grid .about-me-icons .icon-php, .about-me-grid .about-me-icons .icon-laravel {
-  font-size: 40px;
-  padding-right: 20px;
-  transition: color 0.3s ease-in-out;
-}
-
 /* line 37, ../Portfolio/scss/utilities/_extendsmixins.scss */
 .social-icons--linkedin,
 .social-icons--git,
 .social-icons--facebook {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 2rem;
   transition: color 0.3s;
   cursor: pointer;
   padding: 0 5px;
-  color: #0079A0;
+  color: #ffffff;
 }
 
 /* line 45, ../Portfolio/scss/utilities/_extendsmixins.scss */
@@ -450,34 +443,19 @@ body {
 }
 
 /* line 27, ../Portfolio/scss/base/_base.scss */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../img/glassmorphic_01.jpg") no-repeat center center fixed;
-  background-size: cover;
-  filter: blur(2px);
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* line 42, ../Portfolio/scss/base/_base.scss */
 main {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 48, ../Portfolio/scss/base/_base.scss */
+/* line 33, ../Portfolio/scss/base/_base.scss */
 main .content-wrapper {
   margin-left: 0;
   margin-right: 0;
 }
 
 @media (min-width: 768px) {
-  /* line 48, ../Portfolio/scss/base/_base.scss */
+  /* line 33, ../Portfolio/scss/base/_base.scss */
   main .content-wrapper {
     margin-left: 220px;
   }
@@ -1198,10 +1176,10 @@ footer {
 /* line 1, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 1rem;
   left: 0;
   width: 220px;
-  height: 100vh;
+  height: 95vh;
   text-align: center;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.15) 60%, rgba(255, 255, 255, 0.08) 100%);
   backdrop-filter: blur(25px);
@@ -1215,9 +1193,10 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
 }
 
-/* line 30, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 31, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar.sidebar--open {
   transform: translateX(0);
   box-shadow: 2px 0 40px rgba(0, 0, 0, 0.15), inset 1px 0 0 rgba(255, 255, 255, 0.5);
@@ -1227,7 +1206,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 30, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 31, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar.sidebar--open {
     padding-top: 20px;
   }
@@ -1239,13 +1218,13 @@ footer {
     transform: none;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 1px 0 0 rgba(255, 255, 255, 0.3);
     position: fixed;
-    left: 0;
     padding-top: 20px;
+    left: 1rem;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.18) 30%, rgba(255, 255, 255, 0.12) 60%, rgba(255, 255, 255, 0.06) 100%);
   }
 }
 
-/* line 70, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 71, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .logo {
   width: 100%;
   display: flex;
@@ -1254,7 +1233,7 @@ footer {
   margin-bottom: 2rem;
 }
 
-/* line 78, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 79, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .logo a {
   text-decoration: none !important;
   font-size: 3rem;
@@ -1265,19 +1244,19 @@ footer {
   transition: color 0.3s;
 }
 
-/* line 86, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 87, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .logo a:hover {
   color: rgba(255, 60, 75, 0.5);
   text-decoration: none;
 }
 
-/* line 92, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 93, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .logo a span {
   display: inline-block;
   transform: translateY(-3px);
 }
 
-/* line 98, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 99, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul {
   list-style: none;
   padding: 0;
@@ -1287,7 +1266,7 @@ footer {
   align-items: center;
 }
 
-/* line 106, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 107, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul .icon-keyboard_arrow_right, .sidebar nav ul .icon-keyboard_arrow_down {
   font-size: 1.5rem;
   color: transparent;
@@ -1296,12 +1275,12 @@ footer {
   top: 6px;
 }
 
-/* line 115, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 116, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li {
   margin-left: 24.4px;
 }
 
-/* line 118, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 119, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a {
   display: inline-block;
   padding: 15px 0;
@@ -1312,7 +1291,7 @@ footer {
   border-radius: 8px;
 }
 
-/* line 127, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 128, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover {
   border-bottom: 1px solid #BAA085;
   background: rgba(255, 255, 255, 0.1);
@@ -1320,23 +1299,23 @@ footer {
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* line 133, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 134, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_right {
   color: #7F4CC0;
 }
 
-/* line 137, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 138, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li a:hover .icon-keyboard_arrow_down {
   color: #BAA085;
 }
 
-/* line 145, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 146, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar nav ul li:last-child a:hover {
   color: #7F4CC0;
   border-bottom: 1px solid transparent;
 }
 
-/* line 153, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 154, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .contact-me {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -1353,25 +1332,25 @@ footer {
   padding: 10px 0;
 }
 
-/* line 170, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 171, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary:hover {
   border-bottom: 1px solid #7F4CC0 !important;
 }
 
-/* line 174, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 175, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary .contacthover span {
   color: inherit;
   transition: color 0.2s;
   opacity: 0.1;
 }
 
-/* line 181, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 182, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .txt-secondary .contacthover span:hover {
   color: #0079A0;
   opacity: 1;
 }
 
-/* line 188, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 189, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay {
   display: none;
   position: fixed;
@@ -1386,7 +1365,7 @@ footer {
   transition: opacity 0.3s;
 }
 
-/* line 201, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 202, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay.sidebar-overlay--active {
   display: block;
   background: rgba(255, 255, 255, 0.2);
@@ -1394,20 +1373,20 @@ footer {
   -webkit-backdrop-filter: blur(8px);
 }
 
-/* line 207, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 208, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay.sidebar-overlay--active ~ .sidebar {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.25) 60%, rgba(255, 255, 255, 0.15) 100%);
   border-right: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 16px 64px rgba(0, 0, 0, 0.15), inset 1px 0 0 rgba(255, 255, 255, 0.6);
 }
 
-/* line 223, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 224, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .sidebar-overlay.sidebar-overlay--active ~ .sidebar a:hover {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 768px) {
-  /* line 188, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 189, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .sidebar-overlay {
     display: none;
   }
@@ -1618,286 +1597,235 @@ footer {
 .about-me-grid {
   display: flex;
   flex-direction: column;
-  gap: 0px;
-  padding: 20px;
+  gap: 2rem;
+  padding: 3rem 2.5rem;
   text-align: center;
   align-items: center;
-  justify-content: center;
-  max-width: 1260px;
-  margin-left: auto;
-  margin-right: auto;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
 }
 
-/* line 31, ../Portfolio/scss/layout/_about.scss */
+/* line 28, ../Portfolio/scss/layout/_about.scss */
 .about-me-grid::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
-  animation: lightShine 8s ease-in-out infinite;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.04) 50%, transparent 60%);
+  animation: glassShine 12s ease-in-out infinite;
   pointer-events: none;
 }
 
-/* line 49, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid a {
+@media (min-width: 768px) {
+  /* line 5, ../Portfolio/scss/layout/_about.scss */
+  .about-me-grid {
+    padding: 4rem 3rem;
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 5, ../Portfolio/scss/layout/_about.scss */
+  .about-me-grid {
+    padding: 5rem 4rem;
+    gap: 3rem;
+  }
+}
+
+/* line 59, ../Portfolio/scss/layout/_about.scss */
+.about-me-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(80%) brightness(1.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+/* line 70, ../Portfolio/scss/layout/_about.scss */
+.about-me-image img:hover {
+  filter: none;
+  transform: scale(1.05);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+  /* line 59, ../Portfolio/scss/layout/_about.scss */
+  .about-me-image img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 59, ../Portfolio/scss/layout/_about.scss */
+  .about-me-image img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* line 92, ../Portfolio/scss/layout/_about.scss */
+.about-me-text h3 {
+  color: rgba(40, 60, 80, 0.9);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 101, ../Portfolio/scss/layout/_about.scss */
+.about-me-text p {
+  color: rgba(60, 80, 100, 0.85);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 110, ../Portfolio/scss/layout/_about.scss */
+.about-me-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* line 115, ../Portfolio/scss/layout/_about.scss */
+.about-me-text a {
+  color: rgba(0, 120, 160, 0.9);
   text-decoration: none;
-  color: #BAA085;
-  font-size: 1.5rem;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-}
-
-/* line 56, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid a:hover {
-  color: #8b6d4e;
-  text-shadow: 0 0 10px rgba(186, 160, 133, 0.3);
-}
-
-/* line 63, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid h3 {
-  color: #0079A0;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-/* line 73, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid p {
-  color: #34495e;
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-/* line 83, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  transition: color 0.3s ease-in-out;
-}
-
-/* line 90, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-html-five {
-  color: #0079A0;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* line 94, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-html-five:hover {
-  transform: scale(1.2);
-}
-
-/* line 96, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-css3 {
-  color: #7F4CC0;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* line 100, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-css3:hover {
-  transform: scale(1.2);
-}
-
-/* line 102, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-sass {
-  color: #BAA085;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* line 106, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-sass:hover {
-  transform: scale(1.2);
-}
-
-/* line 109, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-javascript {
-  color: #0079A0;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* line 113, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-javascript:hover {
-  transform: scale(1.2);
-}
-
-/* line 116, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-jquery {
-  color: #0079A0;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* line 120, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-jquery:hover {
-  transform: scale(1.2);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
 }
 
 /* line 122, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-postgresql {
-  color: #7f8c8d;
-  opacity: 0.5;
+.about-me-text a:hover {
+  color: rgba(223, 44, 125, 0.9);
+  border-bottom-color: rgba(223, 44, 125, 0.4);
+  text-shadow: 0 0 8px rgba(223, 44, 125, 0.2);
 }
 
-/* line 127, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-php {
-  color: #7f8c8d;
-  opacity: 0.5;
-}
-
-/* line 133, ../Portfolio/scss/layout/_about.scss */
-.about-me-grid .about-me-icons .icon-laravel {
-  color: #7f8c8d;
-  opacity: 0.5;
-}
-
-@media (min-width: 768px) {
-  /* line 5, ../Portfolio/scss/layout/_about.scss */
-  .about-me-grid {
-    text-align: left;
-    margin-left: 0;
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.15);
-    align-items: flex-start;
-  }
-  /* line 154, ../Portfolio/scss/layout/_about.scss */
-  .about-me-grid h3, .about-me-grid p {
-    text-align: left;
-    font-size: 1.7rem;
-  }
-  /* line 158, ../Portfolio/scss/layout/_about.scss */
-  .about-me-grid p {
-    font-size: 1.15rem;
-  }
-}
-
-@media (min-width: 992px) {
-  /* line 5, ../Portfolio/scss/layout/_about.scss */
-  .about-me-grid {
-    margin: 0 auto;
-    padding: 40px 50px;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.6), 0 0 100px rgba(255, 255, 255, 0.2);
-  }
-  /* line 179, ../Portfolio/scss/layout/_about.scss */
-  .about-me-grid h3 {
-    font-size: 2rem;
-  }
-  /* line 182, ../Portfolio/scss/layout/_about.scss */
-  .about-me-grid p {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* line 5, ../Portfolio/scss/layout/_about.scss */
-  .about-me-grid {
-    margin: 0 auto;
-    padding: 50px 100px;
-  }
-  /* line 191, ../Portfolio/scss/layout/_about.scss */
-  .about-me-grid h3 {
-    font-size: 2.3rem;
-  }
-  /* line 194, ../Portfolio/scss/layout/_about.scss */
-  .about-me-grid p {
-    font-size: 1.4rem;
-  }
-}
-
-@keyframes lightShine {
-  0%, 100% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
-  }
-  50% {
-    transform: translateX(100%) translateY(100%) rotate(45deg);
-  }
-}
-
-/* line 213, ../Portfolio/scss/layout/_about.scss */
-.about-me-image {
-  display: none;
-  margin-top: 10px;
+/* line 131, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons {
+  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
-/* line 219, ../Portfolio/scss/layout/_about.scss */
-.about-me-image img {
-  max-width: 100%;
-  border-radius: 50%;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 40px rgba(255, 255, 255, 0.2);
+/* line 140, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"] {
+  font-size: 2.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
-/* line 228, ../Portfolio/scss/layout/_about.scss */
-.about-me-image img:hover {
-  filter: none;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 0 60px rgba(255, 255, 255, 0.3);
+/* line 145, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"]:hover {
+  transform: translateY(-4px) scale(1.1);
 }
 
-/* line 235, ../Portfolio/scss/layout/_about.scss */
-.about-me-image img[loading="lazy"] {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+/* line 150, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-html-five {
+  color: rgba(227, 79, 38, 0.8);
 }
 
-/* line 240, ../Portfolio/scss/layout/_about.scss */
-.about-me-image img[loading="lazy"]:not([src=""]) {
-  opacity: 1;
+/* line 152, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-html-five:hover {
+  color: #e34f26;
 }
 
-@media (min-width: 576px) {
-  /* line 252, ../Portfolio/scss/layout/_about.scss */
-  .about-me-grid .about-me-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/* line 155, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-css3 {
+  color: rgba(21, 114, 182, 0.8);
+}
+
+/* line 157, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-css3:hover {
+  color: #1572b6;
+}
+
+/* line 160, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-sass {
+  color: rgba(207, 100, 154, 0.8);
+}
+
+/* line 162, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-sass:hover {
+  color: #cf649a;
+}
+
+/* line 165, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-javascript {
+  color: rgba(240, 219, 79, 0.9);
+}
+
+/* line 167, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-javascript:hover {
+  color: #f0db4f;
+}
+
+/* line 170, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-jquery {
+  color: rgba(0, 104, 183, 0.8);
+}
+
+/* line 172, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-jquery:hover {
+  color: #0068b7;
+}
+
+/* line 176, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-postgresql, .about-me-icons [class^="icon-"].icon-php, .about-me-icons [class^="icon-"].icon-laravel {
+  color: rgba(120, 140, 160, 0.4);
+  cursor: default;
+}
+
+/* line 182, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"].icon-postgresql:hover, .about-me-icons [class^="icon-"].icon-php:hover, .about-me-icons [class^="icon-"].icon-laravel:hover {
+  transform: none;
+  color: rgba(120, 140, 160, 0.6);
 }
 
 @media (min-width: 768px) {
-  /* line 262, ../Portfolio/scss/layout/_about.scss */
-  .about-me-grid .about-me-icons {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  /* line 131, ../Portfolio/scss/layout/_about.scss */
+  .about-me-icons {
+    gap: 2rem;
+  }
+  /* line 192, ../Portfolio/scss/layout/_about.scss */
+  .about-me-icons [class^="icon-"] {
+    font-size: 3rem;
   }
 }
 
-@media (min-width: 992px) {
-  /* line 271, ../Portfolio/scss/layout/_about.scss */
-  .about-me-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@keyframes glassShine {
+  0%, 100% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0%) translateY(0%) rotate(45deg);
+    opacity: 1;
   }
 }
 
-/* line 282, ../Portfolio/scss/layout/_about.scss */
+/* line 214, ../Portfolio/scss/layout/_about.scss */
 .skip-link {
   position: absolute;
   top: -9999px;
@@ -1907,7 +1835,7 @@ footer {
   overflow: hidden;
 }
 
-/* line 290, ../Portfolio/scss/layout/_about.scss */
+/* line 222, ../Portfolio/scss/layout/_about.scss */
 .skip-link:focus {
   position: static;
   width: auto;
@@ -1921,7 +1849,7 @@ footer {
   text-decoration: none;
 }
 
-/* line 307, ../Portfolio/scss/layout/_about.scss */
+/* line 239, ../Portfolio/scss/layout/_about.scss */
 .next-section {
   display: flex;
   justify-content: center;
@@ -1932,7 +1860,7 @@ footer {
   color: #0079A0;
 }
 
-/* line 316, ../Portfolio/scss/layout/_about.scss */
+/* line 248, ../Portfolio/scss/layout/_about.scss */
 .next-section a {
   text-decoration: none;
   color: #0079A0;
@@ -1941,18 +1869,18 @@ footer {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 323, ../Portfolio/scss/layout/_about.scss */
+/* line 255, ../Portfolio/scss/layout/_about.scss */
 .next-section a:hover {
   color: #002c3a;
 }
 
-/* line 328, ../Portfolio/scss/layout/_about.scss */
+/* line 260, ../Portfolio/scss/layout/_about.scss */
 .next-section .icon-keyboard_arrow_down {
   font-size: 4rem;
   transition: color 0.3s ease-in-out;
 }
 
-/* line 333, ../Portfolio/scss/layout/_about.scss */
+/* line 265, ../Portfolio/scss/layout/_about.scss */
 .next-section .icon-keyboard_arrow_down:hover {
   color: #7F4CC0;
 }
@@ -2231,11 +2159,11 @@ footer {
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
   position: fixed;
   top: 20px;
-  left: 20px;
+  left: 5px;
   z-index: 1100;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
@@ -2319,7 +2247,7 @@ footer {
   top: 0;
   left: 0;
   height: 10px;
-  background: #7F4CC0;
+  background: #1EC9EC;
   width: 0;
   z-index: 9999;
 }
