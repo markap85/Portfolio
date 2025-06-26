@@ -698,8 +698,8 @@ li {
 /* line 177, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn {
   background: transparent;
-  border: 2px solid var(--primary-color, #007bff);
-  color: var(--primary-color, #007bff);
+  border: 2px solid #0079A0;
+  color: #0079A0;
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
   cursor: pointer;
@@ -710,14 +710,16 @@ li {
 
 /* line 189, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn:hover {
-  background: var(--primary-color, #007bff);
+  background: #DF2C7D;
+  border: 2px solid #DF2C7D;
   color: white;
   transform: translateY(-2px);
 }
 
-/* line 195, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 196, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn.active {
-  background: var(--primary-color, #007bff);
+  background: #DF2C7D;
+  border: 2px solid #DF2C7D;
   color: white;
 }
 
@@ -733,7 +735,7 @@ li {
   }
 }
 
-/* line 212, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 214, ../Portfolio/scss/layout/_portfolio.scss */
 .project {
   transition: all 0.3s ease;
 }

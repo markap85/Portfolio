@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = `
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="refactor">Refactor</button>
             <button class="filter-btn" data-filter="frontend">Frontend</button>
             <button class="filter-btn" data-filter="backend">Backend</button>
-            <button class="filter-btn" data-filter="refactor">Refactor</button>
+
         </div>
     `;
 
