@@ -49,25 +49,55 @@
         justify-content: center;
         align-items: center;
         margin-top: 10px;
-        color: $grey-medium !important;
         transition: color 0.3s ease-in-out;
 
         .icon-html-five  {
             @extend %skill-icon;
-            &:hover { color: $primary-color; }
+            color: $primary-color;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            &:hover { transform: scale(1.2); }
         }
         .icon-css3  {
             @extend %skill-icon;
-            &:hover { color: $secondary-color; }
+            color: $secondary-color;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            &:hover { transform: scale(1.2); }
         }
         .icon-sass  {
             @extend %skill-icon;
-            &:hover { color: $accent-color; }
+            color: $accent-color;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            &:hover { transform: scale(1.2); }
         }
 
         .icon-javascript  {
             @extend %skill-icon;
-            &:hover { color: $primary-color; }
+            color: $primary-color;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            &:hover { transform: scale(1.2); }
+        }
+
+        .icon-jquery  {
+            @extend %skill-icon;
+            color: $primary-color;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            &:hover { transform: scale(1.2); }
+        }
+        .icon-postgresql  {
+            @extend %skill-icon;
+            color: $grey;
+            opacity: 0.5
+        }
+        .icon-php  {
+            @extend %skill-icon;
+            color: $grey;
+            opacity: 0.5
+        }
+
+        .icon-laravel  {
+            @extend %skill-icon;
+            color: $grey;
+            opacity: 0.5
         }
     }
 
