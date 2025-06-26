@@ -680,6 +680,59 @@ li {
   top: 1.5px;
 }
 
+/* Project Filter Styles */
+/* line 165, ../Portfolio/scss/layout/_portfolio.scss */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* line 173, ../Portfolio/scss/layout/_portfolio.scss */
+.filter-btn {
+  background: transparent;
+  border: 2px solid var(--primary-color, #007bff);
+  color: var(--primary-color, #007bff);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* line 185, ../Portfolio/scss/layout/_portfolio.scss */
+.filter-btn:hover {
+  background: var(--primary-color, #007bff);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* line 191, ../Portfolio/scss/layout/_portfolio.scss */
+.filter-btn.active {
+  background: var(--primary-color, #007bff);
+  color: white;
+}
+
+/* Animation for filtered projects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* line 208, ../Portfolio/scss/layout/_portfolio.scss */
+.project {
+  transition: all 0.3s ease;
+}
+
 /* line 1, ../Portfolio/scss/layout/_contact.scss */
 .contact-grid {
   display: block;

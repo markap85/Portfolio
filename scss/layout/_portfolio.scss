@@ -156,3 +156,55 @@ $disabled-filter: grayscale(80%); // Grayscale filter for disabled items
   position: relative;
   top: 1.5px; // Adjust this value as needed
 }
+
+// ==========================================================================
+// Portfolio Filters
+// ==========================================================================
+
+/* Project Filter Styles */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color, #007bff);
+    color: var(--primary-color, #007bff);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.filter-btn:hover {
+    background: var(--primary-color, #007bff);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--primary-color, #007bff);
+    color: white;
+}
+
+/* Animation for filtered projects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project {
+    transition: all 0.3s ease;
+}
