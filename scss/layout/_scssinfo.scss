@@ -4,9 +4,9 @@
 
 .scss-info-grid {
     width: 100%;
-    margin-top: 50px;
     margin-right: 0;
     margin-left: 0;
+    max-width: 1260px;
 
     // ==========================================================================
     // Responsive Breakpoint: Medium Screens
@@ -22,12 +22,16 @@
     .info-block {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 50px;
         align-items: stretch; // ensure children stretch to same height
-        background: #fafafa;
+        background: rgba(255, 255, 255, 0.25);
         border-radius: 8px;
         padding: 24px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+        border: 1px solid rgba(255,255,255,0.18);
+        margin: 0 0 20px 0;
 
 
         // Responsive: Large Screens
@@ -95,7 +99,7 @@
 
     h3 {
         font-size: 2rem;
-        color: $primary-color;
+        color: $white;
         margin-bottom: 16px;
         font-weight: bold;
         margin-top: 0;

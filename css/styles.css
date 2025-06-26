@@ -1294,10 +1294,10 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 3rem 2.5rem;
   text-align: center;
-  max-width: 800px;
+  max-width: 1260px;
   width: 100%;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.08);
@@ -1308,21 +1308,7 @@ footer {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-@media (min-width: 768px) {
-  /* line 49, ../Portfolio/scss/layout/_footer.scss */
-  .footer-container {
-    padding: 2rem 3rem;
-  }
-}
-
-@media (min-width: 992px) {
-  /* line 49, ../Portfolio/scss/layout/_footer.scss */
-  .footer-container {
-    padding: 3rem 4rem;
-  }
-}
-
-/* line 83, ../Portfolio/scss/layout/_footer.scss */
+/* line 75, ../Portfolio/scss/layout/_footer.scss */
 .back-to-top {
   display: inline-flex;
   align-items: center;
@@ -1384,13 +1370,13 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 83, ../Portfolio/scss/layout/_footer.scss */
+  /* line 75, ../Portfolio/scss/layout/_footer.scss */
   .back-to-top {
     display: flex;
   }
 }
 
-/* line 86, ../Portfolio/scss/layout/_footer.scss */
+/* line 78, ../Portfolio/scss/layout/_footer.scss */
 .back-to-top a {
   display: flex;
   flex-direction: column;
@@ -1400,48 +1386,47 @@ footer {
   height: 100%;
   text-decoration: none;
   color: inherit;
-  font-size: 0.8rem;
+  font-size: 3rem;
   font-weight: 500;
   gap: 0.2rem;
 }
 
-/* line 100, ../Portfolio/scss/layout/_footer.scss */
+/* line 92, ../Portfolio/scss/layout/_footer.scss */
 .back-to-top .icon-keyboard_arrow_up {
   color: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* line 100, ../Portfolio/scss/layout/_footer.scss */
+  /* line 92, ../Portfolio/scss/layout/_footer.scss */
   .back-to-top .icon-keyboard_arrow_up {
     transition: none;
   }
 }
 
 @media (max-width: 768px) {
-  /* line 83, ../Portfolio/scss/layout/_footer.scss */
+  /* line 75, ../Portfolio/scss/layout/_footer.scss */
   .back-to-top {
     width: 60px;
     height: 60px;
   }
-  /* line 112, ../Portfolio/scss/layout/_footer.scss */
+  /* line 104, ../Portfolio/scss/layout/_footer.scss */
   .back-to-top .icon-keyboard_arrow_up {
     font-size: 1.5rem;
   }
-  /* line 116, ../Portfolio/scss/layout/_footer.scss */
+  /* line 108, ../Portfolio/scss/layout/_footer.scss */
   .back-to-top a {
     font-size: 0.7rem;
   }
 }
 
-/* line 126, ../Portfolio/scss/layout/_footer.scss */
+/* line 118, ../Portfolio/scss/layout/_footer.scss */
 .footer-text {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   width: 100%;
 }
 
-/* line 132, ../Portfolio/scss/layout/_footer.scss */
+/* line 123, ../Portfolio/scss/layout/_footer.scss */
 .footer-text .created-by {
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.9);
@@ -1449,44 +1434,44 @@ footer {
   white-space: nowrap;
 }
 
-/* line 138, ../Portfolio/scss/layout/_footer.scss */
+/* line 129, ../Portfolio/scss/layout/_footer.scss */
 .footer-text .created-by .highlight {
   color: rgba(255, 0, 212, 0.9);
   font-weight: 600;
 }
 
-/* line 144, ../Portfolio/scss/layout/_footer.scss */
+/* line 135, ../Portfolio/scss/layout/_footer.scss */
 .footer-text .copyright {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
 }
 
-/* line 149, ../Portfolio/scss/layout/_footer.scss */
+/* line 140, ../Portfolio/scss/layout/_footer.scss */
 .footer-text .copyright .year {
   font-weight: 500;
 }
 
 @media (min-width: 768px) {
-  /* line 155, ../Portfolio/scss/layout/_footer.scss */
+  /* line 146, ../Portfolio/scss/layout/_footer.scss */
   .footer-text .created-by {
     font-size: 1.2rem;
   }
-  /* line 159, ../Portfolio/scss/layout/_footer.scss */
+  /* line 150, ../Portfolio/scss/layout/_footer.scss */
   .footer-text .copyright {
     font-size: 1rem;
   }
 }
 
 @supports (scroll-behavior: smooth) {
-  /* line 170, ../Portfolio/scss/layout/_footer.scss */
+  /* line 161, ../Portfolio/scss/layout/_footer.scss */
   html {
     scroll-behavior: smooth;
   }
 }
 
 @media print {
-  /* line 180, ../Portfolio/scss/layout/_footer.scss */
+  /* line 171, ../Portfolio/scss/layout/_footer.scss */
   footer {
     display: none;
   }
@@ -1760,7 +1745,7 @@ footer {
   left: 2px;
   width: 18px;
   height: 18px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 4px glass-black(0.2);
@@ -1775,7 +1760,7 @@ footer {
 /* line 322, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active::before {
   transform: translateX(26px);
-  background: #ffffff;
+  background: white;
   box-shadow: 0 2px 8px glass-black(0.3);
 }
 
@@ -2401,12 +2386,189 @@ footer {
   }
 }
 
+/* line 112, ../Portfolio/scss/layout/_examples.scss */
+.examples-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
+  -webkit-backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 143, ../Portfolio/scss/layout/_examples.scss */
+.examples-grid::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.12) 40%, rgba(200, 220, 255, 0.08) 45%, rgba(255, 255, 255, 0.15) 50%, rgba(200, 220, 255, 0.08) 55%, rgba(255, 255, 255, 0.12) 60%, transparent 75%);
+  filter: blur(0.3px) contrast(1.2) hue-rotate(-0.5deg);
+  animation: refractionGlassShine 12s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* line 170, ../Portfolio/scss/layout/_examples.scss */
+.examples-grid::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 40%), radial-gradient(circle at 70% 30%, rgba(200, 220, 255, 0.06) 0%, transparent 35%);
+  animation: secondaryShine 15s ease-in-out infinite reverse;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  /* line 112, ../Portfolio/scss/layout/_examples.scss */
+  .examples-grid {
+    padding: 4rem 3rem;
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 112, ../Portfolio/scss/layout/_examples.scss */
+  .examples-grid {
+    padding: 5rem 4rem;
+    gap: 1rem;
+  }
+}
+
+/* line 206, ../Portfolio/scss/layout/_examples.scss */
+.examples-header {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 210, ../Portfolio/scss/layout/_examples.scss */
+.examples-header h3 {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* line 217, ../Portfolio/scss/layout/_examples.scss */
+.examples-header p {
+  color: #ffffff;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/* line 227, ../Portfolio/scss/layout/_examples.scss */
+.examples-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 235, ../Portfolio/scss/layout/_examples.scss */
+.examples-list .example-item {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* line 244, ../Portfolio/scss/layout/_examples.scss */
+.examples-list .example-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* line 253, ../Portfolio/scss/layout/_examples.scss */
+.examples-list .example-item h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* line 260, ../Portfolio/scss/layout/_examples.scss */
+.examples-list .example-item p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  /* line 227, ../Portfolio/scss/layout/_examples.scss */
+  .examples-list {
+    gap: 2rem;
+  }
+}
+
+@keyframes refractionGlassShine {
+  0%, 100% {
+    transform: translateX(-150%) translateY(-150%) rotate(45deg) scale(0.7);
+    filter: blur(0.3px) contrast(1.2) hue-rotate(-0.5deg);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateX(-100%) translateY(-100%) rotate(46deg) scale(0.85);
+    filter: blur(0.2px) contrast(1.25) hue-rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0%) translateY(0%) rotate(45deg) scale(1);
+    filter: blur(0.4px) contrast(1.15) hue-rotate(0.5deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(100%) translateY(100%) rotate(44deg) scale(0.85);
+    filter: blur(0.2px) contrast(1.25) hue-rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes secondaryShine {
+  0%, 100% {
+    transform: translateX(-100%) translateY(-100%) rotate(-45deg) scale(0.8);
+    opacity: 0.4;
+  }
+  33% {
+    transform: translateX(-25%) translateY(-25%) rotate(-44deg) scale(1.1);
+    opacity: 0.7;
+  }
+  66% {
+    transform: translateX(50%) translateY(50%) rotate(-46deg) scale(0.9);
+    opacity: 0.6;
+  }
+}
+
 /* line 5, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid {
   width: 100%;
-  margin-top: 50px;
   margin-right: 0;
   margin-left: 0;
+  max-width: 1260px;
 }
 
 @media (min-width: 768px) {
@@ -2421,12 +2583,16 @@ footer {
 .scss-info-grid .info-block {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 50px;
   align-items: stretch;
-  background: #fafafa;
+  background: rgba(255, 255, 255, 0.25);
   border-radius: 8px;
   padding: 24px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 0 0 20px 0;
 }
 
 @media (min-width: 992px) {
@@ -2437,7 +2603,7 @@ footer {
   }
 }
 
-/* line 39, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 43, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid .info-block .info-block > * {
   min-width: 0;
 }
@@ -2449,7 +2615,7 @@ footer {
   }
 }
 
-/* line 52, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 56, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid .info-img {
   width: 100%;
   max-width: 400px;
@@ -2466,7 +2632,7 @@ footer {
   filter: brightness(1);
 }
 
-/* line 67, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 71, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid .info-img .info-img img {
   width: 100%;
   height: 100%;
@@ -2474,42 +2640,42 @@ footer {
   border-radius: 8px;
 }
 
-/* line 74, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 78, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid .info-img:hover {
   box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
   filter: brightness(0.8);
 }
 
 @media (min-width: 992px) {
-  /* line 52, ../Portfolio/scss/layout/_scssinfo.scss */
+  /* line 56, ../Portfolio/scss/layout/_scssinfo.scss */
   .scss-info-grid .info-img {
     max-width: 100%;
     aspect-ratio: 16 / 9;
   }
 }
 
-/* line 89, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 93, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid h1, .scss-info-grid h2, .scss-info-grid h3, .scss-info-grid h4, .scss-info-grid h5, .scss-info-grid h6, .scss-info-grid p, .scss-info-grid ul, .scss-info-grid li a {
   text-align: center;
 }
 
 @media (min-width: 992px) {
-  /* line 89, ../Portfolio/scss/layout/_scssinfo.scss */
+  /* line 93, ../Portfolio/scss/layout/_scssinfo.scss */
   .scss-info-grid h1, .scss-info-grid h2, .scss-info-grid h3, .scss-info-grid h4, .scss-info-grid h5, .scss-info-grid h6, .scss-info-grid p, .scss-info-grid ul, .scss-info-grid li a {
     text-align: left;
   }
 }
 
-/* line 96, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 100, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid h3 {
   font-size: 2rem;
-  color: #0079A0;
+  color: #ffffff;
   margin-bottom: 16px;
   font-weight: bold;
   margin-top: 0;
 }
 
-/* line 104, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 108, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid p {
   font-size: 1.1rem;
   color: #34495e;
@@ -2517,7 +2683,7 @@ footer {
   line-height: 1.6;
 }
 
-/* line 111, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 115, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid ul {
   list-style: none;
   padding: 0;
@@ -2525,13 +2691,13 @@ footer {
   color: #34495e;
 }
 
-/* line 117, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 121, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid ul li {
   margin-bottom: 14px;
   font-size: 1.05rem;
 }
 
-/* line 126, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 130, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid a {
   color: #7F4CC0;
   text-decoration: none !important;
@@ -2544,7 +2710,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 126, ../Portfolio/scss/layout/_scssinfo.scss */
+  /* line 130, ../Portfolio/scss/layout/_scssinfo.scss */
   .scss-info-grid a {
     display: inline;
     text-align: left;
@@ -2553,7 +2719,7 @@ footer {
   }
 }
 
-/* line 146, ../Portfolio/scss/layout/_scssinfo.scss */
+/* line 150, ../Portfolio/scss/layout/_scssinfo.scss */
 .scss-info-grid a:hover {
   color: #BAA085;
   text-decoration: none !important;
@@ -3129,7 +3295,7 @@ section {
   left: 2px;
   width: 18px;
   height: 18px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 4px glass-black(0.2);
@@ -3144,7 +3310,7 @@ section {
 /* line 322, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active::before {
   transform: translateX(26px);
-  background: #ffffff;
+  background: white;
   box-shadow: 0 2px 8px glass-black(0.3);
 }
 

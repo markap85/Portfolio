@@ -104,3 +104,208 @@
     }
     }
 }
+
+// ==========================================================================
+// Coding Examples Section Layout
+// ==========================================================================
+
+.examples-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    // Optimized glassmorphic styling
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: 
+      blur(20px) 
+      contrast(1.12) 
+      saturate(1.06) 
+      hue-rotate(0.8deg);
+    -webkit-backdrop-filter: 
+      blur(20px) 
+      contrast(1.12) 
+      saturate(1.06) 
+      hue-rotate(0.8deg);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 24px;
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    
+    // Enhanced refraction shine effect - more prominent
+    &::before {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      width: 300%;
+      height: 300%;
+      background: 
+        linear-gradient(
+          45deg,
+          transparent 25%,
+          rgba(255, 255, 255, 0.12) 40%,
+          rgba(200, 220, 255, 0.08) 45%,
+          rgba(255, 255, 255, 0.15) 50%,
+          rgba(200, 220, 255, 0.08) 55%,
+          rgba(255, 255, 255, 0.12) 60%,
+          transparent 75%
+        );
+      filter: 
+        blur(0.3px) 
+        contrast(1.2) 
+        hue-rotate(-0.5deg);
+      animation: refractionGlassShine 12s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    // Add secondary shine layer for more depth
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(
+          circle at 30% 70%, 
+          rgba(255, 255, 255, 0.1) 0%, 
+          transparent 40%
+        ),
+        radial-gradient(
+          circle at 70% 30%, 
+          rgba(200, 220, 255, 0.06) 0%, 
+          transparent 35%
+        );
+      animation: secondaryShine 15s ease-in-out infinite reverse;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    // Responsive sizing
+    @media (min-width: $brk-point-md) {
+        padding: 4rem 3rem;
+        gap: 2.5rem;
+    }
+    
+    @media (min-width: $brk-point-lg) {
+        padding: 5rem 4rem;
+        gap: 1rem;
+    }
+}
+
+// Header styling
+.examples-header {
+    position: relative;
+    z-index: 1;
+
+    h3 {
+        color: $white;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: $white;
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        line-height: 1.7;
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+    }
+}
+
+// Examples list styling
+.examples-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    .example-item {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 
+              0 8px 25px rgba(0, 0, 0, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        h4 {
+            color: $white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            margin: 0;
+            font-style: italic;
+        }
+    }
+
+    @media (min-width: $brk-point-md) {
+        gap: 2rem;
+    }
+}
+
+// Enhanced animation with more prominent shine
+@keyframes refractionGlassShine {
+  0%, 100% {
+    transform: translateX(-150%) translateY(-150%) rotate(45deg) scale(0.7);
+    filter: blur(0.3px) contrast(1.2) hue-rotate(-0.5deg);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateX(-100%) translateY(-100%) rotate(46deg) scale(0.85);
+    filter: blur(0.2px) contrast(1.25) hue-rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0%) translateY(0%) rotate(45deg) scale(1);
+    filter: blur(0.4px) contrast(1.15) hue-rotate(0.5deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(100%) translateY(100%) rotate(44deg) scale(0.85);
+    filter: blur(0.2px) contrast(1.25) hue-rotate(0deg);
+    opacity: 1;
+  }
+}
+
+// New secondary shine animation
+@keyframes secondaryShine {
+  0%, 100% {
+    transform: translateX(-100%) translateY(-100%) rotate(-45deg) scale(0.8);
+    opacity: 0.4;
+  }
+  33% {
+    transform: translateX(-25%) translateY(-25%) rotate(-44deg) scale(1.1);
+    opacity: 0.7;
+  }
+  66% {
+    transform: translateX(50%) translateY(50%) rotate(-46deg) scale(0.9);
+    opacity: 0.6;
+  }
+}
