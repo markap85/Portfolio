@@ -2223,7 +2223,7 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  height: 5px;
+  height: 10px;
   background: #DF2C7D;
   width: 0;
   z-index: 9999;
