@@ -5,6 +5,10 @@ $disabled-items: (3, 4, 5, 6); // List of item numbers to disable
 $disabled-opacity: 0.4; // Opacity for disabled items
 $disabled-filter: grayscale(80%); // Grayscale filter for disabled items
 
+.portfolio-section {
+  margin-top: 2rem;
+}
+
 // ==========================================================================
 // Portfolio Grid Layout
 // ==========================================================================
@@ -107,11 +111,11 @@ $disabled-filter: grayscale(80%); // Grayscale filter for disabled items
 // ==========================================================================
 
 .project.pr-1:not(.disabled):hover {
-  background-color: $tag-design;
+  background-color: $tag-refactor;
 }
 
 .project.pr-2:not(.disabled):hover {
-  background-color: $tag-responsive;
+  background-color: $tag-frontend;
 }
 
 .project.pr-3:not(.disabled):hover {
@@ -119,7 +123,7 @@ $disabled-filter: grayscale(80%); // Grayscale filter for disabled items
 }
 
 .project.pr-4:not(.disabled):hover {
-  background-color: $tag-responsive;
+  background-color: $tag-frontend;
 }
 
 .project.pr-5:not(.disabled):hover {
@@ -127,21 +131,21 @@ $disabled-filter: grayscale(80%); // Grayscale filter for disabled items
 }
 
 .project.pr-6:not(.disabled):hover {
-  background-color: $tag-design;
+  background-color: $tag-refactor;
 }
 
 // ==========================================================================
 // Project Tags
 // ==========================================================================
 
-.tag-design {
+.tag-refactor {
   @extend %portfolio-tag;
-  background-color: $tag-design;
+  background-color: $tag-refactor;
 }
 
-.tag-responsive {
+.tag-frontend {
   @extend %portfolio-tag;
-  background-color: $tag-responsive;
+  background-color: $tag-frontend;
 }
 
 .tag-backend {

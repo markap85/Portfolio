@@ -3,13 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = `
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="responsive">Frontend</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
             <button class="filter-btn" data-filter="backend">Backend</button>
-            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="refactor">Refactor</button>
         </div>
     `;
 
-    const portfolioSection = document.querySelector('#portfolio');
+    // Target the correct portfolio section
+    const portfolioSection = document.querySelector('#portfolio-section');
     if (portfolioSection) {
         portfolioSection.insertAdjacentHTML('afterbegin', filterButtons);
 
@@ -24,7 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Filter projects
                 document.querySelectorAll('.project').forEach(project => {
-                    const shouldShow = filter === 'all' || project.querySelector('.tag-' + filter);
+                    let shouldShow = false;
+                    
+                    if (filter === 'all') {
+                        shouldShow = true;
+                    } else {
+                        // Check if project has the matching tag class
+                        shouldShow = project.querySelector('.tag-' + filter) !== null;
+                    }
                     
                     if (shouldShow) {
                         project.style.display = 'block';

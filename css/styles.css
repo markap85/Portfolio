@@ -8,7 +8,7 @@
 }
 
 /* line 15, ../Portfolio/scss/utilities/_extendsmixins.scss */
-.tag-design, .tag-responsive, .tag-backend {
+.tag-refactor, .tag-frontend, .tag-backend {
   display: inline-block;
   font-size: 1.1rem;
   position: absolute;
@@ -546,7 +546,12 @@ li {
   margin-top: 20px;
 }
 
-/* line 12, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 8, ../Portfolio/scss/layout/_portfolio.scss */
+.portfolio-section {
+  margin-top: 2rem;
+}
+
+/* line 16, ../Portfolio/scss/layout/_portfolio.scss */
 .portfolio-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -558,7 +563,7 @@ li {
 }
 
 @media (min-width: 576px) {
-  /* line 12, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 16, ../Portfolio/scss/layout/_portfolio.scss */
   .portfolio-grid {
     grid-template-columns: 1fr 1fr;
     max-width: 1260px;
@@ -568,21 +573,21 @@ li {
 }
 
 @media (min-width: 768px) {
-  /* line 12, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 16, ../Portfolio/scss/layout/_portfolio.scss */
   .portfolio-grid {
     margin-left: 25px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 12, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 16, ../Portfolio/scss/layout/_portfolio.scss */
   .portfolio-grid {
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-/* line 45, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 49, ../Portfolio/scss/layout/_portfolio.scss */
 .project {
   text-align: center;
   position: relative;
@@ -593,29 +598,29 @@ li {
   transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-/* line 56, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 60, ../Portfolio/scss/layout/_portfolio.scss */
 .project:not(.disabled):hover {
   top: -5px;
   background-color: #0079A0;
 }
 
-/* line 60, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 64, ../Portfolio/scss/layout/_portfolio.scss */
 .project:not(.disabled):hover h3, .project:not(.disabled):hover a {
   color: #ffffff;
 }
 
-/* line 65, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 69, ../Portfolio/scss/layout/_portfolio.scss */
 .project h3 {
   font-weight: bolder;
   margin-top: 10px;
 }
 
-/* line 70, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 74, ../Portfolio/scss/layout/_portfolio.scss */
 .project h3, .project a {
   padding-left: 10px;
 }
 
-/* line 82, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 86, ../Portfolio/scss/layout/_portfolio.scss */
 .project.disabled, .project.pr-3, .project.pr-4, .project.pr-5, .project.pr-6 {
   opacity: 0.4;
   filter: grayscale(80%);
@@ -623,57 +628,57 @@ li {
   pointer-events: none;
 }
 
-/* line 101, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 105, ../Portfolio/scss/layout/_portfolio.scss */
 .icon-arrow-right2 {
   font-size: normal;
 }
 
-/* line 109, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 113, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-1:not(.disabled):hover {
   background-color: #0079A0;
 }
 
-/* line 113, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 117, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-2:not(.disabled):hover {
   background-color: #DF2C7D;
 }
 
-/* line 117, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 121, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-3:not(.disabled):hover {
   background-color: #BAA085;
 }
 
-/* line 121, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 125, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-4:not(.disabled):hover {
   background-color: #DF2C7D;
 }
 
-/* line 125, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 129, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-5:not(.disabled):hover {
   background-color: #BAA085;
 }
 
-/* line 129, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 133, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-6:not(.disabled):hover {
   background-color: #0079A0;
 }
 
-/* line 137, ../Portfolio/scss/layout/_portfolio.scss */
-.tag-design {
+/* line 141, ../Portfolio/scss/layout/_portfolio.scss */
+.tag-refactor {
   background-color: #0079A0;
 }
 
-/* line 142, ../Portfolio/scss/layout/_portfolio.scss */
-.tag-responsive {
+/* line 146, ../Portfolio/scss/layout/_portfolio.scss */
+.tag-frontend {
   background-color: #DF2C7D;
 }
 
-/* line 147, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 151, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-backend {
   background-color: #BAA085;
 }
 
-/* line 153, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 157, ../Portfolio/scss/layout/_portfolio.scss */
 .icon-heart {
   font-size: 0.8rem;
   position: relative;
@@ -681,7 +686,7 @@ li {
 }
 
 /* Project Filter Styles */
-/* line 165, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 169, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-buttons {
   display: flex;
   justify-content: center;
@@ -690,7 +695,7 @@ li {
   flex-wrap: wrap;
 }
 
-/* line 173, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 177, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn {
   background: transparent;
   border: 2px solid var(--primary-color, #007bff);
@@ -703,14 +708,14 @@ li {
   font-weight: 500;
 }
 
-/* line 185, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 189, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn:hover {
   background: var(--primary-color, #007bff);
   color: white;
   transform: translateY(-2px);
 }
 
-/* line 191, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 195, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn.active {
   background: var(--primary-color, #007bff);
   color: white;
@@ -728,7 +733,7 @@ li {
   }
 }
 
-/* line 208, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 212, ../Portfolio/scss/layout/_portfolio.scss */
 .project {
   transition: all 0.3s ease;
 }
