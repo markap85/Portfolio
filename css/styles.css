@@ -435,12 +435,17 @@ html {
 }
 
 /* line 16, ../Portfolio/scss/base/_base.scss */
+:root {
+  --background-image: url('../img/glassmorphic_01.jpg');
+}
+
+/* line 20, ../Portfolio/scss/base/_base.scss */
 body {
   display: block;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url("../img/glassmorphic_01.jpg") no-repeat center center fixed;
+  background: var(--background-image) no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -450,7 +455,7 @@ body {
   background: none;
 }
 
-/* line 30, ../Portfolio/scss/base/_base.scss */
+/* line 34, ../Portfolio/scss/base/_base.scss */
 body::before {
   content: '';
   position: fixed;
@@ -458,20 +463,21 @@ body::before {
   left: -10%;
   width: 120%;
   height: 120%;
-  background: url("../img/glassmorphic_01.jpg") no-repeat center center;
+  background: var(--background-image) no-repeat center center;
   background-size: cover;
   z-index: -1;
   animation: dramaticRotate 60s ease-in-out infinite;
   transform-origin: center center;
+  transition: background-image 1s ease-in-out;
 }
 
-/* line 48, ../Portfolio/scss/base/_base.scss */
+/* line 53, ../Portfolio/scss/base/_base.scss */
 body.rotation-disabled::before {
   animation: none !important;
   transform: rotate(0deg) scale(1.15) !important;
 }
 
-/* line 54, ../Portfolio/scss/base/_base.scss */
+/* line 59, ../Portfolio/scss/base/_base.scss */
 body.rotation-enabled::before {
   animation: dramaticRotate 60s ease-in-out infinite;
 }
@@ -507,20 +513,20 @@ body.rotation-enabled::before {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* line 93, ../Portfolio/scss/base/_base.scss */
+  /* line 98, ../Portfolio/scss/base/_base.scss */
   body::before {
     animation: none;
     transform: rotate(0deg) scale(1.15);
   }
 }
 
-/* line 99, ../Portfolio/scss/base/_base.scss */
+/* line 104, ../Portfolio/scss/base/_base.scss */
 main {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 103, ../Portfolio/scss/base/_base.scss */
+/* line 108, ../Portfolio/scss/base/_base.scss */
 main .content-wrapper {
   margin: 2rem 0;
   display: flex;
@@ -528,7 +534,7 @@ main .content-wrapper {
 }
 
 @media (min-width: 768px) {
-  /* line 103, ../Portfolio/scss/base/_base.scss */
+  /* line 108, ../Portfolio/scss/base/_base.scss */
   main .content-wrapper {
     margin-left: 220px;
   }
@@ -1424,6 +1430,13 @@ footer {
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
+  background: glass-white(0.1);
+  border-radius: 12px;
+  border: 1px solid glass-white(0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* line 39, ../Portfolio/scss/layout/_sidebar.scss */
@@ -1635,7 +1648,12 @@ footer {
   gap: 0.5rem;
 }
 
-/* line 280, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 281, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar .rotation-toggle#background-toggle-unique {
+  padding-top: 0;
+}
+
+/* line 285, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-label {
   color: #ffffff;
   font-size: 0.8rem;
@@ -1644,7 +1662,7 @@ footer {
   opacity: 0.8;
 }
 
-/* line 288, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 293, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch {
   position: relative;
   width: 50px;
@@ -1658,7 +1676,7 @@ footer {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* line 300, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 305, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch::before {
   content: '';
   position: absolute;
@@ -1672,40 +1690,91 @@ footer {
   box-shadow: 0 2px 4px glass-black(0.2);
 }
 
-/* line 313, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 318, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active {
   background: glass-primary(0.3);
   border-color: glass-primary(0.5);
 }
 
-/* line 317, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 322, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active::before {
   transform: translateX(26px);
   background: #ffffff;
   box-shadow: 0 2px 8px glass-black(0.3);
 }
 
-/* line 324, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 329, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover {
   background: glass-white(0.15);
   border-color: glass-white(0.4);
 }
 
-/* line 328, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 333, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover.active {
   background: glass-primary(0.4);
   border-color: glass-primary(0.6);
 }
 
-/* line 335, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 340, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon {
   font-size: 1rem;
   color: glass-white(0.6);
   transition: color 0.3s ease;
 }
 
-/* line 340, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 345, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon.active {
+  color: #0079A0;
+}
+
+/* line 358, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px glass-black(0.2);
+}
+
+/* line 371, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar.active {
+  background: glass-primary(0.3);
+  border-color: glass-primary(0.5);
+}
+
+/* line 375, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar.active::before {
+  transform: translateX(26px);
+  background: #ffffff;
+  box-shadow: 0 2px 8px glass-black(0.3);
+}
+
+/* line 382, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar:hover {
+  background: glass-white(0.15);
+  border-color: glass-white(0.4);
+}
+
+/* line 386, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar:hover.active {
+  background: glass-primary(0.4);
+  border-color: glass-primary(0.6);
+}
+
+/* line 393, ../Portfolio/scss/layout/_sidebar.scss */
+.toggle-icon {
+  font-size: 1rem;
+  color: glass-white(0.6);
+  transition: color 0.3s ease;
+}
+
+/* line 398, ../Portfolio/scss/layout/_sidebar.scss */
+.toggle-icon.active {
   color: #0079A0;
 }
 
@@ -2788,6 +2857,13 @@ section {
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
+  background: glass-white(0.1);
+  border-radius: 12px;
+  border: 1px solid glass-white(0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* line 39, ../Portfolio/scss/layout/_sidebar.scss */
@@ -2999,7 +3075,12 @@ section {
   gap: 0.5rem;
 }
 
-/* line 280, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 281, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar .rotation-toggle#background-toggle-unique {
+  padding-top: 0;
+}
+
+/* line 285, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-label {
   color: #ffffff;
   font-size: 0.8rem;
@@ -3008,7 +3089,7 @@ section {
   opacity: 0.8;
 }
 
-/* line 288, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 293, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch {
   position: relative;
   width: 50px;
@@ -3022,7 +3103,7 @@ section {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* line 300, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 305, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch::before {
   content: '';
   position: absolute;
@@ -3036,40 +3117,91 @@ section {
   box-shadow: 0 2px 4px glass-black(0.2);
 }
 
-/* line 313, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 318, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active {
   background: glass-primary(0.3);
   border-color: glass-primary(0.5);
 }
 
-/* line 317, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 322, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active::before {
   transform: translateX(26px);
   background: #ffffff;
   box-shadow: 0 2px 8px glass-black(0.3);
 }
 
-/* line 324, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 329, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover {
   background: glass-white(0.15);
   border-color: glass-white(0.4);
 }
 
-/* line 328, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 333, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover.active {
   background: glass-primary(0.4);
   border-color: glass-primary(0.6);
 }
 
-/* line 335, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 340, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon {
   font-size: 1rem;
   color: glass-white(0.6);
   transition: color 0.3s ease;
 }
 
-/* line 340, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 345, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon.active {
+  color: #0079A0;
+}
+
+/* line 358, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px glass-black(0.2);
+}
+
+/* line 371, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar.active {
+  background: glass-primary(0.3);
+  border-color: glass-primary(0.5);
+}
+
+/* line 375, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar.active::before {
+  transform: translateX(26px);
+  background: #ffffff;
+  box-shadow: 0 2px 8px glass-black(0.3);
+}
+
+/* line 382, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar:hover {
+  background: glass-white(0.15);
+  border-color: glass-white(0.4);
+}
+
+/* line 386, ../Portfolio/scss/layout/_sidebar.scss */
+.sidebar:hover.active {
+  background: glass-primary(0.4);
+  border-color: glass-primary(0.6);
+}
+
+/* line 393, ../Portfolio/scss/layout/_sidebar.scss */
+.toggle-icon {
+  font-size: 1rem;
+  color: glass-white(0.6);
+  transition: color 0.3s ease;
+}
+
+/* line 398, ../Portfolio/scss/layout/_sidebar.scss */
+.toggle-icon.active {
   color: #0079A0;
 }
 

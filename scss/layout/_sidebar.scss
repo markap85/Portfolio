@@ -277,6 +277,11 @@
     flex-direction: column;
     gap: 0.5rem;
 
+    // Remove padding from second toggle
+    &#background-toggle-unique {
+      padding-top: 0;
+    }
+
     .toggle-label {
       color: $white;
       font-size: 0.8rem;
@@ -342,4 +347,55 @@
       }
     }
   }
-}
+      background: glass-white(0.1);
+      border-radius: 12px;
+      border: 1px solid glass-white(0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 18px;
+        height: 18px;
+        background: $white;
+        border-radius: 50%;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 4px glass-black(0.2);
+      }
+
+      &.active {
+        background: glass-primary(0.3);
+        border-color: glass-primary(0.5);
+
+        &::before {
+          transform: translateX(26px);
+          background: $white;
+          box-shadow: 0 2px 8px glass-black(0.3);
+        }
+      }
+
+      &:hover {
+        background: glass-white(0.15);
+        border-color: glass-white(0.4);
+
+        &.active {
+          background: glass-primary(0.4);
+          border-color: glass-primary(0.6);
+        }
+      }
+    }
+
+    .toggle-icon {
+      font-size: 1rem;
+      color: glass-white(0.6);
+      transition: color 0.3s ease;
+
+      &.active {
+        color: $primary-color;
+      }
+    }
