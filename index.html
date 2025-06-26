@@ -48,17 +48,16 @@
             <span class="wave wave3"></span>
           </div>
         </div>
-    <nav role="navigation" aria-label="Main navigation">
 
-
-      <ul>
-        <li><a href="index.html#about">About Me<span class="icon-keyboard_arrow_down"></span></a></li>
-        <li><a href="index.html#portfolio">My Portfolio<span class="icon-keyboard_arrow_down"></span></a></li>
-        <li><a href="examples.html" class="txt-secondary">Coding Examples<span class="icon-keyboard_arrow_right"></span></a></li>
-        <li><a href="scss.html" class="txt-secondary">SCS Scheme<span class="icon-keyboard_arrow_right"></span></a></li>
-        <li class="contact-me"><a href="index.html#contact">Contact Me</a></li>
-      </ul>
-    </nav>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html#about">About Me<span class="icon-keyboard_arrow_down"></span></a></li>
+          <li><a href="index.html#portfolio">My Portfolio<span class="icon-keyboard_arrow_down"></span></a></li>
+          <li><a href="examples.html" class="txt-secondary">Coding Examples<span class="icon-keyboard_arrow_right"></span></a></li>
+          <li><a href="scss.html" class="txt-secondary">SCS Scheme<span class="icon-keyboard_arrow_right"></span></a></li>
+          <li class="contact-me"><a href="index.html#contact">Contact Me</a></li>
+        </ul>
+      </nav>
 
     <div class="socials">
         <a class="social-icons--linkedin icon-linkedin" href="https://www.linkedin.com/in/mark-alex-peters/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
@@ -212,14 +211,20 @@
     
   </main>
 
-  <script src="js/typewriter.js"></script>
+  <!-- Load jQuery FIRST -->
+  <script src="js/jquery-1.11.2.min.js"></script>
+  
+  <!-- Initialize immediately after -->
   <script src="js/main.js"></script>
+    <script src="js/page-transitions.js"></script>
+
+  <!-- Then load your other custom scripts -->
+  <script src="js/typewriter.js"></script>
   <script src="js/burger.js"></script>
   <script src="js/scrollpercentage.js"></script>
   <script src="js/audioplayer.js"></script>
   <script src="js/smoothscroll.js"></script>
   <script src="js/formvalidation.js"></script>
-
   <script src="js/scrollanimations.js"></script>
   <script src="js/projectfilter.js"></script>
 
