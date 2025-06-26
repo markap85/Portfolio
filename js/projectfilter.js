@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Check if filter buttons already exist to prevent duplicates
+    if (document.querySelector('.filter-buttons')) {
+        return;
+    }
+
     // Add filter buttons to your portfolio section
     const filterButtons = `
         <div class="filter-buttons">
