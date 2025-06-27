@@ -1754,59 +1754,41 @@ footer {
 }
 
 /* line 268, ../Portfolio/scss/layout/_sidebar.scss */
-.sidebar .contact-me {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  margin-top: clamp(0.25rem, 1vh, 0.5rem) !important;
-  margin-bottom: clamp(0.25rem, 1vh, 0.5rem);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-radius: 12px;
-  padding: clamp(8px, 1.5vh, 10px) 0;
-  flex-shrink: 0;
-}
-
-/* line 285, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player {
   margin: clamp(0.25rem, 1vh, 0.5rem) 0;
   width: clamp(140px, 35vw, 180px);
   padding: clamp(0.5rem, 1.5vh, 1rem);
 }
 
-/* line 290, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 273, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .player-controls {
   gap: clamp(0.25rem, 1vh, 0.5rem);
   margin-bottom: clamp(0.5rem, 1vh, 0.75rem);
 }
 
-/* line 296, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 279, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .control-btn.play-btn {
   width: clamp(36px, 8vh, 48px);
   height: clamp(36px, 8vh, 48px);
 }
 
-/* line 301, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 284, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .control-btn.prev-btn, .sidebar #media-player .control-btn.next-btn {
   width: clamp(28px, 6vh, 36px);
   height: clamp(28px, 6vh, 36px);
 }
 
-/* line 307, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 290, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .track-info {
   margin-bottom: clamp(0.25rem, 1vh, 0.5rem);
 }
 
-/* line 310, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 293, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .track-info .track-title {
   font-size: clamp(0.6rem, 1.5vh, 0.75rem);
 }
 
-/* line 317, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 300, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle {
   padding-top: 0;
   position: relative;
@@ -1820,13 +1802,13 @@ footer {
   order: 3;
 }
 
-/* line 330, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 313, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle#background-toggle-unique {
   padding-top: 0;
   margin-bottom: 0.5rem;
 }
 
-/* line 335, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 318, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-label {
   color: #ffffff;
   font-size: clamp(0.6rem, 1.5vh, 0.8rem);
@@ -1835,7 +1817,7 @@ footer {
   opacity: 0.8;
 }
 
-/* line 343, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 326, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch {
   position: relative;
   width: clamp(40px, 10vh, 50px);
@@ -1849,7 +1831,7 @@ footer {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* line 355, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 338, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch::before {
   content: '';
   position: absolute;
@@ -1863,61 +1845,61 @@ footer {
   box-shadow: 0 2px 4px glass-black(0.2);
 }
 
-/* line 368, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 351, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active {
   background: glass-primary(0.3);
   border-color: glass-primary(0.5);
 }
 
-/* line 372, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 355, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active::before {
   transform: translateX(clamp(20px, 5vh, 26px));
   background: white;
   box-shadow: 0 2px 8px glass-black(0.3);
 }
 
-/* line 379, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 362, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover {
   background: glass-white(0.15);
   border-color: glass-white(0.4);
 }
 
-/* line 383, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 366, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover.active {
   background: glass-primary(0.4);
   border-color: glass-primary(0.6);
 }
 
-/* line 390, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 373, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon {
   font-size: 1rem;
   color: glass-white(0.6);
   transition: color 0.3s ease;
 }
 
-/* line 395, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 378, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon.active {
   color: #32CCEE;
 }
 
 @media (max-width: 767px) {
-  /* line 403, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 386, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar.sidebar--open {
     padding-top: 60px;
   }
-  /* line 407, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 390, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo {
     margin-bottom: 0.25rem;
   }
-  /* line 411, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 394, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 6px 0;
   }
-  /* line 415, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 398, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
     margin: 0.125rem 0;
   }
-  /* line 419, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 402, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 160px;
     margin: 0.25rem 0;
@@ -1925,78 +1907,78 @@ footer {
 }
 
 @media (max-height: 600px) {
-  /* line 427, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 410, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo {
     margin-bottom: 0.25rem;
   }
-  /* line 430, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 413, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo a {
     font-size: 2rem;
   }
-  /* line 435, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 418, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 4px 0;
     font-size: 1rem;
   }
-  /* line 440, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 423, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 140px;
     padding: 0.5rem;
   }
-  /* line 445, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 428, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
     margin: 0.125rem 0;
   }
-  /* line 448, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 431, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch {
     width: 40px;
     height: 20px;
   }
-  /* line 452, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 435, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch::before {
     width: 14px;
     height: 14px;
   }
-  /* line 457, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 440, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch.active::before {
     transform: translateX(20px);
   }
 }
 
 @media (max-height: 500px) {
-  /* line 465, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 448, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo a {
     font-size: 1.5rem;
   }
-  /* line 469, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 452, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul {
     gap: 0.125rem;
   }
-  /* line 472, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 455, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 3px 0;
     font-size: 0.9rem;
   }
-  /* line 478, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 461, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials {
     margin: 0.125rem 0;
     gap: 0.5rem;
   }
-  /* line 482, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 465, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials a {
     font-size: 1.2rem;
   }
-  /* line 487, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 470, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 120px;
     padding: 0.25rem;
   }
-  /* line 492, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 475, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.play-btn {
     width: 30px;
     height: 30px;
   }
-  /* line 497, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 480, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.prev-btn, .sidebar #media-player .control-btn.next-btn {
     width: 24px;
     height: 24px;
@@ -3747,59 +3729,41 @@ section {
 }
 
 /* line 268, ../Portfolio/scss/layout/_sidebar.scss */
-.sidebar .contact-me {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  margin-top: clamp(0.25rem, 1vh, 0.5rem) !important;
-  margin-bottom: clamp(0.25rem, 1vh, 0.5rem);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-radius: 12px;
-  padding: clamp(8px, 1.5vh, 10px) 0;
-  flex-shrink: 0;
-}
-
-/* line 285, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player {
   margin: clamp(0.25rem, 1vh, 0.5rem) 0;
   width: clamp(140px, 35vw, 180px);
   padding: clamp(0.5rem, 1.5vh, 1rem);
 }
 
-/* line 290, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 273, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .player-controls {
   gap: clamp(0.25rem, 1vh, 0.5rem);
   margin-bottom: clamp(0.5rem, 1vh, 0.75rem);
 }
 
-/* line 296, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 279, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .control-btn.play-btn {
   width: clamp(36px, 8vh, 48px);
   height: clamp(36px, 8vh, 48px);
 }
 
-/* line 301, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 284, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .control-btn.prev-btn, .sidebar #media-player .control-btn.next-btn {
   width: clamp(28px, 6vh, 36px);
   height: clamp(28px, 6vh, 36px);
 }
 
-/* line 307, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 290, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .track-info {
   margin-bottom: clamp(0.25rem, 1vh, 0.5rem);
 }
 
-/* line 310, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 293, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .track-info .track-title {
   font-size: clamp(0.6rem, 1.5vh, 0.75rem);
 }
 
-/* line 317, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 300, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle {
   padding-top: 0;
   position: relative;
@@ -3813,13 +3777,13 @@ section {
   order: 3;
 }
 
-/* line 330, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 313, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle#background-toggle-unique {
   padding-top: 0;
   margin-bottom: 0.5rem;
 }
 
-/* line 335, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 318, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-label {
   color: #ffffff;
   font-size: clamp(0.6rem, 1.5vh, 0.8rem);
@@ -3828,7 +3792,7 @@ section {
   opacity: 0.8;
 }
 
-/* line 343, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 326, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch {
   position: relative;
   width: clamp(40px, 10vh, 50px);
@@ -3842,7 +3806,7 @@ section {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* line 355, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 338, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch::before {
   content: '';
   position: absolute;
@@ -3856,61 +3820,61 @@ section {
   box-shadow: 0 2px 4px glass-black(0.2);
 }
 
-/* line 368, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 351, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active {
   background: glass-primary(0.3);
   border-color: glass-primary(0.5);
 }
 
-/* line 372, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 355, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active::before {
   transform: translateX(clamp(20px, 5vh, 26px));
   background: white;
   box-shadow: 0 2px 8px glass-black(0.3);
 }
 
-/* line 379, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 362, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover {
   background: glass-white(0.15);
   border-color: glass-white(0.4);
 }
 
-/* line 383, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 366, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover.active {
   background: glass-primary(0.4);
   border-color: glass-primary(0.6);
 }
 
-/* line 390, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 373, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon {
   font-size: 1rem;
   color: glass-white(0.6);
   transition: color 0.3s ease;
 }
 
-/* line 395, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 378, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon.active {
   color: #32CCEE;
 }
 
 @media (max-width: 767px) {
-  /* line 403, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 386, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar.sidebar--open {
     padding-top: 60px;
   }
-  /* line 407, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 390, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo {
     margin-bottom: 0.25rem;
   }
-  /* line 411, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 394, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 6px 0;
   }
-  /* line 415, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 398, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
     margin: 0.125rem 0;
   }
-  /* line 419, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 402, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 160px;
     margin: 0.25rem 0;
@@ -3918,78 +3882,78 @@ section {
 }
 
 @media (max-height: 600px) {
-  /* line 427, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 410, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo {
     margin-bottom: 0.25rem;
   }
-  /* line 430, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 413, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo a {
     font-size: 2rem;
   }
-  /* line 435, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 418, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 4px 0;
     font-size: 1rem;
   }
-  /* line 440, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 423, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 140px;
     padding: 0.5rem;
   }
-  /* line 445, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 428, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
     margin: 0.125rem 0;
   }
-  /* line 448, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 431, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch {
     width: 40px;
     height: 20px;
   }
-  /* line 452, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 435, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch::before {
     width: 14px;
     height: 14px;
   }
-  /* line 457, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 440, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch.active::before {
     transform: translateX(20px);
   }
 }
 
 @media (max-height: 500px) {
-  /* line 465, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 448, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo a {
     font-size: 1.5rem;
   }
-  /* line 469, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 452, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul {
     gap: 0.125rem;
   }
-  /* line 472, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 455, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 3px 0;
     font-size: 0.9rem;
   }
-  /* line 478, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 461, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials {
     margin: 0.125rem 0;
     gap: 0.5rem;
   }
-  /* line 482, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 465, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials a {
     font-size: 1.2rem;
   }
-  /* line 487, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 470, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 120px;
     padding: 0.25rem;
   }
-  /* line 492, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 475, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.play-btn {
     width: 30px;
     height: 30px;
   }
-  /* line 497, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 480, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.prev-btn, .sidebar #media-player .control-btn.next-btn {
     width: 24px;
     height: 24px;

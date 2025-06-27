@@ -265,23 +265,6 @@
     }
   }
 
-  .contact-me {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin-top: clamp(0.25rem, 1vh, 0.5rem) !important;
-    margin-bottom: clamp(0.25rem, 1vh, 0.5rem);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 12px;
-    padding: clamp(8px, 1.5vh, 10px) 0;
-    flex-shrink: 0;
-  }
-
   #media-player {
     margin: clamp(0.25rem, 1vh, 0.5rem) 0;
     width: clamp(140px, 35vw, 180px); // Scale width with viewport
