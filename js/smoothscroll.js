@@ -4,10 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Check if this is a link to a different page
+            if (href.includes('index.html#') && !window.location.pathname.endsWith('index.html')) {
+                // If we're not on index.html, let the browser handle the navigation normally
+                return;
+            }
+            
             e.preventDefault();
             
             // Get the section ID from the link
-            const href = this.getAttribute('href');
             const targetId = href.includes('#') ? href.split('#')[1] : '';
             
             if (targetId) {
