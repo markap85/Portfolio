@@ -87,6 +87,11 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
   // Image Styles - Extended from %img-portfolio
   img {
     @extend %img-portfolio;
+
+    &:hover {
+      filter: brightness(1.5);
+      transition: filter 0.3s ease;
+    }
   }
 
   // ==========================================================================
