@@ -1,16 +1,16 @@
 /* line 2, ../Portfolio/scss/utilities/_extends.scss */
-.about-me-grid, .examples-grid, .scss-info-grid .info-block {
+.contact-grid, .footer-container, .about-me-grid, .examples-grid, .scss-info-grid .info-block {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
   -webkit-backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 24px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 12px 30px -8px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
 }
 
-/* line 24, ../Portfolio/scss/utilities/_extends.scss */
+/* line 28, ../Portfolio/scss/utilities/_extends.scss */
 .project img {
   max-width: 100%;
   height: 250px;
@@ -19,7 +19,7 @@
   display: block;
 }
 
-/* line 33, ../Portfolio/scss/utilities/_extends.scss */
+/* line 37, ../Portfolio/scss/utilities/_extends.scss */
 .tag-refactor, .tag-frontend, .tag-backend {
   display: inline-block;
   font-size: 1.1rem;
@@ -38,7 +38,7 @@
   letter-spacing: 0.02em;
 }
 
-/* line 59, ../Portfolio/scss/utilities/_extends.scss */
+/* line 63, ../Portfolio/scss/utilities/_extends.scss */
 .social-icons--linkedin,
 .social-icons--git,
 .social-icons--facebook {
@@ -50,7 +50,7 @@
   color: #ffffff;
 }
 
-/* line 67, ../Portfolio/scss/utilities/_extends.scss */
+/* line 71, ../Portfolio/scss/utilities/_extends.scss */
 .social-icons--linkedin:hover,
 .social-icons--git:hover,
 .social-icons--facebook:hover {
@@ -934,13 +934,6 @@ li {
   margin-top: 50px !important;
   color: #34495e;
   z-index: 55;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  margin: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -966,12 +959,12 @@ li {
     margin: 0 auto;
     gap: 20px;
   }
-  /* line 35, ../Portfolio/scss/layout/_contact.scss */
+  /* line 27, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details,
   .contact-grid .contact-form-grid {
     box-sizing: border-box;
   }
-  /* line 40, ../Portfolio/scss/layout/_contact.scss */
+  /* line 32, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details {
     display: flex;
     flex-direction: column;
@@ -982,7 +975,7 @@ li {
 }
 
 @media (min-width: 992px) and (min-width: 768px) {
-  /* line 40, ../Portfolio/scss/layout/_contact.scss */
+  /* line 32, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details {
     padding: 0px;
     text-align: left;
@@ -991,7 +984,7 @@ li {
 }
 
 @media (min-width: 992px) and (min-width: 992px) {
-  /* line 40, ../Portfolio/scss/layout/_contact.scss */
+  /* line 32, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details {
     text-align: left;
     align-items: flex-start;
@@ -999,11 +992,11 @@ li {
 }
 
 @media (min-width: 992px) {
-  /* line 60, ../Portfolio/scss/layout/_contact.scss */
+  /* line 52, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details h3 {
     color: #ffffff;
   }
-  /* line 64, ../Portfolio/scss/layout/_contact.scss */
+  /* line 56, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details a {
     color: #943AE4;
     text-decoration: none;
@@ -1013,14 +1006,14 @@ li {
     transition: color 0.3s;
     word-break: break-all;
   }
-  /* line 72, ../Portfolio/scss/layout/_contact.scss */
+  /* line 64, ../Portfolio/scss/layout/_contact.scss */
   .contact-grid .contact-details a:hover {
     color: #EFADBE;
     font-weight: bold;
   }
 }
 
-/* line 84, ../Portfolio/scss/layout/_contact.scss */
+/* line 76, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid {
   display: grid;
   padding-top: 24px;
@@ -1029,7 +1022,7 @@ li {
   box-sizing: border-box;
 }
 
-/* line 92, ../Portfolio/scss/layout/_contact.scss */
+/* line 84, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .first-name,
 .contact-form-grid .last-name {
   width: 100%;
@@ -1038,84 +1031,84 @@ li {
   margin-top: 10px;
 }
 
-/* line 101, ../Portfolio/scss/layout/_contact.scss */
+/* line 93, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .name-row {
   grid-column: 1;
   grid-row: 1;
 }
 
-/* line 102, ../Portfolio/scss/layout/_contact.scss */
+/* line 94, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .name-row .name-row {
   display: block;
   width: 100%;
 }
 
-/* line 109, ../Portfolio/scss/layout/_contact.scss */
+/* line 101, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .last-name {
   grid-column: 1;
   grid-row: 2;
 }
 
-/* line 113, ../Portfolio/scss/layout/_contact.scss */
+/* line 105, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .email {
   grid-column: 1 / span 1;
   grid-row: 3;
 }
 
-/* line 117, ../Portfolio/scss/layout/_contact.scss */
+/* line 109, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .subject {
   grid-column: 1 / span 2;
   grid-row: 4;
 }
 
-/* line 121, ../Portfolio/scss/layout/_contact.scss */
+/* line 113, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .message {
   grid-column: 1 / span 2;
   grid-row: 5;
 }
 
-/* line 125, ../Portfolio/scss/layout/_contact.scss */
+/* line 117, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .submit-btn {
   grid-column: 1 / span 1;
   grid-row: 6;
 }
 
 @media (min-width: 576px) {
-  /* line 84, ../Portfolio/scss/layout/_contact.scss */
+  /* line 76, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid {
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
   }
-  /* line 134, ../Portfolio/scss/layout/_contact.scss */
+  /* line 126, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .name-row {
     display: contents;
   }
-  /* line 137, ../Portfolio/scss/layout/_contact.scss */
+  /* line 129, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .first-name {
     grid-column: 1;
     grid-row: 1;
   }
-  /* line 141, ../Portfolio/scss/layout/_contact.scss */
+  /* line 133, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .last-name {
     grid-column: 2;
     grid-row: 1;
   }
-  /* line 145, ../Portfolio/scss/layout/_contact.scss */
+  /* line 137, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .email {
     grid-column: 1 / span 2;
     grid-row: 2;
   }
-  /* line 149, ../Portfolio/scss/layout/_contact.scss */
+  /* line 141, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .subject {
     grid-column: 1 / span 2;
     grid-row: 3;
   }
-  /* line 153, ../Portfolio/scss/layout/_contact.scss */
+  /* line 145, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .message {
     grid-column: 1 / span 2;
     grid-row: 4;
   }
-  /* line 157, ../Portfolio/scss/layout/_contact.scss */
+  /* line 149, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .submit-btn {
     grid-column: 1 / span 2;
     grid-row: 5;
@@ -1123,43 +1116,43 @@ li {
 }
 
 @media (min-width: 768px) {
-  /* line 164, ../Portfolio/scss/layout/_contact.scss */
+  /* line 156, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .name-row {
     display: contents;
   }
-  /* line 167, ../Portfolio/scss/layout/_contact.scss */
+  /* line 159, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .first-name {
     grid-column: 1;
     grid-row: 1;
   }
-  /* line 171, ../Portfolio/scss/layout/_contact.scss */
+  /* line 163, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .last-name {
     grid-column: 2;
     grid-row: 1;
   }
-  /* line 175, ../Portfolio/scss/layout/_contact.scss */
+  /* line 167, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .email {
     grid-column: 1 / span 2;
     grid-row: 2;
   }
-  /* line 179, ../Portfolio/scss/layout/_contact.scss */
+  /* line 171, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .subject {
     grid-column: 1 / span 2;
     grid-row: 3;
   }
-  /* line 183, ../Portfolio/scss/layout/_contact.scss */
+  /* line 175, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .message {
     grid-column: 1 / span 2;
     grid-row: 4;
   }
-  /* line 187, ../Portfolio/scss/layout/_contact.scss */
+  /* line 179, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .submit-btn {
     grid-column: 1 / span 2;
     grid-row: 5;
   }
 }
 
-/* line 194, ../Portfolio/scss/layout/_contact.scss */
+/* line 186, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid input,
 .contact-form-grid textarea {
   min-width: 0;
@@ -1178,14 +1171,14 @@ li {
   font-weight: 400;
 }
 
-/* line 213, ../Portfolio/scss/layout/_contact.scss */
+/* line 205, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid input::placeholder,
 .contact-form-grid textarea::placeholder {
   color: glass-white(0.6);
   font-weight: 300;
 }
 
-/* line 218, ../Portfolio/scss/layout/_contact.scss */
+/* line 210, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid input:focus,
 .contact-form-grid textarea:focus {
   border-color: #32CCEE;
@@ -1195,7 +1188,7 @@ li {
   transform: translateY(-1px);
 }
 
-/* line 229, ../Portfolio/scss/layout/_contact.scss */
+/* line 221, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid input:hover:not(:focus),
 .contact-form-grid textarea:hover:not(:focus) {
   border-color: glass-white(0.4);
@@ -1203,7 +1196,7 @@ li {
   transform: translateY(-0.5px);
 }
 
-/* line 236, ../Portfolio/scss/layout/_contact.scss */
+/* line 228, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid textarea {
   height: 120px;
   resize: vertical;
@@ -1211,7 +1204,7 @@ li {
   line-height: 1.5;
 }
 
-/* line 243, ../Portfolio/scss/layout/_contact.scss */
+/* line 235, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .submit-btn {
   justify-self: center;
   background: linear-gradient(135deg, #32CCEE 0%, #61d8f2 100%);
@@ -1230,7 +1223,7 @@ li {
   overflow: hidden;
 }
 
-/* line 266, ../Portfolio/scss/layout/_contact.scss */
+/* line 258, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .submit-btn::before {
   content: '';
   position: absolute;
@@ -1242,20 +1235,20 @@ li {
   transition: left 0.5s;
 }
 
-/* line 282, ../Portfolio/scss/layout/_contact.scss */
+/* line 274, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .submit-btn:hover::before {
   left: 100%;
 }
 
 @media (min-width: 992px) {
-  /* line 243, ../Portfolio/scss/layout/_contact.scss */
+  /* line 235, ../Portfolio/scss/layout/_contact.scss */
   .contact-form-grid .submit-btn {
     width: max-content;
     justify-self: start;
   }
 }
 
-/* line 291, ../Portfolio/scss/layout/_contact.scss */
+/* line 283, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .submit-btn:hover, .contact-form-grid .submit-btn:focus {
   background: linear-gradient(135deg, #943AE4 0%, #ac67ea 100%);
   box-shadow: 0 8px 25px glass-secondary(0.4), inset 0 1px 0 glass-white(0.3);
@@ -1263,13 +1256,13 @@ li {
   outline: none;
 }
 
-/* line 305, ../Portfolio/scss/layout/_contact.scss */
+/* line 297, ../Portfolio/scss/layout/_contact.scss */
 .contact-form-grid .submit-btn:active {
   transform: translateY(0px);
   box-shadow: 0 4px 15px glass-secondary(0.3), inset 0 2px 4px glass-black(0.1);
 }
 
-/* line 314, ../Portfolio/scss/layout/_contact.scss */
+/* line 306, ../Portfolio/scss/layout/_contact.scss */
 .error {
   border: 2px solid #943AE4 !important;
   background: glass-white(0.05) !important;
@@ -1288,7 +1281,7 @@ li {
   }
 }
 
-/* line 326, ../Portfolio/scss/layout/_contact.scss */
+/* line 318, ../Portfolio/scss/layout/_contact.scss */
 .error-message {
   color: #ffffff;
   background: linear-gradient(135deg, #943AE4 0%, #7b1ccf 100%);
@@ -1352,15 +1345,9 @@ footer {
   max-width: 1260px;
   width: 100%;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-/* line 75, ../Portfolio/scss/layout/_footer.scss */
+/* line 68, ../Portfolio/scss/layout/_footer.scss */
 .back-to-top {
   display: inline-flex;
   align-items: center;
@@ -1422,13 +1409,13 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 75, ../Portfolio/scss/layout/_footer.scss */
+  /* line 68, ../Portfolio/scss/layout/_footer.scss */
   .back-to-top {
     display: flex;
   }
 }
 
-/* line 78, ../Portfolio/scss/layout/_footer.scss */
+/* line 71, ../Portfolio/scss/layout/_footer.scss */
 .back-to-top a {
   display: flex;
   flex-direction: column;
@@ -1443,42 +1430,42 @@ footer {
   gap: 0.2rem;
 }
 
-/* line 92, ../Portfolio/scss/layout/_footer.scss */
+/* line 85, ../Portfolio/scss/layout/_footer.scss */
 .back-to-top .icon-keyboard_arrow_up {
   color: inherit;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* line 92, ../Portfolio/scss/layout/_footer.scss */
+  /* line 85, ../Portfolio/scss/layout/_footer.scss */
   .back-to-top .icon-keyboard_arrow_up {
     transition: none;
   }
 }
 
 @media (max-width: 768px) {
-  /* line 75, ../Portfolio/scss/layout/_footer.scss */
+  /* line 68, ../Portfolio/scss/layout/_footer.scss */
   .back-to-top {
     width: 60px;
     height: 60px;
   }
-  /* line 104, ../Portfolio/scss/layout/_footer.scss */
+  /* line 97, ../Portfolio/scss/layout/_footer.scss */
   .back-to-top .icon-keyboard_arrow_up {
     font-size: 1.5rem;
   }
-  /* line 108, ../Portfolio/scss/layout/_footer.scss */
+  /* line 101, ../Portfolio/scss/layout/_footer.scss */
   .back-to-top a {
     font-size: 0.7rem;
   }
 }
 
-/* line 118, ../Portfolio/scss/layout/_footer.scss */
+/* line 111, ../Portfolio/scss/layout/_footer.scss */
 .footer-text {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-/* line 123, ../Portfolio/scss/layout/_footer.scss */
+/* line 116, ../Portfolio/scss/layout/_footer.scss */
 .footer-text .created-by {
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.9);
@@ -1486,44 +1473,44 @@ footer {
   white-space: nowrap;
 }
 
-/* line 129, ../Portfolio/scss/layout/_footer.scss */
+/* line 122, ../Portfolio/scss/layout/_footer.scss */
 .footer-text .created-by .highlight {
   color: rgba(255, 0, 212, 0.9);
   font-weight: 600;
 }
 
-/* line 135, ../Portfolio/scss/layout/_footer.scss */
+/* line 128, ../Portfolio/scss/layout/_footer.scss */
 .footer-text .copyright {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
 }
 
-/* line 140, ../Portfolio/scss/layout/_footer.scss */
+/* line 133, ../Portfolio/scss/layout/_footer.scss */
 .footer-text .copyright .year {
   font-weight: 500;
 }
 
 @media (min-width: 768px) {
-  /* line 146, ../Portfolio/scss/layout/_footer.scss */
+  /* line 139, ../Portfolio/scss/layout/_footer.scss */
   .footer-text .created-by {
     font-size: 1.2rem;
   }
-  /* line 150, ../Portfolio/scss/layout/_footer.scss */
+  /* line 143, ../Portfolio/scss/layout/_footer.scss */
   .footer-text .copyright {
     font-size: 1rem;
   }
 }
 
 @supports (scroll-behavior: smooth) {
-  /* line 161, ../Portfolio/scss/layout/_footer.scss */
+  /* line 154, ../Portfolio/scss/layout/_footer.scss */
   html {
     scroll-behavior: smooth;
   }
 }
 
 @media print {
-  /* line 171, ../Portfolio/scss/layout/_footer.scss */
+  /* line 164, ../Portfolio/scss/layout/_footer.scss */
   footer {
     display: none;
   }
@@ -2189,6 +2176,7 @@ footer {
   .about-me-grid {
     padding: 4rem 3rem;
     gap: 2.5rem;
+    box-shadow: 0 32px 64px -16px rgba(0, 0, 0, 0.3), 0 16px 40px -12px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.12), inset 0 2px 0 rgba(255, 255, 255, 0.4);
   }
 }
 
@@ -2197,10 +2185,11 @@ footer {
   .about-me-grid {
     padding: 5rem 4rem;
     gap: 3rem;
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.35), 0 20px 50px -16px rgba(0, 0, 0, 0.25), 0 12px 32px rgba(0, 0, 0, 0.15), inset 0 2px 0 rgba(255, 255, 255, 0.5);
   }
 }
 
-/* line 58, ../Portfolio/scss/layout/_about.scss */
+/* line 68, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img {
   width: 120px;
   height: 120px;
@@ -2211,7 +2200,7 @@ footer {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
-/* line 69, ../Portfolio/scss/layout/_about.scss */
+/* line 79, ../Portfolio/scss/layout/_about.scss */
 .about-me-image img:hover {
   filter: none;
   transform: scale(1.05);
@@ -2219,7 +2208,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 58, ../Portfolio/scss/layout/_about.scss */
+  /* line 68, ../Portfolio/scss/layout/_about.scss */
   .about-me-image img {
     width: 150px;
     height: 150px;
@@ -2227,14 +2216,14 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 58, ../Portfolio/scss/layout/_about.scss */
+  /* line 68, ../Portfolio/scss/layout/_about.scss */
   .about-me-image img {
     width: 180px;
     height: 180px;
   }
 }
 
-/* line 91, ../Portfolio/scss/layout/_about.scss */
+/* line 101, ../Portfolio/scss/layout/_about.scss */
 .about-me-text h3 {
   color: #ffffff;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -2244,7 +2233,7 @@ footer {
   z-index: 1;
 }
 
-/* line 100, ../Portfolio/scss/layout/_about.scss */
+/* line 110, ../Portfolio/scss/layout/_about.scss */
 .about-me-text p {
   color: #ffffff;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -2255,12 +2244,12 @@ footer {
   z-index: 1;
 }
 
-/* line 109, ../Portfolio/scss/layout/_about.scss */
+/* line 119, ../Portfolio/scss/layout/_about.scss */
 .about-me-text p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 114, ../Portfolio/scss/layout/_about.scss */
+/* line 124, ../Portfolio/scss/layout/_about.scss */
 .about-me-text a {
   color: rgba(0, 120, 160, 0.9);
   text-decoration: none;
@@ -2269,14 +2258,14 @@ footer {
   border-bottom: 1px solid transparent;
 }
 
-/* line 121, ../Portfolio/scss/layout/_about.scss */
+/* line 131, ../Portfolio/scss/layout/_about.scss */
 .about-me-text a:hover {
   color: rgba(223, 44, 125, 0.9);
   border-bottom-color: rgba(223, 44, 125, 0.4);
   text-shadow: 0 0 8px rgba(223, 44, 125, 0.2);
 }
 
-/* line 130, ../Portfolio/scss/layout/_about.scss */
+/* line 140, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons {
   margin: 1.5rem;
   display: flex;
@@ -2288,14 +2277,14 @@ footer {
   z-index: 1;
 }
 
-/* line 140, ../Portfolio/scss/layout/_about.scss */
+/* line 150, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons [class^="icon-"] {
   font-size: 2.5rem;
   transition: all 0.2s;
   color: #ffffff;
 }
 
-/* line 147, ../Portfolio/scss/layout/_about.scss */
+/* line 157, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons .icon-postgresql,
 .about-me-icons .icon-php,
 .about-me-icons .icon-laravel {
@@ -2303,7 +2292,7 @@ footer {
   cursor: default;
 }
 
-/* line 153, ../Portfolio/scss/layout/_about.scss */
+/* line 163, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons .icon-postgresql:hover,
 .about-me-icons .icon-php:hover,
 .about-me-icons .icon-laravel:hover {
@@ -2312,11 +2301,11 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 130, ../Portfolio/scss/layout/_about.scss */
+  /* line 140, ../Portfolio/scss/layout/_about.scss */
   .about-me-icons {
     gap: 2rem;
   }
-  /* line 162, ../Portfolio/scss/layout/_about.scss */
+  /* line 172, ../Portfolio/scss/layout/_about.scss */
   .about-me-icons [class^="icon-"] {
     font-size: 3rem;
   }
@@ -2351,7 +2340,7 @@ footer {
   }
 }
 
-/* line 202, ../Portfolio/scss/layout/_about.scss */
+/* line 212, ../Portfolio/scss/layout/_about.scss */
 .skip-link {
   position: absolute;
   top: -9999px;
@@ -2361,7 +2350,7 @@ footer {
   overflow: hidden;
 }
 
-/* line 210, ../Portfolio/scss/layout/_about.scss */
+/* line 220, ../Portfolio/scss/layout/_about.scss */
 .skip-link:focus {
   position: static;
   width: auto;
@@ -2375,7 +2364,7 @@ footer {
   text-decoration: none;
 }
 
-/* line 226, ../Portfolio/scss/layout/_about.scss */
+/* line 236, ../Portfolio/scss/layout/_about.scss */
 .next-section {
   display: inline-flex;
   align-items: center;
@@ -2437,7 +2426,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 226, ../Portfolio/scss/layout/_about.scss */
+  /* line 236, ../Portfolio/scss/layout/_about.scss */
   .next-section {
     display: flex;
   }
