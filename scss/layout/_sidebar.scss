@@ -62,11 +62,11 @@
       contrast(1.15) 
       saturate(1.08) 
       hue-rotate(1.5deg);
-    // Push content down when using burger menu (mobile only)
+    // Mobile burger menu pushes content down
     padding-top: 50px;
 
     @media (min-width: $brk-point-md) {
-      padding-top: 10px; // Reset for desktop
+      padding-top: 10px; // Desktop doesn't need extra padding
     }
   }
 
@@ -105,26 +105,26 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 0.5rem;
-    flex-shrink: 0; // Prevent logo from shrinking
+    flex-shrink: 0; // Keep logo from getting squished
 
     a {
       text-decoration: none !important;
-      font-size: clamp(2rem, 4vh, 3rem); // Scale logo with viewport height
+      font-size: clamp(2rem, 4vh, 3rem); // Responsive logo size
       font-weight: bold;
-      margin-bottom: 0; // Remove margin-bottom from a, handled by .logo
+      margin-bottom: 0; // Logo handles its own spacing
       color: $white;
-      border-bottom: 1px solid transparent; // Always transparent
+      border-bottom: 1px solid transparent; // No underline ever
       transition: color 0.3s;
-      text-align: center; // Center text in the logo
+      text-align: center; // Center the logo text
       &:hover {
-        color: rgba(266, 60, 75, 0.5); // Change color on hover
-        // Do NOT set border-bottom-color
+        color: rgba(266, 60, 75, 0.5); // Hover color change
+        // Keep border transparent on hover
         text-decoration: none;
       }
 
       span {
-        display: inline-block; // Allow transform to work
-        transform: translateY(-3px); // Adjust the span position
+        display: inline-block; // Enable transforms
+        transform: translateY(-3px); // Fine-tune vertical position
       }
     }
   }

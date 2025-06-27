@@ -15,7 +15,7 @@
         
         if (!mediaPlayer || !audioPlayer) return;
         
-        // Track list
+        // Available music tracks
         const tracks = [
             { title: 'Ambient Track 1', src: './audio/chance.wav' },
             { title: 'Ambient Track 2', src: './audio/glorious.wav' },
@@ -26,16 +26,16 @@
         let isPlaying = false;
         let isMuted = false;
         
-        // Initialize
+        // Set up the media player
         function init() {
             updateTrackInfo();
             updatePlayState();
             updateVolumeState();
         }
         
-        // Update track info display
+        // Show current track information
         function updateTrackInfo() {
-            // Extract filename from src path and clean it up
+            // Clean up the filename for display
             const filename = tracks[currentTrackIndex].src.split('/').pop(); // Get filename
             const nameWithoutExtension = filename.replace(/\.(wav|mp3|ogg|m4a)$/i, ''); // Remove extension
             const cleanTitle = nameWithoutExtension.replace(/_/g, ' '); // Replace underscores with spaces
@@ -44,7 +44,7 @@
             audioPlayer.src = tracks[currentTrackIndex].src;
         }
         
-        // Update play/pause state
+        // Update the play/pause button appearance
         function updatePlayState() {
             if (isPlaying) {
                 playIcon.className = 'icon-pause2';
@@ -59,7 +59,7 @@
             }
         }
         
-        // Update volume state
+        // Update volume button and slider
         function updateVolumeState() {
             const volume = audioPlayer.volume;
             
@@ -77,11 +77,11 @@
                 volumeBtn.setAttribute('aria-label', 'Mute');
             }
             
-            // Update slider value
+            // Keep slider in sync with actual volume
             volumeSlider.value = Math.round(volume * 100);
         }
         
-        // Play/Pause functionality
+        // Handle play/pause button clicks
         playPauseBtn.addEventListener('click', function() {
             if (isPlaying) {
                 audioPlayer.pause();
@@ -93,7 +93,7 @@
             updatePlayState();
         });
         
-        // Previous track
+        // Go to previous track
         prevBtn.addEventListener('click', function() {
             currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
             updateTrackInfo();
@@ -102,7 +102,7 @@
             }
         });
         
-        // Next track
+        // Go to next track
         nextBtn.addEventListener('click', function() {
             currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
             updateTrackInfo();
@@ -111,7 +111,7 @@
             }
         });
         
-        // Volume toggle
+        // Handle volume mute/unmute
         volumeBtn.addEventListener('click', function() {
             if (isMuted || audioPlayer.volume === 0) {
                 audioPlayer.volume = 0.5;
@@ -123,7 +123,7 @@
             updateVolumeState();
         });
         
-        // Volume slider
+        // Handle volume slider changes
         volumeSlider.addEventListener('input', function() {
             const volume = this.value / 100;
             audioPlayer.volume = volume;
@@ -131,9 +131,9 @@
             updateVolumeState();
         });
         
-        // Audio events
+        // Listen for audio player events
         audioPlayer.addEventListener('ended', function() {
-            // Auto-play next track
+            // Move to next track when current one finishes
             currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
             updateTrackInfo();
             audioPlayer.play().catch(e => console.log('Playback failed:', e));
@@ -149,11 +149,11 @@
             updatePlayState();
         });
         
-        // Initialize the player
+        // Start up the media player
         init();
     }
     
-    // Initialize when DOM is ready
+    // Start media player when page loads
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initMediaPlayer);
     } else {

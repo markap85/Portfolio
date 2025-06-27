@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
 
     function changeBackgroundImage() {
-        // Update the CSS custom property that controls the background
+        // Switch to the next background image
         document.documentElement.style.setProperty('--background-image', `url("${backgroundImages[currentIndex]}")`);
         currentIndex = (currentIndex + 1) % backgroundImages.length;
     }
 
-    // Call the function every 20 seconds (20000 milliseconds)
+    // Change background every 20 seconds
     setInterval(changeBackgroundImage, 20000);
 });

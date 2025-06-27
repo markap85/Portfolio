@@ -1,4 +1,4 @@
-    // Burger menu toggle for sidebar and overlay
+    // Mobile hamburger menu controls
     const burger = document.querySelector('.burger');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.querySelector('.sidebar-overlay');
@@ -19,7 +19,7 @@
 
     overlay.addEventListener('click', closeSidebar);
 
-    // Optional: close sidebar on ESC key
+    // Close sidebar with ESC key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeSidebar();
     });

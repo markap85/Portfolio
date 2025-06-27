@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Set initial styles
+    // Prepare page transition styles
     document.body.style.transition = 'opacity 0.5s ease';
     
-    // Only fade in if coming from a transition
+    // Fade in page if coming from another page on this site
     if (document.referrer && document.referrer.includes(window.location.hostname)) {
         document.body.style.opacity = '0';
         requestAnimationFrame(() => {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.opacity = '1';
     }
     
-    // Handle transitions
+    // Set up page transitions for internal links
     const links = document.querySelectorAll('a[href$=".html"]');
     
     links.forEach(link => {
@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
 (function() {
     'use strict';
     
-    // Glassmorphic page transition system
+    // Advanced glassmorphic page transition system
     function initPageTransitions() {
         
-        // Create transition overlay
+        // Build the transition overlay element
         function createTransitionOverlay() {
             const overlay = document.createElement('div');
             overlay.id = 'page-transition-overlay';
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 justify-content: center;
             `;
             
-            // Add loading indicator
+            // Create spinning loading animation
             const loadingIndicator = document.createElement('div');
             loadingIndicator.style.cssText = `
                 width: 60px;
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay.appendChild(loadingIndicator);
             document.body.appendChild(overlay);
             
-            // Add keyframes for spinner
+            // Create CSS animation for the spinner
             if (!document.getElementById('glass-spinner-styles')) {
                 const style = document.createElement('style');
                 style.id = 'glass-spinner-styles';
@@ -90,16 +90,16 @@ document.addEventListener('DOMContentLoaded', function() {
             return overlay;
         }
         
-        // Transition out (when leaving page)
+        // Page exit animation
         function transitionOut() {
             return new Promise((resolve) => {
                 const overlay = createTransitionOverlay();
                 
-                // Fade body to white
+                // Apply blur and brightness effects to current page
                 document.body.style.transition = 'filter 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
                 document.body.style.filter = 'brightness(1.5) contrast(0.8) blur(2px)';
                 
-                // Show overlay
+                // Make overlay visible
                 requestAnimationFrame(() => {
                     overlay.style.opacity = '1';
                     overlay.style.pointerEvents = 'all';
@@ -111,16 +111,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Transition in (when entering new page)
+        // Page entry animation
         function transitionIn() {
             return new Promise((resolve) => {
                 const overlay = document.getElementById('page-transition-overlay');
                 
                 if (overlay) {
-                    // Reset body styles
+                    // Clear any filters applied to page content
                     document.body.style.filter = 'none';
                     
-                    // Fade out overlay
+                    // Hide transition overlay
                     overlay.style.opacity = '0';
                     overlay.style.pointerEvents = 'none';
                     
@@ -134,14 +134,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Handle page load transition in
+        // Set up initial page load transition
         function handlePageLoad() {
-            // Create initial overlay for smooth entry
+            // Show overlay immediately for smooth page entry
             const overlay = createTransitionOverlay();
             overlay.style.opacity = '1';
             overlay.style.pointerEvents = 'all';
             
-            // Wait for page to be ready
+            // Wait for page content to load
             if (document.readyState === 'complete') {
                 setTimeout(() => transitionIn(), 100);
             } else {
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Handle navigation clicks
+        // Set up click handlers for navigation links
         function handleNavigation() {
             const navLinks = document.querySelectorAll('a[href]:not([target="_blank"]):not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"])');
             
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.addEventListener('click', function(e) {
                     const href = this.getAttribute('href');
                     
-                    // Skip if it's a hash link, external link, or special link
+                    // Skip external links, hash links, and special protocols
                     if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || this.target === '_blank') {
                         return;
                     }
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Handle browser back/forward buttons
+        // Handle browser navigation buttons
         function handlePopState() {
             window.addEventListener('popstate', () => {
                 transitionOut().then(() => {
@@ -182,21 +182,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Initialize on page load
+        // Start page load animation
         handlePageLoad();
         
-        // Set up navigation handling
+        // Prepare navigation transitions
         document.addEventListener('DOMContentLoaded', () => {
             handleNavigation();
             handlePopState();
         });
         
-        // Re-initialize navigation when new content is loaded
+        // Update navigation handlers when content changes
         function reinitNavigation() {
             handleNavigation();
         }
         
-        // Expose functions for external use
+        // Make transition functions available globally
         window.pageTransitions = {
             out: transitionOut,
             in: transitionIn,
@@ -204,6 +204,6 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
     
-    // Start the transition system
+    // Initialize the transition system
     initPageTransitions();
 })();

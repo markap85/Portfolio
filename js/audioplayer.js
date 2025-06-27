@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(fadeInterval);
         if (targetVolume === 0) {
           music.pause();
-          // Required for iOS: reset src to force pause
+          // iOS requires this to properly pause audio
           music.currentTime = 0;
           music.load();
         }
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     isPlaying = !isPlaying;
   });
 
-  // Play click sound on all link clicks, but only if enabled
+  // Enable click sounds for navigation
   if (clickSound) {
     document.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function() {
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Init as paused
+  // Start with music paused
   music.volume = 0;
   toggle.classList.add("paused");
 });

@@ -1,8 +1,5 @@
-// ==========================================================================
-// Mixins and Extends for the Project
-// ==========================================================================
-
-// Flexible glassmorphic button mixin
+// SCSS mixins for the portfolio
+// Reusable glassmorphic button styling
 @mixin glassmorphic-btn(
   $width: auto,
   $height: auto,
@@ -60,7 +57,7 @@
   }
 }
 
-// Specialized scroll button mixin using the base glassmorphic mixin
+// Circular scroll button with glassmorphic effect
 @mixin frosted-scroll-btn($size: 90px, $icon-size: 4rem) {
   @include glassmorphic-btn(
     $width: $size,
@@ -103,12 +100,12 @@
   }
 }
 
-// Mixins for reusable styles
+// Additional utility mixins
 @mixin hover-transition($property: all, $duration: $transition-duration, $easing: $transition-easing) {
 transition: $property $duration $easing;
 }
 
 @mixin hover-effect {
 color: $accent-color;
-font-weight: 600; // More precise than 'bold'
+font-weight: 600; // Bold text weight
 }

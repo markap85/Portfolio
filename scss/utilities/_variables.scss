@@ -1,14 +1,8 @@
-// ==========================================================================
-// Generic Color Variables
-// ==========================================================================
-
+// Color definitions for the entire project
 $white              : #ffffff;
 $black              : #000000;
 
-// ==========================================================================
-// Primary Color Variables
-// ==========================================================================
-
+// Main brand colors
 $primary-color      : #32CCEE;
 $secondary-color    : #943AE4;
 $accent-color       : #EFADBE;
@@ -17,20 +11,14 @@ $text-dark          : #34495e;
 $text-light         : #ecf0f1;
 
 
-// ==========================================================================
-// Tag Color Variables
-// ==========================================================================
-
+// Project tag colors
 $tag-refactor       : $primary-color;
 $tag-frontend       : $secondary-color;
 $tag-backend        : $accent-color;
 
-// ==========================================================================
-// Breakpoints
-// ==========================================================================
-
-$brk-point-xs       : 280px;     // 280px
-$brk-point-sm       : 576px;     // 576px
-$brk-point-md       : 768px;     // 768px
-$brk-point-lg       : 992px;     // 992px
-$brk-point-xl       : 1200px;    // 1200px
+// Responsive breakpoints
+$brk-point-xs       : 280px;
+$brk-point-sm       : 576px;
+$brk-point-md       : 768px;
+$brk-point-lg       : 992px;
+$brk-point-xl       : 1200px;

@@ -670,7 +670,7 @@ li {
   color: #EFADBE;
 }
 
-/* line 5, ../Portfolio/scss/layout/_socialmedia.scss */
+/* line 3, ../Portfolio/scss/layout/_socialmedia.scss */
 .socials {
   margin-top: 20px;
 }
@@ -889,7 +889,7 @@ li {
   transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* line 50, ../Portfolio/scss/utilities/_mixins.scss */
+/* line 47, ../Portfolio/scss/utilities/_mixins.scss */
 .filter-btn:hover, .filter-btn:focus {
   background: rgba(255, 255, 255, 0.25);
   color: #ffffff;
@@ -1383,7 +1383,7 @@ footer {
   position: relative;
 }
 
-/* line 50, ../Portfolio/scss/utilities/_mixins.scss */
+/* line 47, ../Portfolio/scss/utilities/_mixins.scss */
 .back-to-top:hover, .back-to-top:focus {
   background: rgba(255, 255, 255, 0.35);
   color: #ffffff;
@@ -1393,26 +1393,26 @@ footer {
   outline: none;
 }
 
-/* line 81, ../Portfolio/scss/utilities/_mixins.scss */
+/* line 78, ../Portfolio/scss/utilities/_mixins.scss */
 .back-to-top .icon-keyboard_arrow_down {
   font-size: 1.8rem;
   color: inherit;
   transition: color 0.3s;
 }
 
-/* line 86, ../Portfolio/scss/utilities/_mixins.scss */
+/* line 83, ../Portfolio/scss/utilities/_mixins.scss */
 .back-to-top .icon-keyboard_arrow_down:hover {
   color: #943AE4;
 }
 
-/* line 91, ../Portfolio/scss/utilities/_mixins.scss */
+/* line 88, ../Portfolio/scss/utilities/_mixins.scss */
 .back-to-top a {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
 }
 
-/* line 96, ../Portfolio/scss/utilities/_mixins.scss */
+/* line 93, ../Portfolio/scss/utilities/_mixins.scss */
 .back-to-top a:hover {
   color: #943AE4;
 }
@@ -2433,7 +2433,7 @@ footer {
   position: relative;
 }
 
-/* line 50, ../Portfolio/scss/utilities/_mixins.scss */
+/* line 47, ../Portfolio/scss/utilities/_mixins.scss */
 .next-section:hover, .next-section:focus {
   background: rgba(255, 255, 255, 0.35);
   color: #ffffff;
@@ -2443,26 +2443,26 @@ footer {
   outline: none;
 }
 
-/* line 81, ../Portfolio/scss/utilities/_mixins.scss */
+/* line 78, ../Portfolio/scss/utilities/_mixins.scss */
 .next-section .icon-keyboard_arrow_down {
   font-size: 4rem;
   color: inherit;
   transition: color 0.3s;
 }
 
-/* line 86, ../Portfolio/scss/utilities/_mixins.scss */
+/* line 83, ../Portfolio/scss/utilities/_mixins.scss */
 .next-section .icon-keyboard_arrow_down:hover {
   color: #943AE4;
 }
 
-/* line 91, ../Portfolio/scss/utilities/_mixins.scss */
+/* line 88, ../Portfolio/scss/utilities/_mixins.scss */
 .next-section a {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
 }
 
-/* line 96, ../Portfolio/scss/utilities/_mixins.scss */
+/* line 93, ../Portfolio/scss/utilities/_mixins.scss */
 .next-section a:hover {
   color: #943AE4;
 }

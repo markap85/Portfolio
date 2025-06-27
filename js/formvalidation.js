@@ -73,10 +73,10 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid &= validateEmail(email);
         }
 
-        // If form is valid, you can submit it
+        // Process form if all validation passes
         if (isValid) {
             alert('Form submitted successfully!');
-            // Here you would typically send the form data to your server
+            // Send form data to server
             form.reset();
         }
     });

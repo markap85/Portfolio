@@ -18,7 +18,7 @@
             const text = "name: \"Mark Peters\",";
             typeWriter(heading, text, 150);
         }
-        // Auto-start when page loads
+        // Start typewriter animation on page load
         window.addEventListener('load', () => {
             startTypewriter();
         });

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // CSS for animations - inject into head
+    // Add animation styles to the page
     const animationCSS = `
         <style>
         .animate-on-scroll {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.head.insertAdjacentHTML('beforeend', animationCSS);
     
-    // Add animation classes to elements
+    // Apply animation classes to specific elements
     const elementsToAnimate = [
         { selector: '.project', class: 'animate-on-scroll' },
         { selector: '.about-me-text', class: 'animate-slide-left' },
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Intersection Observer
+    // Set up intersection observer for scroll animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -77,14 +77,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe all elements with animation classes
+    // Watch for elements entering the viewport
     document.querySelectorAll('.animate-on-scroll, .animate-slide-left, .animate-slide-right, .animate-scale').forEach(element => {
         observer.observe(element);
     });
     
-    // Special animation for skill icons with delay
+    // Create staggered animation for skill icons
     document.querySelectorAll('.about-me-icons span').forEach((icon, index) => {
-        // Add staggered delay
+        // Delay each icon animation slightly
         icon.style.transitionDelay = `${index * 0.1}s`;
     });
 });

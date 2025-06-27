@@ -8,23 +8,23 @@
         
         if (!toggleContainer || !toggleSwitch || !toggleIcon) return;
         
-        // Check if device is mobile
+        // Detect mobile devices
         function isMobileDevice() {
             return window.innerWidth <= 768 || 
                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         }
         
-        // Get current state from localStorage or default to true (but false on mobile)
+        // Load saved rotation preference (disabled on mobile)
         let rotationEnabled = !isMobileDevice() && localStorage.getItem('backgroundRotation') !== 'false';
         
-        // Apply initial state
+        // Set initial toggle state
         updateToggleState(rotationEnabled);
         applyRotationState(rotationEnabled);
         
-        // Handle toggle click - only if not mobile
+        // Handle toggle clicks (desktop only)
         toggleSwitch.addEventListener('click', function() {
             if (isMobileDevice()) {
-                // Don't allow toggling on mobile
+                // Mobile devices can't use background rotation
                 return;
             }
             
@@ -32,14 +32,14 @@
             updateToggleState(rotationEnabled);
             applyRotationState(rotationEnabled);
             
-            // Save state to localStorage
+            // Remember user preference
             localStorage.setItem('backgroundRotation', rotationEnabled.toString());
         });
         
-        // Handle window resize to check if device switches to/from mobile
+        // Disable rotation when switching to mobile view
         window.addEventListener('resize', function() {
             if (isMobileDevice() && rotationEnabled) {
-                // Force disable rotation on mobile
+                // Turn off rotation on mobile devices
                 rotationEnabled = false;
                 updateToggleState(rotationEnabled);
                 applyRotationState(rotationEnabled);
@@ -57,7 +57,7 @@
                 toggleIcon.classList.remove('active');
             }
             
-            // Add visual indication that toggle is disabled on mobile
+            // Show that mobile devices can't use this feature
             if (isMobile) {
                 toggleSwitch.style.opacity = '0.5';
                 toggleSwitch.style.cursor = 'not-allowed';
@@ -70,7 +70,7 @@
         function applyRotationState(enabled) {
             const isMobile = isMobileDevice();
             
-            // Force disabled on mobile regardless of enabled state
+            // Mobile devices and disabled state both stop rotation
             if (isMobile || !enabled) {
                 document.body.classList.add('rotation-disabled');
                 document.body.classList.remove('rotation-enabled');
@@ -81,7 +81,7 @@
         }
     }
     
-    // Initialize when DOM is ready
+    // Start rotation toggle when page loads
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initRotationToggle);
     } else {

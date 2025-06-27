@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all anchor links that point to sections on the same page
+    // Find all anchor links that navigate to page sections
     const anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="index.html#"]');
     
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Extract the target section ID
+            // Get the section ID from the link
             const href = this.getAttribute('href');
             const targetId = href.includes('#') ? href.split('#')[1] : '';
             
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Handle "Back to Top" functionality
+    // Handle back to top links
     const backToTopLinks = document.querySelectorAll('a[href="#"]');
     backToTopLinks.forEach(link => {
         link.addEventListener('click', function(e) {
