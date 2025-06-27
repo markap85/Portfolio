@@ -160,36 +160,92 @@
         
         a {
           display: inline-block;
-          padding: clamp(4px, 1vh, 8px) 0; // Scale padding with viewport height
+          padding: clamp(4px, 1vh, 8px) 0;
           text-decoration: none;
           color: $white;
           font-weight: 600;
-          font-size: clamp(1rem, 2.5vh, 1.2rem); // Scale font with viewport height
+          font-size: clamp(1rem, 2.5vh, 1.2rem);
           border-bottom: 1px solid transparent;
-          transition: color 0.3s, background 0.3s, border-radius 0.3s;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           border-radius: 8px;
+          position: relative;
+          overflow: hidden;
+          padding: 10px 10px;
 
+          // Glassmorphic hover effect
           &:hover {
-            border-bottom: 1px solid $accent-color;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            color: $text-dark;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 
+              0 4px 16px rgba(0, 0, 0, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            transform: translateY(-1px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
 
             .icon-keyboard_arrow_right {
-              color: $secondary-color; // Change icon color on hover
+              color: rgba(255, 255, 255, 0.8);
             }
 
             .icon-keyboard_arrow_down {
-              color: $accent-color; // Change icon color on hover
+              color: rgba(255, 255, 255, 0.8);
             }
+          }
+
+          // Active/focus state
+          &:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 
+              0 6px 20px rgba(0, 0, 0, 0.15),
+              0 0 0 2px rgba(255, 255, 255, 0.2),
+              inset 0 2px 0 rgba(255, 255, 255, 0.4);
+          }
+
+          // Subtle shine effect on hover
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+            z-index: 1;
+          }
+
+          &:hover::before {
+            left: 100%;
+          }
+
+          // Ensure text stays above shine effect
+          span {
+            position: relative;
+            z-index: 2;
           }
         }
 
-        &:last-child a {
+        // Special styling for Contact Me button
+        &.contact-me a {
+          background: rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(15px);
+          -webkit-backdrop-filter: blur(15px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          margin: 0 0.5rem;
 
           &:hover {
-            color: $secondary-color;
-            border-bottom: 1px solid transparent;
+            background: rgba(50, 204, 238, 0.2);
+            border-color: rgba(50, 204, 238, 0.4);
+            color: $text-dark;
+            box-shadow: 
+              0 6px 20px rgba(50, 204, 238, 0.15),
+              inset 0 2px 0 rgba(255, 255, 255, 0.4);
+            border-bottom: 1px solid rgba(50, 204, 238, 0.4);
           }
         }
       }
@@ -200,12 +256,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: clamp(0.5rem, 2vh, 1rem); // Scale gap with viewport height
-    margin: clamp(2rem, 1vh, 0.5rem) 0; // Scale margin with viewport height
-    flex-shrink: 0; // Prevent shrinking
+    gap: clamp(0.5rem, 2vh, 1rem);
+    margin: clamp(0.25rem, 1vh, 0.5rem) 0 clamp(0.5rem, 2vh, 1rem) 0; // Top and bottom margins
+    flex-shrink: 0;
 
     a {
-      font-size: clamp(1.5rem, 3vh, 2rem); // Scale social icons with viewport height
+      font-size: clamp(1.5rem, 3vh, 2rem);
     }
   }
 
@@ -222,8 +278,8 @@
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 12px;
-    padding: clamp(8px, 1.5vh, 10px) 0; // Scale padding with viewport height
-    flex-shrink: 0; // Prevent shrinking
+    padding: clamp(8px, 1.5vh, 10px) 0;
+    flex-shrink: 0;
   }
 
   #media-player {
@@ -446,4 +502,3 @@
     }
   }
 }
-
