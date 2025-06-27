@@ -14,12 +14,12 @@
       rgba(255, 255, 255, 0.08) 100%
     );
   backdrop-filter: 
-    blur(25px) 
+    blur(40) 
     contrast(1.1) 
     saturate(1.05) 
     hue-rotate(1deg);
   -webkit-backdrop-filter: 
-    blur(25px) 
+    blur(40px) 
     contrast(1.1) 
     saturate(1.05) 
     hue-rotate(1deg);
@@ -88,12 +88,12 @@
         rgba(255, 255, 255, 0.06) 100%
       );
     backdrop-filter: 
-      blur(20px) 
+      blur(40px) 
       contrast(1.08) 
       saturate(1.03) 
       hue-rotate(0.5deg);
     -webkit-backdrop-filter: 
-      blur(20px) 
+      blur(40px) 
       contrast(1.08) 
       saturate(1.03) 
       hue-rotate(0.5deg);

@@ -1,8 +1,8 @@
 /* line 2, ../Portfolio/scss/utilities/_extends.scss */
 .contact-grid, .footer-container, .about-me-grid, .examples-grid, .scss-info-grid .info-block {
   background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
-  -webkit-backdrop-filter: blur(20px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
+  backdrop-filter: blur(30px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
+  -webkit-backdrop-filter: blur(30px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 24px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 12px 30px -8px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
@@ -1534,8 +1534,8 @@ footer {
   height: 95vh;
   text-align: center;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.15) 60%, rgba(255, 255, 255, 0.08) 100%);
-  backdrop-filter: blur(25px) contrast(1.1) saturate(1.05) hue-rotate(1deg);
-  -webkit-backdrop-filter: blur(25px) contrast(1.1) saturate(1.05) hue-rotate(1deg);
+  backdrop-filter: blur(40) contrast(1.1) saturate(1.05) hue-rotate(1deg);
+  -webkit-backdrop-filter: blur(40px) contrast(1.1) saturate(1.05) hue-rotate(1deg);
   border-right: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 1px 0 0 rgba(255, 255, 255, 0.4);
   z-index: 1000;
@@ -1576,8 +1576,8 @@ footer {
     padding-top: 10px;
     left: 1rem;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.18) 30%, rgba(255, 255, 255, 0.12) 60%, rgba(255, 255, 255, 0.06) 100%);
-    backdrop-filter: blur(20px) contrast(1.08) saturate(1.03) hue-rotate(0.5deg);
-    -webkit-backdrop-filter: blur(20px) contrast(1.08) saturate(1.03) hue-rotate(0.5deg);
+    backdrop-filter: blur(40px) contrast(1.08) saturate(1.03) hue-rotate(0.5deg);
+    -webkit-backdrop-filter: blur(40px) contrast(1.08) saturate(1.03) hue-rotate(0.5deg);
   }
 }
 
@@ -2309,11 +2309,19 @@ footer {
 /* line 150, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons [class^="icon-"] {
   font-size: 2.5rem;
-  transition: all 0.2s;
+  transition: all 0.15s ease;
   color: #ffffff;
+  cursor: pointer;
 }
 
-/* line 157, ../Portfolio/scss/layout/_about.scss */
+/* line 156, ../Portfolio/scss/layout/_about.scss */
+.about-me-icons [class^="icon-"]:hover {
+  font-size: 3rem !important;
+  transform: scale(1.1) !important;
+  color: #32CCEE;
+}
+
+/* line 164, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons .icon-postgresql,
 .about-me-icons .icon-php,
 .about-me-icons .icon-laravel {
@@ -2321,11 +2329,12 @@ footer {
   cursor: default;
 }
 
-/* line 163, ../Portfolio/scss/layout/_about.scss */
+/* line 170, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons .icon-postgresql:hover,
 .about-me-icons .icon-php:hover,
 .about-me-icons .icon-laravel:hover {
-  transform: none;
+  font-size: 3rem !important;
+  transform: scale(1.1) !important;
   color: rgba(120, 140, 160, 0.6);
 }
 
@@ -2334,10 +2343,72 @@ footer {
   .about-me-icons {
     gap: 2rem;
   }
-  /* line 172, ../Portfolio/scss/layout/_about.scss */
+  /* line 180, ../Portfolio/scss/layout/_about.scss */
   .about-me-icons [class^="icon-"] {
     font-size: 3rem;
   }
+}
+
+/* line 187, ../Portfolio/scss/layout/_about.scss */
+.skill-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* line 199, ../Portfolio/scss/layout/_about.scss */
+.skill-modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  color: #34495e;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  min-width: 250px;
+}
+
+/* line 217, ../Portfolio/scss/layout/_about.scss */
+.skill-modal .modal-content h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #32CCEE;
+}
+
+/* line 223, ../Portfolio/scss/layout/_about.scss */
+.skill-modal .modal-content p {
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+/* line 228, ../Portfolio/scss/layout/_about.scss */
+.skill-modal .modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #34495e;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* line 238, ../Portfolio/scss/layout/_about.scss */
+.skill-modal .modal-content .close:hover {
+  color: #32CCEE;
 }
 
 @keyframes glassShine {
@@ -2369,7 +2440,7 @@ footer {
   }
 }
 
-/* line 212, ../Portfolio/scss/layout/_about.scss */
+/* line 279, ../Portfolio/scss/layout/_about.scss */
 .skip-link {
   position: absolute;
   top: -9999px;
@@ -2379,7 +2450,7 @@ footer {
   overflow: hidden;
 }
 
-/* line 220, ../Portfolio/scss/layout/_about.scss */
+/* line 287, ../Portfolio/scss/layout/_about.scss */
 .skip-link:focus {
   position: static;
   width: auto;
@@ -2393,7 +2464,7 @@ footer {
   text-decoration: none;
 }
 
-/* line 236, ../Portfolio/scss/layout/_about.scss */
+/* line 303, ../Portfolio/scss/layout/_about.scss */
 .next-section {
   display: inline-flex;
   align-items: center;
@@ -2455,7 +2526,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 236, ../Portfolio/scss/layout/_about.scss */
+  /* line 303, ../Portfolio/scss/layout/_about.scss */
   .next-section {
     display: flex;
   }
@@ -3496,8 +3567,8 @@ section {
   height: 95vh;
   text-align: center;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.15) 60%, rgba(255, 255, 255, 0.08) 100%);
-  backdrop-filter: blur(25px) contrast(1.1) saturate(1.05) hue-rotate(1deg);
-  -webkit-backdrop-filter: blur(25px) contrast(1.1) saturate(1.05) hue-rotate(1deg);
+  backdrop-filter: blur(40) contrast(1.1) saturate(1.05) hue-rotate(1deg);
+  -webkit-backdrop-filter: blur(40px) contrast(1.1) saturate(1.05) hue-rotate(1deg);
   border-right: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 1px 0 0 rgba(255, 255, 255, 0.4);
   z-index: 1000;
@@ -3538,8 +3609,8 @@ section {
     padding-top: 10px;
     left: 1rem;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.18) 30%, rgba(255, 255, 255, 0.12) 60%, rgba(255, 255, 255, 0.06) 100%);
-    backdrop-filter: blur(20px) contrast(1.08) saturate(1.03) hue-rotate(0.5deg);
-    -webkit-backdrop-filter: blur(20px) contrast(1.08) saturate(1.03) hue-rotate(0.5deg);
+    backdrop-filter: blur(40px) contrast(1.08) saturate(1.03) hue-rotate(0.5deg);
+    -webkit-backdrop-filter: blur(40px) contrast(1.08) saturate(1.03) hue-rotate(0.5deg);
   }
 }
 
