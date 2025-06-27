@@ -8,9 +8,18 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 12px 30px -8px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
+  max-width: 95%;
+  margin: 16px;
 }
 
-/* line 28, ../Portfolio/scss/utilities/_extends.scss */
+@media (max-width: 600px) {
+  /* line 2, ../Portfolio/scss/utilities/_extends.scss */
+  .contact-grid, .footer-container, .about-me-grid, .examples-grid, .scss-info-grid .info-block {
+    margin: 8px;
+  }
+}
+
+/* line 33, ../Portfolio/scss/utilities/_extends.scss */
 .project img {
   max-width: 100%;
   height: 250px;
@@ -19,7 +28,7 @@
   display: block;
 }
 
-/* line 37, ../Portfolio/scss/utilities/_extends.scss */
+/* line 42, ../Portfolio/scss/utilities/_extends.scss */
 .tag-refactor, .tag-frontend, .tag-backend {
   display: inline-block;
   font-size: 1.1rem;
@@ -38,7 +47,7 @@
   letter-spacing: 0.02em;
 }
 
-/* line 63, ../Portfolio/scss/utilities/_extends.scss */
+/* line 68, ../Portfolio/scss/utilities/_extends.scss */
 .social-icons--linkedin,
 .social-icons--git,
 .social-icons--facebook {
@@ -50,7 +59,7 @@
   color: #ffffff;
 }
 
-/* line 71, ../Portfolio/scss/utilities/_extends.scss */
+/* line 76, ../Portfolio/scss/utilities/_extends.scss */
 .social-icons--linkedin:hover,
 .social-icons--git:hover,
 .social-icons--facebook:hover {
@@ -1318,11 +1327,11 @@ footer {
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
-  padding: 2rem 1rem;
-  margin-top: 4rem;
+  padding: 1rem 1rem;
+  margin-top: 2rem;
   font-size: 1.2rem;
   text-align: center;
-  width: 100%;
+  width: 95%;
   background: transparent;
 }
 
@@ -1684,7 +1693,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: clamp(0.5rem, 2vh, 1rem);
-  margin: clamp(0.25rem, 1vh, 0.5rem) 0;
+  margin: clamp(2rem, 1vh, 0.5rem) 0;
   flex-shrink: 0;
 }
 
@@ -3626,7 +3635,7 @@ section {
   display: flex;
   justify-content: center;
   gap: clamp(0.5rem, 2vh, 1rem);
-  margin: clamp(0.25rem, 1vh, 0.5rem) 0;
+  margin: clamp(2rem, 1vh, 0.5rem) 0;
   flex-shrink: 0;
 }
 

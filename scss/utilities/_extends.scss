@@ -21,7 +21,12 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
       position: relative;
       overflow: hidden;
-      // Enhanced drop shadow for lifted effect
+      max-width: 95%;
+      margin: 16px; // Always some space from viewport edges
+
+      @media (max-width: 600px) {
+        margin: 8px;
+      }
     }
 
     // Portfolio Image Style

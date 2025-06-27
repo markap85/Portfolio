@@ -201,7 +201,7 @@
     display: flex;
     justify-content: center;
     gap: clamp(0.5rem, 2vh, 1rem); // Scale gap with viewport height
-    margin: clamp(0.25rem, 1vh, 0.5rem) 0; // Scale margin with viewport height
+    margin: clamp(2rem, 1vh, 0.5rem) 0; // Scale margin with viewport height
     flex-shrink: 0; // Prevent shrinking
 
     a {
