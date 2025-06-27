@@ -1884,7 +1884,7 @@ footer {
   }
   /* line 386, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
-    margin: 0.125rem 0;
+    display: none;
   }
   /* line 390, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
@@ -3917,7 +3917,7 @@ section {
   }
   /* line 386, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
-    margin: 0.125rem 0;
+    display: none;
   }
   /* line 390, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {

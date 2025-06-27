@@ -384,7 +384,7 @@
     }
     
     .rotation-toggle {
-      margin: 0.125rem 0; // Minimal margins on mobile
+      display: none; // Hide rotation toggle on mobile
     }
     
     #media-player {
