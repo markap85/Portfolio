@@ -37,18 +37,9 @@
   <div class="sidebar-overlay"></div>
 
   <aside class="sidebar" id="sidebar">
-    <div class="logo"><h1><a href="index.html"><span>&#123;</span>M/P<span>&#125;</span></a></h1></div>
-            <!-- =======================
-        MUSIC TOGGLE BUTTON
-        ======================= -->
-        <div id="music-toggle" class="music-toggle">
-          <div class="wave-container">
-            <span class="wave wave1"></span>
-            <span class="wave wave2"></span>
-            <span class="wave wave3"></span>
-          </div>
-        </div>
 
+
+    <div class="logo"><h1><a href="index.html"><span>&#123;</span>M/P<span>&#125;</span></a></h1></div>
 
 
       <nav role="navigation" aria-label="Main navigation">
@@ -66,7 +57,40 @@
         <a class="social-icons--git icon-github" href="https://github.com/markap85" target="_blank" rel="noopener" aria-label="GitHub"></a>
         <a class="social-icons--facebook icon-facebook2" href="https://www.facebook.com/markpeters85" target="_blank" rel="noopener" aria-label="Facebook"></a>
       <!-- Add social icons -->
+
     </div>
+        <!-- =======================
+        GLASSMORPHIC MEDIA PLAYER
+        ======================= -->
+        <div id="media-player" class="media-player">
+          <div class="player-controls">
+            <button class="control-btn prev-btn" id="prev-track" aria-label="Previous track">
+              <span class="icon-first"></span>
+            </button>
+            
+            <button class="control-btn play-btn" id="play-pause" aria-label="Play/Pause">
+              <span class="icon-play3" id="play-icon"></span>
+            </button>
+            
+            <button class="control-btn next-btn" id="next-track" aria-label="Next track">
+              <span class="icon-last"></span>
+            </button>
+          </div>
+          
+          <div class="track-info">
+            <span class="track-title" id="track-title">Track 1</span>
+          </div>
+          
+          <div class="volume-container">
+            <button class="volume-btn" id="volume-toggle" aria-label="Toggle volume">
+              <span class="icon-volume_up" id="volume-icon"></span>
+            </button>
+            <div class="volume-slider-container">
+              <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="50" aria-label="Volume">
+            </div>
+          </div>
+        </div>
+
         <!-- =======================
         ROTATION TOGGLE BUTTON
         ======================= -->
@@ -265,6 +289,10 @@
   <script src="js/nav-dots.js"></script>
   <script src="js/background.js"></script>
     <script src="js/currentyear.js"></script>
+    <script src="js/media-player.js"></script>
 
+</body>
+</html>
+</html>
 </body>
 </html>

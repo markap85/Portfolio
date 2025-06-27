@@ -24,7 +24,7 @@
       <source src="./audio/Music.wav" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-
+  
     <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -38,17 +38,6 @@
     <aside class="sidebar" id="sidebar">
         <div class="logo"><h1><a href="index.html"><span>&#123;</span>M/P<span>&#125;</span></a></h1></div>
         
-        <!-- =======================
-        MUSIC TOGGLE BUTTON
-        ======================= -->
-        <div id="music-toggle" class="music-toggle">
-          <div class="wave-container">
-            <span class="wave wave1"></span>
-            <span class="wave wave2"></span>
-            <span class="wave wave3"></span>
-          </div>
-        </div>
-
         <nav role="navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html#about">About Me</a></li>
@@ -63,6 +52,38 @@
             <a class="social-icons--linkedin icon-linkedin" href="https://www.linkedin.com/in/mark-alex-peters/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
             <a class="social-icons--git icon-github" href="https://github.com/markap85" target="_blank" rel="noopener" aria-label="GitHub"></a>
             <a class="social-icons--facebook icon-facebook2" href="https://www.facebook.com/markpeters85" target="_blank" rel="noopener" aria-label="Facebook"></a>
+        </div>
+
+        <!-- =======================
+        GLASSMORPHIC MEDIA PLAYER
+        ======================= -->
+        <div id="media-player" class="media-player">
+          <div class="player-controls">
+            <button class="control-btn prev-btn" id="prev-track" aria-label="Previous track">
+              <span class="icon-first"></span>
+            </button>
+            
+            <button class="control-btn play-btn" id="play-pause" aria-label="Play/Pause">
+              <span class="icon-play3" id="play-icon"></span>
+            </button>
+            
+            <button class="control-btn next-btn" id="next-track" aria-label="Next track">
+              <span class="icon-last"></span>
+            </button>
+          </div>
+          
+          <div class="track-info">
+            <span class="track-title" id="track-title">Track 1</span>
+          </div>
+          
+          <div class="volume-container">
+            <button class="volume-btn" id="volume-toggle" aria-label="Toggle volume">
+              <span class="icon-volume_up" id="volume-icon"></span>
+            </button>
+            <div class="volume-slider-container">
+              <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="50" aria-label="Volume">
+            </div>
+          </div>
         </div>
         
         <!-- =======================
@@ -105,6 +126,25 @@
             </div>
         </div>
         <!-- PAGE CONTENT END -->
+
+        <!-- Footer -->
+        <div class="content-wrapper">
+            <footer role="contentinfo">
+                <div class="footer-container">
+                    <div class="back-to-top">
+                        <a href="#" aria-label="Back to top"><span class="icon-keyboard_arrow_up"></span></a>
+                    </div>
+                    
+                    <div class="footer-text">
+                        <p class="created-by">
+                            Created with <span>&#10084;</span> by Mark Peters
+                        </p>
+                        <p class="copyright">
+                            &copy; <span id="current-year"></span> Mark Peters. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </div>
     </main>
 
@@ -121,6 +161,7 @@
     <script src="js/rotation-toggle.js"></script>
     <script src="js/background.js"></script>
     <script src="js/currentyear.js"></script>
+    <script src="js/media-player.js"></script>
 
 </body>
 </html>

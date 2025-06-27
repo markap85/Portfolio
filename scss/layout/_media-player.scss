@@ -1,0 +1,295 @@
+// ==========================================================================
+// Glassmorphic Media Player
+// ==========================================================================
+
+.media-player {
+  width: 180px;
+  margin: 0;
+  padding: 1rem;
+  
+  // Glassmorphic container
+  background: rgba($white, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid glass-white(0.3);
+  border-radius: 16px;
+  box-shadow: 
+    0 8px 24px glass-black(0.1),
+    inset 0 1px 0 glass-white(0.3);
+  
+  // Player controls container
+  .player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  // Control buttons
+  .control-btn {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: $white;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+      0 4px 16px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+      box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+    }
+    
+    &:active {
+      transform: scale(0.95);
+    }
+    
+    // Icons
+    [class^="icon-"] {
+      font-size: 1rem;
+      color: $white;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+    }
+    
+    &:hover [class^="icon-"] {
+      opacity: 1;
+    }
+  }
+  
+  // Play button (larger)
+  .play-btn {
+    width: 48px;
+    height: 48px;
+    
+    [class^="icon-"] {
+      font-size: 1.4rem;
+      color: $white;
+      opacity: 0.9;
+    }
+    
+    &.playing {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.2),
+        inset 0 2px 0 rgba(255, 255, 255, 0.4);
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(35px);
+        -webkit-backdrop-filter: blur(35px);
+      }
+      
+      [class^="icon-"] {
+        color: $white;
+        opacity: 1;
+      }
+    }
+  }
+  
+  // Previous/Next buttons (smaller)
+  .prev-btn,
+  .next-btn {
+    width: 36px;
+    height: 36px;
+    
+    [class^="icon-"] {
+      font-size: 0.9rem;
+      color: $white;
+      opacity: 0.7;
+    }
+    
+    &:hover [class^="icon-"] {
+      opacity: 1;
+    }
+  }
+  
+  // Track info
+  .track-info {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    
+    .track-title {
+      color: $white;
+      font-size: 0.75rem;
+      font-weight: 500;
+      opacity: 0.8;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
+      // Hide on mobile
+      @media (max-width: $brk-point-sm) {
+        display: none;
+      }
+    }
+  }
+  
+  // Volume container
+  .volume-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    
+    // Hide entire volume container on mobile
+    @media (max-width: $brk-point-sm) {
+      display: none;
+    }
+    
+    .volume-btn {
+      background: transparent;
+      border: none;
+      color: glass-white(0.6);
+      cursor: pointer;
+      padding: 0.25rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        color: $white;
+        background: glass-white(0.1);
+      }
+      
+      [class^="icon-"] {
+        font-size: 0.8rem;
+      }
+      
+      &.muted {
+        color: glass-white(0.4);
+      }
+    }
+    
+    .volume-slider-container {
+      flex: 1;
+      max-width: 80px;
+    }
+    
+    .volume-slider {
+      width: 100%;
+      height: 4px;
+      background: glass-white(0.2);
+      outline: none;
+      border-radius: 2px;
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      
+      &::-webkit-slider-track {
+        width: 100%;
+        height: 4px;
+        background: glass-white(0.2);
+        border-radius: 2px;
+      }
+      
+      &::-webkit-slider-thumb {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 12px;
+        height: 12px;
+        background: $white;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 2px 4px glass-black(0.2);
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.2);
+          box-shadow: 0 3px 6px glass-black(0.3);
+        }
+      }
+      
+      &::-moz-range-track {
+        width: 100%;
+        height: 4px;
+        background: glass-white(0.2);
+        border-radius: 2px;
+        border: none;
+      }
+      
+      &::-moz-range-thumb {
+        width: 12px;
+        height: 12px;
+        background: $white;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 2px 4px glass-black(0.2);
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.2);
+          box-shadow: 0 3px 6px glass-black(0.3);
+        }
+      }
+    }
+  }
+  
+  // Active state animation
+  &.playing {
+    .play-btn {
+      animation: pulse 2s ease-in-out infinite;
+    }
+  }
+}
+
+// Pulse animation for playing state
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 
+      0 4px 12px glass-black(0.15),
+      0 0 0 0 glass-primary(0.4);
+  }
+  50% {
+    box-shadow: 
+      0 6px 16px glass-black(0.2),
+      0 0 0 4px glass-primary(0.1);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: $brk-point-sm) {
+  .media-player {
+    width: 160px;
+    padding: 0.75rem;
+    
+    // Reduce bottom margin since track info is hidden
+    .player-controls {
+      margin-bottom: 0;
+    }
+    
+    .play-btn {
+      width: 42px;
+      height: 42px;
+      
+      [class^="icon-"] {
+        font-size: 1.2rem;
+      }
+    }
+    
+    .prev-btn,
+    .next-btn {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
