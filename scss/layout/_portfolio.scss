@@ -52,8 +52,7 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
   border-radius: 10px;
   padding-bottom: 10px;
   cursor: pointer;
-  top: 0;
-  transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -61,11 +60,9 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease-in-out;
 
-  // Hover Effect (only for enabled items)
+  // Hover Effect (only for enabled items) - removed transform
   &:not(.disabled):hover {
-    top: -5px;
     background-color: $primary-color;
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.4);
@@ -249,6 +246,9 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
   }
 }
 
+.project {
+  transition: all 0.3s ease;
+}
 .project {
   transition: all 0.3s ease;
 }
