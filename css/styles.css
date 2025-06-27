@@ -1880,7 +1880,7 @@ footer {
   }
   /* line 382, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
-    padding: 6px 0;
+    padding: 10px 10px;
   }
   /* line 386, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
@@ -1889,7 +1889,7 @@ footer {
   /* line 390, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 160px;
-    margin: 0.25rem 0;
+    margin: 0.25rem 0 1rem 0;
   }
 }
 
@@ -1904,68 +1904,70 @@ footer {
   }
   /* line 406, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
-    padding: 4px 0;
+    padding: 10px 10px;
     font-size: 1rem;
   }
   /* line 411, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 140px;
     padding: 0.5rem;
+    margin-bottom: 1rem;
   }
-  /* line 416, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 417, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
     margin: 0.125rem 0;
   }
-  /* line 419, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 420, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch {
     width: 40px;
     height: 20px;
   }
-  /* line 423, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 424, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch::before {
     width: 14px;
     height: 14px;
   }
-  /* line 428, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 429, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch.active::before {
     transform: translateX(20px);
   }
 }
 
 @media (max-height: 500px) {
-  /* line 436, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 437, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo a {
     font-size: 1.5rem;
   }
-  /* line 440, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 441, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul {
     gap: 0.125rem;
   }
-  /* line 443, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 444, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
-    padding: 3px 0;
+    padding: 10px 10px;
     font-size: 0.9rem;
   }
-  /* line 449, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 450, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials {
     margin: 0.125rem 0;
     gap: 0.5rem;
   }
-  /* line 453, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 454, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials a {
     font-size: 1.2rem;
   }
-  /* line 458, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 459, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 120px;
     padding: 0.25rem;
+    margin-bottom: 1rem;
   }
-  /* line 463, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 465, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.play-btn {
     width: 30px;
     height: 30px;
   }
-  /* line 468, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 470, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.prev-btn, .sidebar #media-player .control-btn.next-btn {
     width: 24px;
     height: 24px;
@@ -3913,7 +3915,7 @@ section {
   }
   /* line 382, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
-    padding: 6px 0;
+    padding: 10px 10px;
   }
   /* line 386, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
@@ -3922,7 +3924,7 @@ section {
   /* line 390, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 160px;
-    margin: 0.25rem 0;
+    margin: 0.25rem 0 1rem 0;
   }
 }
 
@@ -3937,68 +3939,70 @@ section {
   }
   /* line 406, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
-    padding: 4px 0;
+    padding: 10px 10px;
     font-size: 1rem;
   }
   /* line 411, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 140px;
     padding: 0.5rem;
+    margin-bottom: 1rem;
   }
-  /* line 416, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 417, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
     margin: 0.125rem 0;
   }
-  /* line 419, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 420, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch {
     width: 40px;
     height: 20px;
   }
-  /* line 423, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 424, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch::before {
     width: 14px;
     height: 14px;
   }
-  /* line 428, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 429, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch.active::before {
     transform: translateX(20px);
   }
 }
 
 @media (max-height: 500px) {
-  /* line 436, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 437, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo a {
     font-size: 1.5rem;
   }
-  /* line 440, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 441, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul {
     gap: 0.125rem;
   }
-  /* line 443, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 444, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
-    padding: 3px 0;
+    padding: 10px 10px;
     font-size: 0.9rem;
   }
-  /* line 449, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 450, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials {
     margin: 0.125rem 0;
     gap: 0.5rem;
   }
-  /* line 453, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 454, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials a {
     font-size: 1.2rem;
   }
-  /* line 458, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 459, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 120px;
     padding: 0.25rem;
+    margin-bottom: 1rem;
   }
-  /* line 463, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 465, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.play-btn {
     width: 30px;
     height: 30px;
   }
-  /* line 468, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 470, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.prev-btn, .sidebar #media-player .control-btn.next-btn {
     width: 24px;
     height: 24px;
