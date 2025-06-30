@@ -103,24 +103,123 @@
         <div class="content-wrapper">
             <div class="examples-grid">
                 <div class="examples-header">
-                    <h3>Coding Examples <span class="txt-secondary">&#123;</span>Coming Soon<span class="txt-secondary">&#125;</span></h3>
-                    <p>Here are some coding examples that showcase my skills and experience in web development.</p>
+                    <h3>Coding Examples <br><span class="txt-secondary">&#123;</span>Responsive Design<span class="txt-secondary">&#125;</span></h3>
+                    <p>Here are some real coding examples from this portfolio website that showcase modern responsive design techniques and best practices.</p>
                 </div>
                 
                 <div class="examples-list">
                     <article class="example-item">
-                        <h4>Example 1: Responsive Web Design</h4>
-                        <p>Coming Soon...</p>
+                        <h4>Example 1: Responsive Portfolio Grid</h4>
+                        <p>This portfolio grid demonstrates modern responsive design using CSS Grid with automatic column adjustments based on screen size.</p>
+                        
+                        <div class="code-block">
+                            <h5>SCSS Code:</h5>
+                            <pre><code>.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr; // 1 column by default
+  gap: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-items: center;
+
+  // Responsive Breakpoints
+  @media (min-width: $brk-point-sm) {
+    grid-template-columns: 1fr 1fr; // 2 columns on small screens
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // 3 columns on large screens
+  @media (min-width: $brk-point-lg) {
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr; 
+  }
+}</code></pre>
+                        </div>
+                        
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li>Mobile-first approach (1 column by default)</li>
+                            <li>Progressive enhancement for larger screens</li>
+                            <li>Automatic spacing with CSS Grid gap</li>
+                            <li>Responsive container with max-width constraint</li>
+                        </ul>
                     </article>
                     
                     <article class="example-item">
-                        <h4>Example 2: JavaScript Functionality</h4>
-                        <p>Coming Soon...</p>
+                        <h4>Example 2: Modern Responsive Typography with Clamp()</h4>
+                        <p>Using CSS clamp() function for fluid typography that scales smoothly between different screen sizes without media queries.</p>
+                        
+                        <div class="code-block">
+                            <h5>SCSS Code:</h5>
+                            <pre><code>.sidebar {
+  .logo a {
+    font-size: clamp(2rem, 4vh, 3rem); // Responsive logo size
+  }
+  
+  nav ul li a {
+    font-size: clamp(1rem, 2.5vh, 1.2rem); // Scale with viewport
+    padding: clamp(4px, 1vh, 8px) 0;
+  }
+  
+  #media-player {
+    width: clamp(140px, 35vw, 180px); // Scale width with viewport
+    padding: clamp(0.5rem, 1.5vh, 1rem); // Scale internal padding
+    
+    .control-btn.play-btn {
+      width: clamp(36px, 8vh, 48px); // Scale play button
+      height: clamp(36px, 8vh, 48px);
+    }
+  }
+}</code></pre>
+                        </div>
+                        
+                        <p><strong>Benefits of clamp():</strong></p>
+                        <ul>
+                            <li>Smooth scaling without abrupt breakpoint changes</li>
+                            <li>Minimum and maximum size constraints</li>
+                            <li>Reduces the need for multiple media queries</li>
+                            <li>Better user experience across all device sizes</li>
+                        </ul>
                     </article>
                     
                     <article class="example-item">
-                        <h4>Example 3: CSS Animations</h4>
-                        <p>Coming Soon...</p>
+                        <h4>Example 3: Responsive Contact Form Layout</h4>
+                        <p>A contact form that adapts its layout using CSS Grid, transitioning from single-column on mobile to multi-column on larger screens.</p>
+                        
+                        <div class="code-block">
+                            <h5>SCSS Code:</h5>
+                            <pre><code>.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr; // Single column by default
+  row-gap: 10px;
+  
+  // Form field positioning
+  .first-name { grid-column: 1; grid-row: 1; }
+  .last-name { grid-column: 1; grid-row: 2; }
+  .email { grid-column: 1; grid-row: 3; }
+  
+  // Responsive: Two columns on medium screens
+  @media (min-width: 576px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    
+    .name-row { display: contents; }
+    .first-name { grid-column: 1; grid-row: 1; }
+    .last-name { grid-column: 2; grid-row: 1; }
+    .email { grid-column: 1 / span 2; grid-row: 2; }
+  }
+}</code></pre>
+                        </div>
+                        
+                        <p><strong>Responsive Features:</strong></p>
+                        <ul>
+                            <li>Grid layout automatically adjusts form structure</li>
+                            <li>Name fields side-by-side on larger screens</li>
+                            <li>Full-width fields span multiple columns when needed</li>
+                            <li>Consistent spacing maintained across breakpoints</li>
+                        </ul>
                     </article>
                 </div>
             </div>
