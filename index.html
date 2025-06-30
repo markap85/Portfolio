@@ -222,15 +222,21 @@
             <p>I'm always open to a chat — drop me a message anytime!</p>
           </div>
 
-          <form class="contact-form-grid">
+          <form class="contact-form-grid" method="POST" id="form">
+            <input type="hidden" name="access_key" value="15528a23-c6d4-4bf0-a2b0-422078a35cb9">
+            <input type="hidden" name="subject" value="New Submission from Web3Forms">
+            <input type="checkbox" name="botcheck" id="" style="display: none;">
+
             <div class="name-row">
-              <input type="text" class="first-name" id="first-name" name="first-name" placeholder="First Name" required autocomplete="given-name">
-              <input type="text" class="last-name" id="last-name" name="last-name" placeholder="Last Name" required autocomplete="family-name">
+              <input type="text" class="first-name" id="first-name" name="name" placeholder="First Name" required autocomplete="given-name">
+              <input type="text" class="last-name" id="last-name" name="phone" placeholder="Phone Number" required autocomplete="family-name">
             </div>
             <input type="email" class="email" id="email" name="email" placeholder="Email Address" required autocomplete="email">
             <input type="text" class="subject" id="subject" name="subject" placeholder="Subject" required autocomplete="off">
             <textarea class="message" id="message" name="message" placeholder="Message" required autocomplete="off"></textarea>
             <button type="submit" class="submit-btn">Submit</button>
+            
+            <div id="result"></div>
           </form>
 
         </div>
@@ -275,6 +281,45 @@
   <script src="js/media-player.js"></script>
   <script src="js/skill-modals.js"></script>
 
+  <script>
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      result.innerHTML = "Please wait..."
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          result.innerHTML = json.message;
+        } else {
+          console.log(response);
+          result.innerHTML = json.message;
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        result.innerHTML = "Something went wrong!";
+      })
+      .then(function() {
+        form.reset();
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 3000);
+      });
+    });
+  </script>
 </body>
-</html>
 </html>
