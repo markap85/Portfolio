@@ -752,16 +752,17 @@ li {
 /* line 83, ../Portfolio/scss/layout/_portfolio.scss */
 .project h3, .project a {
   padding-left: 10px;
+  color: #ffffff;
 }
 
-/* line 91, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 92, ../Portfolio/scss/layout/_portfolio.scss */
 .project img:hover {
   filter: brightness(1.5);
   transition: filter 0.3s ease;
 }
 
-/* line 100, ../Portfolio/scss/layout/_portfolio.scss */
-.project.disabled, .project.pr-3, .project.pr-4, .project.pr-5, .project.pr-6 {
+/* line 101, ../Portfolio/scss/layout/_portfolio.scss */
+.project.disabled, .project.pr-4, .project.pr-5, .project.pr-6 {
   opacity: 0.1;
   cursor: not-allowed;
   pointer-events: none;
@@ -772,76 +773,76 @@ li {
 }
 
 @media (min-width: 576px) {
-  /* line 100, ../Portfolio/scss/layout/_portfolio.scss */
-  .project.disabled, .project.pr-3, .project.pr-4, .project.pr-5, .project.pr-6 {
+  /* line 101, ../Portfolio/scss/layout/_portfolio.scss */
+  .project.disabled, .project.pr-4, .project.pr-5, .project.pr-6 {
     display: block;
   }
 }
 
-/* line 115, ../Portfolio/scss/layout/_portfolio.scss */
-.project.disabled h3, .project.pr-3 h3, .project.pr-4 h3, .project.pr-5 h3, .project.pr-6 h3, .project.disabled a, .project.pr-3 a, .project.pr-4 a, .project.pr-5 a, .project.pr-6 a {
+/* line 116, ../Portfolio/scss/layout/_portfolio.scss */
+.project.disabled h3, .project.pr-4 h3, .project.pr-5 h3, .project.pr-6 h3, .project.disabled a, .project.pr-4 a, .project.pr-5 a, .project.pr-6 a {
   opacity: 0.3;
   color: #ffffff;
 }
 
-/* line 120, ../Portfolio/scss/layout/_portfolio.scss */
-.project.disabled img, .project.pr-3 img, .project.pr-4 img, .project.pr-5 img, .project.pr-6 img {
+/* line 121, ../Portfolio/scss/layout/_portfolio.scss */
+.project.disabled img, .project.pr-4 img, .project.pr-5 img, .project.pr-6 img {
   filter: grayscale(70%) brightness(0.9) contrast(0.8);
   transition: filter 0.3s ease;
   opacity: 0.1;
 }
 
-/* line 138, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 139, ../Portfolio/scss/layout/_portfolio.scss */
 .icon-arrow-right2 {
   font-size: normal;
 }
 
-/* line 146, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 147, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-1:not(.disabled):hover {
   background-color: #32CCEE;
 }
 
-/* line 150, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 151, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-2:not(.disabled):hover {
   background-color: #943AE4;
 }
 
-/* line 154, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 155, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-3:not(.disabled):hover {
   background-color: #EFADBE;
 }
 
-/* line 158, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 159, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-4:not(.disabled):hover {
   background-color: #943AE4;
 }
 
-/* line 162, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 163, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-5:not(.disabled):hover {
   background-color: #EFADBE;
 }
 
-/* line 166, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 167, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-6:not(.disabled):hover {
   background-color: #32CCEE;
 }
 
-/* line 174, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 175, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-refactor {
   background-color: #32CCEE;
 }
 
-/* line 179, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 180, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-frontend {
   background-color: #943AE4;
 }
 
-/* line 184, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 185, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-backend {
   background-color: #EFADBE;
 }
 
-/* line 190, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 191, ../Portfolio/scss/layout/_portfolio.scss */
 .icon-heart {
   font-size: 0.8rem;
   position: relative;
@@ -849,7 +850,7 @@ li {
 }
 
 /* Project Filter Styles */
-/* line 202, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 203, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-buttons {
   display: flex;
   justify-content: center;
@@ -859,13 +860,13 @@ li {
 }
 
 @media (min-width: 768px) {
-  /* line 202, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 203, ../Portfolio/scss/layout/_portfolio.scss */
   .filter-buttons {
     margin-left: 220px;
   }
 }
 
-/* line 214, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 215, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn {
   display: inline-flex;
   align-items: center;
@@ -899,7 +900,7 @@ li {
   outline: none;
 }
 
-/* line 227, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 228, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn.active {
   background: rgba(255, 255, 255, 0.15);
   color: white;
@@ -907,7 +908,7 @@ li {
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-/* line 235, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 236, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn.active:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
@@ -925,12 +926,12 @@ li {
   }
 }
 
-/* line 254, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 255, ../Portfolio/scss/layout/_portfolio.scss */
 .project {
   transition: all 0.3s ease;
 }
 
-/* line 257, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 258, ../Portfolio/scss/layout/_portfolio.scss */
 .project {
   transition: all 0.3s ease;
 }
