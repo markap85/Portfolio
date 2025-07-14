@@ -5,9 +5,64 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-        <meta name="ROBOTS" content="noindex,nofollow">
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Mark Peters - Creative Front-End Web Developer specializing in HTML, CSS, Sass, and JavaScript. Building clean, responsive websites with modern design.">
+        <meta name="keywords" content="web developer, front-end developer, HTML, CSS, Sass, JavaScript, responsive design, portfolio">
+        <meta name="author" content="Mark Peters">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Open Graph Meta Tags for Social Media -->
+        <meta property="og:title" content="Mark Peters - Web Developer">
+        <meta property="og:description" content="Creative Front-End Web Developer specializing in HTML, CSS, Sass, and JavaScript. Building clean, responsive websites with modern design.">
+        <meta property="og:image" content="img/MeImage.webp">
+        <meta property="og:url" content="https://mark-peters.dev">
+        <meta property="og:type" content="website">
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Mark Peters - Web Developer">
+        <meta name="twitter:description" content="Creative Front-End Web Developer specializing in HTML, CSS, Sass, and JavaScript.">
+        <meta name="twitter:image" content="img/MeImage.webp">
+        
+        <!-- Performance Optimizations -->
+        <link rel="preconnect" href="https://api.web3forms.com">
+        <link rel="dns-prefetch" href="https://www.linkedin.com">
+        <link rel="dns-prefetch" href="https://github.com">
+        <link rel="dns-prefetch" href="https://www.facebook.com">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        
+        <!-- Stylesheet -->
         <link rel="stylesheet" href="css/styles.css">
-        <title>Mark Peters - Web Developer</title>
+        
+        <!-- Page Title -->
+        <title>Mark Peters - Creative Front-End Web Developer | Portfolio</title>
+        
+        <!-- Structured Data for SEO -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Mark Peters",
+          "jobTitle": "Front-End Web Developer",
+          "description": "Creative Front-End Web Developer specializing in HTML, CSS, Sass, and JavaScript. Building clean, responsive websites with modern design.",
+          "url": "https://mark-peters.dev",
+          "image": "img/MeImage.webp",
+          "sameAs": [
+            "https://www.linkedin.com/in/mark-alex-peters/",
+            "https://github.com/markap85",
+            "https://www.facebook.com/markpeters85"
+          ],
+          "knowsAbout": ["HTML5", "CSS3", "Sass", "JavaScript", "jQuery", "PHP", "Laravel", "PostgreSQL", "Responsive Design", "Web Development"],
+          "memberOf": {
+            "@type": "Organization",
+            "name": "BAFTA",
+            "url": "https://www.bafta.org/"
+          }
+        }
+        </script>
     </head>
 
 <body>
@@ -20,8 +75,8 @@
     <!-- =======================
     AUDIO PLAYER
     ======================= -->
-    <audio id="bg-music" loop>
-      <source src="./audio/Music.wav" type="audio/mpeg">
+    <audio id="bg-music" loop preload="none">
+      <source src="./audio/Music.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   
@@ -47,7 +102,7 @@
           <li><a href="#about" class="spa-nav">About Me</a></li>
           <li><a href="#portfolio" class="spa-nav">My Portfolio</a></li>
           <li><a href="examples.html" class="txt-secondary spa-nav">Coding Examples</a></li>
-          <li><a href="scss.html" class="txt-secondary spa-nav">SCS Scheme</a></li>
+          <li><a href="scss.html" class="txt-secondary spa-nav">SCSS Scheme</a></li>
           <li class="contact-me"><a href="#contact" class="spa-nav">Contact Me</a></li>
         </ul>
       </nav>
@@ -129,21 +184,21 @@
       <div class="content-wrapper">
         <div class="about-me-grid">
           <div class="about-me-image">
-            <img src="img/MeImage.webp" alt="Mark Peters" loading="lazy">
+            <img src="img/MeImage.webp" alt="Mark Peters - Front-End Web Developer" loading="lazy" width="400" height="400">
           </div>
           <div class="about-me-text">
             <h3>About <span class="txt-secondary">&#123;</span>Me<span class="txt-secondary">&#125;</span></h3>
             <p>Hi, I’m a front-end web developer who enjoys building clean, responsive websites using <span class="txt-primary">HTML</span>, <span class="txt-secondary">CSS</span>, and <span class="txt-accent">Sass</span>. I focus on making designs look great across all devices, with a strong eye for detail and usability.</p>
             <p>Before diving into web development, I've worked in many creative industries over the last two decades including game dev, film and the arts and am a member of <a href="https://www.bafta.org/" target="_blank" rel="noopener" class="special-link">BAFTA</a>. That creative background helps me bring a strong visual sense and storytelling mindset to every project I work on.</p>
             <div class="about-me-icons">
-              <span class="icon-html-five" data-text="Thanks for hovering! I'm a tooltip" class="tooltip"></span>
-              <span class="icon-css3" data-text="Thanks for hovering! I'm a tooltip" class="tooltip"></span>
-              <span class="icon-sass" data-text="Thanks for hovering! I'm a tooltip" class="tooltip"></span>
-              <span class="icon-javascript" data-text="Thanks for hovering! I'm a tooltip" class="tooltip"></span>
-              <span class="icon-jquery" data-text="Thanks for hovering! I'm a tooltip" class="tooltip"></span>
-              <span class="icon-postgresql" data-text="Thanks for hovering! I'm a tooltip" class="tooltip"></span>
-              <span class="icon-php" data-text="Thanks for hovering! I'm a tooltip" class="tooltip"></span>
-              <span class="icon-laravel" data-text="Thanks for hovering! I'm a tooltip" class="tooltip"></span>
+              <span class="icon-html-five" data-text="HTML5 - Semantic markup and modern web standards" class="tooltip" role="img" aria-label="HTML5"></span>
+              <span class="icon-css3" data-text="CSS3 - Modern styling and animations" class="tooltip" role="img" aria-label="CSS3"></span>
+              <span class="icon-sass" data-text="Sass - Advanced CSS preprocessing" class="tooltip" role="img" aria-label="Sass"></span>
+              <span class="icon-javascript" data-text="JavaScript - Interactive web experiences" class="tooltip" role="img" aria-label="JavaScript"></span>
+              <span class="icon-jquery" data-text="jQuery - Simplified DOM manipulation" class="tooltip" role="img" aria-label="jQuery"></span>
+              <span class="icon-postgresql" data-text="PostgreSQL - Robust database management" class="tooltip" role="img" aria-label="PostgreSQL"></span>
+              <span class="icon-php" data-text="PHP - Server-side development" class="tooltip" role="img" aria-label="PHP"></span>
+              <span class="icon-laravel" data-text="Laravel - Elegant PHP framework" class="tooltip" role="img" aria-label="Laravel"></span>
             </div>
           </div>
         </div>
@@ -162,46 +217,46 @@
         <section id="portfolio" class="portfolio-grid">
           <!-- Project 1 -->
             <article class="project pr-1">
-              <img src="img/Netmatters.png" alt="Project One">
+              <img src="img/Netmatters.png" alt="Netmatters Homepage - Responsive website refactor project" loading="lazy" width="300" height="200">
               <p class="tag-refactor"><span class="icon-heart"></span> Refactor</p>
               <h3>Netmatters Homepage</h3>
-              <a href="https://netmatters.mark-peters.netmatters-scs.co.uk/" target="_blank">
+              <a href="https://netmatters.mark-peters.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
                 View Project <span class="icon-arrow-right2"></span>
               </a>
               <br>
-              <a href="https://github.com/markap85/Netmatters-Homepage" target="_blank">
+              <a href="https://github.com/markap85/Netmatters-Homepage" target="_blank" rel="noopener noreferrer">
                 Source Code
               </a>
             </article>
           <!-- Project 2 -->
             <article class="project pr-2">
-              <img src="img/AGS.png" alt="Project Two">
+              <img src="img/AGS.png" alt="Aurora Game Studios - Creative gaming website" loading="lazy" width="300" height="200">
               <p class="tag-frontend">Frontend</p>
               <h3>Aurora Game Studios</h3>
-              <a href="https://auroragamestudios.co.uk" target="_blank">View Project <span class="icon-arrow-right2"></span>
+              <a href="https://auroragamestudios.co.uk" target="_blank" rel="noopener noreferrer">View Project <span class="icon-arrow-right2"></span>
               </a>
             </article>
           <!-- Project 3 -->
             <article class="project pr-3">
-              <img src="img/Revive.png" alt="Project Three">
+              <img src="img/Revive.png" alt="ReVive Interactive - Interactive media website" loading="lazy" width="300" height="200">
               <p class="tag-frontend">Frontend</p>
               <h3>ReVive Interactive</h3>
-              <a href="https://reviveinteractive.co.uk/" target="_blank">View Project <span class="icon-arrow-right2"></span>
+              <a href="https://reviveinteractive.co.uk/" target="_blank" rel="noopener noreferrer">View Project <span class="icon-arrow-right2"></span>
               </a>
             </article>
           <!-- Project 4 -->
             <article class="project pr-4">
-              <img src="img/WebSitePlaceHolder_4.jpg" alt="Project Four">
+              <img src="img/WebSitePlaceHolder_4.jpg" alt="Coming soon - Future project placeholder" loading="lazy" width="300" height="200">
               <h3>Coming Soon</h3>
             </article>
           <!-- Project 5 -->
             <article class="project pr-5">
-              <img src="img/WebSitePlaceHolder_5.jpg" alt="Project Five">
+              <img src="img/WebSitePlaceHolder_5.jpg" alt="Coming soon - Future project placeholder" loading="lazy" width="300" height="200">
               <h3>Coming Soon</h3>
             </article>
           <!-- Project 6 -->
             <article class="project pr-6">
-              <img src="img/WebSitePlaceHolder_6.jpg" alt="Project Six">
+              <img src="img/WebSitePlaceHolder_6.jpg" alt="Coming soon - Future project placeholder" loading="lazy" width="300" height="200">
               <h3>Coming Soon</h3>
             </article>
 
@@ -227,21 +282,21 @@
             <p>I'm always open to a chat — drop me a message anytime!</p>
           </div>
 
-          <form class="contact-form-grid" method="POST" id="form">
+          <form class="contact-form-grid" method="POST" id="form" novalidate>
             <input type="hidden" name="access_key" value="15528a23-c6d4-4bf0-a2b0-422078a35cb9">
-            <input type="hidden" name="subject" value="New Submission from Web3Forms">
-            <input type="checkbox" name="botcheck" id="" style="display: none;">
+            <input type="hidden" name="subject" value="New Portfolio Contact Form Submission">
+            <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1">
 
             <div class="name-row">
-              <input type="text" class="first-name" id="first-name" name="name" placeholder="First Name" required autocomplete="given-name">
-              <input type="text" class="last-name" id="last-name" name="phone" placeholder="Phone Number" required autocomplete="family-name">
+              <input type="text" class="first-name" id="first-name" name="name" placeholder="First Name" required autocomplete="given-name" aria-label="First Name">
+              <input type="tel" class="last-name" id="last-name" name="phone" placeholder="Phone Number" required autocomplete="tel" aria-label="Phone Number">
             </div>
-            <input type="email" class="email" id="email" name="email" placeholder="Email Address" required autocomplete="email">
-            <input type="text" class="subject" id="subject" name="subject" placeholder="Subject" required autocomplete="off">
-            <textarea class="message" id="message" name="message" placeholder="Message" required autocomplete="off"></textarea>
-            <button type="submit" class="submit-btn">Submit</button>
+            <input type="email" class="email" id="email" name="email" placeholder="Email Address" required autocomplete="email" aria-label="Email Address">
+            <input type="text" class="subject" id="subject" name="subject" placeholder="Subject" required autocomplete="off" aria-label="Subject">
+            <textarea class="message" id="message" name="message" placeholder="Message" required autocomplete="off" aria-label="Message" rows="5"></textarea>
+            <button type="submit" class="submit-btn" aria-describedby="result">Submit Message</button>
             
-            <div id="result"></div>
+            <div id="result" role="status" aria-live="polite" style="display: none;"></div>
           </form>
 
         </div>
@@ -271,62 +326,32 @@
     </div> <!-- End dynamic-content -->
   </main>
 
-  <script src="js/jquery-1.11.2.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/typewriter.js"></script>
-  <script src="js/burger.js"></script>
-  <script src="js/scrollpercentage.js"></script>
-  <script src="js/audioplayer.js"></script>
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/formvalidation.js"></script>
-  <script src="js/scrollanimations.js"></script>
-  <script src="js/projectfilter.js"></script>
-  <script src="js/rotation-toggle.js"></script>
-  <script src="js/background.js"></script>
-  <script src="js/currentyear.js"></script>
-  <script src="js/media-player.js"></script>
-  <script src="js/skill-modals.js"></script>
-  <script src="js/spa-loader.js"></script>
-
+  <!-- Scripts - Loaded at bottom for better performance -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script>
-    const form = document.getElementById('form');
-    const result = document.getElementById('result');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
-      result.innerHTML = "Please wait..."
-
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: json
-      })
-      .then(async (response) => {
-        let json = await response.json();
-        if (response.status == 200) {
-          result.innerHTML = json.message;
-        } else {
-          console.log(response);
-          result.innerHTML = json.message;
-        }
-      })
-      .catch(error => {
-        console.log(error);
-        result.innerHTML = "Something went wrong!";
-      })
-      .then(function() {
-        form.reset();
-        setTimeout(() => {
-          result.style.display = "none";
-        }, 3000);
-      });
-    });
+    // Fallback to local jQuery if CDN fails
+    if (typeof jQuery === 'undefined') {
+      document.write('<script src="js/jquery-1.11.2.min.js"><\/script>');
+    }
   </script>
+  
+  <!-- Application Scripts -->
+  <script src="js/main.js" defer></script>
+  <script src="js/typewriter.js" defer></script>
+  <script src="js/burger.js" defer></script>
+  <script src="js/scrollpercentage.js" defer></script>
+  <script src="js/audioplayer.js" defer></script>
+  <script src="js/smoothscroll.js" defer></script>
+  <script src="js/formvalidation.js" defer></script>
+  <script src="js/scrollanimations.js" defer></script>
+  <script src="js/projectfilter.js" defer></script>
+  <script src="js/rotation-toggle.js" defer></script>
+  <script src="js/background.js" defer></script>
+  <script src="js/currentyear.js" defer></script>
+  <script src="js/media-player.js" defer></script>
+  <script src="js/skill-modals.js" defer></script>
+  <script src="js/spa-loader.js" defer></script>
+  <script src="js/contact-form.js" defer></script>
+
 </body>
 </html>
