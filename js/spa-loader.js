@@ -48,8 +48,10 @@ class SPAContentLoader {
                 } else if (href.includes('scss.html')) {
                     this.loadContent('scss');
                 } else if (href.includes('#about') || href.includes('#portfolio') || href.includes('#contact')) {
+                    console.log('Hash navigation detected:', href, 'Current page:', this.currentPage);
                     // If we're not on home page, load home first then scroll
                     if (this.currentPage !== 'home') {
+                        console.log('Not on home page, loading home content first...');
                         this.loadContent('home').then(() => {
                             // Extract the hash from the href
                             const hash = href.includes('#') ? href.split('#')[1] : '';
@@ -60,8 +62,17 @@ class SPAContentLoader {
                             }
                         });
                     } else {
+                        console.log('Already on home page, just scrolling to section...');
                         // Already on home page, just scroll to section
+                        // But ensure portfolio filter is initialized if scrolling to portfolio
                         const hash = href.includes('#') ? href.split('#')[1] : '';
+                        if (hash === 'portfolio' && typeof initPortfolioFilter === 'function') {
+                            // Re-initialize portfolio filter to ensure "Coming Soon" projects are visible
+                            setTimeout(() => {
+                                console.log('Re-initializing portfolio filter for scroll navigation...');
+                                initPortfolioFilter();
+                            }, 100);
+                        }
                         if (hash) {
                             this.scrollToSection(hash);
                         }
@@ -134,13 +145,14 @@ class SPAContentLoader {
             // Update the page title
             this.updatePageTitle(page);
             
+            // Update current page before content transition so reinitializePageScripts knows the correct page
+            this.currentPage = page;
+            
             // Load content with smooth transition
             await this.transitionContent(content);
             
             // Update browser history
             this.updateHistory(page);
-            
-            this.currentPage = page;
             
         } catch (error) {
             console.error('Error loading content:', error);
@@ -236,6 +248,7 @@ class SPAContentLoader {
     }
 
     reinitializePageScripts() {
+        console.log('reinitializePageScripts called for page:', this.currentPage);
         // Re-initialize scripts that might be needed for dynamic content
         
         // Re-run typewriter effect if on home page
