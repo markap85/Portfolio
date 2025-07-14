@@ -52,8 +52,13 @@ function initPortfolioFilter() {
             btn.classList.add('active');
             
             const projects = document.querySelectorAll('.project');
+            const portfolioGrid = document.querySelector('.portfolio-grid');
             
-            // Step 1: Fade out ALL projects first
+            // Step 1: Record current height and fade out ALL projects first
+            const currentHeight = portfolioGrid.offsetHeight;
+            portfolioGrid.style.height = currentHeight + 'px';
+            portfolioGrid.style.transition = 'height 0.6s ease';
+            
             projects.forEach(project => {
                 project.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
                 project.style.opacity = '0';
@@ -89,15 +94,35 @@ function initPortfolioFilter() {
                     }
                 });
                 
-                // Step 3: After repositioning, fade in the visible projects
+                // Step 3: After repositioning, measure new height and animate to it
                 setTimeout(() => {
+                    // Let the grid auto-size first
+                    portfolioGrid.style.height = 'auto';
+                    const newHeight = portfolioGrid.offsetHeight;
+                    
+                    // Set it back to current height and animate to new height
+                    portfolioGrid.style.height = currentHeight + 'px';
+                    
+                    // Force reflow
+                    portfolioGrid.offsetHeight;
+                    
+                    // Animate to new height
+                    portfolioGrid.style.height = newHeight + 'px';
+                    
+                    // Fade in visible projects
                     projects.forEach(project => {
                         if (project.style.display !== 'none') {
                             project.style.opacity = '1';
                             project.style.transform = 'scale(1) translateY(0)';
                         }
                     });
-                }, 200); // Small delay to allow grid repositioning
+                    
+                    // Reset height to auto after animation completes
+                    setTimeout(() => {
+                        portfolioGrid.style.height = 'auto';
+                    }, 600);
+                    
+                }, 100); // Small delay to allow grid repositioning
                 
             }, 400); // Wait for fade out to complete
         });

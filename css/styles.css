@@ -709,9 +709,11 @@ li {
 /* line 7, ../Portfolio/scss/layout/_portfolio.scss */
 .portfolio-section {
   margin-top: 5rem;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
-/* line 15, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 18, ../Portfolio/scss/layout/_portfolio.scss */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -722,30 +724,32 @@ li {
   justify-content: center;
   max-width: 1260px;
   margin: 0 auto;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 0;
 }
 
 @media (max-width: 767px) {
-  /* line 15, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 18, ../Portfolio/scss/layout/_portfolio.scss */
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* line 15, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 18, ../Portfolio/scss/layout/_portfolio.scss */
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 992px) {
-  /* line 15, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 18, ../Portfolio/scss/layout/_portfolio.scss */
   .portfolio-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
-/* line 48, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 54, ../Portfolio/scss/layout/_portfolio.scss */
 .project, .project.pr-4, .project.pr-5, .project.pr-6 {
   text-align: center;
   position: relative;
@@ -760,7 +764,7 @@ li {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-/* line 65, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 71, ../Portfolio/scss/layout/_portfolio.scss */
 .project:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #32CCEE;
   background: rgba(255, 255, 255, 0.2);
@@ -768,30 +772,30 @@ li {
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15), inset 0 2px 0 rgba(255, 255, 255, 0.5);
 }
 
-/* line 73, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 79, ../Portfolio/scss/layout/_portfolio.scss */
 .project:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover h3, .project:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover a {
   color: #ffffff;
 }
 
-/* line 78, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 84, ../Portfolio/scss/layout/_portfolio.scss */
 .project h3, .project.pr-4 h3, .project.pr-5 h3, .project.pr-6 h3 {
   font-weight: bolder;
   margin-top: 10px;
 }
 
-/* line 83, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 89, ../Portfolio/scss/layout/_portfolio.scss */
 .project h3, .project.pr-4 h3, .project.pr-5 h3, .project.pr-6 h3, .project a, .project.pr-4 a, .project.pr-5 a, .project.pr-6 a {
   padding-left: 10px;
   color: #ffffff;
 }
 
-/* line 92, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 98, ../Portfolio/scss/layout/_portfolio.scss */
 .project img:hover {
   filter: brightness(1.5);
   transition: filter 0.3s ease;
 }
 
-/* line 101, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 107, ../Portfolio/scss/layout/_portfolio.scss */
 .project.disabled, .project.pr-4, .project.pr-5, .project.pr-6 {
   opacity: 0.1;
   cursor: not-allowed;
@@ -803,76 +807,76 @@ li {
 }
 
 @media (min-width: 576px) {
-  /* line 101, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 107, ../Portfolio/scss/layout/_portfolio.scss */
   .project.disabled, .project.pr-4, .project.pr-5, .project.pr-6 {
     display: block;
   }
 }
 
-/* line 116, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 122, ../Portfolio/scss/layout/_portfolio.scss */
 .project.disabled h3, .project.pr-4 h3, .project.pr-5 h3, .project.pr-6 h3, .project.disabled a, .project.pr-4 a, .project.pr-5 a, .project.pr-6 a {
   opacity: 0.3;
   color: #ffffff;
 }
 
-/* line 121, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 127, ../Portfolio/scss/layout/_portfolio.scss */
 .project.disabled img, .project.pr-4 img, .project.pr-5 img, .project.pr-6 img {
   filter: grayscale(70%) brightness(0.9) contrast(0.8);
   transition: filter 0.3s ease;
   opacity: 0.1;
 }
 
-/* line 139, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 145, ../Portfolio/scss/layout/_portfolio.scss */
 .icon-arrow-right2 {
   font-size: normal;
 }
 
-/* line 147, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 153, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-1:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #32CCEE;
 }
 
-/* line 151, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 157, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-2:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #943AE4;
 }
 
-/* line 155, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 161, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-3:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #EFADBE;
 }
 
-/* line 159, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 165, ../Portfolio/scss/layout/_portfolio.scss */
 .pr-4.project:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #943AE4;
 }
 
-/* line 163, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 169, ../Portfolio/scss/layout/_portfolio.scss */
 .pr-5.project:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #EFADBE;
 }
 
-/* line 167, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 173, ../Portfolio/scss/layout/_portfolio.scss */
 .pr-6.project:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #32CCEE;
 }
 
-/* line 175, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 181, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-refactor {
   background-color: #32CCEE;
 }
 
-/* line 180, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 186, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-frontend {
   background-color: #943AE4;
 }
 
-/* line 185, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 191, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-backend {
   background-color: #EFADBE;
 }
 
-/* line 191, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 197, ../Portfolio/scss/layout/_portfolio.scss */
 .icon-heart {
   font-size: 0.8rem;
   position: relative;
@@ -880,7 +884,7 @@ li {
 }
 
 /* Project Filter Styles */
-/* line 203, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 209, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-buttons {
   display: none;
   justify-content: center;
@@ -890,20 +894,20 @@ li {
 }
 
 @media (min-width: 768px) {
-  /* line 203, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 209, ../Portfolio/scss/layout/_portfolio.scss */
   .filter-buttons {
     margin-left: 220px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 203, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 209, ../Portfolio/scss/layout/_portfolio.scss */
   .filter-buttons {
     display: flex;
   }
 }
 
-/* line 220, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 226, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn {
   display: inline-flex;
   align-items: center;
@@ -937,7 +941,7 @@ li {
   outline: none;
 }
 
-/* line 233, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 239, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn.active {
   background: rgba(255, 255, 255, 0.15);
   color: white;
@@ -945,7 +949,7 @@ li {
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-/* line 241, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 247, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn.active:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
@@ -963,12 +967,12 @@ li {
   }
 }
 
-/* line 260, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 266, ../Portfolio/scss/layout/_portfolio.scss */
 .project, .project.pr-4, .project.pr-5, .project.pr-6 {
   transition: all 0.3s ease;
 }
 
-/* line 263, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 269, ../Portfolio/scss/layout/_portfolio.scss */
 .project, .project.pr-4, .project.pr-5, .project.pr-6 {
   transition: all 0.3s ease;
 }
