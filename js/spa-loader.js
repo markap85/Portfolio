@@ -224,18 +224,25 @@ class SPAContentLoader {
                     <a href="https://auroragamestudios.co.uk" target="_blank">View Project <span class="icon-arrow-right2"></span>
                     </a>
                   </article>
+                  <!-- Project 3 -->
                   <article class="project pr-3">
-                    <img src="img/WebSitePlaceHolder_3.jpg" alt="Project Three">
-                    <h3>Coming Soon</h3>
+                    <img src="img/Revive.png" alt="Project Three">
+                    <p class="tag-frontend">Frontend</p>
+                    <h3>ReVive Interactive</h3>
+                    <a href="https://reviveinteractive.co.uk/" target="_blank">View Project <span class="icon-arrow-right2"></span>
+                    </a>
                   </article>
+                  <!-- Project 4 -->
                   <article class="project pr-4">
                     <img src="img/WebSitePlaceHolder_4.jpg" alt="Project Four">
                     <h3>Coming Soon</h3>
                   </article>
+                  <!-- Project 5 -->
                   <article class="project pr-5">
                     <img src="img/WebSitePlaceHolder_5.jpg" alt="Project Five">
                     <h3>Coming Soon</h3>
                   </article>
+                  <!-- Project 6 -->
                   <article class="project pr-6">
                     <img src="img/WebSitePlaceHolder_6.jpg" alt="Project Six">
                     <h3>Coming Soon</h3>
@@ -258,7 +265,6 @@ class SPAContentLoader {
               <div class="contact-details">
               <h3>Let's Connect</h3>
               <p>If you like what you see, I'd love to hear from you! Whether it's a new project, a collaboration idea, or just to say hello — feel free to reach out.</p>
-              <h3>(+44) 7909 448558</h3>
               <a href="mailto:markalexanderpeters@gmail.com" target="_blank" rel="noopener">Email Me</a>
               <p>I'm always open to a chat — drop me a message anytime!</p>
               </div>

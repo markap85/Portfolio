@@ -1,8 +1,9 @@
 // Portfolio Filter Functionality
 function initPortfolioFilter() {
-    // Prevent duplicate filter buttons
-    if (document.querySelector('.filter-buttons')) {
-        return;
+    // Remove any existing filter buttons first
+    const existingFilters = document.querySelector('.filter-buttons');
+    if (existingFilters) {
+        existingFilters.remove();
     }
 
     // Create portfolio filter buttons
