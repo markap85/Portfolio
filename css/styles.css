@@ -333,8 +333,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?foo2d0");
-  src: url("../fonts/icomoon.eot?foo2d0#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?foo2d0") format("truetype"), url("../fonts/icomoon.woff?foo2d0") format("woff"), url("../fonts/icomoon.svg?foo2d0#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?lv8yva");
+  src: url("../fonts/icomoon.eot?lv8yva#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?lv8yva") format("truetype"), url("../fonts/icomoon.woff?lv8yva") format("woff"), url("../fonts/icomoon.svg?lv8yva#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -344,6 +344,7 @@ th {
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -354,112 +355,117 @@ th {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 27, ../Portfolio/scss/base/_icons.scss */
+/* line 28, ../Portfolio/scss/base/_icons.scss */
 .icon-keyboard_arrow_up:before {
   content: "\e900";
 }
 
-/* line 30, ../Portfolio/scss/base/_icons.scss */
+/* line 31, ../Portfolio/scss/base/_icons.scss */
 .icon-keyboard_arrow_down:before {
   content: "\e901";
 }
 
-/* line 33, ../Portfolio/scss/base/_icons.scss */
+/* line 34, ../Portfolio/scss/base/_icons.scss */
 .icon-keyboard_arrow_right:before {
   content: "\e902";
 }
 
-/* line 36, ../Portfolio/scss/base/_icons.scss */
+/* line 37, ../Portfolio/scss/base/_icons.scss */
 .icon-dot-net:before {
   content: "\e90a";
 }
 
-/* line 39, ../Portfolio/scss/base/_icons.scss */
+/* line 40, ../Portfolio/scss/base/_icons.scss */
 .icon-laravel:before {
   content: "\e903";
 }
 
-/* line 42, ../Portfolio/scss/base/_icons.scss */
+/* line 43, ../Portfolio/scss/base/_icons.scss */
 .icon-postgresql:before {
   content: "\e904";
 }
 
-/* line 45, ../Portfolio/scss/base/_icons.scss */
+/* line 46, ../Portfolio/scss/base/_icons.scss */
 .icon-php:before {
   content: "\e905";
 }
 
-/* line 48, ../Portfolio/scss/base/_icons.scss */
+/* line 49, ../Portfolio/scss/base/_icons.scss */
 .icon-jquery:before {
   content: "\e906";
 }
 
-/* line 51, ../Portfolio/scss/base/_icons.scss */
+/* line 52, ../Portfolio/scss/base/_icons.scss */
 .icon-javascript:before {
   content: "\e907";
 }
 
-/* line 54, ../Portfolio/scss/base/_icons.scss */
+/* line 55, ../Portfolio/scss/base/_icons.scss */
 .icon-sass:before {
   content: "\e908";
 }
 
-/* line 57, ../Portfolio/scss/base/_icons.scss */
+/* line 58, ../Portfolio/scss/base/_icons.scss */
 .icon-javascript1:before {
   content: "\e909";
 }
 
-/* line 60, ../Portfolio/scss/base/_icons.scss */
+/* line 61, ../Portfolio/scss/base/_icons.scss */
+.icon-cog:before {
+  content: "\e994";
+}
+
+/* line 64, ../Portfolio/scss/base/_icons.scss */
 .icon-heart:before {
   content: "\e9da";
 }
 
-/* line 63, ../Portfolio/scss/base/_icons.scss */
+/* line 67, ../Portfolio/scss/base/_icons.scss */
 .icon-play3:before {
   content: "\ea1c";
 }
 
-/* line 66, ../Portfolio/scss/base/_icons.scss */
+/* line 70, ../Portfolio/scss/base/_icons.scss */
 .icon-pause2:before {
   content: "\ea1d";
 }
 
-/* line 69, ../Portfolio/scss/base/_icons.scss */
+/* line 73, ../Portfolio/scss/base/_icons.scss */
 .icon-first:before {
   content: "\ea21";
 }
 
-/* line 72, ../Portfolio/scss/base/_icons.scss */
+/* line 76, ../Portfolio/scss/base/_icons.scss */
 .icon-last:before {
   content: "\ea22";
 }
 
-/* line 75, ../Portfolio/scss/base/_icons.scss */
+/* line 79, ../Portfolio/scss/base/_icons.scss */
 .icon-facebook2:before {
   content: "\ea91";
 }
 
-/* line 78, ../Portfolio/scss/base/_icons.scss */
+/* line 82, ../Portfolio/scss/base/_icons.scss */
 .icon-instagram:before {
   content: "\ea92";
 }
 
-/* line 81, ../Portfolio/scss/base/_icons.scss */
+/* line 85, ../Portfolio/scss/base/_icons.scss */
 .icon-github:before {
   content: "\eab0";
 }
 
-/* line 84, ../Portfolio/scss/base/_icons.scss */
+/* line 88, ../Portfolio/scss/base/_icons.scss */
 .icon-linkedin:before {
   content: "\eac9";
 }
 
-/* line 87, ../Portfolio/scss/base/_icons.scss */
+/* line 91, ../Portfolio/scss/base/_icons.scss */
 .icon-html-five:before {
   content: "\eae4";
 }
 
-/* line 90, ../Portfolio/scss/base/_icons.scss */
+/* line 94, ../Portfolio/scss/base/_icons.scss */
 .icon-css3:before {
   content: "\eae6";
 }
@@ -1809,7 +1815,28 @@ footer {
   border-bottom: 1px solid rgba(50, 204, 238, 0.4);
 }
 
-/* line 243, ../Portfolio/scss/layout/_sidebar.scss */
+@media (max-width: 768px) {
+  /* line 222, ../Portfolio/scss/layout/_sidebar.scss */
+  .sidebar nav ul li.contact-me a {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid transparent;
+    margin: 0;
+  }
+  /* line 247, ../Portfolio/scss/layout/_sidebar.scss */
+  .sidebar nav ul li.contact-me a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-color: transparent;
+    color: #34495e;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid transparent;
+  }
+}
+
+/* line 264, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .socials {
   width: 100%;
   display: flex;
@@ -1819,47 +1846,47 @@ footer {
   flex-shrink: 0;
 }
 
-/* line 251, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 272, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .socials a {
   font-size: clamp(1.5rem, 3vh, 2rem);
 }
 
-/* line 256, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 277, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player {
   margin: clamp(0.25rem, 1vh, 0.5rem) 0;
   width: clamp(140px, 35vw, 180px);
   padding: clamp(0.5rem, 1.5vh, 1rem);
 }
 
-/* line 261, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 282, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .player-controls {
   gap: clamp(0.25rem, 1vh, 0.5rem);
   margin-bottom: clamp(0.5rem, 1vh, 0.75rem);
 }
 
-/* line 267, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 288, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .control-btn.play-btn {
   width: clamp(36px, 8vh, 48px);
   height: clamp(36px, 8vh, 48px);
 }
 
-/* line 272, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 293, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .control-btn.prev-btn, .sidebar #media-player .control-btn.next-btn {
   width: clamp(28px, 6vh, 36px);
   height: clamp(28px, 6vh, 36px);
 }
 
-/* line 278, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 299, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .track-info {
   margin-bottom: clamp(0.25rem, 1vh, 0.5rem);
 }
 
-/* line 281, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 302, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .track-info .track-title {
   font-size: clamp(0.6rem, 1.5vh, 0.75rem);
 }
 
-/* line 288, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 309, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle {
   padding-top: 0;
   position: relative;
@@ -1873,13 +1900,13 @@ footer {
   order: 3;
 }
 
-/* line 301, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 322, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle#background-toggle-unique {
   padding-top: 0;
   margin-bottom: 0.5rem;
 }
 
-/* line 306, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 327, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-label {
   color: #ffffff;
   font-size: clamp(0.6rem, 1.5vh, 0.8rem);
@@ -1888,7 +1915,7 @@ footer {
   opacity: 0.8;
 }
 
-/* line 314, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 335, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch {
   position: relative;
   width: clamp(40px, 10vh, 50px);
@@ -1902,7 +1929,7 @@ footer {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* line 326, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 347, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch::before {
   content: '';
   position: absolute;
@@ -1916,61 +1943,61 @@ footer {
   box-shadow: 0 2px 4px glass-black(0.2);
 }
 
-/* line 339, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 360, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active {
   background: glass-primary(0.3);
   border-color: glass-primary(0.5);
 }
 
-/* line 343, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 364, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active::before {
   transform: translateX(clamp(20px, 5vh, 26px));
   background: white;
   box-shadow: 0 2px 8px glass-black(0.3);
 }
 
-/* line 350, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 371, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover {
   background: glass-white(0.15);
   border-color: glass-white(0.4);
 }
 
-/* line 354, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 375, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover.active {
   background: glass-primary(0.4);
   border-color: glass-primary(0.6);
 }
 
-/* line 361, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 382, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon {
   font-size: 1rem;
   color: glass-white(0.6);
   transition: color 0.3s ease;
 }
 
-/* line 366, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 387, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon.active {
   color: #32CCEE;
 }
 
 @media (max-width: 767px) {
-  /* line 374, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 395, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar.sidebar--open {
     padding-top: 50px;
   }
-  /* line 378, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 399, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo {
     margin-bottom: 0.25rem;
   }
-  /* line 382, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 403, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 10px 10px;
   }
-  /* line 386, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 407, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
     display: none;
   }
-  /* line 390, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 411, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 160px;
     margin: 0.25rem 0 1rem 0;
@@ -1978,80 +2005,80 @@ footer {
 }
 
 @media (max-height: 600px) {
-  /* line 398, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 419, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo {
     margin-bottom: 0.25rem;
   }
-  /* line 401, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 422, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo a {
     font-size: 2rem;
   }
-  /* line 406, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 427, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 10px 10px;
     font-size: 1rem;
   }
-  /* line 411, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 432, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 140px;
     padding: 0.5rem;
     margin-bottom: 1rem;
   }
-  /* line 417, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 438, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
     margin: 0.125rem 0;
   }
-  /* line 420, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 441, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch {
     width: 40px;
     height: 20px;
   }
-  /* line 424, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 445, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch::before {
     width: 14px;
     height: 14px;
   }
-  /* line 429, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 450, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch.active::before {
     transform: translateX(20px);
   }
 }
 
 @media (max-height: 500px) {
-  /* line 437, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 458, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo a {
     font-size: 1.5rem;
   }
-  /* line 441, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 462, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul {
     gap: 0.125rem;
   }
-  /* line 444, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 465, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 10px 10px;
     font-size: 0.9rem;
   }
-  /* line 450, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 471, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials {
     margin: 0.125rem 0;
     gap: 0.5rem;
   }
-  /* line 454, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 475, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials a {
     font-size: 1.2rem;
   }
-  /* line 459, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 480, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 120px;
     padding: 0.25rem;
     margin-bottom: 1rem;
   }
-  /* line 465, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 486, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.play-btn {
     width: 30px;
     height: 30px;
   }
-  /* line 470, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 491, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.prev-btn, .sidebar #media-player .control-btn.next-btn {
     width: 24px;
     height: 24px;
@@ -3846,7 +3873,28 @@ section {
   border-bottom: 1px solid rgba(50, 204, 238, 0.4);
 }
 
-/* line 243, ../Portfolio/scss/layout/_sidebar.scss */
+@media (max-width: 768px) {
+  /* line 222, ../Portfolio/scss/layout/_sidebar.scss */
+  .sidebar nav ul li.contact-me a {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid transparent;
+    margin: 0;
+  }
+  /* line 247, ../Portfolio/scss/layout/_sidebar.scss */
+  .sidebar nav ul li.contact-me a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-color: transparent;
+    color: #34495e;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid transparent;
+  }
+}
+
+/* line 264, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .socials {
   width: 100%;
   display: flex;
@@ -3856,47 +3904,47 @@ section {
   flex-shrink: 0;
 }
 
-/* line 251, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 272, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .socials a {
   font-size: clamp(1.5rem, 3vh, 2rem);
 }
 
-/* line 256, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 277, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player {
   margin: clamp(0.25rem, 1vh, 0.5rem) 0;
   width: clamp(140px, 35vw, 180px);
   padding: clamp(0.5rem, 1.5vh, 1rem);
 }
 
-/* line 261, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 282, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .player-controls {
   gap: clamp(0.25rem, 1vh, 0.5rem);
   margin-bottom: clamp(0.5rem, 1vh, 0.75rem);
 }
 
-/* line 267, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 288, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .control-btn.play-btn {
   width: clamp(36px, 8vh, 48px);
   height: clamp(36px, 8vh, 48px);
 }
 
-/* line 272, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 293, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .control-btn.prev-btn, .sidebar #media-player .control-btn.next-btn {
   width: clamp(28px, 6vh, 36px);
   height: clamp(28px, 6vh, 36px);
 }
 
-/* line 278, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 299, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .track-info {
   margin-bottom: clamp(0.25rem, 1vh, 0.5rem);
 }
 
-/* line 281, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 302, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar #media-player .track-info .track-title {
   font-size: clamp(0.6rem, 1.5vh, 0.75rem);
 }
 
-/* line 288, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 309, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle {
   padding-top: 0;
   position: relative;
@@ -3910,13 +3958,13 @@ section {
   order: 3;
 }
 
-/* line 301, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 322, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle#background-toggle-unique {
   padding-top: 0;
   margin-bottom: 0.5rem;
 }
 
-/* line 306, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 327, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-label {
   color: #ffffff;
   font-size: clamp(0.6rem, 1.5vh, 0.8rem);
@@ -3925,7 +3973,7 @@ section {
   opacity: 0.8;
 }
 
-/* line 314, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 335, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch {
   position: relative;
   width: clamp(40px, 10vh, 50px);
@@ -3939,7 +3987,7 @@ section {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* line 326, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 347, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch::before {
   content: '';
   position: absolute;
@@ -3953,61 +4001,61 @@ section {
   box-shadow: 0 2px 4px glass-black(0.2);
 }
 
-/* line 339, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 360, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active {
   background: glass-primary(0.3);
   border-color: glass-primary(0.5);
 }
 
-/* line 343, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 364, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch.active::before {
   transform: translateX(clamp(20px, 5vh, 26px));
   background: white;
   box-shadow: 0 2px 8px glass-black(0.3);
 }
 
-/* line 350, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 371, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover {
   background: glass-white(0.15);
   border-color: glass-white(0.4);
 }
 
-/* line 354, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 375, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-switch:hover.active {
   background: glass-primary(0.4);
   border-color: glass-primary(0.6);
 }
 
-/* line 361, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 382, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon {
   font-size: 1rem;
   color: glass-white(0.6);
   transition: color 0.3s ease;
 }
 
-/* line 366, ../Portfolio/scss/layout/_sidebar.scss */
+/* line 387, ../Portfolio/scss/layout/_sidebar.scss */
 .sidebar .rotation-toggle .toggle-icon.active {
   color: #32CCEE;
 }
 
 @media (max-width: 767px) {
-  /* line 374, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 395, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar.sidebar--open {
     padding-top: 50px;
   }
-  /* line 378, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 399, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo {
     margin-bottom: 0.25rem;
   }
-  /* line 382, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 403, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 10px 10px;
   }
-  /* line 386, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 407, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
     display: none;
   }
-  /* line 390, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 411, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 160px;
     margin: 0.25rem 0 1rem 0;
@@ -4015,80 +4063,80 @@ section {
 }
 
 @media (max-height: 600px) {
-  /* line 398, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 419, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo {
     margin-bottom: 0.25rem;
   }
-  /* line 401, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 422, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo a {
     font-size: 2rem;
   }
-  /* line 406, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 427, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 10px 10px;
     font-size: 1rem;
   }
-  /* line 411, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 432, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 140px;
     padding: 0.5rem;
     margin-bottom: 1rem;
   }
-  /* line 417, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 438, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle {
     margin: 0.125rem 0;
   }
-  /* line 420, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 441, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch {
     width: 40px;
     height: 20px;
   }
-  /* line 424, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 445, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch::before {
     width: 14px;
     height: 14px;
   }
-  /* line 429, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 450, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .rotation-toggle .toggle-switch.active::before {
     transform: translateX(20px);
   }
 }
 
 @media (max-height: 500px) {
-  /* line 437, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 458, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .logo a {
     font-size: 1.5rem;
   }
-  /* line 441, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 462, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul {
     gap: 0.125rem;
   }
-  /* line 444, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 465, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar nav ul li a {
     padding: 10px 10px;
     font-size: 0.9rem;
   }
-  /* line 450, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 471, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials {
     margin: 0.125rem 0;
     gap: 0.5rem;
   }
-  /* line 454, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 475, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar .socials a {
     font-size: 1.2rem;
   }
-  /* line 459, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 480, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player {
     width: 120px;
     padding: 0.25rem;
     margin-bottom: 1rem;
   }
-  /* line 465, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 486, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.play-btn {
     width: 30px;
     height: 30px;
   }
-  /* line 470, ../Portfolio/scss/layout/_sidebar.scss */
+  /* line 491, ../Portfolio/scss/layout/_sidebar.scss */
   .sidebar #media-player .control-btn.prev-btn, .sidebar #media-player .control-btn.next-btn {
     width: 24px;
     height: 24px;
@@ -4967,23 +5015,22 @@ nav a.active {
 }
 
 /* line 149, ../Portfolio/scss/components/_settings-menu.scss */
+.settings-modal .setting-item .icon-cog {
+  color: red !important;
+  font-size: 3rem !important;
+  margin-right: 1rem;
+  width: 2rem;
+  text-align: center;
+}
+
+/* line 157, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-item .setting-label {
   display: flex;
   align-items: center;
   flex: 1;
 }
 
-/* line 154, ../Portfolio/scss/components/_settings-menu.scss */
-.settings-modal .setting-item .setting-label .setting-icon {
-  color: #32CCEE;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  font-size: 1.5rem;
-  margin-right: 1rem;
-  width: 2rem;
-  text-align: center;
-}
-
-/* line 164, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 163, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-item .setting-label .setting-text h4 {
   color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -4992,7 +5039,7 @@ nav a.active {
   font-weight: 600;
 }
 
-/* line 172, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 171, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-item .setting-label .setting-text p {
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -5001,13 +5048,13 @@ nav a.active {
   opacity: 0.8;
 }
 
-/* line 182, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 181, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-item .setting-control {
   flex-shrink: 0;
   margin-left: 1rem;
 }
 
-/* line 189, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 188, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .toggle-switch {
   position: relative;
   width: 50px;
@@ -5019,7 +5066,7 @@ nav a.active {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* line 199, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 198, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .toggle-switch .toggle-slider {
   position: absolute;
   top: 2px;
@@ -5032,30 +5079,30 @@ nav a.active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* line 211, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 210, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .toggle-switch.active {
   background: rgba(50, 204, 238, 0.4);
   border-color: rgba(50, 204, 238, 0.6);
 }
 
-/* line 215, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 214, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .toggle-switch.active .toggle-slider {
   transform: translateX(24px);
   background: #32CCEE;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(50, 204, 238, 0.5);
 }
 
-/* line 224, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 223, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .toggle-switch:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* line 227, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 226, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .toggle-switch:hover.active {
   background: rgba(50, 204, 238, 0.5);
 }
 
-/* line 234, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 233, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-select {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -5070,20 +5117,20 @@ nav a.active {
   transition: all 0.3s ease;
 }
 
-/* line 247, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 246, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-select:focus {
   outline: none;
   border-color: #32CCEE;
   box-shadow: 0 0 0 2px rgba(50, 204, 238, 0.3);
 }
 
-/* line 253, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 252, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-select option {
   background: rgba(0, 0, 0, 0.9);
   color: #ffffff;
 }
 
-/* line 260, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 259, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-range {
   width: 120px;
   height: 6px;
@@ -5095,7 +5142,7 @@ nav a.active {
   cursor: pointer;
 }
 
-/* line 270, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 269, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 18px;
@@ -5107,13 +5154,13 @@ nav a.active {
   transition: all 0.3s ease;
 }
 
-/* line 282, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 281, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-range::-webkit-slider-thumb:hover {
   transform: scale(1.1);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4), 0 0 15px rgba(50, 204, 238, 0.6);
 }
 
-/* line 290, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 289, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-range::-moz-range-thumb {
   width: 18px;
   height: 18px;
@@ -5124,7 +5171,7 @@ nav a.active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(50, 204, 238, 0.4);
 }
 
-/* line 303, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 302, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .range-labels {
   display: flex;
   justify-content: space-between;
@@ -5134,7 +5181,7 @@ nav a.active {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* line 313, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 312, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-footer {
   display: flex;
   justify-content: space-between;
@@ -5144,7 +5191,7 @@ nav a.active {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* line 321, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 320, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-footer .settings-reset-btn,
 .settings-modal .settings-footer .settings-close-btn {
   padding: 0.75rem 1.5rem;
@@ -5158,7 +5205,7 @@ nav a.active {
   display: inline-block;
 }
 
-/* line 334, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 333, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-footer .settings-reset-btn {
   background: rgba(255, 100, 100, 0.1);
   backdrop-filter: blur(10px);
@@ -5167,14 +5214,14 @@ nav a.active {
   border-color: rgba(255, 100, 100, 0.3);
 }
 
-/* line 341, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 340, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-footer .settings-reset-btn:hover {
   background: rgba(255, 100, 100, 0.2);
   border-color: rgba(255, 100, 100, 0.5);
   text-shadow: 0 0 10px rgba(255, 100, 100, 0.6);
 }
 
-/* line 348, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 347, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-footer .settings-close-btn {
   background: rgba(50, 204, 238, 0.2);
   backdrop-filter: blur(10px);
@@ -5183,14 +5230,14 @@ nav a.active {
   border-color: rgba(50, 204, 238, 0.5);
 }
 
-/* line 355, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 354, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-footer .settings-close-btn:hover {
   background: rgba(50, 204, 238, 0.3);
   border-color: rgba(50, 204, 238, 0.7);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(50, 204, 238, 0.8);
 }
 
-/* line 367, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 366, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-button {
   position: relative;
   background: rgba(255, 255, 255, 0.2);
@@ -5210,7 +5257,7 @@ nav a.active {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
-/* line 385, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 384, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-button:hover {
   background: rgba(50, 204, 238, 0.3);
   border-color: rgba(50, 204, 238, 0.5);
@@ -5220,13 +5267,13 @@ nav a.active {
 }
 
 @media (max-width: 768px) {
-  /* line 367, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 366, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-button {
     display: none;
   }
 }
 
-/* line 402, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 401, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-button-mobile {
   position: absolute;
   top: 8px;
@@ -5250,7 +5297,7 @@ nav a.active {
   z-index: 10;
 }
 
-/* line 427, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 426, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-button-mobile:hover {
   background: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.4);
@@ -5260,13 +5307,13 @@ nav a.active {
 }
 
 @media (max-width: 768px) {
-  /* line 402, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 401, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-button-mobile {
     display: flex;
   }
 }
 
-/* line 446, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 445, ../Portfolio/scss/components/_settings-menu.scss */
 .background-nav-arrow {
   position: fixed;
   top: 50%;
@@ -5290,7 +5337,7 @@ nav a.active {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* line 468, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 467, ../Portfolio/scss/components/_settings-menu.scss */
 .background-nav-arrow:hover {
   background: rgba(50, 204, 238, 0.3);
   border-color: rgba(50, 204, 238, 0.5);
@@ -5300,7 +5347,7 @@ nav a.active {
 }
 
 @media (max-width: 768px) {
-  /* line 446, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 445, ../Portfolio/scss/components/_settings-menu.scss */
   .background-nav-arrow {
     width: 50px;
     height: 50px;
@@ -5310,39 +5357,39 @@ nav a.active {
 }
 
 @media (max-width: 768px) {
-  /* line 488, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 487, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal {
     padding: 0.5rem;
   }
-  /* line 491, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 490, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-modal-content {
     max-width: 95vw;
     max-height: 95vh;
   }
-  /* line 496, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 495, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-header,
   .settings-modal .settings-body,
   .settings-modal .settings-footer {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  /* line 503, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 502, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .setting-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  /* line 508, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 507, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .setting-item .setting-control {
     margin-left: 0;
     align-self: flex-end;
   }
-  /* line 514, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 513, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-footer {
     flex-direction: column;
     gap: 1rem;
   }
-  /* line 518, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 517, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-footer .settings-reset-btn,
   .settings-modal .settings-footer .settings-close-btn {
     width: 100%;
