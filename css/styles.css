@@ -4788,9 +4788,9 @@ nav a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -4800,20 +4800,20 @@ nav a.active {
 
 /* line 33, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-modal-content {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   width: 100%;
   max-width: 500px;
   max-height: 90vh;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   overflow: hidden;
   position: relative;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 /* line 52, ../Portfolio/scss/components/_settings-menu.scss */
@@ -4822,14 +4822,14 @@ nav a.active {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* line 60, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-header h3 {
   color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
@@ -4838,7 +4838,7 @@ nav a.active {
 /* line 68, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-header .settings-modal-close {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   font-size: 2rem;
   cursor: pointer;
   line-height: 1;
@@ -4854,9 +4854,9 @@ nav a.active {
 
 /* line 83, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-header .settings-modal-close:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   color: #32CCEE;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 10px rgba(50, 204, 238, 0.6);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 10px rgba(50, 204, 238, 0.6);
 }
 
 /* line 93, ../Portfolio/scss/components/_settings-menu.scss */
@@ -4873,19 +4873,19 @@ nav a.active {
 
 /* line 103, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-body::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
 }
 
 /* line 108, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-body::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 4px;
 }
 
 /* line 112, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .settings-body::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 /* line 118, ../Portfolio/scss/components/_settings-menu.scss */
@@ -4894,7 +4894,7 @@ nav a.active {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* line 125, ../Portfolio/scss/components/_settings-menu.scss */
@@ -4912,7 +4912,7 @@ nav a.active {
 /* line 134, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-item .setting-label .setting-icon {
   color: #32CCEE;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   font-size: 1.5rem;
   margin-right: 1rem;
   width: 2rem;
@@ -4922,7 +4922,7 @@ nav a.active {
 /* line 144, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-item .setting-label .setting-text h4 {
   color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   margin: 0 0 0.25rem 0;
   font-size: 1.1rem;
   font-weight: 600;
@@ -4931,7 +4931,7 @@ nav a.active {
 /* line 152, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-item .setting-label .setting-text p {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   margin: 0;
   font-size: 0.9rem;
   opacity: 0.8;
@@ -5066,8 +5066,8 @@ nav a.active {
   justify-content: space-between;
   margin-top: 0.5rem;
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* line 293, ../Portfolio/scss/components/_settings-menu.scss */
@@ -5076,8 +5076,8 @@ nav a.active {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* line 301, ../Portfolio/scss/components/_settings-menu.scss */
@@ -5155,40 +5155,99 @@ nav a.active {
   transform: scale(1.1);
 }
 
+/* line 377, ../Portfolio/scss/components/_settings-menu.scss */
+.background-nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.8rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* line 398, ../Portfolio/scss/components/_settings-menu.scss */
+.background-nav-arrow:hover {
+  background: rgba(50, 204, 238, 0.3);
+  border-color: rgba(50, 204, 238, 0.5);
+  color: #32CCEE;
+  transform: translateY(-50%) scale(1.1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 0 15px rgba(50, 204, 238, 0.6);
+}
+
+/* line 408, ../Portfolio/scss/components/_settings-menu.scss */
+.background-nav-arrow.background-nav-left {
+  left: 2rem;
+}
+
+/* line 412, ../Portfolio/scss/components/_settings-menu.scss */
+.background-nav-arrow.background-nav-right {
+  right: 2rem;
+}
+
 @media (max-width: 768px) {
-  /* line 378, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 377, ../Portfolio/scss/components/_settings-menu.scss */
+  .background-nav-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  /* line 421, ../Portfolio/scss/components/_settings-menu.scss */
+  .background-nav-arrow.background-nav-left {
+    left: 1rem;
+  }
+  /* line 425, ../Portfolio/scss/components/_settings-menu.scss */
+  .background-nav-arrow.background-nav-right {
+    right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* line 433, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal {
     padding: 0.5rem;
   }
-  /* line 381, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 436, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-modal-content {
     max-width: 95vw;
     max-height: 95vh;
   }
-  /* line 386, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 441, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-header,
   .settings-modal .settings-body,
   .settings-modal .settings-footer {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  /* line 393, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 448, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .setting-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  /* line 398, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 453, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .setting-item .setting-control {
     margin-left: 0;
     align-self: flex-end;
   }
-  /* line 404, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 459, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-footer {
     flex-direction: column;
     gap: 1rem;
   }
-  /* line 408, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 463, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-footer .settings-reset-btn,
   .settings-modal .settings-footer .settings-close-btn {
     width: 100%;

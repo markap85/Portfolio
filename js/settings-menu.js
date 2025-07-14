@@ -25,11 +25,27 @@ function initSettingsMenu() {
                             <span class="setting-icon icon-refresh"></span>
                             <div class="setting-text">
                                 <h4>Background Rotation</h4>
-                                <p>Automatically rotate background images</p>
+                                <p>Rotate background images</p>
                             </div>
                         </div>
                         <div class="setting-control">
                             <div class="toggle-switch" id="settings-rotation-toggle">
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Background Slideshow Setting -->
+                    <div class="setting-item">
+                        <div class="setting-label">
+                            <span class="setting-icon icon-slideshow"></span>
+                            <div class="setting-text">
+                                <h4>Background Slideshow</h4>
+                                <p>Auto-cycle through background images</p>
+                            </div>
+                        </div>
+                        <div class="setting-control">
+                            <div class="toggle-switch" id="settings-slideshow-toggle">
                                 <span class="toggle-slider"></span>
                             </div>
                         </div>
@@ -113,6 +129,7 @@ function initSettingsMenu() {
 
     // Setting controls
     const rotationToggle = modal.querySelector('#settings-rotation-toggle');
+    const slideshowToggle = modal.querySelector('#settings-slideshow-toggle');
     const musicToggle = modal.querySelector('#settings-music-toggle');
     const animationSpeed = modal.querySelector('#settings-animation-speed');
     const glassIntensity = modal.querySelector('#settings-glass-intensity');
@@ -122,11 +139,13 @@ function initSettingsMenu() {
 
     // Apply initial settings on page load
     const initialRotation = localStorage.getItem('backgroundRotation') !== 'false';
+    const initialSlideshow = localStorage.getItem('backgroundSlideshow') !== 'false'; // Default to true
     const initialMusic = localStorage.getItem('backgroundMusic') !== 'false'; // Default to true
     const initialSpeed = localStorage.getItem('animationSpeed') || 'normal';
     const initialIntensity = localStorage.getItem('glassIntensity') || '2';
     
     applyRotationSetting(initialRotation);
+    applySlideshowSetting(initialSlideshow);
     applyMusicSetting(initialMusic);
     applyAnimationSpeed(initialSpeed);
     applyGlassIntensity(initialIntensity);
@@ -144,6 +163,20 @@ function initSettingsMenu() {
         
         // Save setting
         localStorage.setItem('backgroundRotation', newState.toString());
+    });
+
+    slideshowToggle.addEventListener('click', function() {
+        const isActive = this.classList.contains('active');
+        const newState = !isActive;
+        
+        // Update UI
+        updateToggleState(this, newState);
+        
+        // Apply slideshow setting
+        applySlideshowSetting(newState);
+        
+        // Save setting
+        localStorage.setItem('backgroundSlideshow', newState.toString());
     });
 
     musicToggle.addEventListener('click', function() {
@@ -218,6 +251,11 @@ function initSettingsMenu() {
         updateToggleState(rotationToggle, rotationEnabled);
         applyRotationSetting(rotationEnabled); // Apply the setting immediately
         
+        // Background slideshow - default to enabled (true)
+        const slideshowEnabled = localStorage.getItem('backgroundSlideshow') !== 'false';
+        updateToggleState(slideshowToggle, slideshowEnabled);
+        applySlideshowSetting(slideshowEnabled); // Apply the setting immediately
+        
         // Background music - default to enabled (true)
         const musicEnabled = localStorage.getItem('backgroundMusic') !== 'false';
         updateToggleState(musicToggle, musicEnabled);
@@ -239,6 +277,23 @@ function initSettingsMenu() {
         } else {
             document.body.classList.add('rotation-disabled');
             document.body.classList.remove('rotation-enabled');
+        }
+    }
+
+    function applySlideshowSetting(enabled) {
+        // Apply slideshow setting to control automatic background changes
+        if (window.backgroundController) {
+            if (enabled) {
+                window.backgroundController.enableSlideshow();
+                // Hide manual navigation arrows
+                const arrows = document.querySelectorAll('.background-nav-arrow');
+                arrows.forEach(arrow => arrow.style.display = 'none');
+            } else {
+                window.backgroundController.disableSlideshow();
+                // Show manual navigation arrows
+                const arrows = document.querySelectorAll('.background-nav-arrow');
+                arrows.forEach(arrow => arrow.style.display = 'flex');
+            }
         }
     }
 
@@ -271,18 +326,21 @@ function initSettingsMenu() {
     function resetToDefaults() {
         // Clear localStorage
         localStorage.removeItem('backgroundRotation');
+        localStorage.removeItem('backgroundSlideshow');
         localStorage.removeItem('backgroundMusic');
         localStorage.removeItem('animationSpeed');
         localStorage.removeItem('glassIntensity');
         
         // Reset to defaults
         updateToggleState(rotationToggle, true);
+        updateToggleState(slideshowToggle, true); // Default to enabled
         updateToggleState(musicToggle, true); // Default to enabled
         animationSpeed.value = 'normal';
         glassIntensity.value = '2';
         
         // Apply defaults
         applyRotationSetting(true);
+        applySlideshowSetting(true); // Default to enabled
         applyMusicSetting(true); // Default to enabled
         applyAnimationSpeed('normal');
         applyGlassIntensity('2');

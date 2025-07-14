@@ -6,13 +6,86 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     let currentIndex = 0;
+    let slideShowInterval = null;
+    let isSlideShowEnabled = true;
+
+    // Background controller object for external access
+    window.backgroundController = {
+        enableSlideshow: function() {
+            isSlideShowEnabled = true;
+            startSlideshow();
+        },
+        disableSlideshow: function() {
+            isSlideShowEnabled = false;
+            stopSlideshow();
+        },
+        nextBackground: function() {
+            currentIndex = (currentIndex + 1) % backgroundImages.length;
+            changeBackgroundImage();
+        },
+        previousBackground: function() {
+            currentIndex = (currentIndex - 1 + backgroundImages.length) % backgroundImages.length;
+            changeBackgroundImage();
+        }
+    };
 
     function changeBackgroundImage() {
-        // Switch to the next background image
+        // Switch to the current background image
         document.documentElement.style.setProperty('--background-image', `url("${backgroundImages[currentIndex]}")`);
-        currentIndex = (currentIndex + 1) % backgroundImages.length;
     }
 
-    // Change background every 20 seconds
-    setInterval(changeBackgroundImage, 20000);
+    function startSlideshow() {
+        if (slideShowInterval) clearInterval(slideShowInterval);
+        // Change background every 20 seconds
+        slideShowInterval = setInterval(function() {
+            if (isSlideShowEnabled) {
+                currentIndex = (currentIndex + 1) % backgroundImages.length;
+                changeBackgroundImage();
+            }
+        }, 20000);
+    }
+
+    function stopSlideshow() {
+        if (slideShowInterval) {
+            clearInterval(slideShowInterval);
+            slideShowInterval = null;
+        }
+    }
+
+    // Create navigation arrows
+    function createNavigationArrows() {
+        const leftArrow = document.createElement('div');
+        leftArrow.className = 'background-nav-arrow background-nav-left';
+        leftArrow.innerHTML = '<span class="icon-keyboard_arrow_left"></span>';
+        leftArrow.setAttribute('aria-label', 'Previous background');
+        leftArrow.addEventListener('click', window.backgroundController.previousBackground);
+
+        const rightArrow = document.createElement('div');
+        rightArrow.className = 'background-nav-arrow background-nav-right';
+        rightArrow.innerHTML = '<span class="icon-keyboard_arrow_right"></span>';
+        rightArrow.setAttribute('aria-label', 'Next background');
+        rightArrow.addEventListener('click', window.backgroundController.nextBackground);
+
+        document.body.appendChild(leftArrow);
+        document.body.appendChild(rightArrow);
+
+        // Initially hide arrows (slideshow is enabled by default)
+        leftArrow.style.display = 'none';
+        rightArrow.style.display = 'none';
+    }
+
+    // Initialize
+    changeBackgroundImage(); // Set initial background
+    createNavigationArrows();
+    
+    // Check localStorage for slideshow setting
+    const slideshowEnabled = localStorage.getItem('backgroundSlideshow') !== 'false';
+    if (slideshowEnabled) {
+        startSlideshow();
+    } else {
+        isSlideShowEnabled = false;
+        // Show arrows if slideshow is disabled
+        const arrows = document.querySelectorAll('.background-nav-arrow');
+        arrows.forEach(arrow => arrow.style.display = 'flex');
+    }
 });
