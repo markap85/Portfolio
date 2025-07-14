@@ -131,7 +131,7 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
 // ==========================================================================
 @each $item in $disabled-items {
   .project.pr-#{$item} {
-    @extend .project.disabled;
+    @extend .project, .disabled;
   }
 }
 

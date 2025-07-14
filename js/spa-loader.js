@@ -34,19 +34,38 @@ class SPAContentLoader {
     }
 
     setupNavigation() {
-        // Get all navigation links that should use AJAX
-        const navLinks = document.querySelectorAll('nav a[href*=".html"]');
+        // Get all navigation links
+        const navLinks = document.querySelectorAll('nav a');
         
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const href = link.getAttribute('href');
                 
-                // Determine which content to load
+                // Handle different types of links
                 if (href.includes('examples.html')) {
                     this.loadContent('examples');
                 } else if (href.includes('scss.html')) {
                     this.loadContent('scss');
+                } else if (href.includes('#about') || href.includes('#portfolio') || href.includes('#contact')) {
+                    // If we're not on home page, load home first then scroll
+                    if (this.currentPage !== 'home') {
+                        this.loadContent('home').then(() => {
+                            // Extract the hash from the href
+                            const hash = href.includes('#') ? href.split('#')[1] : '';
+                            if (hash) {
+                                setTimeout(() => {
+                                    this.scrollToSection(hash);
+                                }, 300); // Wait for content to load
+                            }
+                        });
+                    } else {
+                        // Already on home page, just scroll to section
+                        const hash = href.includes('#') ? href.split('#')[1] : '';
+                        if (hash) {
+                            this.scrollToSection(hash);
+                        }
+                    }
                 } else if (href.includes('index.html')) {
                     this.loadContent('home');
                 }
@@ -54,6 +73,31 @@ class SPAContentLoader {
                 // Update active navigation state
                 this.updateActiveNav(link);
             });
+        });
+
+        // Also handle any scroll-down links and other hash links in content
+        this.setupContentNavigation();
+    }
+
+    setupContentNavigation() {
+        // Handle scroll-down links and other hash links that might be in dynamic content
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('a[href^="#"]');
+            if (link && !link.closest('nav')) { // Exclude nav links (already handled)
+                e.preventDefault();
+                const hash = link.getAttribute('href').substring(1);
+                
+                // If we're not on home page and trying to scroll to a home section, go home first
+                if ((hash === 'about' || hash === 'portfolio' || hash === 'contact') && this.currentPage !== 'home') {
+                    this.loadContent('home').then(() => {
+                        setTimeout(() => {
+                            this.scrollToSection(hash);
+                        }, 300);
+                    });
+                } else {
+                    this.scrollToSection(hash);
+                }
+            }
         });
     }
 
@@ -480,6 +524,11 @@ class SPAContentLoader {
             initSkillModals();
         }
         
+        // Re-initialize portfolio filter if on home page
+        if (this.currentPage === 'home' && typeof initPortfolioFilter === 'function') {
+            setTimeout(() => initPortfolioFilter(), 200);
+        }
+        
         // Re-initialize contact form if on home page
         if (this.currentPage === 'home') {
             this.initContactForm();
@@ -488,6 +537,11 @@ class SPAContentLoader {
         // Re-initialize scroll animations
         if (typeof initScrollAnimations === 'function') {
             initScrollAnimations();
+        }
+        
+        // Re-initialize current year in footer
+        if (typeof updateCurrentYear === 'function') {
+            updateCurrentYear();
         }
     }
 
@@ -585,6 +639,16 @@ class SPAContentLoader {
         // You could implement a more sophisticated error display here
         console.error(message);
         alert(message);
+    }
+
+    scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     }
 }
 
