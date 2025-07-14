@@ -5,7 +5,7 @@
 // Sidebar bottom container for organizing elements
 .sidebar-bottom {
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -13,7 +13,27 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  min-width: fit-content; // Prevent compression in Chrome iOS
+  
+  // Simple iOS safe area support without Chrome-specific fixes
+  @supports (-webkit-touch-callout: none) {
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  }
+  
+  // Gentle Chrome iOS compression fix
+  @media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+    gap: 8px; // Slightly reduce gap on high-DPI mobile to prevent overflow
+  }
+  
+  // Hide settings button on mobile since we have a separate mobile version
+  @media (max-width: $brk-point-md) {
+    .settings-button {
+      display: none;
+    }
+  }
 }
+
+// ...existing code...
 
 .settings-modal {
   position: fixed;
@@ -343,7 +363,7 @@
   }
 }
 
-// Settings Button in Sidebar (now within container)
+// Settings Button in Sidebar (desktop version)
 .settings-button {
   position: relative;
   background: rgba(255, 255, 255, 0.2);
@@ -370,6 +390,55 @@
       0 1px 3px rgba(0, 0, 0, 0.8),
       0 0 15px rgba(50, 204, 238, 0.8);
     transform: scale(1.1);
+  }
+  
+  // Hide on mobile - we have a separate mobile button
+  @media (max-width: $brk-point-md) {
+    display: none;
+  }
+}
+
+// Mobile Settings Button (positioned in sidebar top-right)
+.settings-button-mobile {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  // Match burger menu styling exactly
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  display: none; // Hidden by default
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    color: $primary-color;
+    text-shadow: 
+      0 1px 3px rgba(0, 0, 0, 0.8),
+      0 0 15px rgba(50, 204, 238, 0.8);
+  }
+  
+  // Show only on mobile
+  @media (max-width: $brk-point-md) {
+    display: flex;
   }
 }
 

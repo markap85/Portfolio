@@ -144,7 +144,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: clamp(0.125rem, 0.5vh, 0.25rem); // Scale gap with viewport height
+      gap: clamp(0.05rem, 0.25vh, 0.125rem); // Reduced gap for more space
 
       .icon-keyboard_arrow_right, .icon-keyboard_arrow_down {
         font-size: 1.5rem;
@@ -160,7 +160,7 @@
         
         a {
           display: inline-block;
-          padding: clamp(4px, 1vh, 8px) 0;
+          padding: clamp(2px, 0.75vh, 6px) 0; // Reduced padding for tighter spacing
           text-decoration: none;
           color: $white;
           font-weight: 600;
@@ -170,7 +170,7 @@
           border-radius: 8px;
           position: relative;
           overflow: hidden;
-          padding: 10px 10px;
+          padding: clamp(6px, 1.5vh, 8px) 10px; // Reduced vertical padding
 
           // Glassmorphic hover effect
           &:hover {
@@ -372,7 +372,7 @@
   // Responsive adjustments for mobile
   @media (max-width: 767px) {
     &.sidebar--open {
-      padding-top: 60px; // More space for burger menu
+      padding-top: 50px; // More space for burger menu
     }
     
     .logo {
