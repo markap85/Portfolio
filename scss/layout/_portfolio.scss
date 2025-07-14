@@ -180,17 +180,65 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
 
 .tag-refactor {
   @extend %portfolio-tag;
-  background-color: $tag-refactor;
+  background: 
+    linear-gradient(rgba($tag-refactor, 0.3), rgba($tag-refactor, 0.2)),
+    rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba($tag-refactor, 0.4);
+  
+  &:hover {
+    background: 
+      linear-gradient(rgba($tag-refactor, 0.4), rgba($tag-refactor, 0.3)),
+      rgba(255, 255, 255, 0.18);
+    border-color: rgba($tag-refactor, 0.6);
+    box-shadow: 
+      0 12px 32px rgba(0,0,0,0.45), 
+      0 6px 16px rgba(0,0,0,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.3),
+      0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+  }
 }
 
 .tag-frontend {
   @extend %portfolio-tag;
-  background-color: $tag-frontend;
+  background: 
+    linear-gradient(rgba($tag-frontend, 0.3), rgba($tag-frontend, 0.2)),
+    rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba($tag-frontend, 0.4);
+  
+  &:hover {
+    background: 
+      linear-gradient(rgba($tag-frontend, 0.4), rgba($tag-frontend, 0.3)),
+      rgba(255, 255, 255, 0.18);
+    border-color: rgba($tag-frontend, 0.6);
+    box-shadow: 
+      0 12px 32px rgba(0,0,0,0.45), 
+      0 6px 16px rgba(0,0,0,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.3),
+      0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+  }
 }
 
 .tag-backend {
   @extend %portfolio-tag;
-  background-color: $tag-backend;
+  background: 
+    linear-gradient(rgba($tag-backend, 0.3), rgba($tag-backend, 0.2)),
+    rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba($tag-backend, 0.4);
+  
+  &:hover {
+    background: 
+      linear-gradient(rgba($tag-backend, 0.4), rgba($tag-backend, 0.3)),
+      rgba(255, 255, 255, 0.18);
+    border-color: rgba($tag-backend, 0.6);
+    box-shadow: 
+      0 12px 32px rgba(0,0,0,0.45), 
+      0 6px 16px rgba(0,0,0,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.3),
+      0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+  }
 }
 
 // Heart Icon Adjustment
