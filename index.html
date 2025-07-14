@@ -109,53 +109,55 @@
         </ul>
       </nav>
 
-    <div class="socials">
-        <a class="social-icons--linkedin icon-linkedin" href="https://www.linkedin.com/in/mark-alex-peters/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
-        <a class="social-icons--git icon-github" href="https://github.com/markap85" target="_blank" rel="noopener" aria-label="GitHub"></a>
-        <a class="social-icons--facebook icon-facebook2" href="https://www.facebook.com/markpeters85" target="_blank" rel="noopener" aria-label="Facebook"></a>
+    <!-- =======================
+    SIDEBAR BOTTOM SECTION
+    ======================= -->
+    <div class="sidebar-bottom">
+      <div class="socials">
+          <a class="social-icons--linkedin icon-linkedin" href="https://www.linkedin.com/in/mark-alex-peters/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
+          <a class="social-icons--git icon-github" href="https://github.com/markap85" target="_blank" rel="noopener" aria-label="GitHub"></a>
+          <a class="social-icons--facebook icon-facebook2" href="https://www.facebook.com/markpeters85" target="_blank" rel="noopener" aria-label="Facebook"></a>
+      </div>
+      
+      <!-- =======================
+      MEDIA PLAYER
+      ======================= -->
+      <div id="media-player" class="media-player">
+        <div class="player-controls">
+          <button class="control-btn prev-btn" id="prev-track" aria-label="Previous track">
+            <span class="icon-first"></span>
+          </button>
+          
+          <button class="control-btn play-btn" id="play-pause" aria-label="Play/Pause">
+            <span class="icon-play3" id="play-icon"></span>
+          </button>
+          
+          <button class="control-btn next-btn" id="next-track" aria-label="Next track">
+            <span class="icon-last"></span>
+          </button>
+        </div>
+        
+        <div class="track-info">
+          <span class="track-title" id="track-title">Track 1</span>
+        </div>
+        
+        <div class="volume-container">
+          <button class="volume-btn" id="volume-toggle" aria-label="Toggle volume">
+            <span class="icon-volume_up" id="volume-icon"></span>
+          </button>
+          <div class="volume-slider-container">
+            <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="50" aria-label="Volume">
+          </div>
+        </div>
+      </div>
 
+      <!-- =======================
+      SETTINGS BUTTON
+      ======================= -->
+      <div class="settings-button" id="settings-button" onclick="openSettingsMenu()" aria-label="Open settings menu">
+        <span class="settings-icon">⚙</span>
+      </div>
     </div>
-        <!-- =======================
-        MEDIA PLAYER
-        ======================= -->
-        <div id="media-player" class="media-player">
-          <div class="player-controls">
-            <button class="control-btn prev-btn" id="prev-track" aria-label="Previous track">
-              <span class="icon-first"></span>
-            </button>
-            
-            <button class="control-btn play-btn" id="play-pause" aria-label="Play/Pause">
-              <span class="icon-play3" id="play-icon"></span>
-            </button>
-            
-            <button class="control-btn next-btn" id="next-track" aria-label="Next track">
-              <span class="icon-last"></span>
-            </button>
-          </div>
-          
-          <div class="track-info">
-            <span class="track-title" id="track-title">Track 1</span>
-          </div>
-          
-          <div class="volume-container">
-            <button class="volume-btn" id="volume-toggle" aria-label="Toggle volume">
-              <span class="icon-volume_up" id="volume-icon"></span>
-            </button>
-            <div class="volume-slider-container">
-              <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="50" aria-label="Volume">
-            </div>
-          </div>
-        </div>
-
-        <!-- =======================
-        ROTATION TOGGLE BUTTON
-        ======================= -->
-        <div id="rotation-toggle" class="rotation-toggle">
-          <div class="toggle-label">Background Rotation</div>
-          <div class="toggle-switch active" id="rotation-switch">
-            <span class="toggle-icon icon-refresh active" id="rotation-icon"></span>
-          </div>
-        </div>
 
   </aside>
 
@@ -215,11 +217,11 @@
   <script src="js/formvalidation.js" defer></script>
   <script src="js/scrollanimations.js" defer></script>
   <script src="js/projectfilter.js" defer></script>
-  <script src="js/rotation-toggle.js" defer></script>
   <script src="js/background.js" defer></script>
   <script src="js/currentyear.js" defer></script>
   <script src="js/media-player.js" defer></script>
   <script src="js/skill-modals.js" defer></script>
+  <script src="js/settings-menu.js" defer></script>
   <script src="js/visual-effects.js" defer></script>
   <script src="js/spa-loader.js" defer></script>
   <script src="js/contact-form.js" defer></script>

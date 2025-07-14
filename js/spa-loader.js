@@ -267,6 +267,11 @@ class SPAContentLoader {
             initSkillModals();
         }
         
+        // Re-initialize settings menu for all pages
+        if (typeof initSettingsMenu === 'function') {
+            initSettingsMenu();
+        }
+        
         // Re-initialize portfolio filter if on home page
         if (this.currentPage === 'home' && typeof initPortfolioFilter === 'function') {
             // Give more time for content to be fully rendered
