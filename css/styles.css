@@ -3097,6 +3097,8 @@ footer {
   background: #1EC9EC;
   width: 0;
   z-index: 50;
+  background: linear-gradient(90deg, #32CCEE 0%, #90e3f6 50%, #32CCEE 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* line 1, ../Portfolio/scss/layout/_audio.scss */
@@ -4687,6 +4689,79 @@ nav a.active {
 .content-loading {
   pointer-events: none;
   user-select: none;
+}
+
+/* line 5, ../Portfolio/scss/components/_visual-effects.scss */
+.reveal-animate {
+  animation: revealUp 0.8s ease-out forwards;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* line 21, ../Portfolio/scss/components/_visual-effects.scss */
+.project, .project.pr-4, .project.pr-5, .project.pr-6 {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 25, ../Portfolio/scss/components/_visual-effects.scss */
+.project::before, .project.pr-4::before, .project.pr-5::before, .project.pr-6::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.3) 75%, rgba(255, 255, 255, 0.1) 100%);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* line 46, ../Portfolio/scss/components/_visual-effects.scss */
+.project:hover::before {
+  opacity: 1;
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* line 61, ../Portfolio/scss/components/_visual-effects.scss */
+.about-me-icons span {
+  transition: all 0.3s ease !important;
+}
+
+/* line 64, ../Portfolio/scss/components/_visual-effects.scss */
+.about-me-icons span:hover {
+  transform: perspective(1000px) rotateX(15deg) rotateY(15deg) scale(1.1) !important;
+}
+
+@keyframes parallaxFloat {
+  0%, 100% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+    opacity: 0.7;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
