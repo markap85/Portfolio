@@ -1386,17 +1386,19 @@ li {
   background: linear-gradient(135deg, #943AE4 0%, #7b1ccf 100%);
   border-radius: 8px;
   font-size: 0.9rem;
-  text-align: center;
+  text-align: left;
   margin-top: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  width: 100%;
   min-height: 40px;
   padding: 8px 12px;
   font-weight: 500;
   box-shadow: 0 4px 12px glass-secondary(0.3), inset 0 1px 0 glass-white(0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  align-self: stretch;
+  grid-column: 1 / -1;
 }
 
 /* line 5, ../Portfolio/scss/layout/_footer.scss */
@@ -5017,7 +5019,7 @@ nav a.active {
 /* line 149, ../Portfolio/scss/components/_settings-menu.scss */
 .settings-modal .setting-item .icon-cog {
   color: red !important;
-  font-size: 3rem !important;
+  font-size: 3rem;
   margin-right: 1rem;
   width: 2rem;
   text-align: center;

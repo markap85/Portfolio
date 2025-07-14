@@ -298,6 +298,16 @@ class SPAContentLoader {
     }
 
     initContactForm() {
+        // Use the enhanced form validation instead of basic form handling
+        if (typeof window.initFormValidation === 'function') {
+            window.initFormValidation();
+        } else {
+            console.warn('Enhanced form validation not available, falling back to basic handling');
+            this.basicContactFormInit();
+        }
+    }
+
+    basicContactFormInit() {
         const form = document.getElementById('form');
         const result = document.getElementById('result');
 

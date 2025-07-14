@@ -324,11 +324,10 @@
   );
   border-radius: 8px;
   font-size: 0.9rem;
-  text-align: center;
+  text-align: left;
   margin-top: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  width: 100%;
   min-height: 40px;
   padding: 8px 12px;
   font-weight: 500;
@@ -337,4 +336,11 @@
     inset 0 1px 0 glass-white(0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  
+  // Ensure proper alignment within flexbox containers
+  align-self: stretch;
+  
+  // For grid layout compatibility
+  grid-column: 1 / -1; // Span all columns in the current row
 }
