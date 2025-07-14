@@ -44,11 +44,11 @@
 
       <nav role="navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html#about">About Me</a></li>
-          <li><a href="index.html#portfolio">My Portfolio</a></li>
-          <li><a href="examples.html" class="txt-secondary">Coding Examples</a></li>
-          <li><a href="scss.html" class="txt-secondary">SCS Scheme</a></li>
-          <li class="contact-me"><a href="index.html#contact">Contact Me</a></li>
+          <li><a href="#about" class="spa-nav">About Me</a></li>
+          <li><a href="#portfolio" class="spa-nav">My Portfolio</a></li>
+          <li><a href="examples.html" class="txt-secondary spa-nav">Coding Examples</a></li>
+          <li><a href="scss.html" class="txt-secondary spa-nav">SCS Scheme</a></li>
+          <li class="contact-me"><a href="#contact" class="spa-nav">Contact Me</a></li>
         </ul>
       </nav>
 
@@ -105,7 +105,10 @@
 
   <!-- Main Content -->
   <main id="main-content" role="main">
-    <!-- Hero Section -->
+    <!-- Dynamic Content Container for SPA -->
+    <div id="dynamic-content">
+      <!-- Default content (home page) will be loaded here -->
+      <!-- Hero Section -->
     <header class="hero">
         <div class="content-wrapper">
           <div class="hero-text--name">
@@ -265,6 +268,7 @@
       </footer>
     </div>
     
+    </div> <!-- End dynamic-content -->
   </main>
 
   <script src="js/jquery-1.11.2.min.js"></script>
@@ -282,6 +286,7 @@
   <script src="js/currentyear.js"></script>
   <script src="js/media-player.js"></script>
   <script src="js/skill-modals.js"></script>
+  <script src="js/spa-loader.js"></script>
 
   <script>
     const form = document.getElementById('form');

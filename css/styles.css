@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 2, ../Portfolio/scss/utilities/_extends.scss */
 .contact-grid, .footer-container, .about-me-grid, .examples-grid, .scss-info-grid .info-block {
   background: rgba(255, 255, 255, 0.12);
@@ -4337,6 +4338,319 @@ section {
   50% {
     transform: translateX(0%) translateY(0%) rotate(45deg);
   }
+}
+
+/* ==========================================================================
+   SPA (Single Page Application) Styles
+   ========================================================================== */
+/* Loading Indicator */
+/* line 6, ../Portfolio/scss/components/_spa.scss */
+.loading-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* line 21, ../Portfolio/scss/components/_spa.scss */
+.loading-spinner {
+  text-align: center;
+  color: white;
+}
+
+/* line 26, ../Portfolio/scss/components/_spa.scss */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #32ccee;
+  animation: spin 1s ease-in-out infinite;
+  margin: 0 auto 1rem auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* line 42, ../Portfolio/scss/components/_spa.scss */
+.loading-spinner p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Dynamic Content Container */
+/* line 49, ../Portfolio/scss/components/_spa.scss */
+#dynamic-content {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+/* Active Navigation State */
+/* line 55, ../Portfolio/scss/components/_spa.scss */
+nav a.active {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #32ccee !important;
+  border-color: rgba(50, 204, 238, 0.4) !important;
+  box-shadow: 0 6px 20px rgba(50, 204, 238, 0.15), inset 0 2px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Content-specific transitions */
+/* line 65, ../Portfolio/scss/components/_spa.scss */
+.examples-grid,
+.scss-info-grid {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* line 70, ../Portfolio/scss/components/_spa.scss */
+.example-item,
+.info-block {
+  animation: fadeInUp 0.6s ease-out;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+
+/* line 77, ../Portfolio/scss/components/_spa.scss */
+.example-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+/* line 81, ../Portfolio/scss/components/_spa.scss */
+.example-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SCSS Info specific styles */
+/* line 97, ../Portfolio/scss/components/_spa.scss */
+.scss-info-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* line 103, ../Portfolio/scss/components/_spa.scss */
+.info-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* line 108, ../Portfolio/scss/components/_spa.scss */
+.info-header h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* line 114, ../Portfolio/scss/components/_spa.scss */
+.info-header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* line 121, ../Portfolio/scss/components/_spa.scss */
+.info-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+  /* line 138, ../Portfolio/scss/components/_spa.scss */
+  .info-block {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+/* line 144, ../Portfolio/scss/components/_spa.scss */
+.info-content h4 {
+  color: #32ccee;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* line 150, ../Portfolio/scss/components/_spa.scss */
+.info-content p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* line 156, ../Portfolio/scss/components/_spa.scss */
+.folder-structure {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #32ccee;
+}
+
+/* line 163, ../Portfolio/scss/components/_spa.scss */
+.folder-structure h5 {
+  color: #32ccee;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* line 169, ../Portfolio/scss/components/_spa.scss */
+.folder-structure ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 175, ../Portfolio/scss/components/_spa.scss */
+.folder-structure li {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* line 181, ../Portfolio/scss/components/_spa.scss */
+.folder-structure li:last-child {
+  border-bottom: none;
+}
+
+/* line 185, ../Portfolio/scss/components/_spa.scss */
+.benefits-section {
+  background: rgba(50, 204, 238, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(50, 204, 238, 0.3);
+  margin-top: 2rem;
+}
+
+/* line 193, ../Portfolio/scss/components/_spa.scss */
+.benefits-section h4 {
+  color: #32ccee;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+/* line 199, ../Portfolio/scss/components/_spa.scss */
+.benefits-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 205, ../Portfolio/scss/components/_spa.scss */
+.benefits-section li {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* line 213, ../Portfolio/scss/components/_spa.scss */
+.benefits-section li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #32ccee;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* line 222, ../Portfolio/scss/components/_spa.scss */
+.benefits-section li:last-child {
+  border-bottom: none;
+}
+
+/* line 226, ../Portfolio/scss/components/_spa.scss */
+.benefits-section strong {
+  color: #32ccee;
+}
+
+/* Info image styling */
+/* line 231, ../Portfolio/scss/components/_spa.scss */
+.info-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* line 244, ../Portfolio/scss/components/_spa.scss */
+  .scss-info-grid {
+    padding: 1rem;
+  }
+  /* line 248, ../Portfolio/scss/components/_spa.scss */
+  .info-header h3 {
+    font-size: 2rem;
+  }
+  /* line 252, ../Portfolio/scss/components/_spa.scss */
+  .info-block {
+    padding: 1.5rem;
+  }
+  /* line 256, ../Portfolio/scss/components/_spa.scss */
+  .benefits-section {
+    padding: 1.5rem;
+  }
+}
+
+/* Error states */
+/* line 262, ../Portfolio/scss/components/_spa.scss */
+.error-message {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  color: #ff6b6b;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+/* Smooth page transitions */
+/* line 274, ../Portfolio/scss/components/_spa.scss */
+.page-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure content doesn't flash during transitions */
+/* line 279, ../Portfolio/scss/components/_spa.scss */
+.content-loading {
+  pointer-events: none;
+  user-select: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
