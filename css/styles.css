@@ -827,48 +827,62 @@ li {
   opacity: 0.1;
 }
 
-/* line 145, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 134, ../Portfolio/scss/layout/_portfolio.scss */
+.project.disabled .tag-refactor, .project.pr-4 .tag-refactor, .project.pr-5 .tag-refactor, .project.pr-6 .tag-refactor,
+.project.disabled .tag-frontend,
+.project.pr-4 .tag-frontend,
+.project.pr-5 .tag-frontend,
+.project.pr-6 .tag-frontend,
+.project.disabled .tag-backend,
+.project.pr-4 .tag-backend,
+.project.pr-5 .tag-backend,
+.project.pr-6 .tag-backend {
+  opacity: 0.4;
+  filter: saturate(0.6) brightness(0.8);
+}
+
+/* line 153, ../Portfolio/scss/layout/_portfolio.scss */
 .icon-arrow-right2 {
   font-size: normal;
 }
 
-/* line 153, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 161, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-1:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #32CCEE;
 }
 
-/* line 157, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 165, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-2:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #943AE4;
 }
 
-/* line 161, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 169, ../Portfolio/scss/layout/_portfolio.scss */
 .project.pr-3:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #EFADBE;
 }
 
-/* line 165, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 173, ../Portfolio/scss/layout/_portfolio.scss */
 .pr-4.project:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #943AE4;
 }
 
-/* line 169, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 177, ../Portfolio/scss/layout/_portfolio.scss */
 .pr-5.project:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #EFADBE;
 }
 
-/* line 173, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 181, ../Portfolio/scss/layout/_portfolio.scss */
 .pr-6.project:not(.disabled):not(.project.pr-4):not(.project.pr-5):not(.project.pr-6):hover {
   background-color: #32CCEE;
 }
 
-/* line 181, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 189, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-refactor {
   background: linear-gradient(rgba(50, 204, 238, 0.3), rgba(50, 204, 238, 0.2)), rgba(255, 255, 255, 0.13);
   border: 1px solid rgba(50, 204, 238, 0.4);
 }
 
-/* line 188, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 196, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-refactor:hover {
   background: linear-gradient(rgba(50, 204, 238, 0.4), rgba(50, 204, 238, 0.3)), rgba(255, 255, 255, 0.18);
   border-color: rgba(50, 204, 238, 0.6);
@@ -876,13 +890,13 @@ li {
   transform: translateY(-2px);
 }
 
-/* line 202, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 210, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-frontend {
   background: linear-gradient(rgba(148, 58, 228, 0.3), rgba(148, 58, 228, 0.2)), rgba(255, 255, 255, 0.13);
   border: 1px solid rgba(148, 58, 228, 0.4);
 }
 
-/* line 209, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 217, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-frontend:hover {
   background: linear-gradient(rgba(148, 58, 228, 0.4), rgba(148, 58, 228, 0.3)), rgba(255, 255, 255, 0.18);
   border-color: rgba(148, 58, 228, 0.6);
@@ -890,13 +904,13 @@ li {
   transform: translateY(-2px);
 }
 
-/* line 223, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 231, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-backend {
   background: linear-gradient(rgba(239, 173, 190, 0.3), rgba(239, 173, 190, 0.2)), rgba(255, 255, 255, 0.13);
   border: 1px solid rgba(239, 173, 190, 0.4);
 }
 
-/* line 230, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 238, ../Portfolio/scss/layout/_portfolio.scss */
 .tag-backend:hover {
   background: linear-gradient(rgba(239, 173, 190, 0.4), rgba(239, 173, 190, 0.3)), rgba(255, 255, 255, 0.18);
   border-color: rgba(239, 173, 190, 0.6);
@@ -904,7 +918,7 @@ li {
   transform: translateY(-2px);
 }
 
-/* line 245, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 253, ../Portfolio/scss/layout/_portfolio.scss */
 .icon-heart {
   font-size: 0.8rem;
   position: relative;
@@ -912,7 +926,7 @@ li {
 }
 
 /* Project Filter Styles */
-/* line 257, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 265, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-buttons {
   display: none;
   justify-content: center;
@@ -922,20 +936,20 @@ li {
 }
 
 @media (min-width: 768px) {
-  /* line 257, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 265, ../Portfolio/scss/layout/_portfolio.scss */
   .filter-buttons {
     margin-left: 220px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 257, ../Portfolio/scss/layout/_portfolio.scss */
+  /* line 265, ../Portfolio/scss/layout/_portfolio.scss */
   .filter-buttons {
     display: flex;
   }
 }
 
-/* line 274, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 282, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn {
   display: inline-flex;
   align-items: center;
@@ -969,7 +983,7 @@ li {
   outline: none;
 }
 
-/* line 287, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 295, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn.active {
   background: rgba(255, 255, 255, 0.15);
   color: white;
@@ -977,7 +991,7 @@ li {
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-/* line 295, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 303, ../Portfolio/scss/layout/_portfolio.scss */
 .filter-btn.active:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
@@ -995,12 +1009,12 @@ li {
   }
 }
 
-/* line 314, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 322, ../Portfolio/scss/layout/_portfolio.scss */
 .project, .project.pr-4, .project.pr-5, .project.pr-6 {
   transition: all 0.3s ease;
 }
 
-/* line 317, ../Portfolio/scss/layout/_portfolio.scss */
+/* line 325, ../Portfolio/scss/layout/_portfolio.scss */
 .project, .project.pr-4, .project.pr-5, .project.pr-6 {
   transition: all 0.3s ease;
 }

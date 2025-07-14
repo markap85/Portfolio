@@ -129,6 +129,14 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
       transition: filter 0.3s ease;
       opacity: $disabled-opacity;
     }
+    
+    // Fade the tags on disabled projects
+    .tag-refactor,
+    .tag-frontend,
+    .tag-backend {
+      opacity: 0.4;
+      filter: saturate(0.6) brightness(0.8);
+    }
   }
 }
 
