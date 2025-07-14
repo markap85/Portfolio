@@ -28,6 +28,12 @@
         <!-- Performance Optimizations -->
         <link rel="preconnect" href="https://api.web3forms.com">
         <link rel="dns-prefetch" href="https://www.linkedin.com">
+        
+        <!-- Critical CSS for above-the-fold content - Consider inlining for production -->
+        <!-- Current CSS file contains all styles. For optimal performance, consider:
+             1. Extracting critical CSS for hero section and inlining in <head>
+             2. Loading non-critical CSS asynchronously
+             3. Using CSS modules or splitting by component -->
         <link rel="dns-prefetch" href="https://github.com">
         <link rel="dns-prefetch" href="https://www.facebook.com">
         
@@ -66,6 +72,8 @@
     </head>
 
 <body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- =======================
     PROGRESS BAR
