@@ -216,6 +216,13 @@ class SPAContentLoader {
                 // Update content
                 this.contentContainer.innerHTML = newContent;
                 
+                // Auto scroll to top of page when new content loads
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+                
                 // Re-initialize any necessary scripts for the new content
                 this.reinitializePageScripts();
                 
