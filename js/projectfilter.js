@@ -2,6 +2,12 @@
 function initPortfolioFilter() {
     console.log('Portfolio filter initializing...');
     
+    // Check if we're on a large screen (1024px+) before initializing
+    if (window.innerWidth < 1024) {
+        console.log('Screen too small for portfolio filter, skipping initialization');
+        return;
+    }
+    
     // Remove any existing filter buttons first
     const existingFilters = document.querySelector('.filter-buttons');
     if (existingFilters) {

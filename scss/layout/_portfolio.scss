@@ -15,29 +15,29 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
 .portfolio-grid {
   // Grid Container
   display: grid;
-  grid-template-columns: 1fr; // 1 column by default
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Auto-fit columns based on content
   gap: 30px;
   padding: 20px;
   box-sizing: border-box;
   justify-items: center;
+  justify-content: center; // Center the grid items when filtered
+  max-width: 1260px;
+  margin: 0 auto;
 
 
   // ==========================================================================
   // Responsive Breakpoints
   // ==========================================================================
-  @media (min-width: $brk-point-sm) {
-    grid-template-columns: 1fr 1fr;
-    max-width: 1260px;
-    margin-left: auto;
-    margin-right: auto;
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr; // Single column on mobile
   }
 
-  @media (min-width: $brk-point-md) {
-    margin-left: 0; // Remove margin, let content-wrapper handle it
+  @media (min-width: 768px) and (max-width: 1023px) {
+    grid-template-columns: repeat(2, 1fr); // 2 columns on medium screens
   }
+
   @media (min-width: $brk-point-lg) {
-    margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Up to 3 columns on large screens
   }
 }
 
@@ -201,7 +201,7 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
 
 /* Project Filter Styles */
 .filter-buttons {
-    display: flex;
+    display: none; // Hide by default on small screens
     justify-content: center;
     gap: 1rem;
     margin: 2rem 0;
@@ -209,6 +209,11 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
 
     @media (min-width: 768px) {
         margin-left: 220px;
+    }
+
+    // Only show filter buttons on large screens
+    @media (min-width: $brk-point-lg) {
+        display: flex; // Show on large screens (1024px+)
     }
 }
 
