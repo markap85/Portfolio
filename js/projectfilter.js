@@ -1,10 +1,21 @@
 // Portfolio Filter Functionality
 function initPortfolioFilter() {
+    console.log('Portfolio filter initializing...');
+    
     // Remove any existing filter buttons first
     const existingFilters = document.querySelector('.filter-buttons');
     if (existingFilters) {
         existingFilters.remove();
     }
+
+    // Check if portfolio section exists
+    const portfolioSection = document.querySelector('#portfolio-section');
+    if (!portfolioSection) {
+        console.log('Portfolio section not found, skipping filter initialization');
+        return;
+    }
+
+    console.log('Portfolio section found, creating filter buttons...');
 
     // Create portfolio filter buttons
     const filterButtons = `
@@ -17,18 +28,16 @@ function initPortfolioFilter() {
     `;
 
     // Add filter buttons to portfolio section
-    const portfolioSection = document.querySelector('#portfolio-section');
-    if (portfolioSection) {
-        portfolioSection.insertAdjacentHTML('afterbegin', filterButtons);
+    portfolioSection.insertAdjacentHTML('afterbegin', filterButtons);
 
-        // Check if element is visible on current screen size
-        function isVisibleOnCurrentScreen(project) {
-            const computedStyle = window.getComputedStyle(project);
-            return computedStyle.display !== 'none' && computedStyle.visibility !== 'hidden';
-        }
+    // Check if element is visible on current screen size
+    function isVisibleOnCurrentScreen(project) {
+        const computedStyle = window.getComputedStyle(project);
+        return computedStyle.display !== 'none' && computedStyle.visibility !== 'hidden';
+    }
 
-        // Set up filter button functionality
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+    // Set up filter button functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const filter = btn.dataset.filter;
                 
@@ -95,8 +104,17 @@ function initPortfolioFilter() {
                 activeFilter.click();
             }
         });
-    }
+
+        // Initialize by showing all projects
+        const allButton = document.querySelector('.filter-btn[data-filter="all"]');
+        if (allButton) {
+            // Trigger the "All" filter to show all projects on initial load
+            allButton.click();
+        }
 }
 
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', initPortfolioFilter);
+
+// Make function available globally for SPA re-initialization
+window.initPortfolioFilter = initPortfolioFilter;

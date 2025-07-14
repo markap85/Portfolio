@@ -250,7 +250,11 @@ class SPAContentLoader {
         
         // Re-initialize portfolio filter if on home page
         if (this.currentPage === 'home' && typeof initPortfolioFilter === 'function') {
-            setTimeout(() => initPortfolioFilter(), 200);
+            // Give more time for content to be fully rendered
+            setTimeout(() => {
+                console.log('Re-initializing portfolio filter...');
+                initPortfolioFilter();
+            }, 500);
         }
         
         // Re-initialize contact form if on home page
