@@ -44,63 +44,64 @@ function initPortfolioFilter() {
 
     // Set up filter button functionality
     document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const filter = btn.dataset.filter;
-                
-                // Highlight the active filter button
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                // Show/hide projects based on filter
-                document.querySelectorAll('.project').forEach(project => {
+        btn.addEventListener('click', () => {
+            const filter = btn.dataset.filter;
+            
+            // Highlight the active filter button
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const projects = document.querySelectorAll('.project');
+            
+            // Step 1: Fade out ALL projects first
+            projects.forEach(project => {
+                project.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                project.style.opacity = '0';
+                project.style.transform = 'scale(0.95) translateY(-10px)';
+            });
+            
+            // Step 2: After fade out, determine which projects to show/hide
+            setTimeout(() => {
+                projects.forEach(project => {
                     let shouldShow = false;
                     
                     // Check if project matches the selected filter
                     if (filter === 'all') {
                         shouldShow = true;
                     } else {
-                        // Look for matching tag in project
                         shouldShow = project.querySelector('.tag-' + filter) !== null;
                     }
                     
                     // Also check if CSS rules allow this project to show on current screen
                     if (shouldShow) {
-                        // Reset display to check CSS visibility
                         const originalDisplay = project.style.display;
                         project.style.display = '';
-                        
-                        // See if CSS media queries hide this element
                         const isVisibleByCSS = isVisibleOnCurrentScreen(project);
-                        
-                        // Put back original display value
                         project.style.display = originalDisplay;
                         
-                        // Show project with animation if both filter and CSS allow it
                         if (isVisibleByCSS) {
                             project.style.display = 'block';
-                            project.style.opacity = '0';
-                            project.style.transform = 'translateY(20px)';
-                            
-                            // Animate project into view
-                            setTimeout(() => {
-                                project.style.opacity = '1';
-                                project.style.transform = 'translateY(0)';
-                            }, 100);
                         } else {
-                            // Hide projects that CSS rules exclude on current screen
                             project.style.display = 'none';
                         }
                     } else {
-                        project.style.opacity = '0';
-                        project.style.transform = 'translateY(-20px)';
-                        
-                        setTimeout(() => {
-                            project.style.display = 'none';
-                        }, 300);
+                        project.style.display = 'none';
                     }
                 });
-            });
+                
+                // Step 3: After repositioning, fade in the visible projects
+                setTimeout(() => {
+                    projects.forEach(project => {
+                        if (project.style.display !== 'none') {
+                            project.style.opacity = '1';
+                            project.style.transform = 'scale(1) translateY(0)';
+                        }
+                    });
+                }, 200); // Small delay to allow grid repositioning
+                
+            }, 400); // Wait for fade out to complete
         });
+    });
 
         // Reapply filters when screen size changes
         window.addEventListener('resize', () => {
