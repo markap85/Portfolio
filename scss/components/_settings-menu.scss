@@ -442,10 +442,11 @@
   }
 }
 
-// Background Navigation Arrows
+// Background Navigation Arrow (right only - cycles through backgrounds)
 .background-nav-arrow {
   position: fixed;
   top: 50%;
+  right: 20px;
   transform: translateY(-50%);
   z-index: 5;
   background: rgba(255, 255, 255, 0.2);
@@ -474,26 +475,11 @@
       0 0 15px rgba(50, 204, 238, 0.6);
   }
 
-  &.background-nav-left {
-    left: 2rem;
-  }
-
-  &.background-nav-right {
-    right: 2rem;
-  }
-
   @media (max-width: $brk-point-md) {
     width: 50px;
     height: 50px;
     font-size: 1.5rem;
-
-    &.background-nav-left {
-      left: 1rem;
-    }
-
-    &.background-nav-right {
-      right: 1rem;
-    }
+    right: 1rem;
   }
 }
 

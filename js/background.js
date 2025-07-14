@@ -52,31 +52,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Create navigation arrows
-    function createNavigationArrows() {
-        const leftArrow = document.createElement('div');
-        leftArrow.className = 'background-nav-arrow background-nav-left';
-        leftArrow.innerHTML = '<span class="icon-keyboard_arrow_left"></span>';
-        leftArrow.setAttribute('aria-label', 'Previous background');
-        leftArrow.addEventListener('click', window.backgroundController.previousBackground);
-
+    // Create navigation arrow (right only - cycles through all backgrounds)
+    function createNavigationArrow() {
         const rightArrow = document.createElement('div');
-        rightArrow.className = 'background-nav-arrow background-nav-right';
+        rightArrow.className = 'background-nav-arrow';
         rightArrow.innerHTML = '<span class="icon-keyboard_arrow_right"></span>';
         rightArrow.setAttribute('aria-label', 'Next background');
         rightArrow.addEventListener('click', window.backgroundController.nextBackground);
 
-        document.body.appendChild(leftArrow);
         document.body.appendChild(rightArrow);
 
-        // Initially hide arrows (slideshow is enabled by default)
-        leftArrow.style.display = 'none';
+        // Initially hide arrow (slideshow is enabled by default)
         rightArrow.style.display = 'none';
     }
 
     // Initialize
     changeBackgroundImage(); // Set initial background
-    createNavigationArrows();
+    createNavigationArrow();
     
     // Check localStorage for slideshow setting
     const slideshowEnabled = localStorage.getItem('backgroundSlideshow') !== 'false';
@@ -84,8 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
         startSlideshow();
     } else {
         isSlideShowEnabled = false;
-        // Show arrows if slideshow is disabled
-        const arrows = document.querySelectorAll('.background-nav-arrow');
-        arrows.forEach(arrow => arrow.style.display = 'flex');
+        // Show arrow if slideshow is disabled
+        const arrow = document.querySelector('.background-nav-arrow');
+        if (arrow) arrow.style.display = 'flex';
     }
 });

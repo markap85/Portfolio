@@ -5270,6 +5270,7 @@ nav a.active {
 .background-nav-arrow {
   position: fixed;
   top: 50%;
+  right: 20px;
   transform: translateY(-50%);
   z-index: 5;
   background: rgba(255, 255, 255, 0.2);
@@ -5289,7 +5290,7 @@ nav a.active {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* line 467, ../Portfolio/scss/components/_settings-menu.scss */
+/* line 468, ../Portfolio/scss/components/_settings-menu.scss */
 .background-nav-arrow:hover {
   background: rgba(50, 204, 238, 0.3);
   border-color: rgba(50, 204, 238, 0.5);
@@ -5298,67 +5299,50 @@ nav a.active {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 0 15px rgba(50, 204, 238, 0.6);
 }
 
-/* line 477, ../Portfolio/scss/components/_settings-menu.scss */
-.background-nav-arrow.background-nav-left {
-  left: 2rem;
-}
-
-/* line 481, ../Portfolio/scss/components/_settings-menu.scss */
-.background-nav-arrow.background-nav-right {
-  right: 2rem;
-}
-
 @media (max-width: 768px) {
   /* line 446, ../Portfolio/scss/components/_settings-menu.scss */
   .background-nav-arrow {
     width: 50px;
     height: 50px;
     font-size: 1.5rem;
-  }
-  /* line 490, ../Portfolio/scss/components/_settings-menu.scss */
-  .background-nav-arrow.background-nav-left {
-    left: 1rem;
-  }
-  /* line 494, ../Portfolio/scss/components/_settings-menu.scss */
-  .background-nav-arrow.background-nav-right {
     right: 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  /* line 502, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 488, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal {
     padding: 0.5rem;
   }
-  /* line 505, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 491, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-modal-content {
     max-width: 95vw;
     max-height: 95vh;
   }
-  /* line 510, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 496, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-header,
   .settings-modal .settings-body,
   .settings-modal .settings-footer {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  /* line 517, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 503, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .setting-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  /* line 522, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 508, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .setting-item .setting-control {
     margin-left: 0;
     align-self: flex-end;
   }
-  /* line 528, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 514, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-footer {
     flex-direction: column;
     gap: 1rem;
   }
-  /* line 532, ../Portfolio/scss/components/_settings-menu.scss */
+  /* line 518, ../Portfolio/scss/components/_settings-menu.scss */
   .settings-modal .settings-footer .settings-reset-btn,
   .settings-modal .settings-footer .settings-close-btn {
     width: 100%;

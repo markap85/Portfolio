@@ -285,14 +285,14 @@ function initSettingsMenu() {
         if (window.backgroundController) {
             if (enabled) {
                 window.backgroundController.enableSlideshow();
-                // Hide manual navigation arrows
-                const arrows = document.querySelectorAll('.background-nav-arrow');
-                arrows.forEach(arrow => arrow.style.display = 'none');
+                // Hide manual navigation arrow
+                const arrow = document.querySelector('.background-nav-arrow');
+                if (arrow) arrow.style.display = 'none';
             } else {
                 window.backgroundController.disableSlideshow();
-                // Show manual navigation arrows
-                const arrows = document.querySelectorAll('.background-nav-arrow');
-                arrows.forEach(arrow => arrow.style.display = 'flex');
+                // Show manual navigation arrow
+                const arrow = document.querySelector('.background-nav-arrow');
+                if (arrow) arrow.style.display = 'flex';
             }
         }
     }
