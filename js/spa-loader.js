@@ -34,19 +34,25 @@ class SPAContentLoader {
     }
 
     setupNavigation() {
-        // Get all navigation links
-        const navLinks = document.querySelectorAll('nav a');
+        // Get all navigation links including logo
+        const navLinks = document.querySelectorAll('nav a, .logo a');
+        console.log('Found navigation links:', navLinks.length);
         
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const href = link.getAttribute('href');
+                console.log('Navigation clicked:', href);
                 
                 // Handle different types of links
                 if (href.includes('examples.html')) {
                     this.loadContent('examples');
                 } else if (href.includes('scss.html')) {
                     this.loadContent('scss');
+                } else if (href === '#home' || href.includes('index.html')) {
+                    // Logo clicked or home link - always load home and scroll to top
+                    console.log('Loading home content...');
+                    this.loadContent('home');
                 } else if (href.includes('#about') || href.includes('#portfolio') || href.includes('#contact')) {
                     console.log('Hash navigation detected:', href, 'Current page:', this.currentPage);
                     // If we're not on home page, load home first then scroll
