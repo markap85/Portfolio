@@ -495,4 +495,27 @@
       }
     }
   }
+
+  // Sidebar overlay for mobile (background click to close)
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999; // Below sidebar but above main content
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.sidebar-overlay--active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media (min-width: $brk-point-md) {
+      display: none; // Hide on desktop since sidebar is always visible
+    }
+  }
 }
