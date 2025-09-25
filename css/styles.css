@@ -333,8 +333,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?lv8yva");
-  src: url("../fonts/icomoon.eot?lv8yva#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?lv8yva") format("truetype"), url("../fonts/icomoon.woff?lv8yva") format("woff"), url("../fonts/icomoon.svg?lv8yva#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?whf6gx");
+  src: url("../fonts/icomoon.eot?whf6gx#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?whf6gx") format("truetype"), url("../fonts/icomoon.woff?whf6gx") format("woff"), url("../fonts/icomoon.svg?whf6gx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -371,48 +371,48 @@ th {
 }
 
 /* line 37, ../Portfolio/scss/base/_icons.scss */
+.icon-mysql:before {
+  content: "\e90b";
+}
+
+/* line 40, ../Portfolio/scss/base/_icons.scss */
 .icon-dot-net:before {
   content: "\e90a";
 }
 
-/* line 40, ../Portfolio/scss/base/_icons.scss */
+/* line 43, ../Portfolio/scss/base/_icons.scss */
 .icon-laravel:before {
   content: "\e903";
 }
 
-/* line 43, ../Portfolio/scss/base/_icons.scss */
+/* line 46, ../Portfolio/scss/base/_icons.scss */
 .icon-postgresql:before {
   content: "\e904";
 }
 
-/* line 46, ../Portfolio/scss/base/_icons.scss */
+/* line 49, ../Portfolio/scss/base/_icons.scss */
 .icon-php:before {
   content: "\e905";
 }
 
-/* line 49, ../Portfolio/scss/base/_icons.scss */
+/* line 52, ../Portfolio/scss/base/_icons.scss */
 .icon-jquery:before {
   content: "\e906";
 }
 
-/* line 52, ../Portfolio/scss/base/_icons.scss */
+/* line 55, ../Portfolio/scss/base/_icons.scss */
 .icon-javascript:before {
   content: "\e907";
 }
 
-/* line 55, ../Portfolio/scss/base/_icons.scss */
+/* line 58, ../Portfolio/scss/base/_icons.scss */
 .icon-sass:before {
   content: "\e908";
 }
 
-/* line 58, ../Portfolio/scss/base/_icons.scss */
+/* line 61, ../Portfolio/scss/base/_icons.scss */
 .icon-javascript1:before {
   content: "\e909";
-}
-
-/* line 61, ../Portfolio/scss/base/_icons.scss */
-.icon-cog:before {
-  content: "\e994";
 }
 
 /* line 64, ../Portfolio/scss/base/_icons.scss */
@@ -2468,15 +2468,13 @@ footer {
 }
 
 /* line 164, ../Portfolio/scss/layout/_about.scss */
-.about-me-icons .icon-postgresql,
 .about-me-icons .icon-php,
 .about-me-icons .icon-laravel {
   color: rgba(255, 255, 255, 0.24);
   cursor: default;
 }
 
-/* line 170, ../Portfolio/scss/layout/_about.scss */
-.about-me-icons .icon-postgresql:hover,
+/* line 169, ../Portfolio/scss/layout/_about.scss */
 .about-me-icons .icon-php:hover,
 .about-me-icons .icon-laravel:hover {
   font-size: 3rem !important;
@@ -2489,13 +2487,13 @@ footer {
   .about-me-icons {
     gap: 2rem;
   }
-  /* line 180, ../Portfolio/scss/layout/_about.scss */
+  /* line 179, ../Portfolio/scss/layout/_about.scss */
   .about-me-icons [class^="icon-"] {
     font-size: 3rem;
   }
 }
 
-/* line 187, ../Portfolio/scss/layout/_about.scss */
+/* line 186, ../Portfolio/scss/layout/_about.scss */
 .skill-modal {
   display: none;
   position: fixed;
@@ -2509,7 +2507,7 @@ footer {
   -webkit-backdrop-filter: blur(5px);
 }
 
-/* line 199, ../Portfolio/scss/layout/_about.scss */
+/* line 198, ../Portfolio/scss/layout/_about.scss */
 .skill-modal .skill-modal-content {
   position: absolute;
   top: 50%;
@@ -2527,20 +2525,20 @@ footer {
   min-width: 250px;
 }
 
-/* line 217, ../Portfolio/scss/layout/_about.scss */
+/* line 216, ../Portfolio/scss/layout/_about.scss */
 .skill-modal .skill-modal-content h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
   color: #32CCEE;
 }
 
-/* line 223, ../Portfolio/scss/layout/_about.scss */
+/* line 222, ../Portfolio/scss/layout/_about.scss */
 .skill-modal .skill-modal-content p {
   margin: 0 0 1.5rem 0;
   line-height: 1.6;
 }
 
-/* line 228, ../Portfolio/scss/layout/_about.scss */
+/* line 227, ../Portfolio/scss/layout/_about.scss */
 .skill-modal .skill-modal-content .skill-modal-close {
   position: absolute;
   top: 10px;
@@ -2552,7 +2550,7 @@ footer {
   transition: color 0.3s ease;
 }
 
-/* line 238, ../Portfolio/scss/layout/_about.scss */
+/* line 237, ../Portfolio/scss/layout/_about.scss */
 .skill-modal .skill-modal-content .skill-modal-close:hover {
   color: #32CCEE;
 }
@@ -2586,7 +2584,7 @@ footer {
   }
 }
 
-/* line 279, ../Portfolio/scss/layout/_about.scss */
+/* line 278, ../Portfolio/scss/layout/_about.scss */
 .skip-link {
   position: absolute;
   top: -9999px;
@@ -2596,7 +2594,7 @@ footer {
   overflow: hidden;
 }
 
-/* line 287, ../Portfolio/scss/layout/_about.scss */
+/* line 286, ../Portfolio/scss/layout/_about.scss */
 .skip-link:focus {
   position: static;
   width: auto;
@@ -2610,7 +2608,7 @@ footer {
   text-decoration: none;
 }
 
-/* line 303, ../Portfolio/scss/layout/_about.scss */
+/* line 302, ../Portfolio/scss/layout/_about.scss */
 .next-section {
   display: inline-flex;
   align-items: center;
@@ -2672,7 +2670,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 303, ../Portfolio/scss/layout/_about.scss */
+  /* line 302, ../Portfolio/scss/layout/_about.scss */
   .next-section {
     display: flex;
   }
