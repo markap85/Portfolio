@@ -1,0 +1,14 @@
+{
+    "name": "markap85/portfolio",
+    "description": "Mark Peters Portfolio Website",
+    "require": {
+        "vlucas/phpdotenv": "5.0",
+        "phpmailer/phpmailer": "^6.11"
+    },
+    "authors": [
+        {
+            "name": "Mark Peters",
+            "email": "mark@example.com"
+        }
+    ]
+}

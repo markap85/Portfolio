@@ -2,6 +2,37 @@
 // SCSS Info Page Layout
 // ==========================================================================
 
+// Header styling
+.scss-header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 2rem auto 3rem auto;
+    max-width: 1200px;
+
+    h1 {
+        color: $white;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: $white;
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        line-height: 1.7;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    // Responsive spacing
+    @media (min-width: $brk-point-md) {
+        padding: 3rem 2rem;
+        margin: 3rem auto 4rem auto;
+    }
+}
+
 .scss-info-grid {
     max-width: 1260px;
     margin-top: 40px;

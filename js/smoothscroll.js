@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Find all anchor links that navigate to page sections
-    const anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="index.html#"]');
+    const anchorLinks = document.querySelectorAll('a[href^="#"], a[href*="index.php#"]');
     
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
             // Check if this is a link to a different page
-            if (href.includes('index.html#') && !window.location.pathname.endsWith('index.html')) {
-                // If we're not on index.html, let the browser handle the navigation normally
+            if (href.includes('index.php#') && !window.location.pathname.endsWith('index.php')) {
+                // If we're not on index.php, let the browser handle the navigation normally
                 return;
             }
             

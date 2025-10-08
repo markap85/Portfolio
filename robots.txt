@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mark-peters.netmatters-scs.co.uk/sitemap.xml
+
+# Disallow sensitive files and directories
+Disallow: /config/
+Disallow: /includes/
+Disallow: /vendor/
+Disallow: /.env
+Disallow: /composer.json
+Disallow: /composer.lock
+Disallow: /debug-*.php
+Disallow: /test-*.php
+Disallow: /rewrite-test.php
+
+# Allow important resources
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /fonts/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

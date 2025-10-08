@@ -3,39 +3,40 @@
  * Handles form submission using Web3Forms API
  */
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('form');
+    const form = document.getElementById('contact-form');
     const result = document.getElementById('result');
 
     if (!form || !result) return;
 
     form.addEventListener('submit', function(e) {
+        console.log('Form submit event triggered');
         e.preventDefault();
         
         // Validate form before submission
         if (!validateForm()) {
+            console.log('Form validation failed');
             return;
         }
+        
+        console.log('Form validation passed, submitting...');
 
         const formData = new FormData(form);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
         
         // Show loading state
         result.innerHTML = "Please wait...";
         result.style.display = "block";
         result.className = "result-loading";
 
-        fetch('https://api.web3forms.com/submit', {
+        fetch('contact-form', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
+                'X-Requested-With': 'XMLHttpRequest'
             },
-            body: json
+            body: formData
         })
         .then(async (response) => {
             let json = await response.json();
-            if (response.status === 200) {
+            if (response.ok && json.success) {
                 result.innerHTML = json.message || "Thank you! Your message has been sent successfully.";
                 result.className = "result-success";
                 form.reset();
@@ -61,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function validateForm() {
         const firstName = document.getElementById('first-name');
-        const lastName = document.getElementById('last-name');
+        const phone = document.getElementById('phone');
         const email = document.getElementById('email');
         const subject = document.getElementById('subject');
         const message = document.getElementById('message');

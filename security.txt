@@ -1,0 +1,13 @@
+Contact: mailto:markalexanderpeters@gmail.com
+Expires: 2026-10-08T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://mark-peters.netmatters-scs.co.uk/.well-known/security.txt
+
+# Security Policy
+# If you discover a security vulnerability, please report it responsibly:
+# 1. Email the details to the contact address above
+# 2. Allow reasonable time for response (48-72 hours)
+# 3. Do not disclose publicly until fixed
+# 
+# This is a portfolio site with no sensitive user data
+# Focus areas: XSS, CSRF, file upload vulnerabilities

@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     let backgroundImages = [
-        '../img/glassmorphic_01.jpg',
-        '../img/glassmorphic_02.jpg',
-        '../img/glassmorphic_03.jpg',
+        '../img/glassmorphic_01.webp',
+        '../img/glassmorphic_02.webp',
+        '../img/glassmorphic_03.webp',
     ];
 
     let currentIndex = 0;

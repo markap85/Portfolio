@@ -1,0 +1,57 @@
+# Clean URLs - Remove .php extensions
+RewriteEngine On
+
+# Remove trailing slash from URLs (except directories)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Redirect .php URLs to clean URLs (so users see clean URLs)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+([^.?\s]+)\.php(?:\?[^\s]*)?\s [NC]
+RewriteRule ^ /%1? [R=301,L]
+
+# Add .php extension internally for clean URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^.]+)$ $1.php [L]
+
+# Security: Prevent access to sensitive files
+<Files ~ "^\.">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "\.env$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "composer\.(json|lock)$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "package\.(json|lock)$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Block access to debug and test files
+<Files ~ "debug-.*\.php$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "test-.*\.php$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>

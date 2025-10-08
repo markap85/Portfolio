@@ -1,0 +1,35 @@
+/* TEAM */
+Developer: Mark Peters
+Site: https://mark-peters.netmatters-scs.co.uk
+Email: markalexanderpeters@gmail.com
+Location: Cambridge, UK
+
+/* THANKS */
+Netmatters SCS - Training and Development
+Sass/SCSS - CSS preprocessing
+PHP - Server-side scripting
+WebP - Image optimization
+
+/* SITE */
+Last update: 2025/10/08
+Language: English
+Doctype: HTML5
+IDE: Visual Studio Code
+Standards: W3C HTML5, CSS3, ES6+
+Components: PHP, Sass/SCSS, Vanilla JavaScript
+Fonts: System fonts, Icon fonts
+Tools: Composer, PHPMailer, GitHub
+
+/* SOCIAL */
+GitHub: https://github.com/markap85
+LinkedIn: [Your LinkedIn Profile]
+
+/* PORTFOLIO HIGHLIGHTS */
+- Responsive Design
+- Clean URLs with .htaccess
+- Contact Form with PHP Backend
+- WebP Image Optimization (81.4% size reduction)
+- SEO Optimized with Structured Data
+- WCAG Accessibility Compliant
+- Modern JavaScript (No jQuery dependency)
+- Professional SCSS Architecture
