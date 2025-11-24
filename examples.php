@@ -13,8 +13,13 @@ $pageUrl = 'https://mark-peters.dev/examples';
 $pageKeywords = 'coding examples, responsive design, JavaScript, CSS Grid, async await, portfolio examples';
 $currentPage = 'examples';
 $includeStructuredData = false;
-$includeAudioPlayer = false;
+$includeAudioPlayer = true;
 $includeSpaLoader = false;
+
+// Examples page specific scripts
+$additionalScripts = [
+    'js/media-player.js'
+];
 ?>
 <?php include 'includes/html-start.php'; ?>
 
@@ -177,6 +182,54 @@ async function setRandomPhoto() {
                             <li>Name fields side-by-side on larger screens</li>
                             <li>Full-width fields span multiple columns when needed</li>
                             <li>Consistent spacing maintained across breakpoints</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="example-item">
+                        <h4>Example 4: Advanced Query Builder with Dynamic Filtering & Sorting</h4>
+                        <p>Complex search, filter, and sort implementation in a Laravel EmployeeController demonstrating advanced Eloquent query building with relationship handling.</p>
+                        
+                        <div class="code-block">
+                            <h5>PHP/Laravel Code:</h5>
+                            <pre><code>public function index(Request $request)
+{
+    $query = Employee::with(['company', 'user']);
+    
+    // Multi-field search with relationship queries
+    if ($request->has('search') && $request->search != '') {
+        $search = $request->search;
+        $query->where(function($q) use ($search) {
+            $q->where('first_name', 'like', "%{$search}%")
+              ->orWhere('last_name', 'like', "%{$search}%")
+              ->orWhere('email', 'like', "%{$search}%")
+              ->orWhere('phone', 'like', "%{$search}%")
+              ->orWhereHas('company', function($q) use ($search) {
+                  $q->where('name', 'like', "%{$search}%");
+              });
+        });
+    }
+    
+    // Dynamic sorting with relationship handling
+    if ($sortField === 'company_id') {
+        $query->leftJoin('companies', 'employees.company_id', '=', 'companies.id')
+              ->orderBy('companies.name', $sortDirection)
+              ->select('employees.*');
+    } else {
+        $query->orderBy($sortField, $sortDirection);
+    }
+    
+    $employees = $query->paginate(10)->appends($request->query());
+}</code></pre>
+                        </div>
+                        
+                        <p><strong>Key Laravel Features:</strong></p>
+                        <ul>
+                            <li>Eager loading relationships with <code>with()</code> to prevent N+1 queries</li>
+                            <li>Dynamic multi-field search using query scopes and closures</li>
+                            <li>Relationship querying with <code>orWhereHas()</code> for nested searches</li>
+                            <li>Complex join operations for sorting by related model attributes</li>
+                            <li>Pagination with query string preservation</li>
+                            <li>Conditional query building based on request parameters</li>
                         </ul>
                     </article>
                 </div>

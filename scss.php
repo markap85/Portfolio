@@ -13,8 +13,13 @@ $pageUrl = 'https://mark-peters.dev/scss';
 $pageKeywords = 'SCSS, Sass, CSS architecture, design system, stylesheet organization, web development';
 $currentPage = 'scss';
 $includeStructuredData = false;
-$includeAudioPlayer = false;
+$includeAudioPlayer = true;
 $includeSpaLoader = false;
+
+// SCSS page specific scripts
+$additionalScripts = [
+    'js/media-player.js'
+];
 ?>
 <?php include 'includes/html-start.php'; ?>
 

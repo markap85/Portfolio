@@ -114,20 +114,25 @@ $additionalScripts = [
 
               <!-- Project 3 -->
                 <article class="project pr-3" itemscope itemtype="https://schema.org/CreativeWork">
+                  <img src="img/laravel.webp" alt="Laravel Assessment - PHP Backend Development" loading="lazy" width="300" height="200" decoding="async" itemprop="image">
+                  <p class="tag-backend">Backend</p>
+                  <h3 itemprop="name">Laravel - Assessment</h3>
+                  <meta itemprop="description" content="Full-stack Laravel application demonstrating PHP backend development and MVC architecture">
+                  <a href="https://laravel.mark-peters.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer" itemprop="url">
+                    View Project <span class="icon-arrow-right2"></span>
+                  </a>
+                  <br>
+                  <a href="https://github.com/markap85/Laravel" target="_blank" rel="noopener noreferrer">
+                    Source Code
+                  </a>
+                </article>
+              <!-- Project 4 -->
+                <article class="project pr-3" itemscope itemtype="https://schema.org/CreativeWork">
                   <img src="img/AGS.webp" alt="Aurora Game Studios - Creative gaming website" loading="lazy" width="300" height="200" decoding="async" itemprop="image">
                   <p class="tag-frontend">Frontend</p>
                   <h3 itemprop="name">Aurora Game Studios</h3>
                   <meta itemprop="description" content="Creative gaming website showcasing frontend development skills">
                   <a href="https://auroragamestudios.co.uk" target="_blank" rel="noopener noreferrer" itemprop="url">View Project <span class="icon-arrow-right2"></span>
-                  </a>
-                </article>
-              <!-- Project 4 -->
-                <article class="project pr-4" itemscope itemtype="https://schema.org/CreativeWork">
-                  <img src="img/Revive.webp" alt="ReVive Interactive - Interactive media website" loading="lazy" width="300" height="200" decoding="async" itemprop="image">
-                  <p class="tag-frontend">Frontend</p>
-                  <h3 itemprop="name">ReVive Interactive</h3>
-                  <meta itemprop="description" content="Interactive media website demonstrating modern web technologies">
-                  <a href="https://reviveinteractive.co.uk/" target="_blank" rel="noopener noreferrer" itemprop="url">View Project <span class="icon-arrow-right2"></span>
                   </a>
                 </article>
               <!-- Project 5 -->
