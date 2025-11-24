@@ -654,10 +654,6 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
 
 .about-me-icons [class^="icon-"]:hover { font-size: 3rem !important; transform: scale(1.1) !important; color: #32CCEE; }
 
-.about-me-icons .icon-laravel { color: rgba(255, 255, 255, 0.24); cursor: default; }
-
-.about-me-icons .icon-laravel:hover { font-size: 3rem !important; transform: scale(1.1) !important; color: rgba(120, 140, 160, 0.6); }
-
 @media (min-width: 768px) { .about-me-icons { gap: 2rem; }
   .about-me-icons [class^="icon-"] { font-size: 3rem; } }
 

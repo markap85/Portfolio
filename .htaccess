@@ -1,6 +1,11 @@
 # Clean URLs - Remove .php extensions
 RewriteEngine On
 
+# Explicitly allow access to scss.php and examples.php
+<FilesMatch "^(scss|examples)\.php$">
+    Require all granted
+</FilesMatch>
+
 # Remove trailing slash from URLs (except directories)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)/$ /$1 [R=301,L]

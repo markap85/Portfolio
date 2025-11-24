@@ -160,17 +160,6 @@
         }
     }
 
-    // Future skills with reduced opacity
-    .icon-laravel {
-        color: rgba(255, 255, 255, 0.24);
-        cursor: default;
-
-        &:hover {
-            font-size: 3rem !important;
-            transform: scale(1.1) !important;
-            color: rgba(120, 140, 160, 0.6);
-        }
-    }
 
     @media (min-width: $brk-point-md) {
         gap: 2rem;
