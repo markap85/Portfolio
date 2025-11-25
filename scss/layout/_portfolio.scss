@@ -1,7 +1,7 @@
 // ==========================================================================
 // Configuration Variables - Easy to Update
 // ==========================================================================
-$disabled-items: (5, 6); // List of item numbers to disable
+$disabled-items: (6); // List of item numbers to disable
 $disabled-opacity: 0.1; // Increased opacity for better visibility
 
 .portfolio-section {
@@ -22,8 +22,6 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
   gap: 30px;
   padding: 20px;
   box-sizing: border-box;
-  justify-items: center;
-  justify-content: center; // Center the grid items when filtered
   max-width: 1260px;
   margin: 0 auto;
   // Smooth transition for layout changes
@@ -67,8 +65,6 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
     0 8px 32px rgba(0, 0, 0, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
   width: 100%;
-  max-width: 350px;
-  min-width: 300px;
 
   // Hover Effect (only for enabled items) - removed transform
   &:not(.disabled):hover {

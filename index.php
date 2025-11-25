@@ -84,7 +84,7 @@ $additionalScripts = [
             <div id="portfolio" class="portfolio-grid">
               <!-- Project 1 -->
                 <article class="project pr-1" itemscope itemtype="https://schema.org/CreativeWork">
-                  <img src="img/Netmatters.webp" alt="Netmatters Homepage - Responsive website refactor project" loading="lazy" width="300" height="200" decoding="async" itemprop="image">
+                  <img src="img/Netmatters.webp" alt="Netmatters Homepage - Responsive website refactor project" loading="lazy" decoding="async" itemprop="image">
                   <p class="tag-refactor"><span class="icon-heart"></span> Refactor</p>
                   <h3 itemprop="name">Netmatters Homepage</h3>
                   <meta itemprop="description" content="Responsive website refactor project showcasing modern web development techniques">
@@ -99,7 +99,7 @@ $additionalScripts = [
 
                 <!-- Project 2 -->
                 <article class="project pr-2" itemscope itemtype="https://schema.org/CreativeWork">
-                  <img src="img/JSArrays.webp" alt="JavaScript - Array Reflection" loading="lazy" width="300" height="200" decoding="async" itemprop="image">
+                  <img src="img/JSArrays.webp" alt="JavaScript - Array Reflection" loading="lazy" decoding="async" itemprop="image">
                   <p class="tag-frontend">Frontend</p>
                   <h3 itemprop="name">JavaScript - Arrays</h3>
                   <meta itemprop="description" content="Example of JavaScript array reflection techniques">
@@ -114,7 +114,7 @@ $additionalScripts = [
 
               <!-- Project 3 -->
                 <article class="project pr-3" itemscope itemtype="https://schema.org/CreativeWork">
-                  <img src="img/laravel.webp" alt="Laravel Assessment - PHP Backend Development" loading="lazy" width="300" height="200" decoding="async" itemprop="image">
+                  <img src="img/laravel.webp" alt="Laravel Assessment - PHP Backend Development" loading="lazy" decoding="async" itemprop="image">
                   <p class="tag-backend">Backend</p>
                   <h3 itemprop="name">Laravel - Assessment</h3>
                   <meta itemprop="description" content="Full-stack Laravel application demonstrating PHP backend development and MVC architecture">
@@ -127,8 +127,8 @@ $additionalScripts = [
                   </a>
                 </article>
               <!-- Project 4 -->
-                <article class="project pr-3" itemscope itemtype="https://schema.org/CreativeWork">
-                  <img src="img/AGS.webp" alt="Aurora Game Studios - Creative gaming website" loading="lazy" width="300" height="200" decoding="async" itemprop="image">
+                <article class="project pr-4" itemscope itemtype="https://schema.org/CreativeWork">
+                  <img src="img/AGS.webp" alt="Aurora Game Studios - Creative gaming website" loading="lazy" decoding="async" itemprop="image">
                   <p class="tag-frontend">Frontend</p>
                   <h3 itemprop="name">Aurora Game Studios</h3>
                   <meta itemprop="description" content="Creative gaming website showcasing frontend development skills">
@@ -136,14 +136,17 @@ $additionalScripts = [
                   </a>
                 </article>
               <!-- Project 5 -->
-                <article class="project pr-5">
-                  <img src="img/WebSitePlaceHolder_4.webp" alt="Coming soon - Future project placeholder" loading="lazy" width="300" height="200" decoding="async">
-                  <p class="tag-frontend">Coming Soon</p>
-                  <h3>Future Project</h3>
+                <article class="project pr-5" itemscope itemtype="https://schema.org/CreativeWork">
+                  <img src="img/ACSite.webp" alt="Andy Childs Driving Coach - Professional driving instructor website" loading="lazy" decoding="async" itemprop="image">
+                  <p class="tag-frontend">Frontend</p>
+                  <h3 itemprop="name">Andy Childs Driving Coach</h3>
+                  <meta itemprop="description" content="Professional driving instructor website showcasing frontend development skills">
+                  <a href="https://andychildsdrivingcoach.co.uk/" target="_blank" rel="noopener noreferrer" itemprop="url">View Project <span class="icon-arrow-right2"></span>
+                  </a>
                 </article>
               <!-- Project 6 -->
                 <article class="project pr-6">
-                  <img src="img/WebSitePlaceHolder_5.webp" alt="Coming soon - Future project placeholder" loading="lazy" width="300" height="200" decoding="async">
+                  <img src="img/WebSitePlaceHolder_5.webp" alt="Coming soon - Future project placeholder" loading="lazy" decoding="async">
                   <p class="tag-backend">Coming Soon</p>
                   <h3>Future Project</h3>
                 </article>

@@ -31,7 +31,7 @@
 
     // Portfolio project image sizing
 %img-portfolio {
-    max-width: 100%;
+    width: 100%; // Force full width
     height: 250px; // Fixed height for consistent layout
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
