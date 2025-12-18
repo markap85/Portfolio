@@ -45,14 +45,15 @@
       h3 {
         color: $white;
       }
-
-      a {
-        @include button-primary;
-        margin: 1rem 0;
-        width: fit-content;
-      }
     }
   }
+}
+
+// Ensure "Email Me" anchor displays as a button at all breakpoints
+.contact-details a {
+  @include button-primary;
+  margin: 1rem 0;
+  width: fit-content;
 }
 
 // ==========================================================================

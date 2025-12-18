@@ -194,6 +194,10 @@ li { list-style: none; padding: 0; margin: 0; }
 
 .txt-accent { color: #D4A5A5; }
 
+.scss-header h1, .examples-header h1 { color: #ffffff; font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 600; margin-bottom: 1rem; }
+
+.scss-header p, .examples-header p { color: #ffffff; font-size: clamp(1rem, 2.5vw, 1.2rem); line-height: 1.7; max-width: 600px; margin: 0 auto; }
+
 .socials { margin-top: 20px; }
 
 .portfolio-section { margin-top: 5rem; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); overflow: hidden; }
@@ -304,10 +308,13 @@ li { list-style: none; padding: 0; margin: 0; }
 
 @media (min-width: 992px) and (min-width: 992px) { .contact-grid .contact-details { text-align: left; align-items: flex-start; } }
 
-@media (min-width: 992px) { .contact-grid .contact-details h3 { color: #ffffff; }
-  .contact-grid .contact-details a { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 16px 32px; border: none; border-radius: 12px; background: linear-gradient(135deg, #6BA3BE 0%, #8eb9ce 100%); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 6px 20px rgba(107, 163, 190, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2); color: #ffffff; font-size: 1.1rem; font-weight: 600; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; user-select: none; position: relative; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); margin: 1rem 0; width: fit-content; }
-  .contact-grid .contact-details a:hover, .contact-grid .contact-details a:focus { background: linear-gradient(135deg, #8B7BA8 0%, #a69abc 100%); box-shadow: 0 8px 28px rgba(139, 123, 168, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3); transform: translateY(-2px); outline: none; }
-  .contact-grid .contact-details a:active { transform: translateY(0); box-shadow: 0 4px 12px rgba(107, 163, 190, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1); } }
+@media (min-width: 992px) { .contact-grid .contact-details h3 { color: #ffffff; } }
+
+.contact-details a { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 16px 32px; border: none; border-radius: 12px; background: linear-gradient(135deg, #6BA3BE 0%, #8eb9ce 100%); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 6px 20px rgba(107, 163, 190, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2); color: #ffffff; font-size: 1.1rem; font-weight: 600; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; user-select: none; position: relative; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); margin: 1rem 0; width: fit-content; }
+
+.contact-details a:hover, .contact-details a:focus { background: linear-gradient(135deg, #8B7BA8 0%, #a69abc 100%); box-shadow: 0 8px 28px rgba(139, 123, 168, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3); transform: translateY(-2px); outline: none; }
+
+.contact-details a:active { transform: translateY(0); box-shadow: 0 4px 12px rgba(107, 163, 190, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
 
 .contact-form-grid { display: grid; padding-top: 24px; row-gap: 10px; grid-template-columns: 1fr; box-sizing: border-box; }
 
@@ -681,10 +688,6 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
 
 .examples-header { position: relative; z-index: 1; text-align: center; padding: 2rem 1rem; margin: 2rem auto 3rem auto; max-width: 1200px; }
 
-.examples-header h1 { color: #ffffff; font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 600; margin-bottom: 1rem; }
-
-.examples-header p { color: #ffffff; font-size: clamp(1rem, 2.5vw, 1.2rem); line-height: 1.7; max-width: 600px; margin: 0 auto; }
-
 @media (min-width: 768px) { .examples-header { padding: 3rem 2rem; margin: 3rem auto 4rem auto; } }
 
 .examples-list { display: flex; flex-direction: column; gap: 2rem; width: 100%; position: relative; z-index: 1; }
@@ -714,10 +717,6 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
 @media (min-width: 768px) { .examples-list { gap: 2rem; } }
 
 .scss-header { position: relative; z-index: 1; text-align: center; padding: 2rem 1rem; margin: 2rem auto 3rem auto; max-width: 1200px; }
-
-.scss-header h1 { color: #ffffff; font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 600; margin-bottom: 1rem; }
-
-.scss-header p { color: #ffffff; font-size: clamp(1rem, 2.5vw, 1.2rem); line-height: 1.7; max-width: 600px; margin: 0 auto; }
 
 @media (min-width: 768px) { .scss-header { padding: 3rem 2rem; margin: 3rem auto 4rem auto; } }
 

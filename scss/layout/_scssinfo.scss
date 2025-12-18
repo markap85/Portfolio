@@ -11,20 +11,7 @@
     margin: 2rem auto 3rem auto;
     max-width: 1200px;
 
-    h1 {
-        color: $white;
-        font-size: clamp(1.8rem, 4vw, 2.5rem);
-        font-weight: 600;
-        margin-bottom: 1rem;
-    }
-
-    p {
-        color: $white;
-        font-size: clamp(1rem, 2.5vw, 1.2rem);
-        line-height: 1.7;
-        max-width: 600px;
-        margin: 0 auto;
-    }
+    // Typography consolidated in base/_typography.scss
 
     // Responsive spacing
     @media (min-width: $brk-point-md) {
@@ -36,7 +23,7 @@
 .scss-info-grid {
     width: 100%;
     max-width: 1200px; // match standard container width
-    margin: 40px auto 0; // center within content-wrapper gutters
+    margin: $container-top-margin auto 0; // center within content-wrapper gutters
 
     @media (min-width: $brk-point-md) {
         padding-left: 3rem;
