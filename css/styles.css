@@ -1,7 +1,6 @@
-@charset "UTF-8";
-.portfolio-grid, .contact-grid, .footer-container, .hero .hero-text--name, .about-me-grid, .project, .project.pr-6, .sidebar, .examples-grid, .scss-info-grid .info-block, .media-player { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(30px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg); -webkit-backdrop-filter: blur(30px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 24px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 12px 30px -8px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3); position: relative; overflow: hidden; }
+.portfolio-grid, .contact-grid, .footer-container, .hero .hero-text--name, .about-me-grid, .project, .project.pr-6, .sidebar, .examples-list .example-item, .scss-info-grid .info-block, .media-player { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(30px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg); -webkit-backdrop-filter: blur(30px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 24px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08), 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 12px 30px -8px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3); position: relative; overflow: hidden; }
 
-@media (max-width: 600px) { .portfolio-grid, .contact-grid, .footer-container, .hero .hero-text--name, .about-me-grid, .project, .project.pr-6, .sidebar, .examples-grid, .scss-info-grid .info-block, .media-player { margin: 8px; } }
+@media (max-width: 600px) { .portfolio-grid, .contact-grid, .footer-container, .hero .hero-text--name, .about-me-grid, .project, .project.pr-6, .sidebar, .examples-list .example-item, .scss-info-grid .info-block, .media-player { margin: 8px; } }
 
 .project img, .project.pr-6 img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px 10px 0px 0px; display: block; }
 
@@ -707,7 +706,7 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
 
 .examples { width: 80%; margin-left: 20px; margin-right: 20px; margin-top: 60px; text-align: center; overflow-wrap: break-word; }
 
-.examples h3 { font-size: 1rem; color: #6BA3BE; margin-bottom: 16px; font-weight: bold; }
+.examples h1 { font-size: 1rem; color: #6BA3BE; text-align: center; margin-bottom: 16px; font-weight: bold; }
 
 .examples p { font-size: 0.8rem; color: #34495e; margin-bottom: 24px; line-height: 1.6; }
 
@@ -731,27 +730,21 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
   .examples p { font-size: 1.2rem; }
   .examples ul li a { font-size: 1.2rem; } }
 
-.examples-grid { display: flex; flex-direction: column; gap: 3rem; padding: 3rem 2.5rem; text-align: left; width: 100%; margin: 0; }
+.examples-grid { display: block; width: 100%; max-width: 1200px; margin: 40px auto 0; }
 
-.examples-grid::before { content: ''; position: absolute; top: -100%; left: -100%; width: 300%; height: 300%; background: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.12) 40%, rgba(200, 220, 255, 0.08) 45%, rgba(255, 255, 255, 0.15) 50%, rgba(200, 220, 255, 0.08) 55%, rgba(255, 255, 255, 0.12) 60%, transparent 75%); filter: blur(0.3px) contrast(1.2) hue-rotate(-0.5deg); animation: refractionGlassShine 12s ease-in-out infinite; pointer-events: none; }
+.examples-header { position: relative; z-index: 1; text-align: center; padding: 2rem 1rem; margin: 2rem auto 3rem auto; max-width: 1200px; }
 
-.examples-grid::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 40%), radial-gradient(circle at 70% 30%, rgba(200, 220, 255, 0.06) 0%, transparent 35%); animation: secondaryShine 15s ease-in-out infinite reverse; pointer-events: none; z-index: 1; }
+.examples-header h1 { color: #ffffff; font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 600; margin-bottom: 1rem; }
 
-@media (min-width: 768px) { .examples-grid { padding: 4rem 3rem; gap: 2.5rem; } }
+.examples-header p { color: #ffffff; font-size: clamp(1rem, 2.5vw, 1.2rem); line-height: 1.7; max-width: 600px; margin: 0 auto; }
 
-@media (min-width: 992px) { .examples-grid { padding: 5rem 4rem; gap: 1rem; } }
-
-.examples-header { position: relative; z-index: 1; margin-bottom: 2rem; }
-
-.examples-header h1 { color: #ffffff; font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; margin-bottom: 1rem; text-align: left; }
-
-.examples-header p { color: rgba(255, 255, 255, 0.9); font-size: clamp(1rem, 2.5vw, 1.2rem); line-height: 1.7; max-width: 100%; margin: 0; text-align: left; }
+@media (min-width: 768px) { .examples-header { padding: 3rem 2rem; margin: 3rem auto 4rem auto; } }
 
 .examples-list { display: flex; flex-direction: column; gap: 2rem; width: 100%; position: relative; z-index: 1; }
 
-.examples-list .example-item { background: rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.examples-list .example-item { padding: 2rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 
-.examples-list .example-item:hover { background: rgba(0, 0, 0, 0.3); border-color: rgba(255, 255, 255, 0.25); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2); }
+.examples-list .example-item:hover { transform: translateY(-2px); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2); }
 
 .examples-list .example-item h4 { color: #ffffff; font-size: 1.2rem; font-weight: 500; margin-bottom: 0.5rem; }
 
@@ -801,11 +794,15 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
 
 @media (min-width: 768px) { .scss-header { padding: 3rem 2rem; margin: 3rem auto 4rem auto; } }
 
-.scss-info-grid { max-width: 1260px; margin-top: 40px; margin-left: 50px; margin-right: 50px; }
+.scss-info-grid { width: 100%; max-width: 1200px; margin: 40px auto 0; }
+
+@media (min-width: 768px) { .scss-info-grid { padding-left: 3rem; padding-right: 3rem; } }
+
+@media (min-width: 992px) { .scss-info-grid { padding-left: 4rem; padding-right: 4rem; } }
 
 @media (min-width: 768px) { .scss-info-grid { margin-top: 0; } }
 
-.scss-info-grid .info-block { display: grid; grid-template-columns: 1fr; gap: 50px; padding: 2rem; margin: 0 0 2rem 0; }
+.scss-info-grid .info-block { display: grid; grid-template-columns: 1fr; gap: 2rem; padding: 2rem; margin: 0 0 2rem 0; }
 
 @media (max-width: 600px) { .scss-info-grid .info-block { grid-template-columns: 1fr; } }
 
@@ -831,11 +828,21 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
 
 .scss-info-grid ul li { list-style-type: disc; margin-bottom: 14px; font-size: 1.05rem; }
 
-.scss-info-grid a { color: #6BA3BE; text-decoration: none !important; text-decoration-thickness: 0 !important; font-weight: 500; transition: color 0.2s, border-bottom-color 0.2s; font-size: 1.5rem; display: block; text-align: center; margin: 0 auto; }
-
-@media (min-width: 992px) { .scss-info-grid a { display: inline; text-align: left; margin: 0; align-items: left; } }
+.scss-info-grid a { color: #6BA3BE; text-decoration: none !important; text-decoration-thickness: 0 !important; font-weight: 500; transition: color 0.2s, border-bottom-color 0.2s; font-size: 1.5rem; }
 
 .scss-info-grid a:hover { color: #D4A5A5; text-decoration: none !important; text-decoration-thickness: 0 !important; }
+
+.scss-info-grid .info-block a.button { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 16px 32px; border: none; border-radius: 12px; background: linear-gradient(135deg, #6BA3BE 0%, #8eb9ce 100%); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 6px 20px rgba(107, 163, 190, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2); color: #ffffff; font-size: 1.1rem; font-weight: 600; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; user-select: none; position: relative; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: inline-block; margin: 1rem auto 0 auto; text-align: center; }
+
+.scss-info-grid .info-block a.button::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); transition: left 0.5s; }
+
+.scss-info-grid .info-block a.button:hover, .scss-info-grid .info-block a.button:focus { background: linear-gradient(135deg, #8B7BA8 0%, #a69abc 100%); box-shadow: 0 8px 28px rgba(139, 123, 168, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3); transform: translateY(-2px); outline: none; }
+
+.scss-info-grid .info-block a.button:hover::before, .scss-info-grid .info-block a.button:focus::before { left: 100%; }
+
+.scss-info-grid .info-block a.button:active { transform: translateY(0); box-shadow: 0 4px 12px rgba(107, 163, 190, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+
+@media (min-width: 992px) { .scss-info-grid .info-block a.button { margin: 1rem 0 0 0; text-align: left; } }
 
 .burger { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 48px; height: 48px; background: transparent; border: none; cursor: pointer; position: fixed; top: 1.5rem; left: 1.5rem; z-index: 1100; transition: all 0.3s ease; }
 
@@ -983,59 +990,7 @@ nav a.active { background: rgba(255, 255, 255, 0.2) !important; color: #32ccee !
   to { opacity: 1;
     transform: translateY(0); } }
 
-/* SCSS Info specific styles */
-.scss-info-grid { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-
-.info-header { text-align: center; margin-bottom: 3rem; }
-
-.info-header h3 { font-size: 2.5rem; margin-bottom: 1rem; color: white; }
-
-.info-header p { font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); max-width: 600px; margin: 0 auto; }
-
-.info-block { display: grid; grid-template-columns: 1fr; gap: 2rem; padding: 2rem; margin: 2rem 0; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3); }
-
-@media (min-width: 768px) { .info-block { grid-template-columns: 1fr 1fr; align-items: center; } }
-
-.info-content h4 { color: #32ccee; font-size: 1.8rem; margin-bottom: 1rem; }
-
-.info-content p { color: rgba(255, 255, 255, 0.9); line-height: 1.6; margin-bottom: 1.5rem; }
-
-.folder-structure { background: rgba(0, 0, 0, 0.3); padding: 1.5rem; border-radius: 10px; border-left: 4px solid #32ccee; }
-
-.folder-structure h5 { color: #32ccee; margin-bottom: 1rem; font-size: 1.2rem; }
-
-.folder-structure ul { list-style: none; padding: 0; margin: 0; }
-
-.folder-structure li { color: rgba(255, 255, 255, 0.8); padding: 0.5rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-
-.folder-structure li:last-child { border-bottom: none; }
-
-.benefits-section { background: rgba(50, 204, 238, 0.1); padding: 2rem; border-radius: 15px; border: 1px solid rgba(50, 204, 238, 0.3); margin-top: 2rem; }
-
-.benefits-section h4 { color: #32ccee; font-size: 1.6rem; margin-bottom: 1.5rem; }
-
-.benefits-section ul { list-style: none; padding: 0; margin: 0; }
-
-.benefits-section li { color: rgba(255, 255, 255, 0.9); padding: 0.8rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); position: relative; padding-left: 2rem; }
-
-.benefits-section li:before { content: "✓"; position: absolute; left: 0; color: #32ccee; font-weight: bold; font-size: 1.2rem; }
-
-.benefits-section li:last-child { border-bottom: none; }
-
-.benefits-section strong { color: #32ccee; }
-
-/* Info image styling */
-.info-img { width: 100%; max-width: 400px; height: auto; object-fit: cover; margin: 0 auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); display: block; }
-
-/* Responsive adjustments */
-@media (max-width: 768px) { .scss-info-grid { padding: 1rem; }
-  .info-header h3 { font-size: 2rem; }
-  .info-block { padding: 1.5rem; }
-  .benefits-section { padding: 1.5rem; } }
-
-/* Error states */
-.error-message { background: rgba(255, 0, 0, 0.1); border: 1px solid rgba(255, 0, 0, 0.3); color: #ff6b6b; padding: 1rem; border-radius: 8px; text-align: center; margin: 2rem auto; max-width: 500px; }
-
+/* Removed SCSS Info-specific layout overrides here to avoid conflicts with layout/_scssinfo.scss */
 /* Smooth page transitions */
 .page-transition { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 

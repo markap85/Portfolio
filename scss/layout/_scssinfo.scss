@@ -34,10 +34,19 @@
 }
 
 .scss-info-grid {
-    max-width: 1260px;
-    margin-top: 40px;
-    margin-left: 50px;
-    margin-right: 50px;
+    width: 100%;
+    max-width: 1200px; // match standard container width
+    margin: 40px auto 0; // center within content-wrapper gutters
+
+    @media (min-width: $brk-point-md) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    @media (min-width: $brk-point-lg) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 
     // ==========================================================================
     // Responsive Breakpoint: Medium Screens
@@ -52,7 +61,7 @@
     .info-block {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 2rem; // match examples card spacing
         padding: 2rem;
         margin: 0 0 2rem 0;
         @extend %glassmorphic-card;
@@ -144,6 +153,7 @@
     // ==========================================================================
     // Link Styles and Responsive Alignment
     // ==========================================================================
+    // Default link styling for inline text links (e.g., scores)
     a {
         color: $primary-color;
         text-decoration: none !important;
@@ -152,23 +162,23 @@
         transition: color 0.2s, border-bottom-color 0.2s;
         font-size: 1.5rem;
 
-        // Center links by default (below md)
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-
-        @media (min-width: $brk-point-lg) {
-            // Restore inline and alignment for md and up
-            display: inline;
-            text-align: left;
-            margin: 0;
-            align-items: left;
-        }
-
         &:hover {
             color: $accent-color;
             text-decoration: none !important;
             text-decoration-thickness: 0 !important;
+        }
+    }
+
+    // Promote "Learn More" CTA links to primary buttons
+    .info-block a.button {
+        @include button-primary;
+        display: inline-block;
+        margin: 1rem auto 0 auto; // center by default
+        text-align: center;
+
+        @media (min-width: $brk-point-lg) {
+            margin: 1rem 0 0 0; // align left on large screens
+            text-align: left;
         }
     }
 }

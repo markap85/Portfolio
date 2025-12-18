@@ -29,15 +29,18 @@ $additionalScripts = [
     <!-- ======================= -->
     <!-- Main Content -->
     <main id="main-content">
+        <!-- Examples Header -->
+        <div class="content-wrapper">
+          <div class="examples-header">
+            <h1>Coding Examples</h1>
+            <p>Here are some real coding examples from this portfolio website that showcase modern responsive design techniques and best practices.</p>
+          </div>
+        </div>
+
         <!-- Examples Content -->
         <div class="content-wrapper">
-            <div class="examples-grid">
-                <div class="examples-header">
-                    <h1>Coding Examples <br><span class="txt-secondary">&#123;</span>Responsive Design<span class="txt-secondary">&#125;</span></h1>
-                    <p>Here are some real coding examples from this portfolio website that showcase modern responsive design techniques and best practices.</p>
-                </div>
-                
-                <div class="examples-list">
+          <div class="examples-grid">
+            <div class="examples-list">
                     <article class="example-item">
                         <h4>Example 1: Responsive Portfolio Grid</h4>
                         <p>This portfolio grid demonstrates modern responsive design using CSS Grid with automatic column adjustments based on screen size.</p>
@@ -68,6 +71,13 @@ $additionalScripts = [
 }</code></pre>
                         </div>
                         
+              <p><strong>Technologies Used:</strong></p>
+              <ul>
+                <li>Sass (SCSS) with responsive breakpoint variables</li>
+                <li>CSS Grid for fluid, column-based layouts</li>
+                <li>Max-width container to keep content centered</li>
+              </ul>
+                        
                         <p><strong>Key Features:</strong></p>
                         <ul>
                             <li>Mobile-first approach (1 column by default)</li>
@@ -75,6 +85,13 @@ $additionalScripts = [
                             <li>Automatic spacing with CSS Grid gap</li>
                             <li>Responsive container with max-width constraint</li>
                         </ul>
+
+              <p><strong>Outcomes:</strong></p>
+              <ul>
+                <li>Consistent card sizing and spacing across breakpoints</li>
+                <li>Predictable gutters and alignment in a 1200px container</li>
+                <li>No JavaScript needed for layout responsiveness</li>
+              </ul>
                     </article>
                     
                     <article class="example-item">
@@ -136,6 +153,13 @@ async function setRandomPhoto() {
 }</code></pre>
                         </div>
                         
+              <p><strong>Technologies Used:</strong></p>
+              <ul>
+                <li>Modern JavaScript (ES6+), async/await</li>
+                <li>Fetch API for HTTP requests</li>
+                <li>DOM APIs with optional chaining for safety</li>
+              </ul>
+                        
                         <p><strong>Key JavaScript Features:</strong></p>
                         <ul>
                             <li>Async/await for clean asynchronous code handling</li>
@@ -145,6 +169,13 @@ async function setRandomPhoto() {
                             <li>Event listeners and dynamic content updates</li>
                             <li>Optional chaining for safe method calls</li>
                         </ul>
+
+              <p><strong>Outcomes:</strong></p>
+              <ul>
+                <li>Smoother UX with a clear loading state</li>
+                <li>Resilient behavior on network/image errors</li>
+                <li>Dynamic image and credit updates without page reloads</li>
+              </ul>
                     </article>
                     
                     <article class="example-item">
@@ -176,6 +207,13 @@ async function setRandomPhoto() {
 }</code></pre>
                         </div>
                         
+              <p><strong>Technologies Used:</strong></p>
+              <ul>
+                <li>CSS Grid with responsive media queries</li>
+                <li>Progressive enhancement from single to two columns</li>
+                <li>Semantic class structure for maintainability</li>
+              </ul>
+                        
                         <p><strong>Responsive Features:</strong></p>
                         <ul>
                             <li>Grid layout automatically adjusts form structure</li>
@@ -183,6 +221,13 @@ async function setRandomPhoto() {
                             <li>Full-width fields span multiple columns when needed</li>
                             <li>Consistent spacing maintained across breakpoints</li>
                         </ul>
+
+              <p><strong>Outcomes:</strong></p>
+              <ul>
+                <li>Stable layout with no validation-induced shifting</li>
+                <li>Improved readability and form flow on larger screens</li>
+                <li>Easier to extend with additional fields and rows</li>
+              </ul>
                     </article>
                     
                     <article class="example-item">
@@ -222,6 +267,13 @@ async function setRandomPhoto() {
 }</code></pre>
                         </div>
                         
+              <p><strong>Technologies Used:</strong></p>
+              <ul>
+                <li>PHP 8+, Laravel Eloquent ORM</li>
+                <li>Eager loading, relationship queries, and joins</li>
+                <li>Pagination with query-string preservation</li>
+              </ul>
+                        
                         <p><strong>Key Laravel Features:</strong></p>
                         <ul>
                             <li>Eager loading relationships with <code>with()</code> to prevent N+1 queries</li>
@@ -231,6 +283,13 @@ async function setRandomPhoto() {
                             <li>Pagination with query string preservation</li>
                             <li>Conditional query building based on request parameters</li>
                         </ul>
+
+              <p><strong>Outcomes:</strong></p>
+              <ul>
+                <li>Reduced database load and fewer queries via eager loading</li>
+                <li>Accurate sorting by related entities without denormalization</li>
+                <li>Flexible, maintainable query logic suitable for admin UIs</li>
+              </ul>
                     </article>
                 </div>
             </div>

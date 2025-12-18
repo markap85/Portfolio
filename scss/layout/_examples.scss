@@ -12,9 +12,10 @@
         overflow-wrap: break-word;
 
         // Section Heading
-        h3 {
+        h1 {
             font-size: 1rem;
             color: $primary-color;
+        text-align: center;
             margin-bottom: 16px;
             font-weight: bold;
         }
@@ -110,101 +111,39 @@
 // ==========================================================================
 
 .examples-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    padding: 3rem 2.5rem;
-    text-align: left;
+    display: block;
     width: 100%;
-    margin: 0;
-
-    // Optimized glassmorphic styling
-    @extend %glassmorphic-card;
-
-    // Enhanced refraction shine effect - more prominent
-    &::before {
-      content: '';
-      position: absolute;
-      top: -100%;
-      left: -100%;
-      width: 300%;
-      height: 300%;
-      background: 
-        linear-gradient(
-          45deg,
-          transparent 25%,
-          rgba(255, 255, 255, 0.12) 40%,
-          rgba(200, 220, 255, 0.08) 45%,
-          rgba(255, 255, 255, 0.15) 50%,
-          rgba(200, 220, 255, 0.08) 55%,
-          rgba(255, 255, 255, 0.12) 60%,
-          transparent 75%
-        );
-      filter: 
-        blur(0.3px) 
-        contrast(1.2) 
-        hue-rotate(-0.5deg);
-      animation: refractionGlassShine 12s ease-in-out infinite;
-      pointer-events: none;
-    }
-
-    // Add secondary shine layer for more depth
-    &::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: 
-        radial-gradient(
-          circle at 30% 70%, 
-          rgba(255, 255, 255, 0.1) 0%, 
-          transparent 40%
-        ),
-        radial-gradient(
-          circle at 70% 30%, 
-          rgba(200, 220, 255, 0.06) 0%, 
-          transparent 35%
-        );
-      animation: secondaryShine 15s ease-in-out infinite reverse;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    // Responsive sizing
-    @media (min-width: $brk-point-md) {
-        padding: 4rem 3rem;
-        gap: 2.5rem;
-    }
-    
-    @media (min-width: $brk-point-lg) {
-        padding: 5rem 4rem;
-        gap: 1rem;
-    }
+    max-width: 1200px; // match standard container width
+    margin: 40px auto 0; // center within content-wrapper gutters
 }
 
 // Header styling
 .examples-header {
     position: relative;
     z-index: 1;
-    margin-bottom: 2rem;
+    text-align: center; // match scss-header default
+    padding: 2rem 1rem;
+    margin: 2rem auto 3rem auto;
+    max-width: 1200px;
 
     h1 {
         color: $white;
-        font-size: clamp(2rem, 4vw, 3rem);
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
         font-weight: 600;
         margin-bottom: 1rem;
-        text-align: left;
     }
 
     p {
-        color: rgba(255, 255, 255, 0.9);
+        color: $white;
         font-size: clamp(1rem, 2.5vw, 1.2rem);
         line-height: 1.7;
-        max-width: 100%;
-        margin: 0;
-        text-align: left;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: $brk-point-md) {
+        padding: 3rem 2rem;
+        margin: 3rem auto 4rem auto;
     }
 }
 
@@ -218,17 +157,12 @@
     z-index: 1;
 
     .example-item {
-        background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 16px;
+        @extend %glassmorphic-card; // match SCSS page card style
         padding: 2rem;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
         &:hover {
-            background: rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
             transform: translateY(-2px);
             box-shadow: 
               0 8px 25px rgba(0, 0, 0, 0.15),
