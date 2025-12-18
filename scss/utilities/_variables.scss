@@ -16,6 +16,14 @@ $tag-refactor       : $primary-color;
 $tag-frontend       : $secondary-color;
 $tag-backend        : $accent-color;
 
+// Feedback & status colors (centralized, do not change hues)
+$danger-color-strong: #dc3545; // error borders/messages
+$danger-color-alt   : #e74c3c; // alternate error tone
+$error-accent       : #ff4757; // bright error accent
+$success-color      : #28a745; // success state
+$success-color-alt  : #2ecc71; // alternate success tone
+$info-color         : #17a2b8; // info state
+
 // Responsive breakpoints
 $brk-point-xs       : 280px;
 $brk-point-sm       : 576px;

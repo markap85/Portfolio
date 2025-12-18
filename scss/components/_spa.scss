@@ -28,7 +28,7 @@
     height: 50px;
     border: 3px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    border-top-color: #32ccee;
+    border-top-color: #32ccee; // consider moving to $accent-cyan if reused
     animation: spin 1s ease-in-out infinite;
     margin: 0 auto 1rem auto;
 }
@@ -54,7 +54,7 @@
 /* Active Navigation State */
 nav a.active {
     background: rgba(255, 255, 255, 0.2) !important;
-    color: #32ccee !important;
+    color: #32ccee !important; // consider moving to $accent-cyan if reused
     border-color: rgba(50, 204, 238, 0.4) !important;
     box-shadow: 
         0 6px 20px rgba(50, 204, 238, 0.15),

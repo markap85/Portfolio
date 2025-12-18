@@ -361,7 +361,7 @@
 }
 
 input.error, textarea.error {
-  border: 2px solid #ff4757 !important; // matches default width, prevents shift
+  border: 2px solid $error-accent !important; // matches default width, prevents shift
 }
 
 .form-result {
@@ -378,7 +378,7 @@ input.error, textarea.error {
       rgba(46, 204, 113, 0.2) 0%, 
       rgba(46, 204, 113, 0.1) 100%);
     border: 1px solid rgba(46, 204, 113, 0.3);
-    color: #2ecc71;
+    color: $success-color-alt;
   }
   
   &.error {
@@ -387,7 +387,7 @@ input.error, textarea.error {
       rgba(231, 76, 60, 0.2) 0%, 
       rgba(231, 76, 60, 0.1) 100%);
     border: 1px solid rgba(231, 76, 60, 0.3);
-    color: #e74c3c;
+    color: $danger-color-alt;
   }
 }
 
@@ -433,27 +433,27 @@ input.error, textarea.error {
     
     &.error {
     background-color: $white;
-      border: 1px solid #dc3545;
-      color: #dc3545;
+      border: 1px solid $danger-color-strong;
+      color: $danger-color-strong;
     }
     
     &.success {
     background-color: $white;
       border: 1px solid rgba(40, 167, 69, 0.3);
-      color: #28a745;
+      color: $success-color;
     }
     
     &.info {
     background-color: $white;
       border: 1px solid rgba(23, 162, 184, 0.3);
-      color: #17a2b8;
+      color: $info-color;
     }
   }
   
   .error-message {
     background-color: $white;
-    border: 2px solid #dc3545;
-    color: #dc3545;
+    border: 2px solid $danger-color-strong;
+    color: $danger-color-strong;
     margin-top: 10px;
   }
 }
