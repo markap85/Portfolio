@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let backgroundImages = [
-        '../img/glassmorphic_01.webp',
-        '../img/glassmorphic_02.webp',
-        '../img/glassmorphic_03.webp',
+    // Vibrant dark gradients with strong variation for glassmorphic showcase
+    let backgroundGradients = [
+        'linear-gradient(135deg, #0f0c29 0%, #302b63 20%, #24243e 40%, #0f2027 60%, #203a43 80%, #0f0c29 100%)',
+        'linear-gradient(135deg, #434343 0%, #000000 20%, #141e30 40%, #243b55 60%, #434343 80%, #000000 100%)',
+        'linear-gradient(135deg, #1e3c72 0%, #2a5298 20%, #1e3c72 40%, #7f27ff 60%, #513d8f 80%, #1e3c72 100%)',
     ];
 
     let currentIndex = 0;
@@ -20,18 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
             stopSlideshow();
         },
         nextBackground: function() {
-            currentIndex = (currentIndex + 1) % backgroundImages.length;
+            currentIndex = (currentIndex + 1) % backgroundGradients.length;
             changeBackgroundImage();
         },
         previousBackground: function() {
-            currentIndex = (currentIndex - 1 + backgroundImages.length) % backgroundImages.length;
+            currentIndex = (currentIndex - 1 + backgroundGradients.length) % backgroundGradients.length;
             changeBackgroundImage();
         }
     };
 
     function changeBackgroundImage() {
-        // Switch to the current background image
-        document.documentElement.style.setProperty('--background-image', `url("${backgroundImages[currentIndex]}")`);
+        // Switch to the current background gradient
+        document.documentElement.style.setProperty('--background-gradient', backgroundGradients[currentIndex]);
     }
 
     function startSlideshow() {
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Change background every 20 seconds
         slideShowInterval = setInterval(function() {
             if (isSlideShowEnabled) {
-                currentIndex = (currentIndex + 1) % backgroundImages.length;
+                currentIndex = (currentIndex + 1) % backgroundGradients.length;
                 changeBackgroundImage();
             }
         }, 20000);
