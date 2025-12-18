@@ -217,21 +217,21 @@ li { list-style: none; padding: 0; margin: 0; }
 
 .portfolio-section { margin-top: 5rem; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); overflow: hidden; }
 
-.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; box-sizing: border-box; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); min-height: 0; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; align-items: stretch; box-sizing: border-box; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); min-height: 0; }
 
 @media (max-width: 767px) { .portfolio-grid { grid-template-columns: 1fr; } }
 
 @media (min-width: 768px) and (max-width: 1023px) { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
 
-@media (min-width: 992px) { .portfolio-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); } }
+@media (min-width: 992px) { .portfolio-grid { grid-template-columns: repeat(3, 1fr); } }
 
-.project, .project.pr-6 { text-align: center; position: relative; border-radius: 10px; padding-bottom: 10px; cursor: pointer; transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; width: 100%; max-width: 100%; margin: 0; }
+.project, .project.pr-6 { text-align: center; position: relative; border-radius: 10px; padding-bottom: 10px; cursor: pointer; transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; width: 100%; max-width: 100%; margin: 0; display: flex; flex-direction: column; min-height: 430px; }
 
 .project:not(.disabled):not(.project.pr-6):hover { background-color: #6BA3BE; background: rgba(255, 255, 255, 0.18); border-color: rgba(255, 255, 255, 0.4); box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15), inset 0 2px 0 rgba(255, 255, 255, 0.5); }
 
 .project:not(.disabled):not(.project.pr-6):hover h3, .project:not(.disabled):not(.project.pr-6):hover a { color: #ffffff; }
 
-.project h3, .project.pr-6 h3 { font-weight: bolder; margin-top: 10px; word-wrap: break-word; hyphens: auto; max-width: 100%; }
+.project h3, .project.pr-6 h3 { font-weight: bolder; margin-top: 10px; word-wrap: break-word; hyphens: auto; max-width: 100%; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
 .project h3, .project.pr-6 h3, .project a, .project.pr-6 a { padding-left: 10px; color: #ffffff; }
 
@@ -837,13 +837,9 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
 
 .scss-info-grid a:hover { color: #D4A5A5; text-decoration: none !important; text-decoration-thickness: 0 !important; }
 
-.burger { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 48px; height: 48px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 10px; cursor: pointer; position: fixed; top: 1.5rem; left: 1.5rem; z-index: 1100; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5); transition: all 0.3s ease; }
-
-.burger:hover { background: rgba(255, 255, 255, 0.3); border-color: rgba(255, 255, 255, 0.4); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6); }
+.burger { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 48px; height: 48px; background: transparent; border: none; cursor: pointer; position: fixed; top: 1.5rem; left: 1.5rem; z-index: 1100; transition: all 0.3s ease; }
 
 .burger span, .burger .burger-bar { display: block; width: 32px; height: 4px; margin: 5px 0; background: #ffffff; border-radius: 2px; transition: 0.3s; }
-
-.burger.active { background: rgba(255, 255, 255, 0.35); border-color: rgba(255, 255, 255, 0.5); }
 
 .burger.active span { background: #ffffff; }
 

@@ -19,8 +19,9 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
   @extend %section-container;
   // Grid Container
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Auto-fit columns based on content
+  grid-template-columns: repeat(3, 1fr); // Keep 3 fixed columns on large screens
   gap: 30px;
+  align-items: stretch; // Ensure grid items can fill equal heights
   box-sizing: border-box;
   // Smooth transition for layout changes
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -39,7 +40,7 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
   }
 
   @media (min-width: $brk-point-lg) {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Up to 3 columns on large screens
+    grid-template-columns: repeat(3, 1fr); // Fixed 3 columns so cards don't stretch to fill
   }
 }
 
@@ -59,6 +60,9 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
   width: 100%;
   max-width: 100%;
   margin: 0;
+  display: flex; // Make card layout vertical and fill cell
+  flex-direction: column;
+  min-height: 430px; // Equalize card heights across the grid
 
   // Hover Effect (only for enabled items) - removed transform
   &:not(.disabled):hover {
@@ -80,6 +84,11 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
     word-wrap: break-word;
     hyphens: auto;
     max-width: 100%;
+    // Limit title to two lines for consistent card height
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   h3, a { // Text Styles
