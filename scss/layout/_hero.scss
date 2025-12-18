@@ -5,29 +5,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden; // clip animated ::after within hero
   // hero is the wrapper now; vertical spacing comes from .content-wrapper margins
 
 
-  // Add subtle frosted glass animation
-  &::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      45deg,
-      transparent 30%,
-      rgba(255, 255, 255, 0.2) 50%,
-      transparent 70%
-    );
-    animation: frostShine 8s ease-in-out infinite;
-    pointer-events: none;
-    z-index: 1;
-    // Ensure the animation stays within bounds
-    will-change: transform;
-  }
 
   .hero-text--name {
     @extend %section-container;

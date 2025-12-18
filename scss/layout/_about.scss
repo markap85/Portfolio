@@ -6,6 +6,8 @@
   @extend %section-container;
   gap: 1rem;
   z-index:55;
+  position: relative; // ensure ::before positions against container
+  overflow: hidden; // clip animated ::before within container
     
     // Enhanced refraction shine effect
     &::before {

@@ -82,9 +82,5 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
     
-    // Create staggered animation for skill icons
-    document.querySelectorAll('.about-me-icons span').forEach((icon, index) => {
-        // Delay each icon animation slightly
-        icon.style.transitionDelay = `${index * 0.1}s`;
-    });
+    // Skill icon scroll animations removed per UX decision
 });
