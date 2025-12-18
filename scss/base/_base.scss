@@ -139,12 +139,13 @@ main {
   margin-right: 0;
 
   .content-wrapper {
-  margin: 2rem 0;
+    margin: 2rem 1rem;
     display: flex;
     justify-content: center;
     
     @media (min-width: 768px) {
-      margin-left: 220px;
+      margin-left: 236px; // sidebar left (16px) + sidebar width (220px)
+      margin-right: 16px; // Match sidebar left offset for symmetry
     }
   }
 }

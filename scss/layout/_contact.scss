@@ -5,24 +5,23 @@
   margin-top: 50px !important; // Add space at the top for all screen sizes
   color: $white;
   z-index:55;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 
     // Optimized glassmorphic styling
     @extend %glassmorphic-card;
 
   @media (min-width: $brk-point-md) {
-    margin-left: 0; // Remove margin, let content-wrapper handle it
-  }
-
-  @media (min-width: $brk-point-lg) {
-    margin: 0 auto;
+    margin-top: 50px !important;
   }
 
   @media (min-width: $brk-point-lg) {
     display: grid;
     grid-template-columns: 1fr 2fr; // 2 columns after 992px
     align-items: start; // Prevent vertical shifting of grid items
-    max-width: 1260px;
-    margin: 0 auto;
+    margin-top: 50px !important;
     gap: 20px;
 
     .contact-details,

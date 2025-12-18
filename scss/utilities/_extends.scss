@@ -21,8 +21,6 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
       position: relative;
       overflow: hidden;
-      max-width: 95%;
-      margin: 16px; // Spacing from screen edges
 
       @media (max-width: 600px) {
         margin: 8px;
