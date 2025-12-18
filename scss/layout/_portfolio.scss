@@ -148,6 +148,17 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
   }
 }
 
+// ==========================================================================
+// Project Link Styles
+// ==========================================================================
+
+.project {
+  a {
+    @include button-secondary;
+    margin: 0.5rem 0.25rem;
+  }
+}
+
 // Arrow Icon Styles For Portfolio
 .icon-arrow-right2 {
   font-size: normal;

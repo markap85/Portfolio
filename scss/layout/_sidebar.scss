@@ -97,7 +97,7 @@
       transition: color 0.3s;
       text-align: center; // Center the logo text
       &:hover {
-        color: rgba(266, 60, 75, 0.5); // Hover color change
+        color: $primary-color; // Hover color change
         // Keep border transparent on hover
         text-decoration: none;
       }
@@ -138,104 +138,18 @@
 
       li {
         width: 100%;
+        display: flex;
+        justify-content: center;
         
         a {
-          display: inline-block;
-          padding: clamp(2px, 0.75vh, 6px) 0; // Reduced padding for tighter spacing
-          text-decoration: none;
-          color: $white;
-          font-weight: 600;
+          @include button-secondary;
+          padding: clamp(6px, 1.5vh, 8px) 10px;
           font-size: clamp(1rem, 2.5vh, 1.2rem);
-          border-bottom: 1px solid transparent;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          border-radius: 8px;
-          position: relative;
-          overflow: hidden;
-          padding: clamp(6px, 1.5vh, 8px) 10px; // Reduced vertical padding
+          font-weight: 600;
 
-          // Glassmorphic hover effect
-          &:hover {
-            color: $text-dark;
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: 
-              0 4px 16px rgba(0, 0, 0, 0.1),
-              inset 0 1px 0 rgba(255, 255, 255, 0.3);
-          }
-
-          // Active/focus state
-          &:focus {
-            outline: none;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 
-              0 6px 20px rgba(0, 0, 0, 0.15),
-              0 0 0 2px rgba(255, 255, 255, 0.2),
-              inset 0 2px 0 rgba(255, 255, 255, 0.4);
-          }
-
-          // Subtle shine effect on hover
-          &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.5s ease;
-            z-index: 1;
-          }
-
-          &:hover::before {
-            left: 100%;
-          }
-
-          // Ensure text stays above shine effect
-          span {
-            position: relative;
-            z-index: 2;
-          }
-        }
-
-        // Special styling for Contact Me button
-        &.contact-me a {
-          background: rgba(255, 255, 255, 0.08);
-          backdrop-filter: blur(15px);
-          -webkit-backdrop-filter: blur(15px);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          margin: 0 0.5rem;
-
-          &:hover {
-            background: rgba(50, 204, 238, 0.2);
-            border-color: rgba(50, 204, 238, 0.4);
-            color: $text-dark;
-            box-shadow: 
-              0 6px 20px rgba(50, 204, 238, 0.15),
-              inset 0 2px 0 rgba(255, 255, 255, 0.4);
-            border-bottom: 1px solid rgba(50, 204, 238, 0.4);
-          }
-          
-          // Remove special styling on mobile - make it look like other links
-          @media (max-width: $brk-point-md) {
-            background: transparent;
-            backdrop-filter: none;
-            -webkit-backdrop-filter: none;
-            border: 1px solid transparent;
-            margin: 0;
-            
-            &:hover {
-              background: rgba(255, 255, 255, 0.12);
-              backdrop-filter: blur(20px);
-              -webkit-backdrop-filter: blur(20px);
-              border-color: transparent;
-              color: $text-dark;
-              box-shadow: 
-                0 4px 16px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3);
-              border-bottom: 1px solid transparent;
-            }
+          // Override the after pseudo-element positioning for sidebar
+          &::after {
+            bottom: 2px; // Position slightly higher for better visibility
           }
         }
       }

@@ -294,7 +294,7 @@ class ContactFormValidator {
             errorContainer.style.display = 'none';
             errorContainer.textContent = '';
         } else {
-            errorContainer.textContent = 'Please correct the errors below.';
+            errorContainer.textContent = 'Please correct the errors above.';
             errorContainer.style.display = 'block';
         }
     }
