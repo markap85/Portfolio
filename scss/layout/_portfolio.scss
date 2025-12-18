@@ -114,15 +114,15 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
     cursor: not-allowed;
     pointer-events: none;
     display: none;
+    
+    // Enhanced glassmorphic styling for disabled state (place before nested rules to avoid mixed-decls)
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(25px) saturate(0.8);
+    -webkit-backdrop-filter: blur(25px) saturate(0.8);
 
     @media (min-width: $brk-point-sm) {
       display: block; // Ensure it displays in grid layout
     }
-    
-    // Enhanced glassmorphic styling for disabled state
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(25px) saturate(0.8);
-    -webkit-backdrop-filter: blur(25px) saturate(0.8);
     
     h3, a {
       opacity: 0.3;
@@ -160,8 +160,8 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
 
 .project {
   a {
+    margin: 0.5rem 0.25rem; // declaration before nested rules from mixin to avoid mixed-decls
     @include button-secondary;
-    margin: 0.5rem 0.25rem;
   }
 }
 
@@ -344,9 +344,6 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
   }
 }
 
-.project {
-  transition: all 0.3s ease;
-}
 .project {
   transition: all 0.3s ease;
 }

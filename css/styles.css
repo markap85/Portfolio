@@ -246,7 +246,7 @@ li { list-style: none; padding: 0; margin: 0; }
 
 .project.disabled .tag-refactor, .project.pr-6 .tag-refactor, .project.disabled .tag-frontend, .project.pr-6 .tag-frontend, .project.disabled .tag-backend, .project.pr-6 .tag-backend { opacity: 0.4; filter: saturate(0.6) brightness(0.8); }
 
-.project a, .project.pr-6 a { display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; padding: 8px 12px; border: none !important; border-top: none !important; border-bottom: none !important; background: transparent !important; background-image: none !important; box-shadow: none !important; text-shadow: none; color: #ffffff; font-size: 0.95rem; font-weight: 500; text-decoration: none; cursor: pointer; user-select: none; position: relative; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); margin: 0.5rem 0.25rem; }
+.project a, .project.pr-6 a { margin: 0.5rem 0.25rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; padding: 8px 12px; border: none !important; border-top: none !important; border-bottom: none !important; background: transparent !important; background-image: none !important; box-shadow: none !important; text-shadow: none; color: #ffffff; font-size: 0.95rem; font-weight: 500; text-decoration: none; cursor: pointer; user-select: none; position: relative; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 
 .project a::after, .project.pr-6 a::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background: #ffffff; transform: translateX(-50%); transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 
@@ -311,8 +311,7 @@ li { list-style: none; padding: 0; margin: 0; }
 
 .project, .project.pr-6 { transition: all 0.3s ease; }
 
-.project, .project.pr-6 { transition: all 0.3s ease; }
-
+/* removed sass:color module import; using global adjust-color for compatibility */
 .contact-grid { display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; color: #ffffff; z-index: 55; box-sizing: border-box; }
 
 @media (min-width: 992px) { .contact-grid { display: grid; grid-template-columns: 1fr 2fr; align-items: start; gap: 20px; }

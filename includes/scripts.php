@@ -23,7 +23,6 @@ $includeSpaLoader = $includeSpaLoader ?? false;
 <?php if ($includeSpaLoader): ?>
 <!-- Static Content Scripts (for index.php) -->
 <script src="js/typewriter.js" defer></script>
-<script src="js/formvalidation.js" defer></script>
 <script src="js/scrollanimations.js" defer></script>
 <script src="js/projectfilter.js" defer></script>
 <script src="js/media-player.js" defer></script>

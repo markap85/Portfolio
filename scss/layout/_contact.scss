@@ -1,3 +1,5 @@
+/* removed sass:color module import; using global adjust-color for compatibility */
+
 .contact-grid {
   @extend %section-container;
   display: flex;
@@ -236,7 +238,7 @@
     background: linear-gradient(
       135deg,
       $primary-color 0%,
-      lighten($primary-color, 10%) 100%
+      adjust-color($primary-color, $lightness: 10%) 100%
     );
     color: $white;
     border: none;
@@ -284,7 +286,7 @@
       background: linear-gradient(
         135deg,
         $secondary-color 0%,
-        lighten($secondary-color, 10%) 100%
+        adjust-color($secondary-color, $lightness: 10%) 100%
       );
       box-shadow: 
         0 8px 25px glass-secondary(0.4),
@@ -319,7 +321,7 @@
   background: linear-gradient(
     135deg,
     $secondary-color 0%,
-    darken($secondary-color, 10%) 100%
+    adjust-color($secondary-color, $lightness: -10%) 100%
   );
   border-radius: 8px;
   font-size: 0.9rem;
