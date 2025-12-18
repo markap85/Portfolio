@@ -25,16 +25,6 @@
     max-width: 1200px; // match standard container width
     margin: $container-top-margin auto 0; // center within content-wrapper gutters
 
-    @media (min-width: $brk-point-md) {
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-
-    @media (min-width: $brk-point-lg) {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-
     // ==========================================================================
     // Responsive Breakpoint: Medium Screens
     // ==========================================================================

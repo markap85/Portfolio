@@ -722,10 +722,6 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
 
 .scss-info-grid { width: 100%; max-width: 1200px; margin: 40px auto 0; }
 
-@media (min-width: 768px) { .scss-info-grid { padding-left: 3rem; padding-right: 3rem; } }
-
-@media (min-width: 992px) { .scss-info-grid { padding-left: 4rem; padding-right: 4rem; } }
-
 @media (min-width: 768px) { .scss-info-grid { margin-top: 0; } }
 
 .scss-info-grid .info-block { display: grid; grid-template-columns: 1fr; gap: 2rem; padding: 2rem; margin: 0 0 2rem 0; }
