@@ -435,7 +435,8 @@ input.error, textarea.error {
   }
   
   .error-message {
-    background-color: $white;
+    background: $white !important; // ensure no gradient layer from earlier rules
+    background-image: none !important;
     border: 2px solid $danger-color-strong;
     color: $danger-color-strong;
     margin-top: 10px;

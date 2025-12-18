@@ -41,4 +41,24 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Consolidated: Show/hide back-to-top button based on scroll position
+    const backToTopContainer = document.querySelector('.back-to-top');
+    const onScroll = () => {
+        if (!backToTopContainer) return;
+        const y = window.pageYOffset || document.documentElement.scrollTop || 0;
+        backToTopContainer.style.visibility = 'visible';
+        backToTopContainer.style.opacity = y > 300 ? '1' : '0.7';
+    };
+
+    // Prefer reduced motion: avoid opacity changes if user prefers
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion) {
+        window.addEventListener('scroll', onScroll, { passive: true });
+        // Run once on load
+        onScroll();
+    } else if (backToTopContainer) {
+        backToTopContainer.style.visibility = 'visible';
+        backToTopContainer.style.opacity = '1';
+    }
 });

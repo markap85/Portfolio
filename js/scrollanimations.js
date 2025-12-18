@@ -42,6 +42,18 @@ document.addEventListener('DOMContentLoaded', function() {
         .animate-scale.animate-in {
             transform: scale(1) !important;
         }
+
+        /* Respect reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-on-scroll,
+            .animate-slide-left,
+            .animate-slide-right,
+            .animate-scale {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+        }
         </style>
     `;
     
@@ -69,9 +81,13 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -50px 0px'
     };
 
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                if (reduceMotion) {
+                    entry.target.classList.add('animate-in');
+                }
                 entry.target.classList.add('animate-in');
             }
         });

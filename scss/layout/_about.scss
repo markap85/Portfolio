@@ -34,6 +34,13 @@
       pointer-events: none;
     }
 
+    // Accessibility: respect reduced motion preference
+    @media (prefers-reduced-motion: reduce) {
+      &::before {
+        animation: none;
+      }
+    }
+
     // Responsive sizing with enhanced shadows
     @media (min-width: $brk-point-md) {
       gap: 1rem;

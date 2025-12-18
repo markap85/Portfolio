@@ -18,7 +18,6 @@ $includeSpaLoader = $includeSpaLoader ?? false;
 <script src="js/smoothscroll.js" defer></script>
 <script src="js/currentyear.js" defer></script>
 <script src="js/visual-effects.js" defer></script>
-<script src="js/back-to-top.js" defer></script>
 
 <?php if ($includeSpaLoader): ?>
 <!-- Static Content Scripts (for index.php) -->

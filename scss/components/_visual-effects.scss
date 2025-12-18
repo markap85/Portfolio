@@ -17,6 +17,19 @@
     }
 }
 
+// Reduced motion accessibility
+@media (prefers-reduced-motion: reduce) {
+    .reveal-animate {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .project::before {
+        animation: none !important;
+    }
+}
+
 // Glowing Border Effect for Portfolio Cards
 .project {
     position: relative;
