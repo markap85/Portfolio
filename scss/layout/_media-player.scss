@@ -6,16 +6,8 @@
   width: 180px;
   margin: 0;
   padding: 1rem;
-  
-  // Glassmorphic container
-  background: rgba($white, 0.2);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid glass-white(0.3);
+  @extend %glassmorphic-card;
   border-radius: 16px;
-  box-shadow: 
-    0 8px 24px glass-black(0.1),
-    inset 0 1px 0 glass-white(0.3);
   
   // Player controls container
   .player-controls {

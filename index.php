@@ -39,16 +39,12 @@ $additionalScripts = [
         <header class="hero" id="hero">
             <div class="content-wrapper">
               <div class="hero-text--name">
-                <h2 class="light">const me = &#123;</h2>
+                <h2 class="light code-syntax">const me = &#123;</h2>
                 <h1 id="typewriter" class="light">name: "Mark Peters",</h1>
                 <h2 class="light">  role: <span>"Web Developer"</span>,</h2>
-                <h2 class="light">&#125;;</h2>
+                <h2 class="light code-syntax">&#125;;</h2>
               </div>
             </div>
-              <div class="content-wrapper hero-text--scroll">
-                <a href="#about" class="scroll-down"></a> <br>
-                <a href="#about" class="icon-keyboard_arrow_down"></a>
-              </div>
         </header>
 
         <!-- ABOUT ME - Wrap content but keep section full width -->
