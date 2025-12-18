@@ -1,10 +1,9 @@
 .sidebar {
   position: fixed;
-  top: 1rem;
-  left: 0;
-  width: 220px;
-  height: 95vh;
-  max-height: calc(100vh - 2rem);
+  top: $sidebar-gap;
+  bottom: $sidebar-gap;
+  left: $sidebar-gap;
+  width: $sidebar-width;
   text-align: center;
   @extend %glassmorphic-card;
   border-right: 1px solid rgba(255, 255, 255, 0.25);
@@ -23,7 +22,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 10px;
   padding: 0.5rem 0; // Add internal padding
   gap: 0.5rem; // Space between major sections
   
@@ -47,7 +45,6 @@
 
   &.sidebar--open {
     transform: translateX(0);
-      left: 1rem;
     box-shadow: 
       4px 0 60px rgba(0, 0, 0, 0.3),
       2px 0 30px rgba(0, 0, 0, 0.2),
@@ -68,9 +65,8 @@
       0 8px 32px rgba(0, 0, 0, 0.2),
       0 6px 20px rgba(0, 0, 0, 0.1),
       inset 1px 0 0 rgba(255, 255, 255, 0.3);
-    position: fixed;
+    // position already fixed above
     padding-top: 10px;
-    left: 1rem;
   }
 
   .logo {
@@ -79,9 +75,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 0.5rem;
-    flex-shrink: 0; // Keep logo from getting squished
-    flex-grow: 0; // Prevent from growing
-    min-height: 0; // Allow proper sizing
+    @extend %no-flex-compress; // Keep logo from getting squished
 
     .logo-text {
       margin: 0; // Reset any default margins
@@ -162,9 +156,7 @@
     justify-content: center;
     gap: clamp(0.5rem, 2vh, 1rem);
     margin: 0; // Remove margins to work with flex gap
-    flex-shrink: 0; // Don't compress
-    flex-grow: 0; // Don't grow
-    min-height: 0; // Allow proper sizing
+    @extend %no-flex-compress; // Avoid compression and growth
 
     a {
       font-size: clamp(1.5rem, 3vh, 2rem);
@@ -175,9 +167,7 @@
     margin: 0; // Remove margins to work with flex gap
     width: clamp(140px, 35vw, 180px); // Scale width with viewport
     padding: clamp(0.5rem, 1.5vh, 1rem); // Scale internal padding
-    flex-shrink: 0; // Don't compress
-    flex-grow: 0; // Don't grow
-    min-height: 0; // Allow proper sizing
+    @extend %no-flex-compress; // Avoid compression and growth
     
     .player-controls {
       gap: clamp(0.25rem, 1vh, 0.5rem); // Scale button gaps
@@ -218,7 +208,7 @@
     justify-content: center;
     flex-direction: column;
     gap: clamp(0.125rem, 0.5vh, 0.25rem); // Reduce gap
-    flex-shrink: 0; // Prevent shrinking
+    @extend %no-flex-compress; // Prevent shrinking and growth
     order: 3; // Place toggles at the bottom
 
     // Remove padding from second toggle
@@ -295,9 +285,6 @@
 
   // Responsive adjustments for mobile
   @media (max-width: 767px) {
-    &.sidebar--open {
-      padding-top: 50px; // More space for burger menu
-    }
     
     .logo {
       margin-bottom: 0.25rem;

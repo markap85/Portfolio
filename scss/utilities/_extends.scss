@@ -1,5 +1,5 @@
     // Glassmorphic card styling for portfolio items
-    %glassmorphic-card {
+  %glassmorphic-card {
       background: rgba(255, 255, 255, 0.20);
       backdrop-filter: 
         blur(30px) 
@@ -34,6 +34,27 @@
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
     display: block;
+}
+
+// Unified section container: width, spacing, and glassmorphic surface
+%section-container {
+  @extend %glassmorphic-card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+
+  @media (min-width: $brk-point-md) {
+    padding: 4rem 3rem;
+  }
+
+  @media (min-width: $brk-point-lg) {
+    padding: 5rem 4rem;
+  }
 }
 
 // Project category tags
@@ -99,4 +120,11 @@
   &:hover {
     background-color: $secondary-color;
   }
+}
+
+// Utility: prevent flex items from compressing/growing and allow proper sizing
+%no-flex-compress {
+  flex-shrink: 0;
+  flex-grow: 0;
+  min-height: 0;
 }

@@ -5,13 +5,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
-  height: 100vh;
-
-  margin-bottom: 2rem;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 2rem;
+  // hero is the wrapper now; vertical spacing comes from .content-wrapper margins
 
 
   // Add subtle frosted glass animation
@@ -36,6 +30,7 @@
   }
 
   .hero-text--name {
+    @extend %section-container;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,6 +38,8 @@
     width: 100%;
     position: relative;
     z-index: 3;
+    // Fill the viewport minus the outer wrapper margins (top+bottom)
+    min-height: calc(100vh - (2 * #{$sidebar-gap}));
 
     span, a {
       color: $white;

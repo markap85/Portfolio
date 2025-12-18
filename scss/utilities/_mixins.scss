@@ -78,6 +78,9 @@
   border-top: none !important;
   border-bottom: none !important;
   background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none;
   
   color: $white;
   font-size: 0.95rem;
@@ -103,10 +106,14 @@
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &:hover, &:focus {
+  &:hover, &:focus, &:focus-visible {
     color: $white;
     background: transparent !important;
     border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    text-shadow: none;
     outline: none;
 
     &::after {
@@ -118,6 +125,10 @@
     color: $primary-color;
     background: transparent !important;
     border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    text-shadow: none;
   }
 
   // Icon styling within button

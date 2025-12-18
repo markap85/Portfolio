@@ -36,15 +36,13 @@ $additionalScripts = [
     <!-- Static Content Container (maintaining SPA structure for CSS) -->
     <div id="dynamic-content">
         <!-- Hero Section -->
-        <header class="hero" id="hero">
-            <div class="content-wrapper">
+        <header class="hero content-wrapper" id="hero">
               <div class="hero-text--name">
                 <h2 class="light code-syntax">const me = &#123;</h2>
                 <h1 id="typewriter" class="light">name: "Mark Peters",</h1>
                 <h2 class="light">  role: <span>"Web Developer"</span>,</h2>
                 <h2 class="light code-syntax">&#125;;</h2>
               </div>
-            </div>
         </header>
 
         <!-- ABOUT ME - Wrap content but keep section full width -->

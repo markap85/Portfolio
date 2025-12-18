@@ -1,19 +1,13 @@
 .contact-grid {
+  @extend %section-container;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 3rem 2.5rem;
   text-align: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   color: $white;
   z-index:55;
   box-sizing: border-box;
-
-    // Optimized glassmorphic styling
-    @extend %glassmorphic-card;
 
   @media (min-width: $brk-point-lg) {
     display: grid;

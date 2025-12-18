@@ -135,18 +135,20 @@ body {
 }
 
 main {
-  margin-left: 0;
-  margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
 
-  .content-wrapper {
-    margin: 2rem 1rem;
+// Make content wrapper margins/global gutters consistent across main and footer
+.content-wrapper {
+    margin: $sidebar-gap 1rem;
     display: flex;
     justify-content: center;
-    
-    @media (min-width: 768px) {
-      margin-left: 236px; // sidebar left (16px) + sidebar width (220px)
-      margin-right: 16px; // Match sidebar left offset for symmetry
+
+    @media (min-width: $brk-point-md) {
+        // Sidebar offset = gap + width; mirror gap on right for balance
+        margin-left: calc(#{$sidebar-gap} + #{$sidebar-width});
+        margin-right: $sidebar-gap;
     }
-  }
 }
 

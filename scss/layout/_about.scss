@@ -3,19 +3,9 @@
 // ==========================================================================
 
 .about-me-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 3rem 2.5rem;
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    z-index:55;
-
-    // Optimized glassmorphic styling
-    @extend %glassmorphic-card;
+  @extend %section-container;
+  gap: 2rem;
+  z-index:55;
     
     // Enhanced refraction shine effect
     &::before {
@@ -44,8 +34,7 @@
 
     // Responsive sizing with enhanced shadows
     @media (min-width: $brk-point-md) {
-        padding: 4rem 3rem;
-        gap: 2.5rem;
+      gap: 2.5rem;
         box-shadow: 
           0 32px 64px -16px rgba(0, 0, 0, 0.3),
           0 16px 40px -12px rgba(0, 0, 0, 0.2),
@@ -54,8 +43,7 @@
     }
     
     @media (min-width: $brk-point-lg) {
-        padding: 5rem 4rem;
-        gap: 3rem;
+      gap: 3rem;
         box-shadow: 
           0 40px 80px -20px rgba(0, 0, 0, 0.35),
           0 20px 50px -16px rgba(0, 0, 0, 0.25),
