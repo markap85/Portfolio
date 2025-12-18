@@ -30,9 +30,11 @@ $additionalScripts = [
     <!-- Main Content -->
     <main id="main-content">
         <!-- SCSS Header -->
-        <div class="scss-header">
-            <h1>SCSS Training & Development</h1>
-            <p>My journey through web development training, showcasing the programs and resources that have shaped my skills in SCSS and modern web technologies.</p>
+        <div class="content-wrapper">
+            <div class="scss-header">
+                <h1>SCSS Training & Development</h1>
+                <p>My journey through web development training, showcasing the programs and resources that have shaped my skills in SCSS and modern web technologies.</p>
+            </div>
         </div>
         
         <!-- SCSS Content -->

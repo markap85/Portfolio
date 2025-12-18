@@ -185,8 +185,8 @@
   input,
   textarea {
     min-width: 0;
-    border: none;
-    border: 1px solid glass-white(0.3);
+    // Fix layout shift on error borders by using a consistent width
+    border: 2px solid transparent;
     border-radius: 12px;
     font-size: 1rem;
     background: glass-white(0.08);
@@ -207,7 +207,7 @@
     }
 
     &:focus {
-      border-color: $primary-color;
+      border-color: $primary-color; // same 2px width, only color changes
       background: glass-white(0.12);
       box-shadow: 
         0 6px 20px glass-black(0.1),
@@ -218,7 +218,7 @@
     }
 
     &:hover:not(:focus) {
-      border-color: glass-white(0.4);
+      border-color: glass-white(0.4); // keep width unchanged
       background: glass-white(0.1);
       transform: translateY(-0.5px);
     }
@@ -303,9 +303,9 @@
 }
 
 .error {
-    border: 2px solid $secondary-color !important;
-    background: glass-white(0.05) !important;
-    animation: errorShake 0.5s ease-in-out;
+  border: 2px solid $secondary-color !important; // same width as default
+  background: glass-white(0.05) !important;
+  animation: errorShake 0.5s ease-in-out;
 }
 
 @keyframes errorShake {
@@ -325,9 +325,8 @@
   font-size: 0.9rem;
   text-align: left;
   margin-top: 8px;
-  display: block;
   width: 100%;
-  min-height: 40px;
+  min-height: 40px; // Reserve space even when hidden
   padding: 8px 12px;
   font-weight: 500;
   box-shadow: 
@@ -336,32 +335,33 @@
   backdrop-filter: blur(30px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
   -webkit-backdrop-filter: blur(30px) contrast(1.12) saturate(1.06) hue-rotate(0.8deg);
   box-sizing: border-box;
-  
-  // Ensure proper alignment within flexbox containers
-  align-self: stretch;
-  
-  // For grid layout compatibility
-  grid-column: 1 / -1; // Span all columns in the current row
+  align-self: stretch; // Ensure proper alignment within flex containers
+  grid-column: 1 / -1; // For grid layout compatibility
+
+  // Visibility handling to prevent layout shift
+  display: block; // Always occupy space
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 // ==========================================================================
 // Error Messages and Form States
 // ==========================================================================
 
+// Remove display toggling; handled via visibility to avoid layout shift
 .error-message {
-  display: none;
-  color: $white;
-  font-size: 0.8rem;
-  margin-top: 5px;
-  font-weight: 500;
-  
-  &.show {
-    display: block;
-  }
+  // styles are defined above; keep a small override here for font sizing in this block
+  font-size: 0.85rem;
 }
 
 input.error, textarea.error {
-  border: 2px solid #ff4757 !important;
+  border: 2px solid #ff4757 !important; // matches default width, prevents shift
 }
 
 .form-result {

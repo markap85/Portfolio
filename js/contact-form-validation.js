@@ -291,11 +291,11 @@ class ContactFormValidator {
         const errorCount = Object.keys(this.errors).length;
         
         if (errorCount === 0) {
-            errorContainer.style.display = 'none';
+            errorContainer.classList.remove('show');
             errorContainer.textContent = '';
         } else {
             errorContainer.textContent = 'Please correct the errors above.';
-            errorContainer.style.display = 'block';
+            errorContainer.classList.add('show');
         }
     }
 
@@ -308,7 +308,7 @@ class ContactFormValidator {
         
         const errorContainer = document.getElementById('form-errors');
         if (errorContainer) {
-            errorContainer.style.display = 'none';
+            errorContainer.classList.remove('show');
             errorContainer.textContent = '';
         }
     }
@@ -337,7 +337,7 @@ class ContactFormValidator {
         // Hide the error message
         const errorContainer = document.getElementById('form-errors');
         if (errorContainer) {
-            errorContainer.style.display = 'none';
+            errorContainer.classList.remove('show');
             errorContainer.textContent = '';
         }
     }

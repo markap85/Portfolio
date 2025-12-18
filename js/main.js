@@ -9,6 +9,7 @@
       burger.classList.remove('active');
       overlay.classList.remove('sidebar-overlay--active');
       burger.setAttribute('aria-expanded', 'false');
+      burger.setAttribute('aria-label', 'Open navigation menu');
     }
 
     burger.addEventListener('click', function () {
@@ -16,6 +17,7 @@
       burger.classList.toggle('active');
       overlay.classList.toggle('sidebar-overlay--active', isOpen);
       burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      burger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
     });
 
     overlay.addEventListener('click', function(e) {

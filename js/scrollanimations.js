@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { selector: '.project', class: 'animate-on-scroll' },
         { selector: '.about-me-text', class: 'animate-slide-left' },
         { selector: '.about-me-image', class: 'animate-slide-right' },
-        { selector: '.about-me-icons span', class: 'animate-scale' },
+        // Remove animation on about-me skill icons
         { selector: '.contact-details', class: 'animate-slide-left' },
         { selector: '.contact-form-grid', class: 'animate-slide-right' }
     ];

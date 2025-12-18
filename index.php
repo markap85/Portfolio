@@ -187,7 +187,7 @@ $additionalScripts = [
                 </button>
                 
                 <!-- Form messages within the form grid -->
-                <div class="error-message" id="form-errors" role="alert" style="display: none;"></div>
+                <div class="error-message" id="form-errors" role="alert"></div>
                 <div id="form-result" class="form-result" role="status" aria-live="polite"></div>
               </form>
 
