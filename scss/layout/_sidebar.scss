@@ -4,6 +4,7 @@
   left: 0;
   width: 220px;
   height: 95vh;
+  max-height: calc(100vh - 2rem); // Ensure it doesn't exceed viewport
   text-align: center;
   background: 
     linear-gradient(
@@ -31,10 +32,34 @@
   transform: translateX(-100%);
   transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s, background 0.3s;
   overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+  scrollbar-width: thin; // Firefox
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent; // Firefox
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
+  padding: 0.5rem 0; // Add internal padding
+  gap: 0.5rem; // Space between major sections
+  
+  // Custom scrollbar styling for WebKit browsers
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
 
   &.sidebar--open {
     transform: translateX(0);
@@ -106,6 +131,8 @@
     align-items: center;
     margin-bottom: 0.5rem;
     flex-shrink: 0; // Keep logo from getting squished
+    flex-grow: 0; // Prevent from growing
+    min-height: 0; // Allow proper sizing
 
     .logo-text {
       margin: 0; // Reset any default margins
@@ -134,12 +161,13 @@
   }
 
   nav {
-    flex: 1; // Take up available space
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    min-height: 0; // Allow shrinking
+    flex: 1 1 auto; // Grow to fill space, shrink if needed
+    min-height: min-content; // At minimum, show all content
+    overflow: visible;
     
     ul {
       list-style: none;
@@ -270,8 +298,10 @@
     display: flex;
     justify-content: center;
     gap: clamp(0.5rem, 2vh, 1rem);
-    margin: clamp(0.25rem, 1vh, 0.5rem) 0 clamp(0.5rem, 2vh, 1rem) 0; // Top and bottom margins
-    flex-shrink: 0;
+    margin: 0; // Remove margins to work with flex gap
+    flex-shrink: 0; // Don't compress
+    flex-grow: 0; // Don't grow
+    min-height: 0; // Allow proper sizing
 
     a {
       font-size: clamp(1.5rem, 3vh, 2rem);
@@ -279,9 +309,12 @@
   }
 
   #media-player {
-    margin: clamp(0.25rem, 1vh, 0.5rem) 0;
+    margin: 0; // Remove margins to work with flex gap
     width: clamp(140px, 35vw, 180px); // Scale width with viewport
     padding: clamp(0.5rem, 1.5vh, 1rem); // Scale internal padding
+    flex-shrink: 0; // Don't compress
+    flex-grow: 0; // Don't grow
+    min-height: 0; // Allow proper sizing
     
     .player-controls {
       gap: clamp(0.25rem, 1vh, 0.5rem); // Scale button gaps
@@ -313,8 +346,11 @@
   .rotation-toggle {
     padding-top: 0; // Remove top padding
     position: relative;
-    margin: clamp(0.125rem, 0.5vh, 0.25rem) 0; // Reduce margin
+    margin: 0; // Remove margins to work with flex gap
     display: flex;
+    flex-shrink: 0; // Don't compress
+    flex-grow: 0; // Don't grow
+    min-height: 0; // Allow proper sizing
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -414,7 +450,7 @@
     
     #media-player {
       width: 160px; // Smaller player on mobile
-      margin: 0.25rem 0 1rem 0; // Added bottom margin for mobile spacing
+      margin: 0; // Remove all margins
     }
   }
 
@@ -436,11 +472,11 @@
     #media-player {
       width: 140px;
       padding: 0.5rem;
-      margin-bottom: 1rem; // Additional spacing from bottom edge
+      margin: 0; // Remove all margins
     }
     
     .rotation-toggle {
-      margin: 0.125rem 0;
+      margin: 0; // Remove all margins
       
       .toggle-switch {
         width: 40px;
@@ -473,7 +509,7 @@
     }
     
     .socials {
-      margin: 0.125rem 0;
+      margin: 0; // Remove all margins
       gap: 0.5rem;
       
       a {
@@ -484,7 +520,7 @@
     #media-player {
       width: 120px;
       padding: 0.25rem;
-      margin-bottom: 1rem; // More space from bottom edge on mobile
+      margin: 0; // Remove all margins
       
       .control-btn {
         &.play-btn {

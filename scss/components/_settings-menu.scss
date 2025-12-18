@@ -4,20 +4,22 @@
 
 // Sidebar bottom container for organizing elements
 .sidebar-bottom {
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  width: 100%;
+  margin-top: 0; // Remove auto to prevent overlapping
+  padding: 0;
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.5rem;
   align-items: center;
-  min-width: fit-content; // Prevent compression in Chrome iOS
+  flex-shrink: 0; // Never compress this section
+  flex-grow: 0; // Never grow
+  min-height: min-content; // Only take space needed
   
   // Simple iOS safe area support without Chrome-specific fixes
   @supports (-webkit-touch-callout: none) {
-    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
   }
   
   // Gentle Chrome iOS compression fix
