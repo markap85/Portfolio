@@ -28,12 +28,7 @@ $currentPage = $currentPage ?? getCurrentPage();
         </div>
     </div>
 
-    <!-- =======================
-    MOBILE SETTINGS BUTTON
-    ======================= -->
-    <button type="button" class="settings-button-mobile" id="settings-button-mobile" onclick="openSettingsMenu()" aria-label="Open settings menu">
-        <span class="icon-cog"></span>
-    </button>
+    <!-- Settings removed for clarity -->
 
     <nav aria-label="Main navigation">
         <ul>
@@ -119,11 +114,6 @@ $currentPage = $currentPage ?? getCurrentPage();
             </div>
         </div>
 
-        <!-- =======================
-        SETTINGS BUTTON
-        ======================= -->
-        <button type="button" class="settings-button" id="settings-button" onclick="openSettingsMenu()" aria-label="Open settings menu">
-            <span class="icon-cog"></span>
-        </button>
+        <!-- Settings removed for clarity -->
     </div>
 </aside>

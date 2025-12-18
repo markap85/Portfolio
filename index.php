@@ -53,8 +53,8 @@ $additionalScripts = [
                 <img src="img/MeImage.webp" alt="Mark Peters - Front-End Web Developer" loading="lazy" width="400" height="400" decoding="async" fetchpriority="high">
               </div>
               <div class="about-me-text">
-                <h3>About <span class="txt-secondary">&#123;</span>Me<span class="txt-secondary">&#125;</span></h3>
-                <p>Hi, I'm a <strong>front-end web developer</strong> who enjoys building clean, responsive websites using <span class="txt-primary">HTML</span>, <span class="txt-secondary">CSS</span>, and <span class="txt-accent">Sass</span>. I focus on making designs look great across all devices, with a strong eye for detail and usability.</p>
+                <h3>About <span class="txt-primary">&#123;</span>Me<span class="txt-primary">&#125;</span></h3>
+                <p>Hi, I'm a <strong>front-end web developer</strong> who enjoys building clean, responsive websites using <span class="txt-primary">HTML</span>, <span class="txt-primary">CSS</span>, and <span class="txt-primary">Sass</span>. I focus on making designs look great across all devices, with a strong eye for detail and usability.</p>
                 <p>Before diving into web development, I've worked in many creative industries over the last two decades including <em>game development</em>, <em>film</em> and <em>the arts</em> and am a member of <a href="https://www.bafta.org/" target="_blank" rel="noopener" class="special-link">BAFTA</a>. That creative background helps me bring a strong visual sense and storytelling mindset to every project I work on.</p>
                 <div class="about-me-icons">
                   <span class="icon-html-five tooltip" data-text="HTML5 - Semantic markup and modern web standards" role="img" aria-label="HTML5"></span>

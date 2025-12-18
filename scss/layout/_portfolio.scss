@@ -268,6 +268,15 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
 // Portfolio Filters
 // ==========================================================================
 
+// Ensure filter buttons stack above grid inside the wrapper and stay centered
+#portfolio-section {
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* Project Filter Styles */
 .filter-buttons {
     display: none; // Hide by default on small screens

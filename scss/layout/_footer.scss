@@ -24,20 +24,20 @@ footer {
   flex-shrink: 0;
   
   // Spacing
-  padding: 1rem 1rem;
-  margin-top: 2rem;
+  padding: 0; // Inner container handles padding
+  margin-top: 0; // .content-wrapper controls vertical spacing
   
   // Typography
   font-size: 1.2rem;
   text-align: center;
   
   // Visual
-  width: 95%;
+  width: 100%;
   background: transparent;
   
   // Responsive padding
   @media (max-width: 768px) {
-    padding: 1.5rem 1rem;
+    padding: 0;
     font-size: 1.1rem;
   }
 }
@@ -56,7 +56,22 @@ footer {
 // ==========================================================================
 
 .back-to-top {
-  @include frosted-scroll-btn(70px, 1.8rem);
+  @include glassmorphic-btn(
+    $width: 70px,
+    $height: 70px,
+    $padding: 0,
+    $border-radius: 50%,
+    $font-size: 1.8rem,
+    $bg: rgba(255, 255, 255, 0.12),
+    $hover-bg: rgba(255, 255, 255, 0.25),
+    $border: 1px solid rgba(255, 255, 255, 0.25),
+    $hover-border: 1px solid rgba(255, 255, 255, 0.4),
+    $color: $white,
+    $hover-color: $white
+  );
+  align-self: center;
+  z-index: 4;
+  position: relative;
   
   a {
     display: flex;

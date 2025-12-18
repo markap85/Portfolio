@@ -33,8 +33,9 @@ function initPortfolioFilter() {
         </div>
     `;
 
-    // Add filter buttons to portfolio section
-    portfolioSection.insertAdjacentHTML('afterbegin', filterButtons);
+    // Add filter buttons inside the section's content wrapper so they align with containers
+    const portfolioWrapper = portfolioSection.querySelector('.content-wrapper') || portfolioSection;
+    portfolioWrapper.insertAdjacentHTML('afterbegin', filterButtons);
 
     // Check if element is visible on current screen size
     function isVisibleOnCurrentScreen(project) {

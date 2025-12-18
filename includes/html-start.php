@@ -12,10 +12,7 @@
     <!-- Accessibility Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- =======================
-    PROGRESS BAR
-    ======================= -->
-    <div id="progress-bar"></div>
+    
 
     <?php if (isset($includeAudioPlayer) && $includeAudioPlayer): ?>
     <!-- =======================

@@ -42,14 +42,8 @@ html {
 }
 
 :root {
-    --background-gradient: linear-gradient(135deg, 
-        #0f0c29 0%,      /* Deep indigo */
-        #302b63 20%,     /* Rich purple */
-        #24243e 40%,     /* Dark plum */
-        #0f2027 60%,     /* Deep teal */
-        #203a43 80%,     /* Dark cyan */
-        #0f0c29 100%     /* Back to deep indigo */
-    );
+    // Locked single background gradient for clarity and consistency
+    --background-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 20%, #1e3c72 40%, #7f27ff 60%, #513d8f 80%, #1e3c72 100%);
 }
 
 body {
@@ -146,8 +140,9 @@ main {
     justify-content: center;
 
     @media (min-width: $brk-point-md) {
-        // Sidebar offset = gap + width; mirror gap on right for balance
-        margin-left: calc(#{$sidebar-gap} + #{$sidebar-width});
+        // Sidebar offset + an extra gap to visually separate container from sidebar
+        // Left gap equals: sidebar width + 2 * gap (one to place after sidebar, one as visible gutter)
+        margin-left: calc(#{$sidebar-width} + (2 * #{$sidebar-gap}));
         margin-right: $sidebar-gap;
     }
 }

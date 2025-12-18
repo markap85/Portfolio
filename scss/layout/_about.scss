@@ -111,16 +111,14 @@
     }
 
     a {
-        color: rgba(0, 120, 160, 0.9);
+        color: $primary-color;
         text-decoration: none;
         font-weight: 500;
         transition: all 0.3s ease;
         border-bottom: 1px solid transparent;
 
         &:hover {
-            color: rgba(223, 44, 125, 0.9);
-            border-bottom-color: rgba(223, 44, 125, 0.4);
-            text-shadow: 0 0 8px rgba(223, 44, 125, 0.2);
+            color: $accent-color;
         }
     }
 }

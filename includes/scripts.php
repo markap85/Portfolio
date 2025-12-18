@@ -15,11 +15,8 @@ $includeSpaLoader = $includeSpaLoader ?? false;
 
 <!-- Core Application Scripts -->
 <script src="js/main.js" defer></script>
-<script src="js/scrollpercentage.js" defer></script>
 <script src="js/smoothscroll.js" defer></script>
-<script src="js/background.js" defer></script>
 <script src="js/currentyear.js" defer></script>
-<script src="js/settings-menu.js" defer></script>
 <script src="js/visual-effects.js" defer></script>
 <script src="js/back-to-top.js" defer></script>
 
