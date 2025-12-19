@@ -12,8 +12,9 @@
     0 8px 32px rgba(0, 0, 0, 0.1),
     inset 1px 0 0 rgba(255, 255, 255, 0.4);
   z-index: 1000;
-  // Move fully off-screen when collapsed, accounting for left gutter
-  transform: translateX(calc(-100% - #{$sidebar-gap}));
+  // Move fully off-screen when collapsed, accounting for left gutter and shadow bleed
+  // Extra 12px ensures no visible edge from blur/border
+  transform: translateX(calc(-100% - #{$sidebar-gap} - 12px));
   transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s, background 0.3s;
   overflow-y: auto;
   overflow-x: hidden;
