@@ -52,7 +52,7 @@ $disabled-opacity: 0.1; // Increased opacity for better visibility
   // Grid Item
   text-align: center;
   position: relative;
-  border-radius: 10px;
+  border-radius: $border-radius-global;
   padding-bottom: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;

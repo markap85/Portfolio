@@ -210,7 +210,7 @@ li { list-style: none; padding: 0; margin: 0; }
 
 @media (min-width: 992px) { .portfolio-grid { grid-template-columns: repeat(3, 1fr); } }
 
-.project, .project.pr-6 { text-align: center; position: relative; border-radius: 10px; padding-bottom: 10px; cursor: pointer; transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; width: 100%; max-width: 100%; margin: 0; display: flex; flex-direction: column; min-height: 430px; }
+.project, .project.pr-6 { text-align: center; position: relative; border-radius: 24px; padding-bottom: 10px; cursor: pointer; transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; width: 100%; max-width: 100%; margin: 0; display: flex; flex-direction: column; min-height: 430px; }
 
 .project:not(.disabled):not(.project.pr-6):hover { background-color: #6BA3BE; background: rgba(255, 255, 255, 0.18); border-color: rgba(255, 255, 255, 0.4); box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15), inset 0 2px 0 rgba(255, 255, 255, 0.5); }
 
@@ -456,7 +456,7 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
 
 @media print { footer { display: none; } }
 
-.sidebar { position: fixed; top: 1rem; bottom: 1rem; left: 1rem; width: 220px; text-align: center; border-right: 1px solid rgba(255, 255, 255, 0.25); border-radius: 10px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 1px 0 0 rgba(255, 255, 255, 0.4); z-index: 1000; transform: translateX(calc(-100% - 1rem - 12px)); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s, background 0.3s; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, 0.3) transparent; display: flex; flex-direction: column; align-items: center; padding: 0.5rem 0; gap: 0.5rem; }
+.sidebar { position: fixed; top: 1rem; bottom: 1rem; left: 1rem; width: 220px; text-align: center; border-right: 1px solid rgba(255, 255, 255, 0.25); border-radius: 24px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 1px 0 0 rgba(255, 255, 255, 0.4); z-index: 1000; transform: translateX(calc(-100% - 1rem - 12px)); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s, background 0.3s; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, 0.3) transparent; display: flex; flex-direction: column; align-items: center; padding: 0.5rem 0; gap: 0.5rem; }
 
 .sidebar::-webkit-scrollbar { width: 6px; }
 
@@ -764,7 +764,7 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
 
 @media (min-width: 992px) { .scss-info-grid .info-block a.button { margin: 1rem 0 0 0; text-align: left; } }
 
-.burger { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 48px; height: 48px; background: transparent; border: none; cursor: pointer; position: fixed; top: 1.5rem; left: 1.5rem; z-index: 1100; transition: all 0.3s ease; }
+.burger { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 48px; height: 48px; background: transparent; border: none; cursor: pointer; position: fixed; top: 2rem; left: 2rem; z-index: 1100; transition: all 0.3s ease; }
 
 .burger span, .burger .burger-bar { display: block; width: 32px; height: 4px; margin: 5px 0; background: #ffffff; border-radius: 2px; transition: 0.3s; }
 
@@ -776,7 +776,7 @@ footer { display: flex; flex-direction: column; align-items: center; flex-shrink
 
 @media (min-width: 768px) { .burger { display: none; } }
 
-.burger.active .burger-bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.burger.active .burger-bar:nth-child(1) { transform: translateY(18px) rotate(45deg); }
 
 .burger.active .burger-bar:nth-child(2) { opacity: 0; }
 

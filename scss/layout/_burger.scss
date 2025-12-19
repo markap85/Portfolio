@@ -9,8 +9,8 @@
   border: none;
   cursor: pointer;
   position: fixed;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 2rem;
+  left: 2rem;
   z-index: 1100;
   transition: all 0.3s ease;
 
@@ -46,7 +46,7 @@
 }
 
 .burger.active .burger-bar:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
+  transform: translateY(18px) rotate(45deg);
 }
 .burger.active .burger-bar:nth-child(2) {
   opacity: 0;
